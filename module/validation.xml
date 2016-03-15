@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<ValidationSchema>
+  <ArchaeologicalElement name="Transect">
+    <property name="Transect ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Device ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Logger ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Number of Participants in Transect">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Landform">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Slope Gradient">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Vegetation notes">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Ground surface visibility">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Ground surface exposure">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Geomorphological Activity">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Site">
+    <property name="Site ID Number">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="General Condition of Site">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Total length of visible site">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Average width of visible site">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Estimated area of visible site">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Length of assessed site area">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Average width of potential site area">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Internal Length">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Internal Width">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Shelter Height">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Shelter Floor Area">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Feature"/>
+  <ArchaeologicalElement name="Objects_IV"/>
+  <ArchaeologicalElement name="Cultural_Management_Comments"/>
+</ValidationSchema>

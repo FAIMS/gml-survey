@@ -1,0 +1,1075 @@
+<?xml version="1.0"?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Fill This In</h:title>
+    <model>
+      <instance>
+        <faims id="Fill_This_In">
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <User>
+            <User>
+              <User/>
+            </User>
+          </User>
+          <Control>
+            <Control>
+              <New_Transect/>
+              <New_Site/>
+              <New_Feature/>
+              <New_Objects_IV/>
+              <New_Cultural_Management_Comments/>
+              <Next_Transect_ID/>
+              <Next_Site_ID_Number/>
+              <Next_Feature_ID/>
+              <Next_Intangible_Value_ID/>
+              <Next_Other_Feature_ID/>
+              <Next_Grinding_Grove_ID/>
+              <Next_Shell_ID/>
+              <Next_Arch_Dep_ID/>
+              <Next_CM_Tree_ID/>
+              <Next_Comment_ID/>
+            </Control>
+          </Control>
+          <Transect>
+            <Transect>
+              <Colgroup_GPS>
+                <Col_0>
+                  <Latitude/>
+                  <Northing/>
+                </Col_0>
+                <Col_1>
+                  <Longitude/>
+                  <Easting/>
+                </Col_1>
+              </Colgroup_GPS>
+              <Take_From_GPS/>
+              <Transect_ID/>
+              <Timestamp/>
+              <Device_ID/>
+              <Logger_ID/>
+              <Total_Transect_Width_m/>
+              <Number_of_Participants_in_Transect/>
+              <Participants/>
+              <Landform/>
+              <Slope_Gradient/>
+              <Aspect/>
+              <Vegetation_notes/>
+              <Ground_surface_visibility/>
+              <Ground_surface_exposure/>
+              <Ground_surface_notes/>
+              <Soil_observations/>
+              <Geomorphological_Activity/>
+              <Disturbance/>
+              <Photo/>
+              <Photo_Caption/>
+              <Sketch/>
+              <Other_Notes/>
+              <Colgroup_GPS>
+                <Col_0>
+                  <Latitude/>
+                  <Northing/>
+                </Col_0>
+                <Col_1>
+                  <Longitude/>
+                  <Easting/>
+                </Col_1>
+              </Colgroup_GPS>
+              <Take_From_GPS/>
+            </Transect>
+            <Map>
+              <Map/>
+              <Survey_extent/>
+            </Map>
+          </Transect>
+          <Site>
+            <Site>
+              <Site_ID_Number/>
+              <Open_Closed_Site/>
+              <Site_Aspect_Orientation/>
+              <Distance_to_permanent_water_source/>
+              <Distance_to_temporary_water_source/>
+              <Name_of_nearest_permanent_water_source/>
+              <Name_of_nearest_temporary_water/>
+              <General_Condition_of_Site/>
+            </Site>
+            <Open_Site>
+              <Total_length_of_visible_site/>
+              <Average_width_of_visible_site/>
+              <Estimated_area_of_visible_site/>
+              <Length_of_assessed_site_area/>
+              <Subsurfance_potential/>
+              <Length_of_potential_site_area/>
+              <Average_width_of_potential_site_area/>
+            </Open_Site>
+            <Closed_Site>
+              <Shelter_Cave_Formation/>
+              <Rock_Surface_Condition/>
+              <Internal_Length/>
+              <Internal_Width/>
+              <Shelter_Height/>
+              <Shelter_Floor_Area/>
+            </Closed_Site>
+          </Site>
+          <Feature>
+            <Feature>
+              <Feature_ID/>
+              <Feature_Type/>
+              <Feature_Condition/>
+            </Feature>
+          </Feature>
+          <Objects_IV>
+            <Artefact>
+              <Insitu/>
+              <Stratified/>
+              <Total_Number_of_Artefacts/>
+              <Instance_No/>
+              <Artefact_Raw_Material/>
+              <Artefact_Type/>
+              <Artefact_Description_for_Aboriginal_Stone_Artefacts/>
+              <Artefact_Description_for_Historical_Artefacts/>
+              <Artefact_Colour/>
+              <Artefact_Status_Modification/>
+              <Platform_Surface_for_Aboriginal_stone_artefacts/>
+              <Platform_Type_for_Aboriginal_stone_artefacts/>
+              <Termination_for_Aboriginal_stone_artefacts/>
+              <Cross_Section_for_Aboriginal_artefacts/>
+              <Length_mm/>
+              <Width_mm/>
+              <Thickness_mm/>
+              <Other_Observations/>
+              <Photo/>
+              <Photo_Caption/>
+            </Artefact>
+            <Intangible_Values>
+              <Intangible_Value_ID/>
+              <Intangible_Value_Type/>
+              <Description/>
+            </Intangible_Values>
+            <Art>
+              <Art_ID/>
+              <Pigment_Engraved/>
+              <Super-impositioning/>
+              <Motif_s/>
+              <Application_Technique/>
+              <Form/>
+              <Main_Colour/>
+              <Art_Location/>
+              <Associated_Story_Significance_Interpretation/>
+              <Art_Condition/>
+              <Sketch_plan/>
+              <Photo/>
+              <Other_Observations/>
+            </Art>
+            <Other_Feature>
+              <Other_Feature_ID/>
+              <Description/>
+              <Chain_of_Custody_Notes_for_human_remains/>
+              <Sketch_Plan/>
+              <Photo/>
+            </Other_Feature>
+            <Grinding_Grove>
+              <Grinding_Grove_ID/>
+              <Type/>
+              <Profile_Shape/>
+              <Seed_species_present/>
+              <Groove_function/>
+              <Dimensions_-_length_of_smallest_part_mm/>
+              <Dimensions_-_width_of_smallest_part_mm/>
+              <Dimensions_-_depth_of_smallest_part_mm/>
+              <Dimensions_-_length_of_largest_part_mm/>
+              <Dimensions_-_width_of_largest_part_mm/>
+              <Dimensions_-_depth_of_largest_part_mm/>
+              <Groove_count/>
+              <Cluster_count/>
+              <Sketch_Plan/>
+              <Photo/>
+            </Grinding_Grove>
+            <Shell>
+              <Shell_ID/>
+              <Distribution/>
+              <Distance_to_high_water_mark_metres/>
+              <Species_present/>
+              <Dominant_Species/>
+              <Approximate_percentage_of_dominant_species_as_part_of_assemblage/>
+              <Sketch_Plan/>
+              <Photo/>
+            </Shell>
+            <Hearth_Ground_Oven>
+              <Hearth_ID/>
+              <Shape/>
+              <Length/>
+              <Width/>
+              <Estimated_Depth/>
+              <Components/>
+              <Descriptive_Notes/>
+              <Sketch_Plan/>
+              <Photo/>
+            </Hearth_Ground_Oven>
+            <Potential_Archaeological_Deposit>
+              <Arch_Dep_ID/>
+              <Insitu/>
+              <Stratified/>
+              <Deposit_Type/>
+              <Surface_Artefacts/>
+            </Potential_Archaeological_Deposit>
+            <Culturally_Modified_Tree>
+              <CM_Tree_ID/>
+              <Type/>
+              <Tree_Species/>
+              <Number_of_Scars/>
+              <Number_of_Carved_Panels/>
+              <Living_Status/>
+              <Tree_Status/>
+              <Damage/>
+              <Regrowth/>
+              <Is_a_tree_health_assessment_required/>
+              <Length_of_Scar_mm/>
+              <Width_of_Scar_mm/>
+              <Depth_of_Scar_mm/>
+              <Height_Above_Ground_mm/>
+              <Shape/>
+              <Orientation/>
+              <Carving_type/>
+              <Axe_Marks/>
+            </Culturally_Modified_Tree>
+          </Objects_IV>
+          <Cultural_Management_Comments>
+            <C_M_Comments>
+              <Comment_ID/>
+              <Aboriginal_community_interpretation/>
+              <Aboriginal_community_management_recommendations/>
+              <Other_management_recommendations/>
+            </C_M_Comments>
+          </Cultural_Management_Comments>
+          <logic/>
+        </faims>
+      </instance>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Transect_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Site_ID_Number"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Feature_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Intangible_Value_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Other_Feature_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Grinding_Grove_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Shell_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Arch_Dep_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_CM_Tree_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Comment_ID"/>
+      <bind type="decimal" nodeset="/faims/Transect/Transect/Transect_ID"/>
+      <bind type="decimal" nodeset="/faims/Site/Site/Site_ID_Number"/>
+      <bind type="decimal" nodeset="/faims/Feature/Feature/Feature_ID"/>
+      <bind type="decimal" nodeset="/faims/Objects_IV/Intangible_Values/Intangible_Value_ID"/>
+      <bind type="decimal" nodeset="/faims/Objects_IV/Other_Feature/Other_Feature_ID"/>
+      <bind type="decimal" nodeset="/faims/Objects_IV/Grinding_Grove/Grinding_Grove_ID"/>
+      <bind type="decimal" nodeset="/faims/Objects_IV/Shell/Shell_ID"/>
+      <bind type="decimal" nodeset="/faims/Objects_IV/Potential_Archaeological_Deposit/Arch_Dep_ID"/>
+      <bind type="decimal" nodeset="/faims/Objects_IV/Culturally_Modified_Tree/CM_Tree_ID"/>
+      <bind type="decimal" nodeset="/faims/Cultural_Management_Comments/C_M_Comments/Comment_ID"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="style">
+      <label/>
+      <group ref="orientation">
+        <label/>
+        <input ref="orientation">
+          <label>horizontal</label>
+        </input>
+      </group>
+      <group ref="even">
+        <label/>
+        <input ref="layout_weight">
+          <label>1</label>
+        </input>
+      </group>
+      <group ref="large">
+        <label/>
+        <input ref="layout_weight">
+          <label>3</label>
+        </input>
+      </group>
+    </group>
+    <group ref="User">
+      <label>{User}</label>
+      <group ref="User">
+        <label>{User}</label>
+        <select1 appearance="compact" ref="User">
+          <label>{User}</label>
+          <!--WARNING: No type t was given for this view; assuming it is a list-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="Control">
+      <label>{Control}</label>
+      <group ref="Control">
+        <label>{Control}</label>
+        <trigger ref="New_Transect">
+          <label>{New_Transect}</label>
+        </trigger>
+        <trigger ref="New_Site">
+          <label>{New_Site}</label>
+        </trigger>
+        <trigger ref="New_Feature">
+          <label>{New_Feature}</label>
+        </trigger>
+        <trigger ref="New_Objects_IV">
+          <label>{Objects___IV}</label>
+        </trigger>
+        <trigger ref="New_Cultural_Management_Comments">
+          <label>{Cultural___Management_Comments}</label>
+        </trigger>
+        <input ref="Next_Transect_ID" faims_style_class="required">
+          <label>{Next_Transect_ID}</label>
+        </input>
+        <input ref="Next_Site_ID_Number" faims_style_class="required">
+          <label>{Next_Site_ID_Number}</label>
+        </input>
+        <input ref="Next_Feature_ID" faims_style_class="required">
+          <label>{Next_Feature_ID}</label>
+        </input>
+        <input ref="Next_Intangible_Value_ID" faims_style_class="required">
+          <label>{Next_Intangible_Value_ID}</label>
+        </input>
+        <input ref="Next_Other_Feature_ID" faims_style_class="required">
+          <label>{Next_Other_Feature_ID}</label>
+        </input>
+        <input ref="Next_Grinding_Grove_ID" faims_style_class="required">
+          <label>{Next_Grinding_Grove_ID}</label>
+        </input>
+        <input ref="Next_Shell_ID" faims_style_class="required">
+          <label>{Next_Shell_ID}</label>
+        </input>
+        <input ref="Next_Arch_Dep_ID" faims_style_class="required">
+          <label>{Next_Arch_Dep_ID}</label>
+        </input>
+        <input ref="Next_CM_Tree_ID" faims_style_class="required">
+          <label>{Next_CM_Tree_ID}</label>
+        </input>
+        <input ref="Next_Comment_ID" faims_style_class="required">
+          <label>{Next_Comment_ID}</label>
+        </input>
+      </group>
+    </group>
+    <group ref="Transect" faims_archent_type="Transect">
+      <label>{Transect}</label>
+      <group ref="Transect">
+        <label>{Transect}</label>
+        <group ref="Colgroup_GPS" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Latitude" faims_attribute_name="Latitude" faims_attribute_type="measure" faims_read_only="true">
+              <!--ERROR: View name is duplicated such that this UI schema is invalid.-->
+              <label>{Latitude}</label>
+            </input>
+            <input ref="Northing" faims_attribute_name="Northing" faims_attribute_type="measure" faims_read_only="true">
+              <!--ERROR: View name is duplicated such that this UI schema is invalid.-->
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input ref="Longitude" faims_attribute_name="Longitude" faims_attribute_type="measure" faims_read_only="true">
+              <!--ERROR: View name is duplicated such that this UI schema is invalid.-->
+              <label>{Longitude}</label>
+            </input>
+            <input ref="Easting" faims_attribute_name="Easting" faims_attribute_type="measure" faims_read_only="true">
+              <!--ERROR: View name is duplicated such that this UI schema is invalid.-->
+              <label>{Easting}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Take_From_GPS">
+          <label>{Take_From_GPS}</label>
+        </trigger>
+        <input faims_attribute_type="measure" ref="Transect_ID" faims_attribute_name="Transect ID" faims_style_class="required">
+          <label>{Transect_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input ref="Timestamp" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{timestamp}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="Device_ID" faims_attribute_name="Device ID" faims_style_class="required">
+          <label>{Device_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Logger_ID" faims_attribute_name="Logger ID" faims_style_class="required">
+          <label>{Logger_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Total_Transect_Width_m" faims_attribute_name="Total Transect Width m">
+          <label>{Total_Transect_Width__m_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Number_of_Participants_in_Transect" faims_attribute_name="Number of Participants in Transect" faims_style_class="required">
+          <label>{Number_of_Participants_in_Transect}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Participants" faims_attribute_name="Participants">
+          <label>{Participants}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Landform" faims_attribute_name="Landform" faims_style_class="required">
+          <label>{Landform}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Slope_Gradient" faims_attribute_name="Slope Gradient" faims_style_class="required">
+          <label>{Slope_Gradient}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Aspect" faims_attribute_name="Aspect">
+          <label>{Aspect}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Vegetation_notes" faims_attribute_name="Vegetation notes" faims_style_class="required">
+          <label>{Vegetation_notes}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Ground_surface_visibility" faims_attribute_name="Ground surface visibility" faims_style_class="required">
+          <label>{Ground_surface_visibility}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Ground_surface_exposure" faims_attribute_name="Ground surface exposure" faims_style_class="required">
+          <label>{Ground_surface_exposure}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Ground_surface_notes" faims_attribute_name="Ground surface notes">
+          <label>{Ground_surface_notes}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Soil_observations" faims_attribute_name="Soil observations">
+          <label>{Soil_observations}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Geomorphological_Activity" faims_attribute_name="Geomorphological Activity" faims_style_class="required">
+          <label>{Geomorphological_Activity}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Disturbance" faims_attribute_name="Disturbance">
+          <label>{Disturbance}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo" faims_attribute_name="Photo">
+          <label>{Photo}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo_Caption" faims_attribute_name="Photo Caption">
+          <label>{Photo_Caption}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Sketch" faims_attribute_name="Sketch">
+          <label>{Sketch}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Other_Notes" faims_attribute_name="Other Notes">
+          <label>{Other_Notes}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <group ref="Colgroup_GPS" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Latitude" faims_attribute_name="Latitude" faims_attribute_type="measure" faims_read_only="true">
+              <!--ERROR: View name is duplicated such that this UI schema is invalid.-->
+              <label>{Latitude}</label>
+            </input>
+            <input ref="Northing" faims_attribute_name="Northing" faims_attribute_type="measure" faims_read_only="true">
+              <!--ERROR: View name is duplicated such that this UI schema is invalid.-->
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input ref="Longitude" faims_attribute_name="Longitude" faims_attribute_type="measure" faims_read_only="true">
+              <!--ERROR: View name is duplicated such that this UI schema is invalid.-->
+              <label>{Longitude}</label>
+            </input>
+            <input ref="Easting" faims_attribute_name="Easting" faims_attribute_type="measure" faims_read_only="true">
+              <!--ERROR: View name is duplicated such that this UI schema is invalid.-->
+              <label>{Easting}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Take_From_GPS">
+          <label>{Take_From_GPS}</label>
+        </trigger>
+      </group>
+      <group ref="Map" faims_scrollable="false">
+        <label>{Map}</label>
+        <input faims_map="true" ref="Map">
+          <label/>
+        </input>
+        <input faims_attribute_type="measure" ref="Survey_extent" faims_attribute_name="Survey extent" faims_read_only="true">
+          <label>{Survey_extent}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+    </group>
+    <group ref="Site" faims_archent_type="Site">
+      <label>{Site}</label>
+      <group ref="Site">
+        <label>{Site}</label>
+        <input faims_attribute_type="measure" ref="Site_ID_Number" faims_attribute_name="Site ID Number" faims_style_class="required">
+          <label>{Site_ID_Number}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Open_Closed_Site" faims_attribute_name="Open Closed Site">
+          <label>{Open_Closed_Site}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Site_Aspect_Orientation" faims_attribute_name="Site Aspect Orientation">
+          <label>{Site_Aspect_Orientation}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Distance_to_permanent_water_source" faims_attribute_name="Distance to permanent water source">
+          <label>{Distance_to_permanent_water_source}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Distance_to_temporary_water_source" faims_attribute_name="Distance to temporary water source">
+          <label>{Distance_to_temporary_water_source}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Name_of_nearest_permanent_water_source" faims_attribute_name="Name of nearest permanent water source">
+          <label>{Name_of_nearest_permanent_water_source}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Name_of_nearest_temporary_water" faims_attribute_name="Name of nearest temporary water">
+          <label>{Name_of_nearest_temporary_water}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="General_Condition_of_Site" faims_attribute_name="General Condition of Site" faims_style_class="required">
+          <label>{General_Condition_of_Site}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Open_Site">
+        <label>{Open_Site}</label>
+        <input faims_attribute_type="measure" ref="Total_length_of_visible_site" faims_attribute_name="Total length of visible site" faims_style_class="required">
+          <label>{Total_length_of_visible_site}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Average_width_of_visible_site" faims_attribute_name="Average width of visible site" faims_style_class="required">
+          <label>{Average_width_of_visible_site}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Estimated_area_of_visible_site" faims_attribute_name="Estimated area of visible site" faims_style_class="required">
+          <label>{Estimated_area_of_visible_site}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Length_of_assessed_site_area" faims_attribute_name="Length of assessed site area" faims_style_class="required">
+          <label>{Length_of_assessed_site_area}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Subsurfance_potential" faims_attribute_name="Subsurfance potential">
+          <label>{Subsurfance_potential}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Length_of_potential_site_area" faims_attribute_name="Length of potential site area">
+          <label>{Length_of_potential_site_area}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Average_width_of_potential_site_area" faims_attribute_name="Average width of potential site area" faims_style_class="required">
+          <label>{Average_width_of_potential_site_area}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Closed_Site">
+        <label>{Closed_Site}</label>
+        <input faims_attribute_type="measure" ref="Shelter_Cave_Formation" faims_attribute_name="Shelter Cave Formation">
+          <label>{Shelter_Cave_Formation}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Rock_Surface_Condition" faims_attribute_name="Rock Surface Condition">
+          <label>{Rock_Surface_Condition}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Internal_Length" faims_attribute_name="Internal Length" faims_style_class="required">
+          <label>{Internal_Length}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Internal_Width" faims_attribute_name="Internal Width" faims_style_class="required">
+          <label>{Internal_Width}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Shelter_Height" faims_attribute_name="Shelter Height" faims_style_class="required">
+          <label>{Shelter_Height}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Shelter_Floor_Area" faims_attribute_name="Shelter Floor Area" faims_style_class="required">
+          <label>{Shelter_Floor_Area}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+    </group>
+    <group ref="Feature" faims_archent_type="Feature">
+      <label>{Feature}</label>
+      <group ref="Feature">
+        <label>{Feature}</label>
+        <input faims_attribute_type="measure" ref="Feature_ID" faims_attribute_name="Feature ID">
+          <label>{Feature_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Feature_Type" faims_attribute_name="Feature Type">
+          <label>{Feature_Type}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Feature_Condition" faims_attribute_name="Feature Condition">
+          <label>{Feature_Condition}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+    </group>
+    <group ref="Objects_IV" faims_archent_type="Objects IV">
+      <label>{Objects___IV}</label>
+      <group ref="Artefact">
+        <label>{Artefact}</label>
+        <input faims_attribute_type="measure" ref="Insitu" faims_attribute_name="Insitu">
+          <label>{Insitu}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Stratified" faims_attribute_name="Stratified">
+          <label>{Stratified}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Total_Number_of_Artefacts" faims_attribute_name="Total Number of Artefacts">
+          <label>{Total_Number_of_Artefacts}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Instance_No" faims_attribute_name="Instance No">
+          <label>{Instance_No_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Artefact_Raw_Material" faims_attribute_name="Artefact Raw Material">
+          <label>{Artefact_Raw_Material}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Artefact_Type" faims_attribute_name="Artefact Type">
+          <label>{Artefact_Type}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Artefact_Description_for_Aboriginal_Stone_Artefacts" faims_attribute_name="Artefact Description for Aboriginal Stone Artefacts">
+          <label>{Artefact_Description__for_Aboriginal_Stone_Artefacts_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Artefact_Description_for_Historical_Artefacts" faims_attribute_name="Artefact Description for Historical Artefacts">
+          <label>{Artefact_Description__for_Historical_Artefacts_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Artefact_Colour" faims_attribute_name="Artefact Colour">
+          <label>{Artefact_Colour}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Artefact_Status_Modification" faims_attribute_name="Artefact Status Modification">
+          <label>{Artefact_Status_Modification}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Platform_Surface_for_Aboriginal_stone_artefacts" faims_attribute_name="Platform Surface for Aboriginal stone artefacts">
+          <label>{Platform_Surface__for_Aboriginal_stone_artefacts_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Platform_Type_for_Aboriginal_stone_artefacts" faims_attribute_name="Platform Type for Aboriginal stone artefacts">
+          <label>{Platform_Type__for_Aboriginal_stone_artefacts_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Termination_for_Aboriginal_stone_artefacts" faims_attribute_name="Termination for Aboriginal stone artefacts">
+          <label>{Termination__for_Aboriginal_stone_artefacts_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Cross_Section_for_Aboriginal_artefacts" faims_attribute_name="Cross Section for Aboriginal artefacts">
+          <label>{Cross_Section__for_Aboriginal_artefacts_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Length_mm" faims_attribute_name="Length mm">
+          <label>{Length__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Width_mm" faims_attribute_name="Width mm">
+          <label>{Width__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Thickness_mm" faims_attribute_name="Thickness mm">
+          <label>{Thickness__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Other_Observations" faims_attribute_name="Other Observations">
+          <label>{Other_Observations}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo" faims_attribute_name="Photo">
+          <label>{Photo}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo_Caption" faims_attribute_name="Photo Caption">
+          <label>{Photo_Caption}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Intangible_Values">
+        <label>{Intangible_Values}</label>
+        <input faims_attribute_type="measure" ref="Intangible_Value_ID" faims_attribute_name="Intangible Value ID">
+          <label>{Intangible_Value_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Intangible_Value_Type" faims_attribute_name="Intangible Value Type">
+          <label>{Intangible_Value_Type}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Description" faims_attribute_name="Description">
+          <label>{Description}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Art">
+        <label>{Art}</label>
+        <input faims_attribute_type="measure" ref="Art_ID" faims_attribute_name="Art ID">
+          <label>{Art_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Pigment_Engraved" faims_attribute_name="Pigment Engraved">
+          <label>{Pigment_Engraved}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Super-impositioning" faims_attribute_name="Super-impositioning">
+          <label>{Super-impositioning}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Motif_s" faims_attribute_name="Motif s">
+          <label>{Motif_s}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Application_Technique" faims_attribute_name="Application Technique">
+          <label>{Application_Technique}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Form" faims_attribute_name="Form">
+          <label>{Form}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Main_Colour" faims_attribute_name="Main Colour">
+          <label>{Main_Colour}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Art_Location" faims_attribute_name="Art Location">
+          <label>{Art_Location}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Associated_Story_Significance_Interpretation" faims_attribute_name="Associated Story Significance Interpretation">
+          <label>{Associated_Story_Significance_Interpretation}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Art_Condition" faims_attribute_name="Art Condition">
+          <label>{Art_Condition}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Sketch_plan" faims_attribute_name="Sketch plan">
+          <label>{Sketch_plan}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo" faims_attribute_name="Photo">
+          <label>{Photo}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Other_Observations" faims_attribute_name="Other Observations">
+          <label>{Other_Observations}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Other_Feature">
+        <label>{Other_Feature}</label>
+        <input faims_attribute_type="measure" ref="Other_Feature_ID" faims_attribute_name="Other Feature ID">
+          <label>{Other_Feature_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Description" faims_attribute_name="Description">
+          <label>{Description}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Chain_of_Custody_Notes_for_human_remains" faims_attribute_name="Chain of Custody Notes for human remains">
+          <label>{Chain_of_Custody_Notes__for_human_remains_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Sketch_Plan" faims_attribute_name="Sketch Plan">
+          <label>{Sketch_Plan}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo" faims_attribute_name="Photo">
+          <label>{Photo}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Grinding_Grove">
+        <label>{Grinding_Grove}</label>
+        <input faims_attribute_type="measure" ref="Grinding_Grove_ID" faims_attribute_name="Grinding Grove ID">
+          <label>{Grinding_Grove_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Type" faims_attribute_name="Type">
+          <label>{Type}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Profile_Shape" faims_attribute_name="Profile Shape">
+          <label>{Profile_Shape}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Seed_species_present" faims_attribute_name="Seed species present">
+          <label>{Seed_species_present}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Groove_function" faims_attribute_name="Groove function">
+          <label>{Groove_function}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Dimensions_-_length_of_smallest_part_mm" faims_attribute_name="Dimensions - length of smallest part mm">
+          <label>{Dimensions___length_of_smallest_part__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Dimensions_-_width_of_smallest_part_mm" faims_attribute_name="Dimensions - width of smallest part mm">
+          <label>{Dimensions___width_of_smallest_part__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Dimensions_-_depth_of_smallest_part_mm" faims_attribute_name="Dimensions - depth of smallest part mm">
+          <label>{Dimensions___depth_of_smallest_part__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Dimensions_-_length_of_largest_part_mm" faims_attribute_name="Dimensions - length of largest part mm">
+          <label>{Dimensions___length_of_largest_part__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Dimensions_-_width_of_largest_part_mm" faims_attribute_name="Dimensions - width of largest part mm">
+          <label>{Dimensions___width_of_largest_part__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Dimensions_-_depth_of_largest_part_mm" faims_attribute_name="Dimensions - depth of largest part mm">
+          <label>{Dimensions___depth_of_largest_part__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Groove_count" faims_attribute_name="Groove count">
+          <label>{Groove_count}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Cluster_count" faims_attribute_name="Cluster count">
+          <label>{Cluster_count}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Sketch_Plan" faims_attribute_name="Sketch Plan">
+          <label>{Sketch_Plan}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo" faims_attribute_name="Photo">
+          <label>{Photo}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Shell">
+        <label>{Shell}</label>
+        <input faims_attribute_type="measure" ref="Shell_ID" faims_attribute_name="Shell ID">
+          <label>{Shell_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Distribution" faims_attribute_name="Distribution">
+          <label>{Distribution}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Distance_to_high_water_mark_metres" faims_attribute_name="Distance to high water mark metres">
+          <label>{Distance_to_high_water_mark__metres_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Species_present" faims_attribute_name="Species present">
+          <label>{Species_present}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Dominant_Species" faims_attribute_name="Dominant Species">
+          <label>{Dominant_Species}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Approximate_percentage_of_dominant_species_as_part_of_assemblage" faims_attribute_name="Approximate percentage of dominant species as part of assemblage">
+          <label>{Approximate_percentage_of_dominant_species_as_part_of_assemblage}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Sketch_Plan" faims_attribute_name="Sketch Plan">
+          <label>{Sketch_Plan}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo" faims_attribute_name="Photo">
+          <label>{Photo}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Hearth_Ground_Oven">
+        <label>{Hearth_Ground_Oven}</label>
+        <input faims_attribute_type="measure" ref="Hearth_ID" faims_attribute_name="Hearth ID">
+          <label>{Hearth_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Shape" faims_attribute_name="Shape">
+          <label>{Shape}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Length" faims_attribute_name="Length">
+          <label>{Length}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Width" faims_attribute_name="Width">
+          <label>{Width}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Estimated_Depth" faims_attribute_name="Estimated Depth">
+          <label>{Estimated_Depth}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Components" faims_attribute_name="Components">
+          <label>{Components}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Descriptive_Notes" faims_attribute_name="Descriptive Notes">
+          <label>{Descriptive_Notes}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Sketch_Plan" faims_attribute_name="Sketch Plan">
+          <label>{Sketch_Plan}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Photo" faims_attribute_name="Photo">
+          <label>{Photo}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Potential_Archaeological_Deposit">
+        <label>{Potential_Archaeological_Deposit}</label>
+        <input faims_attribute_type="measure" ref="Arch_Dep_ID" faims_attribute_name="Arch Dep ID">
+          <label>{Arch_Dep_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Insitu" faims_attribute_name="Insitu">
+          <label>{Insitu}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Stratified" faims_attribute_name="Stratified">
+          <label>{Stratified}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Deposit_Type" faims_attribute_name="Deposit Type">
+          <label>{Deposit_Type}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Surface_Artefacts" faims_attribute_name="Surface Artefacts">
+          <label>{Surface_Artefacts}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Culturally_Modified_Tree">
+        <label>{Culturally_Modified_Tree}</label>
+        <input faims_attribute_type="measure" ref="CM_Tree_ID" faims_attribute_name="CM Tree ID">
+          <label>{CM_Tree_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Type" faims_attribute_name="Type">
+          <label>{Type}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Tree_Species" faims_attribute_name="Tree Species">
+          <label>{Tree_Species}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Number_of_Scars" faims_attribute_name="Number of Scars">
+          <label>{Number_of_Scars}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Number_of_Carved_Panels" faims_attribute_name="Number of Carved Panels">
+          <label>{Number_of_Carved_Panels}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Living_Status" faims_attribute_name="Living Status">
+          <label>{Living_Status}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Tree_Status" faims_attribute_name="Tree Status">
+          <label>{Tree_Status}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Damage" faims_attribute_name="Damage">
+          <label>{Damage}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Regrowth" faims_attribute_name="Regrowth">
+          <label>{Regrowth}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Is_a_tree_health_assessment_required" faims_attribute_name="Is a tree health assessment required">
+          <label>{Is_a_tree_health_assessment_required}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Length_of_Scar_mm" faims_attribute_name="Length of Scar mm">
+          <label>{Length_of_Scar__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Width_of_Scar_mm" faims_attribute_name="Width of Scar mm">
+          <label>{Width_of_Scar__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Depth_of_Scar_mm" faims_attribute_name="Depth of Scar mm">
+          <label>{Depth_of_Scar__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Height_Above_Ground_mm" faims_attribute_name="Height Above Ground mm">
+          <label>{Height_Above_Ground__mm_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Shape" faims_attribute_name="Shape">
+          <label>{Shape}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Orientation" faims_attribute_name="Orientation">
+          <label>{Orientation}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Carving_type" faims_attribute_name="Carving type">
+          <label>{Carving_type}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Axe_Marks" faims_attribute_name="Axe Marks">
+          <label>{Axe_Marks}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+    </group>
+    <group ref="Cultural_Management_Comments" faims_archent_type="Cultural Management Comments">
+      <label>{Cultural___Management_Comments}</label>
+      <group ref="C_M_Comments">
+        <label>{C___M_Comments}</label>
+        <input faims_attribute_type="measure" ref="Comment_ID" faims_attribute_name="Comment ID">
+          <label>{Comment_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Aboriginal_community_interpretation" faims_attribute_name="Aboriginal community interpretation">
+          <label>{Aboriginal_community_interpretation}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Aboriginal_community_management_recommendations" faims_attribute_name="Aboriginal community management recommendations">
+          <label>{Aboriginal_community_management_recommendations}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Other_management_recommendations" faims_attribute_name="Other management recommendations">
+          <label>{Other_management_recommendations}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+    </group>
+  </h:body>
+</h:html>

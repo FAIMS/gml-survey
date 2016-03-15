@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
+<!--@PREPROC:  ./preproc.sh-->
 <module>
+
+<!--SUBSTITUTE_THIS-->
 
 <User f="nodata">
   <User>
