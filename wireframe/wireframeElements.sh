@@ -325,9 +325,9 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Tree_Status "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Damage "" dropdown 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Damage "" checkbox 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Regrowth "" checkbox 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Regrowth "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Is_a_tree_health_assessment_required "" dropdown 1 false false true false false wireframeImages/
   

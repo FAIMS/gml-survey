@@ -2,8 +2,6 @@
 <!--@PREPROC:  ./preproc.sh-->
 <module>
 
-<!--SUBSTITUTE_THIS-->
-
 <User f="nodata">
   <User>
     <User f="user" l="Control"/>
@@ -28,7 +26,12 @@
 <Transect>
   <Transect>
     <gps><!--Start Survey Unit--></gps>
-    <Transect_ID f="id notnull autonum"/>
+    <Transect_ID f="id notnull autonum">
+      <desc>
+        The current autonumbering assumes single device in field. If multiple
+        devices are in use, uniqueness rules must be defined.
+      </desc>
+    </Transect_ID>
     <timestamp/>
     <Device_ID t="radio" f="notnull">
       <opts>
@@ -76,27 +79,76 @@
         <opt>Cliffed</opt>
       </opts>
     </Slope_Gradient>
-    <Aspect/>
-    <Vegetation_notes f="notnull"/>
-    <Ground_surface_visibility f="notnull"/>
-    <Ground_surface_exposure f="notnull"/>
-    <Ground_surface_notes/>
-    <Soil_observations/>
+    <Aspect>
+      <desc>
+        Note which direction the landform faces and multiple directions if that
+        is relevant.
+      </desc>
+    </Aspect>
+    <Vegetation_notes f="notnull">
+      <desc>
+        Note any recognisable species that are particularly dominant, known
+        classifications for the ecosystem or other pertinent information.
+      </desc>
+    </Vegetation_notes>
+    <Ground_surface_visibility f="notnull">
+      <desc>
+        Estimate the average percentage of ground surface that is visible for
+        the survey unit as per the definition in the Code of Practice (perhaps
+        include the definition from Appendix A of the Code).
+      </desc>
+    </Ground_surface_visibility>
+    <Ground_surface_exposure f="notnull">
+      <desc>
+        Estimate the average percentage of ground surface that is exposed/
+        quantity of exposures within the survey unit as per the definition in
+        the Code of Practice (perhaps include the definition from Appendix A of
+        the Code).
+      </desc>
+    </Ground_surface_exposure>
+    <Ground_surface_notes>
+      <desc>
+        Describe any factors or issues affecting ground cover - e.g. grass
+        height and thickness, leaf litter, flooding etc.
+      </desc>
+    </Ground_surface_notes>
+    <Soil_observations>
+      <desc>
+        Describe the nature of the soil within the survey unit from any
+        exposures that allow observations to be made. FAIMS to insert MOLS
+        description criteria in the information field.
+      </desc>
+    </Soil_observations>
     <Geomorphological_Activity f="notnull">
+      <desc>
+        Insert descriptions from Australian Soil and Land Survey Field Handbook.
+        No Observation means that the geomorphology could not be determined -
+        you must always try to make an observation.
+      </desc>
       <opts>
-        <opts>Eroded</opts>
-        <opts>Eroded or Aggraded</opts>
-        <opts>Aggraded</opts>
-        <opts>Heaved up or Elevated</opts>
-        <opts>Built Up</opts>
-        <opts>Excavated or Dug Out</opts>
-        <opts>Subsided or Depressed</opts>
-        <opts>No Observation Made</opts>
+        <opt>Eroded</opt>
+        <opt>Eroded or Aggraded</opt>
+        <opt>Aggraded</opt>
+        <opt>Heaved up or Elevated</opt>
+        <opt>Built Up</opt>
+        <opt>Excavated or Dug Out</opt>
+        <opt>Subsided or Depressed</opt>
+        <opt>No Observation Made</opt>
       </opts>
     </Geomorphological_Activity>
     <Disturbance/>
-    <Photo/>
-    <Photo_Caption/>
+    <Photo>
+      <desc>
+        Take a photo that best represents the survey unit. Note direction photo
+        is facing and what it includes in relation to the survey unit.
+      </desc>
+    </Photo>
+    <Photo_Caption>
+      <desc>
+        Note direction photo is facing and what it includes in relation to the
+        survey unit.
+      </desc>
+    </Photo_Caption>
     <Sketch/>
     <Other_Notes/>
     <gps><!--Finish Survey Unit--></gps>
@@ -109,10 +161,16 @@
 
 <Site>
   <Site>
-    <Site_ID_Number f="id notnull autonum"/>
+    <Site_ID_Number f="id notnull autonum">
+      <desc>
+        The current autonumbering assumes single device in field. If multiple
+        devices are in use, uniqueness rules must be defined.
+      </desc>
+    </Site_ID_Number>
     <Open_Closed_Site>Open/Closed Site</Open_Closed_Site>
     <Site_Aspect_Orientation>
       Site Aspect/Orientation
+      <desc>As per the descriptions in the AHIMS site recording form.</desc>
       <opts>
         <opt>N-S</opt>
         <opt>NE-SW</opt>
@@ -121,11 +179,20 @@
         <opt>N/A</opt>
       </opts>
     </Site_Aspect_Orientation>
-    <Distance_to_permanent_water_source/>
-    <Distance_to_temporary_water_source/>
-    <Name_of_nearest_permanent_water_source/>
-    <Name_of_nearest_temporary_water/>
+    <Distance_to_permanent_water_source>
+      <desc>Distance to permanent water source in metres.</desc>
+    </Distance_to_permanent_water_source>
+    <Distance_to_temporary_water_source>
+      <desc>Distance to temporary water source in metres.</desc>
+    </Distance_to_temporary_water_source>
+    <Name_of_nearest_permanent_water_source>
+      <desc>Name of nearest permanent water source.</desc>
+    </Name_of_nearest_permanent_water_source>
+    <Name_of_nearest_temporary_water>
+      <desc>Name of nearest temporary water.</desc>
+    </Name_of_nearest_temporary_water>
     <General_Condition_of_Site t="checkbox" f="notnull">
+      <desc>Select all those that apply.</desc>
       <opts>
         <opt>Weathered</opt>
         <opt>Vehicle damage</opt>
@@ -185,6 +252,7 @@
   <Feature>
     <Feature_ID f="id autonum"/>
     <Feature_Type t="checkbox">
+      <desc>Select all relevant site features.</desc>
       <opts>
         <opt>Intangible values</opt>
         <opt>Aboriginal Ceremony</opt>
@@ -306,6 +374,10 @@
     </Artefact_Colour>
     <Artefact_Status_Modification>
       Artefact Status/Modification
+      <desc>
+        Carved tends to refer to wooden features/ objects while cut refers to
+        historical artefacts - cut pipe, cut plastic etc.
+      </desc>
       <opts>
         <opt>Broken</opt>
         <opt>Modified</opt>
@@ -371,12 +443,39 @@
         <opt>Irregular</opt>
       </opts>
     </Cross_Section_for_Aboriginal_artefacts>
-    <Length_mm>Length (mm)</Length_mm>
-    <Width_mm>Width (mm)</Width_mm>
-    <Thickness_mm>Thickness (mm)</Thickness_mm>
-    <Other_Observations/>
-    <Photo/>
-    <Photo_Caption/>
+    <Length_mm>
+      Length (mm)
+      <desc>Maximum length of the object - longest side.</desc>
+    </Length_mm>
+    <Width_mm>
+      Width (mm)
+      <desc>
+        Maximum width of the object (taken 90 degrees to the length
+        measurement).
+      </desc>
+    </Width_mm>
+    <Thickness_mm>
+      Thickness (mm)
+      <desc>
+        Maximum thickness of the object measurement is taken at its thickest
+        part.
+      </desc>
+    </Thickness_mm>
+    <Other_Observations>
+      <desc>Note any other things like texture, e.g., waxy / lustre.</desc>
+    </Other_Observations>
+    <Photo>
+      <desc>
+        Take a photo that best represents the artefacts present. Use scale and
+        colour reference (IFRAO). Use north arrow where appropriate.
+      </desc>
+    </Photo>
+    <Photo_Caption>
+      <desc>
+        Note direction photo is facing and what it includes in relation to the
+        survey unit.
+      </desc>
+    </Photo_Caption>
   </Artefact>
   <Intangible_Values>
     <Intangible_Value_ID f="autonum"/>
@@ -406,6 +505,10 @@
     </Super-impositioning>
     <Motif_s t="checkbox">
       Motif/s
+      <desc>
+        Select all that apply - if other, add in freeform text beside the other
+        button.
+      </desc>
       <opts>
         <opt>Anthropomorphic</opt>
         <opt>Bird</opt>
@@ -444,6 +547,10 @@
       </opts>
     </Motif_s>
     <Application_Technique t="checkbox">
+      <desc>
+        Select all that apply - if other, add in freeform text beside the other
+        button.
+      </desc>
       <opts>
         <opt>Abraded</opt>
         <opt>Drawn</opt>
@@ -476,6 +583,10 @@
       </opts>
     </Main_Colour>
     <Art_Location t="checkbox">
+      <desc>
+        Select all that apply - if other, add in freeform text beside the other
+        button.
+      </desc>
       <opts>
         <opt>All over shelter or rock platform surface</opt>
         <opt>Ceiling</opt>
@@ -592,6 +703,7 @@
     <Width/>
     <Estimated_Depth/>
     <Components>
+      <desc>Tick all those that are relevant.</desc>
       <opts>
         <opt>Baked clay balls</opt>
         <opt>Charcoal</opt>
@@ -667,7 +779,8 @@
         <opt>Not in situ</opt>
       </opts>
     </Tree_Status>
-    <Damage>
+    <Damage t="checkbox">
+      <desc>Tick those that are relevant.</desc>
       <opts>
         <opt>Ringbarked</opt>
         <opt>Rot</opt>
@@ -675,12 +788,14 @@
         <opt>None</opt>
       </opts>
     </Damage>
-    <Regrowth t="checkbox">
+    <Regrowth>
+      <desc>Select only one.</desc>
       <opts>
         <!--BOOLEAN-->
       </opts>
     </Regrowth>
     <Is_a_tree_health_assessment_required>
+      <desc>Select only one.</desc>
       <opts>
         <!--BOOLEAN-->
       </opts>
@@ -732,9 +847,24 @@
   <C_M_Comments>
     C &amp; M Comments
     <Comment_ID f="id autonum"/>
-    <Aboriginal_community_interpretation/>
-    <Aboriginal_community_management_recommendations/>
-    <Other_management_recommendations/>
+    <Aboriginal_community_interpretation>
+      <desc>Note informants name and what they have said.</desc>
+    </Aboriginal_community_interpretation>
+    <Aboriginal_community_management_recommendations>
+      <desc>Note informants name and what they have said.</desc>
+    </Aboriginal_community_management_recommendations>
+    <Other_management_recommendations>
+      <desc>
+        Add any thoughts you have on appropriate/necessary management. The AHIMS
+        site recording form lists the following as options, but there may be
+        other measures that are more appropriate: boardwalk,
+        fencing/cage/barrier, closure to public, continued inspection, fire
+        hazard reduction, expert assessment, meeting with land manager,
+        revegetation, signage, soil erosion control, track closure/re-routing,
+        rubbish removal, insect/animal removal additional recording,
+        interpretation.
+      </desc>
+    </Other_management_recommendations>
   </C_M_Comments>
 </Cultural_Management_Comments>
 

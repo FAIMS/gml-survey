@@ -3,7 +3,10 @@
   <ArchaeologicalElement name="Transect">
     <description/>
     <property name="Transect ID" isIdentifier="true" type="measure">
-      <description/>
+      <description>
+        The current autonumbering assumes single device in field. If multiple
+        devices are in use, uniqueness rules must be defined.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
@@ -95,37 +98,63 @@
       </lookup>
     </property>
     <property name="Aspect" type="measure">
-      <description/>
+      <description>
+        Note which direction the landform faces and multiple directions if that
+        is relevant.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Vegetation notes" type="measure">
-      <description/>
+      <description>
+        Note any recognisable species that are particularly dominant, known
+        classifications for the ecosystem or other pertinent information.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Ground surface visibility" type="measure">
-      <description/>
+      <description>
+        Estimate the average percentage of ground surface that is visible for
+        the survey unit as per the definition in the Code of Practice (perhaps
+        include the definition from Appendix A of the Code).
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Ground surface exposure" type="measure">
-      <description/>
+      <description>
+        Estimate the average percentage of ground surface that is exposed/
+        quantity of exposures within the survey unit as per the definition in
+        the Code of Practice (perhaps include the definition from Appendix A of
+        the Code).
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Ground surface notes" type="measure">
-      <description/>
+      <description>
+        Describe any factors or issues affecting ground cover - e.g. grass
+        height and thickness, leaf litter, flooding etc.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Soil observations" type="measure">
-      <description/>
+      <description>
+        Describe the nature of the soil within the survey unit from any
+        exposures that allow observations to be made. FAIMS to insert MOLS
+        description criteria in the information field.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Geomorphological Activity" type="vocab">
-      <description/>
+      <description>
+        Insert descriptions from Australian Soil and Land Survey Field Handbook.
+        No Observation means that the geomorphology could not be determined -
+        you must always try to make an observation.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup/>
@@ -136,12 +165,18 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Photo" type="measure">
-      <description/>
+      <description>
+        Take a photo that best represents the survey unit. Note direction photo
+        is facing and what it includes in relation to the survey unit.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Photo Caption" type="measure">
-      <description/>
+      <description>
+        Note direction photo is facing and what it includes in relation to the
+        survey unit.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
@@ -180,7 +215,10 @@
   <ArchaeologicalElement name="Site">
     <description/>
     <property name="Site ID Number" isIdentifier="true" type="measure">
-      <description/>
+      <description>
+        The current autonumbering assumes single device in field. If multiple
+        devices are in use, uniqueness rules must be defined.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
@@ -190,7 +228,7 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Site Aspect Orientation" type="vocab">
-      <description/>
+      <description>As per the descriptions in the AHIMS site recording form.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -207,27 +245,27 @@
       </lookup>
     </property>
     <property name="Distance to permanent water source" type="measure">
-      <description/>
+      <description>Distance to permanent water source in metres.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Distance to temporary water source" type="measure">
-      <description/>
+      <description>Distance to temporary water source in metres.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Name of nearest permanent water source" type="measure">
-      <description/>
+      <description>Name of nearest permanent water source.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Name of nearest temporary water" type="measure">
-      <description/>
+      <description>Name of nearest temporary water.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="General Condition of Site" type="vocab">
-      <description/>
+      <description>Select all those that apply.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -359,7 +397,7 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Feature Type" type="vocab">
-      <description/>
+      <description>Select all relevant site features.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -3740,7 +3778,10 @@
       </lookup>
     </property>
     <property name="Artefact Status Modification" type="vocab">
-      <description/>
+      <description>
+        Carved tends to refer to wooden features/ objects while cut refers to
+        historical artefacts - cut pipe, cut plastic etc.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -3859,32 +3900,44 @@
       </lookup>
     </property>
     <property name="Length mm" type="measure">
-      <description/>
+      <description>Maximum length of the object - longest side.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Width mm" type="measure">
-      <description/>
+      <description>
+        Maximum width of the object (taken 90 degrees to the length
+        measurement).
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Thickness mm" type="measure">
-      <description/>
+      <description>
+        Maximum thickness of the object measurement is taken at its thickest
+        part.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Other Observations" type="measure">
-      <description/>
+      <description>Note any other things like texture, e.g., waxy / lustre.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Photo" type="measure">
-      <description/>
+      <description>
+        Take a photo that best represents the artefacts present. Use scale and
+        colour reference (IFRAO). Use north arrow where appropriate.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Photo Caption" type="measure">
-      <description/>
+      <description>
+        Note direction photo is facing and what it includes in relation to the
+        survey unit.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
@@ -3943,7 +3996,10 @@
       </lookup>
     </property>
     <property name="Motif s" type="vocab">
-      <description/>
+      <description>
+        Select all that apply - if other, add in freeform text beside the other
+        button.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -4018,7 +4074,10 @@
       </lookup>
     </property>
     <property name="Application Technique" type="vocab">
-      <description/>
+      <description>
+        Select all that apply - if other, add in freeform text beside the other
+        button.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -4079,7 +4138,10 @@
       </lookup>
     </property>
     <property name="Art Location" type="vocab">
-      <description/>
+      <description>
+        Select all that apply - if other, add in freeform text beside the other
+        button.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -4428,7 +4490,7 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Components" type="vocab">
-      <description/>
+      <description>Tick all those that are relevant.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -4601,7 +4663,7 @@
       </lookup>
     </property>
     <property name="Damage" type="vocab">
-      <description/>
+      <description>Tick those that are relevant.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -4616,7 +4678,7 @@
       </lookup>
     </property>
     <property name="Regrowth" type="vocab">
-      <description/>
+      <description>Select only one.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -4627,7 +4689,7 @@
       </lookup>
     </property>
     <property name="Is a tree health assessment required" type="vocab">
-      <description/>
+      <description>Select only one.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
@@ -4733,17 +4795,26 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Aboriginal community interpretation" type="measure">
-      <description/>
+      <description>Note informants name and what they have said.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Aboriginal community management recommendations" type="measure">
-      <description/>
+      <description>Note informants name and what they have said.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Other management recommendations" type="measure">
-      <description/>
+      <description>
+        Add any thoughts you have on appropriate/necessary management. The AHIMS
+        site recording form lists the following as options, but there may be
+        other measures that are more appropriate: boardwalk,
+        fencing/cage/barrier, closure to public, continued inspection, fire
+        hazard reduction, expert assessment, meeting with land manager,
+        revegetation, signage, soil erosion control, track closure/re-routing,
+        rubbish removal, insect/animal removal additional recording,
+        interpretation.
+      </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>

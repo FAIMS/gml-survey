@@ -1176,21 +1176,21 @@
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Damage" faims_attribute_name="Damage">
+        <select faims_attribute_type="vocab" ref="Damage" faims_attribute_name="Damage">
           <label>{Damage}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <select1 faims_attribute_type="vocab" ref="Regrowth" faims_attribute_name="Regrowth">
+          <label>{Regrowth}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select faims_attribute_type="vocab" ref="Regrowth" faims_attribute_name="Regrowth">
-          <label>{Regrowth}</label>
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select>
         <select1 faims_attribute_type="vocab" ref="Is_a_tree_health_assessment_required" faims_attribute_name="Is a tree health assessment required">
           <label>{Is_a_tree_health_assessment_required}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
