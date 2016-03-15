@@ -144,6 +144,51 @@ getDropdownItemValue() {
   return dropdownItemValue;
 }
 
+addOnEvent("Transect/Transect/Landform", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Landform\")");
+addOnEvent("Transect/Transect/Slope_Gradient", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Slope_Gradient\")");
+addOnEvent("Transect/Transect/Geomorphological_Activity", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Geomorphological_Activity\")");
+addOnEvent("Transect/Transect/opts", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/opts\")");
+addOnEvent("Site/Site/Site_Aspect_Orientation", "click", "dropdownItemValue = getFieldValue(\"Site/Site/Site_Aspect_Orientation\")");
+addOnEvent("Site/Closed_Site/Shelter_Cave_Formation", "click", "dropdownItemValue = getFieldValue(\"Site/Closed_Site/Shelter_Cave_Formation\")");
+addOnEvent("Site/Closed_Site/Rock_Surface_Condition", "click", "dropdownItemValue = getFieldValue(\"Site/Closed_Site/Rock_Surface_Condition\")");
+addOnEvent("Feature/Feature/Feature_Condition", "click", "dropdownItemValue = getFieldValue(\"Feature/Feature/Feature_Condition\")");
+addOnEvent("Objects_IV/Artefact/Insitu", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Insitu\")");
+addOnEvent("Objects_IV/Artefact/Stratified", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Stratified\")");
+addOnEvent("Objects_IV/Artefact/Artefact_Raw_Material", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Raw_Material\")");
+addOnEvent("Objects_IV/Artefact/Artefact_Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Type\")");
+addOnEvent("Objects_IV/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts\")");
+addOnEvent("Objects_IV/Artefact/Artefact_Colour", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Colour\")");
+addOnEvent("Objects_IV/Artefact/Artefact_Status_Modification", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Status_Modification\")");
+addOnEvent("Objects_IV/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts\")");
+addOnEvent("Objects_IV/Artefact/Platform_Type_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Platform_Type_for_Aboriginal_stone_artefacts\")");
+addOnEvent("Objects_IV/Artefact/Termination_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Termination_for_Aboriginal_stone_artefacts\")");
+addOnEvent("Objects_IV/Artefact/Cross_Section_for_Aboriginal_artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Cross_Section_for_Aboriginal_artefacts\")");
+addOnEvent("Objects_IV/Intangible_Values/Intangible_Value_Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Intangible_Values/Intangible_Value_Type\")");
+addOnEvent("Objects_IV/Art/Pigment_Engraved", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Pigment_Engraved\")");
+addOnEvent("Objects_IV/Art/Super-impositioning", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Super-impositioning\")");
+addOnEvent("Objects_IV/Art/Form", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Form\")");
+addOnEvent("Objects_IV/Art/Main_Colour", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Main_Colour\")");
+addOnEvent("Objects_IV/Art/Art_Condition", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Art_Condition\")");
+addOnEvent("Objects_IV/Grinding_Grove/Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Grinding_Grove/Type\")");
+addOnEvent("Objects_IV/Grinding_Grove/Profile_Shape", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Grinding_Grove/Profile_Shape\")");
+addOnEvent("Objects_IV/Shell/Distribution", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Shell/Distribution\")");
+addOnEvent("Objects_IV/Shell/Dominant_Species", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Shell/Dominant_Species\")");
+addOnEvent("Objects_IV/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage\")");
+addOnEvent("Objects_IV/Hearth_Ground_Oven/Components", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Hearth_Ground_Oven/Components\")");
+addOnEvent("Objects_IV/Potential_Archaeological_Deposit/Insitu", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Potential_Archaeological_Deposit/Insitu\")");
+addOnEvent("Objects_IV/Potential_Archaeological_Deposit/Stratified", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Potential_Archaeological_Deposit/Stratified\")");
+addOnEvent("Objects_IV/Potential_Archaeological_Deposit/Deposit_Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Potential_Archaeological_Deposit/Deposit_Type\")");
+addOnEvent("Objects_IV/Potential_Archaeological_Deposit/Surface_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Potential_Archaeological_Deposit/Surface_Artefacts\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Type\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Tree_Species", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Tree_Species\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Living_Status", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Living_Status\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Tree_Status", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Tree_Status\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Damage", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Damage\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Is_a_tree_health_assessment_required", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Is_a_tree_health_assessment_required\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Shape", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Shape\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Orientation", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Orientation\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Carving_type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Carving_type\")");
+addOnEvent("Objects_IV/Culturally_Modified_Tree/Axe_Marks", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Axe_Marks\")");
 
 /******************************************************************************/
 /*                                 ACTION BAR                                 */
@@ -458,7 +503,60 @@ makeVocab(String type, String path, String attrib, List vocabExclusions, String 
       }
     });
 }
+makeVocab("RadioGroup", "Transect/Transect/Device_ID", "Device ID");
+makeVocab("DropDown", "Transect/Transect/Landform", "Landform");
+makeVocab("DropDown", "Transect/Transect/Slope_Gradient", "Slope Gradient");
+makeVocab("DropDown", "Transect/Transect/Geomorphological_Activity", "Geomorphological Activity");
+makeVocab("DropDown", "Transect/Transect/opts", "opts");
+makeVocab("DropDown", "Site/Site/Site_Aspect_Orientation", "Site Aspect Orientation");
+makeVocab("CheckBoxGroup", "Site/Site/General_Condition_of_Site", "General Condition of Site");
 makeVocab("RadioGroup", "Site/Open_Site/Subsurfance_potential", "Subsurfance potential");
+makeVocab("DropDown", "Site/Closed_Site/Shelter_Cave_Formation", "Shelter Cave Formation");
+makeVocab("DropDown", "Site/Closed_Site/Rock_Surface_Condition", "Rock Surface Condition");
+makeVocab("CheckBoxGroup", "Feature/Feature/Feature_Type", "Feature Type");
+makeVocab("DropDown", "Feature/Feature/Feature_Condition", "Feature Condition");
+makeVocab("DropDown", "Objects_IV/Artefact/Insitu", "Insitu");
+makeVocab("DropDown", "Objects_IV/Artefact/Stratified", "Stratified");
+makeVocab("DropDown", "Objects_IV/Artefact/Artefact_Raw_Material", "Artefact Raw Material");
+makeVocab("DropDown", "Objects_IV/Artefact/Artefact_Type", "Artefact Type");
+makeVocab("HierarchicalDropDown", "Objects_IV/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "Artefact Description for Aboriginal Stone Artefacts");
+makeVocab("HierarchicalDropDown", "Objects_IV/Artefact/Artefact_Colour", "Artefact Colour");
+makeVocab("DropDown", "Objects_IV/Artefact/Artefact_Status_Modification", "Artefact Status Modification");
+makeVocab("DropDown", "Objects_IV/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts", "Platform Surface for Aboriginal stone artefacts");
+makeVocab("DropDown", "Objects_IV/Artefact/Platform_Type_for_Aboriginal_stone_artefacts", "Platform Type for Aboriginal stone artefacts");
+makeVocab("DropDown", "Objects_IV/Artefact/Termination_for_Aboriginal_stone_artefacts", "Termination for Aboriginal stone artefacts");
+makeVocab("DropDown", "Objects_IV/Artefact/Cross_Section_for_Aboriginal_artefacts", "Cross Section for Aboriginal artefacts");
+makeVocab("DropDown", "Objects_IV/Intangible_Values/Intangible_Value_Type", "Intangible Value Type");
+makeVocab("DropDown", "Objects_IV/Art/Pigment_Engraved", "Pigment Engraved");
+makeVocab("DropDown", "Objects_IV/Art/Super-impositioning", "Super-impositioning");
+makeVocab("CheckBoxGroup", "Objects_IV/Art/Motif_s", "Motif s");
+makeVocab("CheckBoxGroup", "Objects_IV/Art/Application_Technique", "Application Technique");
+makeVocab("DropDown", "Objects_IV/Art/Form", "Form");
+makeVocab("DropDown", "Objects_IV/Art/Main_Colour", "Main Colour");
+makeVocab("CheckBoxGroup", "Objects_IV/Art/Art_Location", "Art Location");
+makeVocab("DropDown", "Objects_IV/Art/Art_Condition", "Art Condition");
+makeVocab("DropDown", "Objects_IV/Grinding_Grove/Type", "Type");
+makeVocab("DropDown", "Objects_IV/Grinding_Grove/Profile_Shape", "Profile Shape");
+makeVocab("DropDown", "Objects_IV/Shell/Distribution", "Distribution");
+makeVocab("CheckBoxGroup", "Objects_IV/Shell/Species_present", "Species present");
+makeVocab("DropDown", "Objects_IV/Shell/Dominant_Species", "Dominant Species");
+makeVocab("DropDown", "Objects_IV/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "Approximate percentage of dominant species as part of assemblage");
+makeVocab("DropDown", "Objects_IV/Hearth_Ground_Oven/Components", "Components");
+makeVocab("DropDown", "Objects_IV/Potential_Archaeological_Deposit/Insitu", "Insitu");
+makeVocab("DropDown", "Objects_IV/Potential_Archaeological_Deposit/Stratified", "Stratified");
+makeVocab("DropDown", "Objects_IV/Potential_Archaeological_Deposit/Deposit_Type", "Deposit Type");
+makeVocab("DropDown", "Objects_IV/Potential_Archaeological_Deposit/Surface_Artefacts", "Surface Artefacts");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Type", "Type");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Tree_Species", "Tree Species");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Living_Status", "Living Status");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Tree_Status", "Tree Status");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Damage", "Damage");
+makeVocab("CheckBoxGroup", "Objects_IV/Culturally_Modified_Tree/Regrowth", "Regrowth");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Is_a_tree_health_assessment_required", "Is a tree health assessment required");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Shape", "Shape");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Orientation", "Orientation");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Carving_type", "Carving type");
+makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Axe_Marks", "Axe Marks");
 
 
 /******************************************************************************/

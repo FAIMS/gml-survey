@@ -55,7 +55,7 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Transect_Transect_Timestamp "" input 1 false false false false true wireframeImages/
   
-  ./makeElement.sh Transect_Transect_Device_ID "" input 1 false false true true false wireframeImages/
+  ./makeElement.sh Transect_Transect_Device_ID "" radio 1 false false true true false wireframeImages/
   
   ./makeElement.sh Transect_Transect_Logger_ID "" input 1 false false true true false wireframeImages/
   
@@ -65,9 +65,9 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Transect_Transect_Participants "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Transect_Transect_Landform "" input 1 false false true true false wireframeImages/
+  ./makeElement.sh Transect_Transect_Landform "" dropdown 1 false false true true false wireframeImages/
   
-  ./makeElement.sh Transect_Transect_Slope_Gradient "" input 1 false false true true false wireframeImages/
+  ./makeElement.sh Transect_Transect_Slope_Gradient "" dropdown 1 false false true true false wireframeImages/
   
   ./makeElement.sh Transect_Transect_Aspect "" input 1 false false true false false wireframeImages/
   
@@ -81,7 +81,7 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Transect_Transect_Soil_observations "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Transect_Transect_Geomorphological_Activity "" input 1 false false true true false wireframeImages/
+  ./makeElement.sh Transect_Transect_Geomorphological_Activity "" dropdown 1 false false true true false wireframeImages/
   
   ./makeElement.sh Transect_Transect_Disturbance "" input 1 false false true false false wireframeImages/
   
@@ -111,7 +111,7 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Site_Site_Open_Closed_Site "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Site_Site_Site_Aspect_Orientation "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Site_Site_Site_Aspect_Orientation "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Site_Site_Distance_to_permanent_water_source "" input 1 false false true false false wireframeImages/
   
@@ -121,7 +121,7 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Site_Site_Name_of_nearest_temporary_water "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Site_Site_General_Condition_of_Site "" input 1 false false true true false wireframeImages/
+  ./makeElement.sh Site_Site_General_Condition_of_Site "" checkbox 1 false false true true false wireframeImages/
   
   ./makeElement.sh Site_Open_Site_Total_length_of_visible_site "" input 1 false false true true false wireframeImages/
   
@@ -137,9 +137,9 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Site_Open_Site_Average_width_of_potential_site_area "" input 1 false false true true false wireframeImages/
   
-  ./makeElement.sh Site_Closed_Site_Shelter_Cave_Formation "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Site_Closed_Site_Shelter_Cave_Formation "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Site_Closed_Site_Rock_Surface_Condition "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Site_Closed_Site_Rock_Surface_Condition "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Site_Closed_Site_Internal_Length "" input 1 false false true true false wireframeImages/
   
@@ -151,37 +151,37 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Feature_Feature_Feature_ID "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Feature_Feature_Feature_Type "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Feature_Feature_Feature_Type "" checkbox 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Feature_Feature_Feature_Condition "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Feature_Feature_Feature_Condition "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Insitu "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Insitu "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Stratified "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Stratified "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Artefact_Total_Number_of_Artefacts "" input 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Artefact_Instance_No "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Artefact_Raw_Material "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Artefact_Raw_Material "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Artefact_Type "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Artefact_Type "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Artefact_Description_for_Aboriginal_Stone_Artefacts "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Artefact_Description_for_Aboriginal_Stone_Artefacts "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Artefact_Artefact_Description_for_Historical_Artefacts "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Artefact_Colour "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Artefact_Colour "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Artefact_Status_Modification "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Artefact_Status_Modification "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Platform_Surface_for_Aboriginal_stone_artefacts "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Platform_Surface_for_Aboriginal_stone_artefacts "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Platform_Type_for_Aboriginal_stone_artefacts "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Platform_Type_for_Aboriginal_stone_artefacts "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Termination_for_Aboriginal_stone_artefacts "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Termination_for_Aboriginal_stone_artefacts "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Artefact_Cross_Section_for_Aboriginal_artefacts "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Artefact_Cross_Section_for_Aboriginal_artefacts "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Artefact_Length_mm "" input 1 false false true false false wireframeImages/
   
@@ -197,29 +197,29 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Objects_IV_Intangible_Values_Intangible_Value_ID "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Intangible_Values_Intangible_Value_Type "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Intangible_Values_Intangible_Value_Type "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Intangible_Values_Description "Description" input 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Art_Art_ID "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Art_Pigment_Engraved "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Art_Pigment_Engraved "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Art_Super-impositioning "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Art_Super-impositioning "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Art_Motif_s "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Art_Motif_s "" checkbox 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Art_Application_Technique "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Art_Application_Technique "" checkbox 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Art_Form "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Art_Form "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Art_Main_Colour "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Art_Main_Colour "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Art_Art_Location "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Art_Art_Location "" checkbox 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Art_Associated_Story_Significance_Interpretation "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Art_Art_Condition "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Art_Art_Condition "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Art_Sketch_plan "" input 1 false false true false false wireframeImages/
   
@@ -239,9 +239,9 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Objects_IV_Grinding_Grove_Grinding_Grove_ID "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Grinding_Grove_Type "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Grinding_Grove_Type "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Grinding_Grove_Profile_Shape "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Grinding_Grove_Profile_Shape "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Grinding_Grove_Seed_species_present "" input 1 false false true false false wireframeImages/
   
@@ -269,15 +269,15 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Objects_IV_Shell_Shell_ID "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Shell_Distribution "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Shell_Distribution "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Shell_Distance_to_high_water_mark_metres "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Shell_Species_present "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Shell_Species_present "" checkbox 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Shell_Dominant_Species "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Shell_Dominant_Species "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Shell_Approximate_percentage_of_dominant_species_as_part_of_assemblage "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Shell_Approximate_percentage_of_dominant_species_as_part_of_assemblage "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Shell_Sketch_Plan "" input 1 false false true false false wireframeImages/
   
@@ -293,7 +293,7 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Objects_IV_Hearth_Ground_Oven_Estimated_Depth "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Hearth_Ground_Oven_Components "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Hearth_Ground_Oven_Components "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Hearth_Ground_Oven_Descriptive_Notes "" input 1 false false true false false wireframeImages/
   
@@ -303,33 +303,33 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Arch_Dep_ID "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Insitu "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Insitu "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Stratified "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Stratified "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Deposit_Type "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Deposit_Type "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Surface_Artefacts "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Potential_Archaeological_Deposit_Surface_Artefacts "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Culturally_Modified_Tree_CM_Tree_ID "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Type "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Type "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Tree_Species "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Tree_Species "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Number_of_Scars "" input 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Number_of_Carved_Panels "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Living_Status "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Living_Status "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Tree_Status "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Tree_Status "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Damage "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Damage "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Regrowth "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Regrowth "" checkbox 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Is_a_tree_health_assessment_required "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Is_a_tree_health_assessment_required "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Length_of_Scar_mm "" input 1 false false true false false wireframeImages/
   
@@ -339,13 +339,13 @@ mkdir -p wireframeImages
   
   ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Height_Above_Ground_mm "" input 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Shape "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Shape "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Orientation "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Orientation "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Carving_type "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Carving_type "" dropdown 1 false false true false false wireframeImages/
   
-  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Axe_Marks "" input 1 false false true false false wireframeImages/
+  ./makeElement.sh Objects_IV_Culturally_Modified_Tree_Axe_Marks "" dropdown 1 false false true false false wireframeImages/
   
   ./makeElement.sh Cultural_Management_Comments_C_M_Comments_Comment_ID "" input 1 false false true false false wireframeImages/
   

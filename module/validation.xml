@@ -8,7 +8,7 @@
     </property>
     <property name="Device ID">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param value="vocab" type="field"/>
       </validator>
     </property>
     <property name="Logger ID">
@@ -60,7 +60,7 @@
     </property>
     <property name="General Condition of Site">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param value="vocab" type="field"/>
       </validator>
     </property>
     <property name="Total length of visible site">

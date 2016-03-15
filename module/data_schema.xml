@@ -7,10 +7,20 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Device ID" type="measure">
+    <property name="Device ID" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{A}
+<description/></term>
+        <term>{B}
+<description/></term>
+        <term>{C}
+<description/></term>
+        <term>{D}
+<description/></term>
+      </lookup>
     </property>
     <property name="Logger ID" type="measure">
       <description/>
@@ -35,18 +45,54 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Landform" type="measure">
+    <property name="Landform" type="vocab">
       <description>
         Include definitions of these terms from p.12 of Australian Soil and Land
         Survey Handbook
       </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Crest___Hill_top}
+<description/></term>
+        <term>{Upper_Slope}
+<description/></term>
+        <term>{Mid_slope}
+<description/></term>
+        <term>{Lower_Slope}
+<description/></term>
+        <term>{Simple_Slope}
+<description/></term>
+        <term>{Flat}
+<description/></term>
+        <term>{Open_Depression__vale_}
+<description/></term>
+        <term>{Closed_Depression}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Slope Gradient" type="measure">
+    <property name="Slope Gradient" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Level}
+<description/></term>
+        <term>{Very_gently_inclined}
+<description/></term>
+        <term>{Gently_inclined}
+<description/></term>
+        <term>{Moderately_inclined}
+<description/></term>
+        <term>{Steep}
+<description/></term>
+        <term>{Very_steep}
+<description/></term>
+        <term>{Precipitous}
+<description/></term>
+        <term>{Cliffed}
+<description/></term>
+      </lookup>
     </property>
     <property name="Aspect" type="measure">
       <description/>
@@ -78,10 +124,11 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Geomorphological Activity" type="measure">
+    <property name="Geomorphological Activity" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup/>
     </property>
     <property name="Disturbance" type="measure">
       <description/>
@@ -142,10 +189,22 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Site Aspect Orientation" type="measure">
+    <property name="Site Aspect Orientation" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{N_S}
+<description/></term>
+        <term>{NE_SW}
+<description/></term>
+        <term>{E_W}
+<description/></term>
+        <term>{SE_NW}
+<description/></term>
+        <term>{N_A}
+<description/></term>
+      </lookup>
     </property>
     <property name="Distance to permanent water source" type="measure">
       <description/>
@@ -167,10 +226,36 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="General Condition of Site" type="measure">
+    <property name="General Condition of Site" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Weathered}
+<description/></term>
+        <term>{Vehicle_damage}
+<description/></term>
+        <term>{Surface_water_Wash}
+<description/></term>
+        <term>{Fire_damage}
+<description/></term>
+        <term>{Erosion}
+<description/></term>
+        <term>{Stock_damage}
+<description/></term>
+        <term>{Exposed_archaeological___Other_material}
+<description/></term>
+        <term>{Fire_damage}
+<description/></term>
+        <term>{Animal_damage}
+<description/></term>
+        <term>{Graffitti___Vandalism}
+<description/></term>
+        <term>{Mineralisation}
+<description/></term>
+        <term>{Unstable_structure___Landform}
+<description/></term>
+      </lookup>
     </property>
     <property name="Total length of visible site" type="measure">
       <description/>
@@ -213,15 +298,37 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Shelter Cave Formation" type="measure">
+    <property name="Shelter Cave Formation" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Boulder}
+<description/></term>
+        <term>{Wind_erosion}
+<description/></term>
+        <term>{Water_erosion}
+<description/></term>
+        <term>{Rock_collapse}
+<description/></term>
+        <term>{Other}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Rock Surface Condition" type="measure">
+    <property name="Rock Surface Condition" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Silica_gloss}
+<description/></term>
+        <term>{Tessellated}
+<description/></term>
+        <term>{Weathered}
+<description/></term>
+        <term>{Other}
+<description/></term>
+      </lookup>
     </property>
     <property name="Internal Length" type="measure">
       <description/>
@@ -251,28 +358,104 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Feature Type" type="measure">
+    <property name="Feature Type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Intangible_values}
+<description/></term>
+        <term>{Aboriginal_Ceremony}
+<description/></term>
+        <term>{Aboriginal_Resource}
+<description/></term>
+        <term>{Dreaming}
+<description/></term>
+        <term>{Gathering}
+<description/></term>
+        <term>{Art}
+<description/></term>
+        <term>{Artefact}
+<description/></term>
+        <term>{Burial}
+<description/></term>
+        <term>{Conflict}
+<description/></term>
+        <term>{Mound}
+<description/></term>
+        <term>{Fish_Trap}
+<description/></term>
+        <term>{Grinding_Groove}
+<description/></term>
+        <term>{Habitation_Structure}
+<description/></term>
+        <term>{Hearth___Ground_Oven}
+<description/></term>
+        <term>{Non_Human_Bone___Organic_Material}
+<description/></term>
+        <term>{Ochre_quarry}
+<description/></term>
+        <term>{Potential_Archaeological_Deposit}
+<description/></term>
+        <term>{Stone_Quarry}
+<description/></term>
+        <term>{Shell}
+<description/></term>
+        <term>{Stone_Arrangement}
+<description/></term>
+        <term>{Culturally_Modified_Tree}
+<description/></term>
+        <term>{Water_Hole}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Feature Condition" type="measure">
+    <property name="Feature Condition" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Excellent}
+<description/></term>
+        <term>{Good}
+<description/></term>
+        <term>{Fair}
+<description/></term>
+        <term>{Poor}
+<description/></term>
+      </lookup>
     </property>
   </ArchaeologicalElement>
   <ArchaeologicalElement name="Objects IV">
     <description/>
-    <property name="Insitu" type="measure">
+    <property name="Insitu" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+        <term>{Potentially}
+<description/></term>
+        <term>{Unknown}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Stratified" type="measure">
+    <property name="Stratified" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+        <term>{Potentially}
+<description/></term>
+        <term>{Unknown}
+<description/></term>
+      </lookup>
     </property>
     <property name="Total Number of Artefacts" type="measure">
       <description/>
@@ -284,55 +467,3396 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Artefact Raw Material" type="measure">
+    <property name="Artefact Raw Material" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Basalt}
+<description/></term>
+        <term>{Chert}
+<description/></term>
+        <term>{Fine_grained_siliceous}
+<description/></term>
+        <term>{Granite}
+<description/></term>
+        <term>{Quartz}
+<description/></term>
+        <term>{Quartzite}
+<description/></term>
+        <term>{Sandstone}
+<description/></term>
+        <term>{Silcrete}
+<description/></term>
+        <term>{Glass}
+<description/></term>
+        <term>{Mudstone}
+<description/></term>
+        <term>{Silcrete}
+<description/></term>
+        <term>{Petrified_wood}
+<description/></term>
+        <term>{Chalcedony}
+<description/></term>
+        <term>{Chalcedonic_chert}
+<description/></term>
+        <term>{Ceramic}
+<description/></term>
+        <term>{Metal}
+<description/></term>
+        <term>{Shell}
+<description/></term>
+        <term>{Bone}
+<description/></term>
+        <term>{Wood}
+<description/></term>
+        <term>{Resin}
+<description/></term>
+        <term>{Plastic}
+<description/></term>
+        <term>{Building_material}
+<description/></term>
+        <term>{Synthetic}
+<description/></term>
+        <term>{Textile}
+<description/></term>
+        <term>{Other_animal_Material}
+<description/></term>
+        <term>{Other_plant_material}
+<description/></term>
+        <term>{Other_unknown_material}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Artefact Type" type="measure">
+    <property name="Artefact Type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Aboriginal}
+<description/></term>
+        <term>{Historical}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Artefact Description for Aboriginal Stone Artefacts" type="measure">
+    <property name="Artefact Description for Aboriginal Stone Artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Anvil}
+<description/></term>
+        <term>{Axe}
+<description/></term>
+        <term>{Core}
+<description/></term>
+        <term>{Flake}
+<description/></term>
+        <term>{Hammerstone}
+<description/></term>
+        <term>{Manuport}
+<description/></term>
+        <term>{Groundstone_Implement}
+<description/><term>{Milling_slab}
+<description/></term><term>{Mortar}
+<description/></term><term>{Muller}
+<description/></term></term>
+        <term>{Retouched_Flake}
+<description/></term>
+        <term>{Core_Fragment}
+<description/></term>
+        <term>{Flake_Fragment}
+<description/></term>
+        <term>{Retouched_Flake_Fragment}
+<description/></term>
+        <term>{Other___Unknown}
+<description/></term>
+      </lookup>
     </property>
     <property name="Artefact Description for Historical Artefacts" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Artefact Colour" type="measure">
+    <property name="Artefact Colour" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{R}
+<description/><term>{2_5R}
+<description/><term>{1_}
+<description/><term>{2_5R_1_2}
+<description/></term><term>{2_5R_1_4}
+<description/></term><term>{2_5R_1_6}
+<description/></term><term>{2_5R_1_8}
+<description/></term><term>{2_5R_1_10}
+<description/></term></term><term>{2_}
+<description/><term>{2_5R_2_2}
+<description/></term><term>{2_5R_2_4}
+<description/></term><term>{2_5R_2_6}
+<description/></term><term>{2_5R_2_8}
+<description/></term><term>{2_5R_2_10}
+<description/></term><term>{2_5R_2_12}
+<description/></term><term>{2_5R_2_14}
+<description/></term></term><term>{3_}
+<description/><term>{2_5R_3_2}
+<description/></term><term>{2_5R_3_4}
+<description/></term><term>{2_5R_3_6}
+<description/></term><term>{2_5R_3_8}
+<description/></term><term>{2_5R_3_10}
+<description/></term><term>{2_5R_3_12}
+<description/></term><term>{2_5R_3_14}
+<description/></term><term>{2_5R_3_16}
+<description/></term></term><term>{4_}
+<description/><term>{2_5R_4_2}
+<description/></term><term>{2_5R_4_4}
+<description/></term><term>{2_5R_4_6}
+<description/></term><term>{2_5R_4_8}
+<description/></term><term>{2_5R_4_10}
+<description/></term><term>{2_5R_4_12}
+<description/></term><term>{2_5R_4_14}
+<description/></term><term>{2_5R_4_16}
+<description/></term><term>{2_5R_4_18}
+<description/></term></term><term>{5_}
+<description/><term>{2_5R_5_2}
+<description/></term><term>{2_5R_5_4}
+<description/></term><term>{2_5R_5_6}
+<description/></term><term>{2_5R_5_8}
+<description/></term><term>{2_5R_5_10}
+<description/></term><term>{2_5R_5_12}
+<description/></term><term>{2_5R_5_14}
+<description/></term><term>{2_5R_5_16}
+<description/></term><term>{2_5R_5_18}
+<description/></term><term>{2_5R_5_20}
+<description/></term></term><term>{6_}
+<description/><term>{2_5R_6_2}
+<description/></term><term>{2_5R_6_4}
+<description/></term><term>{2_5R_6_6}
+<description/></term><term>{2_5R_6_8}
+<description/></term><term>{2_5R_6_10}
+<description/></term><term>{2_5R_6_12}
+<description/></term><term>{2_5R_6_14}
+<description/></term><term>{2_5R_6_16}
+<description/></term><term>{2_5R_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{2_5R_7_2}
+<description/></term><term>{2_5R_7_4}
+<description/></term><term>{2_5R_7_6}
+<description/></term><term>{2_5R_7_8}
+<description/></term><term>{2_5R_7_10}
+<description/></term><term>{2_5R_7_12}
+<description/></term><term>{2_5R_7_14}
+<description/></term><term>{2_5R_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{2_5R_8_2}
+<description/></term><term>{2_5R_8_4}
+<description/></term><term>{2_5R_8_6}
+<description/></term><term>{2_5R_8_8}
+<description/></term><term>{2_5R_8_10}
+<description/></term></term><term>{9_}
+<description/><term>{2_5R_9_2}
+<description/></term><term>{2_5R_9_4}
+<description/></term><term>{2_5R_9_6}
+<description/></term></term></term><term>{5R}
+<description/><term>{1_}
+<description/><term>{5R_1_2}
+<description/></term><term>{5R_1_4}
+<description/></term><term>{5R_1_6}
+<description/></term><term>{5R_1_8}
+<description/></term><term>{5R_1_10}
+<description/></term></term><term>{2_}
+<description/><term>{5R_2_2}
+<description/></term><term>{5R_2_4}
+<description/></term><term>{5R_2_6}
+<description/></term><term>{5R_2_8}
+<description/></term><term>{5R_2_10}
+<description/></term><term>{5R_2_12}
+<description/></term><term>{5R_2_14}
+<description/></term></term><term>{3_}
+<description/><term>{5R_3_2}
+<description/></term><term>{5R_3_4}
+<description/></term><term>{5R_3_6}
+<description/></term><term>{5R_3_8}
+<description/></term><term>{5R_3_10}
+<description/></term><term>{5R_3_12}
+<description/></term><term>{5R_3_14}
+<description/></term><term>{5R_3_16}
+<description/></term></term><term>{4_}
+<description/><term>{5R_4_2}
+<description/></term><term>{5R_4_4}
+<description/></term><term>{5R_4_6}
+<description/></term><term>{5R_4_8}
+<description/></term><term>{5R_4_10}
+<description/></term><term>{5R_4_12}
+<description/></term><term>{5R_4_14}
+<description/></term><term>{5R_4_16}
+<description/></term><term>{5R_4_18}
+<description/></term></term><term>{5_}
+<description/><term>{5R_5_2}
+<description/></term><term>{5R_5_4}
+<description/></term><term>{5R_5_6}
+<description/></term><term>{5R_5_8}
+<description/></term><term>{5R_5_10}
+<description/></term><term>{5R_5_12}
+<description/></term><term>{5R_5_14}
+<description/></term><term>{5R_5_16}
+<description/></term><term>{5R_5_18}
+<description/></term><term>{5R_5_20}
+<description/></term></term><term>{6_}
+<description/><term>{5R_6_2}
+<description/></term><term>{5R_6_4}
+<description/></term><term>{5R_6_6}
+<description/></term><term>{5R_6_8}
+<description/></term><term>{5R_6_10}
+<description/></term><term>{5R_6_12}
+<description/></term><term>{5R_6_14}
+<description/></term><term>{5R_6_16}
+<description/></term><term>{5R_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{5R_7_2}
+<description/></term><term>{5R_7_4}
+<description/></term><term>{5R_7_6}
+<description/></term><term>{5R_7_8}
+<description/></term><term>{5R_7_10}
+<description/></term><term>{5R_7_12}
+<description/></term><term>{5R_7_14}
+<description/></term></term><term>{8_}
+<description/><term>{5R_8_2}
+<description/></term><term>{5R_8_4}
+<description/></term><term>{5R_8_6}
+<description/></term><term>{5R_8_8}
+<description/></term><term>{5R_8_10}
+<description/></term></term><term>{9_}
+<description/><term>{5R_9_2}
+<description/></term><term>{5R_9_4}
+<description/></term><term>{5R_9_6}
+<description/></term></term></term><term>{7_5R}
+<description/><term>{1_}
+<description/><term>{7_5R_1_2}
+<description/></term><term>{7_5R_1_4}
+<description/></term><term>{7_5R_1_6}
+<description/></term><term>{7_5R_1_8}
+<description/></term><term>{7_5R_1_10}
+<description/></term></term><term>{2_}
+<description/><term>{7_5R_2_2}
+<description/></term><term>{7_5R_2_4}
+<description/></term><term>{7_5R_2_6}
+<description/></term><term>{7_5R_2_8}
+<description/></term><term>{7_5R_2_10}
+<description/></term><term>{7_5R_2_12}
+<description/></term><term>{7_5R_2_14}
+<description/></term></term><term>{3_}
+<description/><term>{7_5R_3_2}
+<description/></term><term>{7_5R_3_4}
+<description/></term><term>{7_5R_3_6}
+<description/></term><term>{7_5R_3_8}
+<description/></term><term>{7_5R_3_10}
+<description/></term><term>{7_5R_3_12}
+<description/></term><term>{7_5R_3_14}
+<description/></term><term>{7_5R_3_16}
+<description/></term></term><term>{4_}
+<description/><term>{7_5R_4_2}
+<description/></term><term>{7_5R_4_4}
+<description/></term><term>{7_5R_4_6}
+<description/></term><term>{7_5R_4_8}
+<description/></term><term>{7_5R_4_10}
+<description/></term><term>{7_5R_4_12}
+<description/></term><term>{7_5R_4_14}
+<description/></term><term>{7_5R_4_16}
+<description/></term><term>{7_5R_4_18}
+<description/></term><term>{7_5R_4_20}
+<description/></term></term><term>{5_}
+<description/><term>{7_5R_5_2}
+<description/></term><term>{7_5R_5_4}
+<description/></term><term>{7_5R_5_6}
+<description/></term><term>{7_5R_5_8}
+<description/></term><term>{7_5R_5_10}
+<description/></term><term>{7_5R_5_12}
+<description/></term><term>{7_5R_5_14}
+<description/></term><term>{7_5R_5_16}
+<description/></term><term>{7_5R_5_18}
+<description/></term><term>{7_5R_5_20}
+<description/></term></term><term>{6_}
+<description/><term>{7_5R_6_2}
+<description/></term><term>{7_5R_6_4}
+<description/></term><term>{7_5R_6_6}
+<description/></term><term>{7_5R_6_8}
+<description/></term><term>{7_5R_6_10}
+<description/></term><term>{7_5R_6_12}
+<description/></term><term>{7_5R_6_14}
+<description/></term><term>{7_5R_6_16}
+<description/></term><term>{7_5R_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{7_5R_7_2}
+<description/></term><term>{7_5R_7_4}
+<description/></term><term>{7_5R_7_6}
+<description/></term><term>{7_5R_7_8}
+<description/></term><term>{7_5R_7_10}
+<description/></term><term>{7_5R_7_12}
+<description/></term><term>{7_5R_7_14}
+<description/></term><term>{7_5R_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{7_5R_8_2}
+<description/></term><term>{7_5R_8_4}
+<description/></term><term>{7_5R_8_6}
+<description/></term><term>{7_5R_8_8}
+<description/></term><term>{7_5R_8_10}
+<description/></term></term><term>{9_}
+<description/><term>{7_5R_9_2}
+<description/></term><term>{7_5R_9_4}
+<description/></term><term>{7_5R_9_6}
+<description/></term></term></term><term>{10R}
+<description/><term>{1_}
+<description/><term>{10R_1_2}
+<description/></term><term>{10R_1_4}
+<description/></term><term>{10R_1_6}
+<description/></term><term>{10R_1_8}
+<description/></term><term>{10R_1_10}
+<description/></term></term><term>{2_}
+<description/><term>{10R_2_2}
+<description/></term><term>{10R_2_4}
+<description/></term><term>{10R_2_6}
+<description/></term><term>{10R_2_8}
+<description/></term><term>{10R_2_10}
+<description/></term><term>{10R_2_12}
+<description/></term><term>{10R_2_14}
+<description/></term></term><term>{3_}
+<description/><term>{10R_3_2}
+<description/></term><term>{10R_3_4}
+<description/></term><term>{10R_3_6}
+<description/></term><term>{10R_3_8}
+<description/></term><term>{10R_3_10}
+<description/></term><term>{10R_3_12}
+<description/></term><term>{10R_3_14}
+<description/></term></term><term>{4_}
+<description/><term>{10R_4_2}
+<description/></term><term>{10R_4_4}
+<description/></term><term>{10R_4_6}
+<description/></term><term>{10R_4_8}
+<description/></term><term>{10R_4_10}
+<description/></term><term>{10R_4_12}
+<description/></term><term>{10R_4_14}
+<description/></term><term>{10R_4_16}
+<description/></term></term><term>{5_}
+<description/><term>{10R_5_2}
+<description/></term><term>{10R_5_4}
+<description/></term><term>{10R_5_6}
+<description/></term><term>{10R_5_8}
+<description/></term><term>{10R_5_10}
+<description/></term><term>{10R_5_12}
+<description/></term><term>{10R_5_14}
+<description/></term><term>{10R_5_16}
+<description/></term><term>{10R_5_18}
+<description/></term></term><term>{6_}
+<description/><term>{10R_6_2}
+<description/></term><term>{10R_6_4}
+<description/></term><term>{10R_6_6}
+<description/></term><term>{10R_6_8}
+<description/></term><term>{10R_6_10}
+<description/></term><term>{10R_6_12}
+<description/></term><term>{10R_6_14}
+<description/></term><term>{10R_6_16}
+<description/></term><term>{10R_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{10R_7_2}
+<description/></term><term>{10R_7_4}
+<description/></term><term>{10R_7_6}
+<description/></term><term>{10R_7_8}
+<description/></term><term>{10R_7_10}
+<description/></term><term>{10R_7_12}
+<description/></term><term>{10R_7_14}
+<description/></term><term>{10R_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{10R_8_2}
+<description/></term><term>{10R_8_4}
+<description/></term><term>{10R_8_6}
+<description/></term><term>{10R_8_8}
+<description/></term><term>{10R_8_10}
+<description/></term></term><term>{9_}
+<description/><term>{10R_9_2}
+<description/></term><term>{10R_9_4}
+<description/></term><term>{10R_9_6}
+<description/></term></term></term></term>
+        <term>{YR}
+<description/><term>{2_5YR}
+<description/><term>{1_}
+<description/><term>{2_5YR_1_2}
+<description/></term><term>{2_5YR_1_4}
+<description/></term><term>{2_5YR_1_6}
+<description/></term><term>{2_5YR_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{2_5YR_2_2}
+<description/></term><term>{2_5YR_2_4}
+<description/></term><term>{2_5YR_2_6}
+<description/></term><term>{2_5YR_2_8}
+<description/></term></term><term>{3_}
+<description/><term>{2_5YR_3_2}
+<description/></term><term>{2_5YR_3_4}
+<description/></term><term>{2_5YR_3_6}
+<description/></term><term>{2_5YR_3_8}
+<description/></term><term>{2_5YR_3_10}
+<description/></term></term><term>{4_}
+<description/><term>{2_5YR_4_2}
+<description/></term><term>{2_5YR_4_4}
+<description/></term><term>{2_5YR_4_6}
+<description/></term><term>{2_5YR_4_8}
+<description/></term><term>{2_5YR_4_10}
+<description/></term><term>{2_5YR_4_12}
+<description/></term></term><term>{5_}
+<description/><term>{2_5YR_5_2}
+<description/></term><term>{2_5YR_5_4}
+<description/></term><term>{2_5YR_5_6}
+<description/></term><term>{2_5YR_5_8}
+<description/></term><term>{2_5YR_5_10}
+<description/></term><term>{2_5YR_5_12}
+<description/></term><term>{2_5YR_5_14}
+<description/></term><term>{2_5YR_5_16}
+<description/></term></term><term>{6_}
+<description/><term>{2_5YR_6_2}
+<description/></term><term>{2_5YR_6_4}
+<description/></term><term>{2_5YR_6_6}
+<description/></term><term>{2_5YR_6_8}
+<description/></term><term>{2_5YR_6_10}
+<description/></term><term>{2_5YR_6_12}
+<description/></term><term>{2_5YR_6_14}
+<description/></term><term>{2_5YR_6_16}
+<description/></term><term>{2_5YR_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{2_5YR_7_2}
+<description/></term><term>{2_5YR_7_4}
+<description/></term><term>{2_5YR_7_6}
+<description/></term><term>{2_5YR_7_8}
+<description/></term><term>{2_5YR_7_10}
+<description/></term><term>{2_5YR_7_12}
+<description/></term><term>{2_5YR_7_14}
+<description/></term><term>{2_5YR_7_16}
+<description/></term><term>{2_5YR_7_18}
+<description/></term><term>{2_5YR_7_20}
+<description/></term></term><term>{8_}
+<description/><term>{2_5YR_8_2}
+<description/></term><term>{2_5YR_8_4}
+<description/></term><term>{2_5YR_8_6}
+<description/></term><term>{2_5YR_8_8}
+<description/></term><term>{2_5YR_8_10}
+<description/></term><term>{2_5YR_8_12}
+<description/></term></term><term>{9_}
+<description/><term>{2_5YR_9_2}
+<description/></term><term>{2_5YR_9_4}
+<description/></term><term>{2_5YR_9_6}
+<description/></term></term></term><term>{5YR}
+<description/><term>{1_}
+<description/><term>{5YR_1_2}
+<description/></term><term>{5YR_1_4}
+<description/></term></term><term>{2_}
+<description/><term>{5YR_2_2}
+<description/></term><term>{5YR_2_4}
+<description/></term><term>{5YR_2_6}
+<description/></term></term><term>{3_}
+<description/><term>{5YR_3_2}
+<description/></term><term>{5YR_3_4}
+<description/></term><term>{5YR_3_6}
+<description/></term><term>{5YR_3_8}
+<description/></term></term><term>{4_}
+<description/><term>{5YR_4_2}
+<description/></term><term>{5YR_4_4}
+<description/></term><term>{5YR_4_6}
+<description/></term><term>{5YR_4_8}
+<description/></term><term>{5YR_4_10}
+<description/></term><term>{5YR_4_12}
+<description/></term></term><term>{5_}
+<description/><term>{5YR_5_2}
+<description/></term><term>{5YR_5_4}
+<description/></term><term>{5YR_5_6}
+<description/></term><term>{5YR_5_8}
+<description/></term><term>{5YR_5_10}
+<description/></term><term>{5YR_5_12}
+<description/></term><term>{5YR_5_14}
+<description/></term></term><term>{6_}
+<description/><term>{5YR_6_2}
+<description/></term><term>{5YR_6_4}
+<description/></term><term>{5YR_6_6}
+<description/></term><term>{5YR_6_8}
+<description/></term><term>{5YR_6_10}
+<description/></term><term>{5YR_6_12}
+<description/></term><term>{5YR_6_14}
+<description/></term><term>{5YR_6_16}
+<description/></term><term>{5YR_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{5YR_7_2}
+<description/></term><term>{5YR_7_4}
+<description/></term><term>{5YR_7_6}
+<description/></term><term>{5YR_7_8}
+<description/></term><term>{5YR_7_10}
+<description/></term><term>{5YR_7_12}
+<description/></term><term>{5YR_7_14}
+<description/></term><term>{5YR_7_16}
+<description/></term><term>{5YR_7_18}
+<description/></term><term>{5YR_7_20}
+<description/></term></term><term>{8_}
+<description/><term>{5YR_8_2}
+<description/></term><term>{5YR_8_4}
+<description/></term><term>{5YR_8_6}
+<description/></term><term>{5YR_8_8}
+<description/></term><term>{5YR_8_10}
+<description/></term><term>{5YR_8_12}
+<description/></term><term>{5YR_8_14}
+<description/></term></term><term>{9_}
+<description/><term>{5YR_9_2}
+<description/></term><term>{5YR_9_4}
+<description/></term><term>{5YR_9_6}
+<description/></term></term></term><term>{7_5YR}
+<description/><term>{1_}
+<description/><term>{7_5YR_1_2}
+<description/></term></term><term>{2_}
+<description/><term>{7_5YR_2_2}
+<description/></term><term>{7_5YR_2_4}
+<description/></term><term>{7_5YR_2_6}
+<description/></term></term><term>{3_}
+<description/><term>{7_5YR_3_2}
+<description/></term><term>{7_5YR_3_4}
+<description/></term><term>{7_5YR_3_6}
+<description/></term><term>{7_5YR_3_8}
+<description/></term></term><term>{4_}
+<description/><term>{7_5YR_4_2}
+<description/></term><term>{7_5YR_4_4}
+<description/></term><term>{7_5YR_4_6}
+<description/></term><term>{7_5YR_4_8}
+<description/></term><term>{7_5YR_4_10}
+<description/></term></term><term>{5_}
+<description/><term>{7_5YR_5_2}
+<description/></term><term>{7_5YR_5_4}
+<description/></term><term>{7_5YR_5_6}
+<description/></term><term>{7_5YR_5_8}
+<description/></term><term>{7_5YR_5_10}
+<description/></term><term>{7_5YR_5_12}
+<description/></term><term>{7_5YR_5_14}
+<description/></term></term><term>{6_}
+<description/><term>{7_5YR_6_2}
+<description/></term><term>{7_5YR_6_4}
+<description/></term><term>{7_5YR_6_6}
+<description/></term><term>{7_5YR_6_8}
+<description/></term><term>{7_5YR_6_10}
+<description/></term><term>{7_5YR_6_12}
+<description/></term><term>{7_5YR_6_14}
+<description/></term><term>{7_5YR_6_16}
+<description/></term></term><term>{7_}
+<description/><term>{7_5YR_7_2}
+<description/></term><term>{7_5YR_7_4}
+<description/></term><term>{7_5YR_7_6}
+<description/></term><term>{7_5YR_7_8}
+<description/></term><term>{7_5YR_7_10}
+<description/></term><term>{7_5YR_7_12}
+<description/></term><term>{7_5YR_7_14}
+<description/></term><term>{7_5YR_7_16}
+<description/></term><term>{7_5YR_7_18}
+<description/></term></term><term>{8_}
+<description/><term>{7_5YR_8_2}
+<description/></term><term>{7_5YR_8_4}
+<description/></term><term>{7_5YR_8_6}
+<description/></term><term>{7_5YR_8_8}
+<description/></term><term>{7_5YR_8_10}
+<description/></term><term>{7_5YR_8_12}
+<description/></term><term>{7_5YR_8_14}
+<description/></term><term>{7_5YR_8_16}
+<description/></term><term>{7_5YR_8_18}
+<description/></term><term>{7_5YR_8_20}
+<description/></term></term><term>{9_}
+<description/><term>{7_5YR_9_2}
+<description/></term><term>{7_5YR_9_4}
+<description/></term><term>{7_5YR_9_6}
+<description/></term><term>{7_5YR_9_8}
+<description/></term></term></term><term>{10YR}
+<description/><term>{1_}
+<description/><term>{10YR_1_2}
+<description/></term></term><term>{2_}
+<description/><term>{10YR_2_2}
+<description/></term><term>{10YR_2_4}
+<description/></term></term><term>{3_}
+<description/><term>{10YR_3_2}
+<description/></term><term>{10YR_3_4}
+<description/></term><term>{10YR_3_6}
+<description/></term><term>{10YR_3_8}
+<description/></term></term><term>{4_}
+<description/><term>{10YR_4_2}
+<description/></term><term>{10YR_4_4}
+<description/></term><term>{10YR_4_6}
+<description/></term><term>{10YR_4_8}
+<description/></term><term>{10YR_4_10}
+<description/></term></term><term>{5_}
+<description/><term>{10YR_5_2}
+<description/></term><term>{10YR_5_4}
+<description/></term><term>{10YR_5_6}
+<description/></term><term>{10YR_5_8}
+<description/></term><term>{10YR_5_10}
+<description/></term><term>{10YR_5_12}
+<description/></term></term><term>{6_}
+<description/><term>{10YR_6_2}
+<description/></term><term>{10YR_6_4}
+<description/></term><term>{10YR_6_6}
+<description/></term><term>{10YR_6_8}
+<description/></term><term>{10YR_6_10}
+<description/></term><term>{10YR_6_12}
+<description/></term><term>{10YR_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{10YR_7_2}
+<description/></term><term>{10YR_7_4}
+<description/></term><term>{10YR_7_6}
+<description/></term><term>{10YR_7_8}
+<description/></term><term>{10YR_7_10}
+<description/></term><term>{10YR_7_12}
+<description/></term><term>{10YR_7_14}
+<description/></term><term>{10YR_7_16}
+<description/></term><term>{10YR_7_18}
+<description/></term></term><term>{8_}
+<description/><term>{10YR_8_2}
+<description/></term><term>{10YR_8_4}
+<description/></term><term>{10YR_8_6}
+<description/></term><term>{10YR_8_8}
+<description/></term><term>{10YR_8_10}
+<description/></term><term>{10YR_8_12}
+<description/></term><term>{10YR_8_14}
+<description/></term><term>{10YR_8_16}
+<description/></term><term>{10YR_8_18}
+<description/></term><term>{10YR_8_20}
+<description/></term></term><term>{9_}
+<description/><term>{10YR_9_2}
+<description/></term><term>{10YR_9_4}
+<description/></term><term>{10YR_9_6}
+<description/></term><term>{10YR_9_8}
+<description/></term></term></term></term>
+        <term>{Y}
+<description/><term>{2_5Y}
+<description/><term>{1_}
+<description/><term>{2_5Y_1_2}
+<description/></term></term><term>{2_}
+<description/><term>{2_5Y_2_2}
+<description/></term><term>{2_5Y_2_4}
+<description/></term></term><term>{3_}
+<description/><term>{2_5Y_3_2}
+<description/></term><term>{2_5Y_3_4}
+<description/></term><term>{2_5Y_3_6}
+<description/></term></term><term>{4_}
+<description/><term>{2_5Y_4_2}
+<description/></term><term>{2_5Y_4_4}
+<description/></term><term>{2_5Y_4_6}
+<description/></term><term>{2_5Y_4_8}
+<description/></term><term>{2_5Y_4_10}
+<description/></term></term><term>{5_}
+<description/><term>{2_5Y_5_2}
+<description/></term><term>{2_5Y_5_4}
+<description/></term><term>{2_5Y_5_6}
+<description/></term><term>{2_5Y_5_8}
+<description/></term><term>{2_5Y_5_10}
+<description/></term><term>{2_5Y_5_12}
+<description/></term></term><term>{6_}
+<description/><term>{2_5Y_6_2}
+<description/></term><term>{2_5Y_6_4}
+<description/></term><term>{2_5Y_6_6}
+<description/></term><term>{2_5Y_6_8}
+<description/></term><term>{2_5Y_6_10}
+<description/></term><term>{2_5Y_6_12}
+<description/></term><term>{2_5Y_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{2_5Y_7_2}
+<description/></term><term>{2_5Y_7_4}
+<description/></term><term>{2_5Y_7_6}
+<description/></term><term>{2_5Y_7_8}
+<description/></term><term>{2_5Y_7_10}
+<description/></term><term>{2_5Y_7_12}
+<description/></term><term>{2_5Y_7_14}
+<description/></term><term>{2_5Y_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{2_5Y_8_2}
+<description/></term><term>{2_5Y_8_4}
+<description/></term><term>{2_5Y_8_6}
+<description/></term><term>{2_5Y_8_8}
+<description/></term><term>{2_5Y_8_10}
+<description/></term><term>{2_5Y_8_12}
+<description/></term><term>{2_5Y_8_14}
+<description/></term><term>{2_5Y_8_16}
+<description/></term><term>{2_5Y_8_18}
+<description/></term><term>{2_5Y_8_20}
+<description/></term></term><term>{9_}
+<description/><term>{2_5Y_9_2}
+<description/></term><term>{2_5Y_9_4}
+<description/></term><term>{2_5Y_9_6}
+<description/></term><term>{2_5Y_9_8}
+<description/></term><term>{2_5Y_9_10}
+<description/></term><term>{2_5Y_9_12}
+<description/></term></term></term><term>{5Y}
+<description/><term>{1_}
+<description/><term>{5Y_1_2}
+<description/></term></term><term>{2_}
+<description/><term>{5Y_2_2}
+<description/></term><term>{5Y_2_4}
+<description/></term></term><term>{3_}
+<description/><term>{5Y_3_2}
+<description/></term><term>{5Y_3_4}
+<description/></term><term>{5Y_3_6}
+<description/></term></term><term>{4_}
+<description/><term>{5Y_4_2}
+<description/></term><term>{5Y_4_4}
+<description/></term><term>{5Y_4_6}
+<description/></term><term>{5Y_4_8}
+<description/></term></term><term>{5_}
+<description/><term>{5Y_5_2}
+<description/></term><term>{5Y_5_4}
+<description/></term><term>{5Y_5_6}
+<description/></term><term>{5Y_5_8}
+<description/></term><term>{5Y_5_10}
+<description/></term><term>{5Y_5_12}
+<description/></term></term><term>{6_}
+<description/><term>{5Y_6_2}
+<description/></term><term>{5Y_6_4}
+<description/></term><term>{5Y_6_6}
+<description/></term><term>{5Y_6_8}
+<description/></term><term>{5Y_6_10}
+<description/></term><term>{5Y_6_12}
+<description/></term><term>{5Y_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{5Y_7_2}
+<description/></term><term>{5Y_7_4}
+<description/></term><term>{5Y_7_6}
+<description/></term><term>{5Y_7_8}
+<description/></term><term>{5Y_7_10}
+<description/></term><term>{5Y_7_12}
+<description/></term><term>{5Y_7_14}
+<description/></term><term>{5Y_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{5Y_8_2}
+<description/></term><term>{5Y_8_4}
+<description/></term><term>{5Y_8_6}
+<description/></term><term>{5Y_8_8}
+<description/></term><term>{5Y_8_10}
+<description/></term><term>{5Y_8_12}
+<description/></term><term>{5Y_8_14}
+<description/></term><term>{5Y_8_16}
+<description/></term><term>{5Y_8_18}
+<description/></term></term><term>{9_}
+<description/><term>{5Y_9_2}
+<description/></term><term>{5Y_9_4}
+<description/></term><term>{5Y_9_6}
+<description/></term><term>{5Y_9_8}
+<description/></term><term>{5Y_9_10}
+<description/></term><term>{5Y_9_12}
+<description/></term><term>{5Y_9_14}
+<description/></term><term>{5Y_9_16}
+<description/></term><term>{5Y_9_18}
+<description/></term><term>{5Y_9_20}
+<description/></term></term></term><term>{7_5Y}
+<description/><term>{1_}
+<description/><term>{7_5Y_1_2}
+<description/></term></term><term>{2_}
+<description/><term>{7_5Y_2_2}
+<description/></term><term>{7_5Y_2_4}
+<description/></term></term><term>{3_}
+<description/><term>{7_5Y_3_2}
+<description/></term><term>{7_5Y_3_4}
+<description/></term><term>{7_5Y_3_6}
+<description/></term></term><term>{4_}
+<description/><term>{7_5Y_4_2}
+<description/></term><term>{7_5Y_4_4}
+<description/></term><term>{7_5Y_4_6}
+<description/></term><term>{7_5Y_4_8}
+<description/></term></term><term>{5_}
+<description/><term>{7_5Y_5_2}
+<description/></term><term>{7_5Y_5_4}
+<description/></term><term>{7_5Y_5_6}
+<description/></term><term>{7_5Y_5_8}
+<description/></term><term>{7_5Y_5_10}
+<description/></term><term>{7_5Y_5_12}
+<description/></term></term><term>{6_}
+<description/><term>{7_5Y_6_2}
+<description/></term><term>{7_5Y_6_4}
+<description/></term><term>{7_5Y_6_6}
+<description/></term><term>{7_5Y_6_8}
+<description/></term><term>{7_5Y_6_10}
+<description/></term><term>{7_5Y_6_12}
+<description/></term><term>{7_5Y_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{7_5Y_7_2}
+<description/></term><term>{7_5Y_7_4}
+<description/></term><term>{7_5Y_7_6}
+<description/></term><term>{7_5Y_7_8}
+<description/></term><term>{7_5Y_7_10}
+<description/></term><term>{7_5Y_7_12}
+<description/></term><term>{7_5Y_7_14}
+<description/></term><term>{7_5Y_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{7_5Y_8_2}
+<description/></term><term>{7_5Y_8_4}
+<description/></term><term>{7_5Y_8_6}
+<description/></term><term>{7_5Y_8_8}
+<description/></term><term>{7_5Y_8_10}
+<description/></term><term>{7_5Y_8_12}
+<description/></term><term>{7_5Y_8_14}
+<description/></term><term>{7_5Y_8_16}
+<description/></term><term>{7_5Y_8_18}
+<description/></term></term><term>{9_}
+<description/><term>{7_5Y_9_2}
+<description/></term><term>{7_5Y_9_4}
+<description/></term><term>{7_5Y_9_6}
+<description/></term><term>{7_5Y_9_8}
+<description/></term><term>{7_5Y_9_10}
+<description/></term><term>{7_5Y_9_12}
+<description/></term><term>{7_5Y_9_14}
+<description/></term><term>{7_5Y_9_16}
+<description/></term><term>{7_5Y_9_18}
+<description/></term></term></term><term>{10Y}
+<description/><term>{1_}
+<description/><term>{10Y_1_2}
+<description/></term></term><term>{2_}
+<description/><term>{10Y_2_2}
+<description/></term><term>{10Y_2_4}
+<description/></term></term><term>{3_}
+<description/><term>{10Y_3_2}
+<description/></term><term>{10Y_3_4}
+<description/></term><term>{10Y_3_6}
+<description/></term></term><term>{4_}
+<description/><term>{10Y_4_2}
+<description/></term><term>{10Y_4_4}
+<description/></term><term>{10Y_4_6}
+<description/></term><term>{10Y_4_8}
+<description/></term></term><term>{5_}
+<description/><term>{10Y_5_2}
+<description/></term><term>{10Y_5_4}
+<description/></term><term>{10Y_5_6}
+<description/></term><term>{10Y_5_8}
+<description/></term><term>{10Y_5_10}
+<description/></term><term>{10Y_5_12}
+<description/></term></term><term>{6_}
+<description/><term>{10Y_6_2}
+<description/></term><term>{10Y_6_4}
+<description/></term><term>{10Y_6_6}
+<description/></term><term>{10Y_6_8}
+<description/></term><term>{10Y_6_10}
+<description/></term><term>{10Y_6_12}
+<description/></term><term>{10Y_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{10Y_7_2}
+<description/></term><term>{10Y_7_4}
+<description/></term><term>{10Y_7_6}
+<description/></term><term>{10Y_7_8}
+<description/></term><term>{10Y_7_10}
+<description/></term><term>{10Y_7_12}
+<description/></term><term>{10Y_7_14}
+<description/></term><term>{10Y_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{10Y_8_2}
+<description/></term><term>{10Y_8_4}
+<description/></term><term>{10Y_8_6}
+<description/></term><term>{10Y_8_8}
+<description/></term><term>{10Y_8_10}
+<description/></term><term>{10Y_8_12}
+<description/></term><term>{10Y_8_14}
+<description/></term><term>{10Y_8_16}
+<description/></term><term>{10Y_8_18}
+<description/></term></term><term>{9_}
+<description/><term>{10Y_9_2}
+<description/></term><term>{10Y_9_4}
+<description/></term><term>{10Y_9_6}
+<description/></term><term>{10Y_9_8}
+<description/></term><term>{10Y_9_10}
+<description/></term><term>{10Y_9_12}
+<description/></term><term>{10Y_9_14}
+<description/></term><term>{10Y_9_16}
+<description/></term><term>{10Y_9_18}
+<description/></term></term></term></term>
+        <term>{GY}
+<description/><term>{2_5GY}
+<description/><term>{1_}
+<description/><term>{2_5GY_1_2}
+<description/></term></term><term>{2_}
+<description/><term>{2_5GY_2_2}
+<description/></term><term>{2_5GY_2_4}
+<description/></term></term><term>{3_}
+<description/><term>{2_5GY_3_2}
+<description/></term><term>{2_5GY_3_4}
+<description/></term><term>{2_5GY_3_6}
+<description/></term></term><term>{4_}
+<description/><term>{2_5GY_4_2}
+<description/></term><term>{2_5GY_4_4}
+<description/></term><term>{2_5GY_4_6}
+<description/></term><term>{2_5GY_4_8}
+<description/></term></term><term>{5_}
+<description/><term>{2_5GY_5_2}
+<description/></term><term>{2_5GY_5_4}
+<description/></term><term>{2_5GY_5_6}
+<description/></term><term>{2_5GY_5_8}
+<description/></term><term>{2_5GY_5_10}
+<description/></term><term>{2_5GY_5_12}
+<description/></term></term><term>{6_}
+<description/><term>{2_5GY_6_2}
+<description/></term><term>{2_5GY_6_4}
+<description/></term><term>{2_5GY_6_6}
+<description/></term><term>{2_5GY_6_8}
+<description/></term><term>{2_5GY_6_10}
+<description/></term><term>{2_5GY_6_12}
+<description/></term><term>{2_5GY_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{2_5GY_7_2}
+<description/></term><term>{2_5GY_7_4}
+<description/></term><term>{2_5GY_7_6}
+<description/></term><term>{2_5GY_7_8}
+<description/></term><term>{2_5GY_7_10}
+<description/></term><term>{2_5GY_7_12}
+<description/></term><term>{2_5GY_7_14}
+<description/></term><term>{2_5GY_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{2_5GY_8_2}
+<description/></term><term>{2_5GY_8_4}
+<description/></term><term>{2_5GY_8_6}
+<description/></term><term>{2_5GY_8_8}
+<description/></term><term>{2_5GY_8_10}
+<description/></term><term>{2_5GY_8_12}
+<description/></term><term>{2_5GY_8_14}
+<description/></term><term>{2_5GY_8_16}
+<description/></term><term>{2_5GY_8_18}
+<description/></term></term><term>{9_}
+<description/><term>{2_5GY_9_2}
+<description/></term><term>{2_5GY_9_4}
+<description/></term><term>{2_5GY_9_6}
+<description/></term><term>{2_5GY_9_8}
+<description/></term><term>{2_5GY_9_10}
+<description/></term><term>{2_5GY_9_12}
+<description/></term><term>{2_5GY_9_14}
+<description/></term><term>{2_5GY_9_16}
+<description/></term><term>{2_5GY_9_18}
+<description/></term></term></term><term>{5GY}
+<description/><term>{1_}
+<description/><term>{5GY_1_2}
+<description/></term><term>{5GY_1_4}
+<description/></term></term><term>{2_}
+<description/><term>{5GY_2_2}
+<description/></term><term>{5GY_2_4}
+<description/></term><term>{5GY_2_6}
+<description/></term></term><term>{3_}
+<description/><term>{5GY_3_2}
+<description/></term><term>{5GY_3_4}
+<description/></term><term>{5GY_3_6}
+<description/></term><term>{5GY_3_8}
+<description/></term></term><term>{4_}
+<description/><term>{5GY_4_2}
+<description/></term><term>{5GY_4_4}
+<description/></term><term>{5GY_4_6}
+<description/></term><term>{5GY_4_8}
+<description/></term><term>{5GY_4_10}
+<description/></term></term><term>{5_}
+<description/><term>{5GY_5_2}
+<description/></term><term>{5GY_5_4}
+<description/></term><term>{5GY_5_6}
+<description/></term><term>{5GY_5_8}
+<description/></term><term>{5GY_5_10}
+<description/></term><term>{5GY_5_12}
+<description/></term></term><term>{6_}
+<description/><term>{5GY_6_2}
+<description/></term><term>{5GY_6_4}
+<description/></term><term>{5GY_6_6}
+<description/></term><term>{5GY_6_8}
+<description/></term><term>{5GY_6_10}
+<description/></term><term>{5GY_6_12}
+<description/></term><term>{5GY_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{5GY_7_2}
+<description/></term><term>{5GY_7_4}
+<description/></term><term>{5GY_7_6}
+<description/></term><term>{5GY_7_8}
+<description/></term><term>{5GY_7_10}
+<description/></term><term>{5GY_7_12}
+<description/></term><term>{5GY_7_14}
+<description/></term><term>{5GY_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{5GY_8_2}
+<description/></term><term>{5GY_8_4}
+<description/></term><term>{5GY_8_6}
+<description/></term><term>{5GY_8_8}
+<description/></term><term>{5GY_8_10}
+<description/></term><term>{5GY_8_12}
+<description/></term><term>{5GY_8_14}
+<description/></term><term>{5GY_8_16}
+<description/></term><term>{5GY_8_18}
+<description/></term><term>{5GY_8_20}
+<description/></term></term><term>{9_}
+<description/><term>{5GY_9_2}
+<description/></term><term>{5GY_9_4}
+<description/></term><term>{5GY_9_6}
+<description/></term><term>{5GY_9_8}
+<description/></term><term>{5GY_9_10}
+<description/></term><term>{5GY_9_12}
+<description/></term><term>{5GY_9_14}
+<description/></term><term>{5GY_9_16}
+<description/></term><term>{5GY_9_18}
+<description/></term></term></term><term>{7_5GY}
+<description/><term>{1_}
+<description/><term>{7_5GY_1_2}
+<description/></term><term>{7_5GY_1_4}
+<description/></term></term><term>{2_}
+<description/><term>{7_5GY_2_2}
+<description/></term><term>{7_5GY_2_4}
+<description/></term><term>{7_5GY_2_6}
+<description/></term><term>{7_5GY_2_8}
+<description/></term></term><term>{3_}
+<description/><term>{7_5GY_3_2}
+<description/></term><term>{7_5GY_3_4}
+<description/></term><term>{7_5GY_3_6}
+<description/></term><term>{7_5GY_3_8}
+<description/></term><term>{7_5GY_3_10}
+<description/></term></term><term>{4_}
+<description/><term>{7_5GY_4_2}
+<description/></term><term>{7_5GY_4_4}
+<description/></term><term>{7_5GY_4_6}
+<description/></term><term>{7_5GY_4_8}
+<description/></term><term>{7_5GY_4_10}
+<description/></term><term>{7_5GY_4_12}
+<description/></term></term><term>{5_}
+<description/><term>{7_5GY_5_2}
+<description/></term><term>{7_5GY_5_4}
+<description/></term><term>{7_5GY_5_6}
+<description/></term><term>{7_5GY_5_8}
+<description/></term><term>{7_5GY_5_10}
+<description/></term><term>{7_5GY_5_12}
+<description/></term><term>{7_5GY_5_14}
+<description/></term></term><term>{6_}
+<description/><term>{7_5GY_6_2}
+<description/></term><term>{7_5GY_6_4}
+<description/></term><term>{7_5GY_6_6}
+<description/></term><term>{7_5GY_6_8}
+<description/></term><term>{7_5GY_6_10}
+<description/></term><term>{7_5GY_6_12}
+<description/></term><term>{7_5GY_6_14}
+<description/></term><term>{7_5GY_6_16}
+<description/></term></term><term>{7_}
+<description/><term>{7_5GY_7_2}
+<description/></term><term>{7_5GY_7_4}
+<description/></term><term>{7_5GY_7_6}
+<description/></term><term>{7_5GY_7_8}
+<description/></term><term>{7_5GY_7_10}
+<description/></term><term>{7_5GY_7_12}
+<description/></term><term>{7_5GY_7_14}
+<description/></term><term>{7_5GY_7_16}
+<description/></term><term>{7_5GY_7_18}
+<description/></term></term><term>{8_}
+<description/><term>{7_5GY_8_2}
+<description/></term><term>{7_5GY_8_4}
+<description/></term><term>{7_5GY_8_6}
+<description/></term><term>{7_5GY_8_8}
+<description/></term><term>{7_5GY_8_10}
+<description/></term><term>{7_5GY_8_12}
+<description/></term><term>{7_5GY_8_14}
+<description/></term><term>{7_5GY_8_16}
+<description/></term><term>{7_5GY_8_18}
+<description/></term><term>{7_5GY_8_20}
+<description/></term></term><term>{9_}
+<description/><term>{7_5GY_9_2}
+<description/></term><term>{7_5GY_9_4}
+<description/></term><term>{7_5GY_9_6}
+<description/></term><term>{7_5GY_9_8}
+<description/></term><term>{7_5GY_9_10}
+<description/></term><term>{7_5GY_9_12}
+<description/></term><term>{7_5GY_9_14}
+<description/></term><term>{7_5GY_9_16}
+<description/></term><term>{7_5GY_9_18}
+<description/></term></term></term><term>{10GY}
+<description/><term>{1_}
+<description/><term>{10GY_1_2}
+<description/></term><term>{10GY_1_4}
+<description/></term><term>{10GY_1_6}
+<description/></term></term><term>{2_}
+<description/><term>{10GY_2_2}
+<description/></term><term>{10GY_2_4}
+<description/></term><term>{10GY_2_6}
+<description/></term><term>{10GY_2_8}
+<description/></term><term>{10GY_2_10}
+<description/></term><term>{10GY_2_12}
+<description/></term></term><term>{3_}
+<description/><term>{10GY_3_2}
+<description/></term><term>{10GY_3_4}
+<description/></term><term>{10GY_3_6}
+<description/></term><term>{10GY_3_8}
+<description/></term><term>{10GY_3_10}
+<description/></term><term>{10GY_3_12}
+<description/></term><term>{10GY_3_14}
+<description/></term></term><term>{4_}
+<description/><term>{10GY_4_2}
+<description/></term><term>{10GY_4_4}
+<description/></term><term>{10GY_4_6}
+<description/></term><term>{10GY_4_8}
+<description/></term><term>{10GY_4_10}
+<description/></term><term>{10GY_4_12}
+<description/></term><term>{10GY_4_14}
+<description/></term><term>{10GY_4_16}
+<description/></term></term><term>{5_}
+<description/><term>{10GY_5_2}
+<description/></term><term>{10GY_5_4}
+<description/></term><term>{10GY_5_6}
+<description/></term><term>{10GY_5_8}
+<description/></term><term>{10GY_5_10}
+<description/></term><term>{10GY_5_12}
+<description/></term><term>{10GY_5_14}
+<description/></term><term>{10GY_5_16}
+<description/></term><term>{10GY_5_18}
+<description/></term></term><term>{6_}
+<description/><term>{10GY_6_2}
+<description/></term><term>{10GY_6_4}
+<description/></term><term>{10GY_6_6}
+<description/></term><term>{10GY_6_8}
+<description/></term><term>{10GY_6_10}
+<description/></term><term>{10GY_6_12}
+<description/></term><term>{10GY_6_14}
+<description/></term><term>{10GY_6_16}
+<description/></term><term>{10GY_6_18}
+<description/></term><term>{10GY_6_20}
+<description/></term></term><term>{7_}
+<description/><term>{10GY_7_2}
+<description/></term><term>{10GY_7_4}
+<description/></term><term>{10GY_7_6}
+<description/></term><term>{10GY_7_8}
+<description/></term><term>{10GY_7_10}
+<description/></term><term>{10GY_7_12}
+<description/></term><term>{10GY_7_14}
+<description/></term><term>{10GY_7_16}
+<description/></term><term>{10GY_7_18}
+<description/></term><term>{10GY_7_20}
+<description/></term><term>{10GY_7_22}
+<description/></term></term><term>{8_}
+<description/><term>{10GY_8_2}
+<description/></term><term>{10GY_8_4}
+<description/></term><term>{10GY_8_6}
+<description/></term><term>{10GY_8_8}
+<description/></term><term>{10GY_8_10}
+<description/></term><term>{10GY_8_12}
+<description/></term><term>{10GY_8_14}
+<description/></term><term>{10GY_8_16}
+<description/></term><term>{10GY_8_18}
+<description/></term><term>{10GY_8_20}
+<description/></term><term>{10GY_8_22}
+<description/></term><term>{10GY_8_24}
+<description/></term></term><term>{9_}
+<description/><term>{10GY_9_2}
+<description/></term><term>{10GY_9_4}
+<description/></term><term>{10GY_9_6}
+<description/></term><term>{10GY_9_8}
+<description/></term><term>{10GY_9_10}
+<description/></term><term>{10GY_9_12}
+<description/></term><term>{10GY_9_14}
+<description/></term><term>{10GY_9_16}
+<description/></term><term>{10GY_9_18}
+<description/></term></term></term></term>
+        <term>{G}
+<description/><term>{2_5G}
+<description/><term>{1_}
+<description/><term>{2_5G_1_2}
+<description/></term><term>{2_5G_1_4}
+<description/></term><term>{2_5G_1_6}
+<description/></term><term>{2_5G_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{2_5G_2_2}
+<description/></term><term>{2_5G_2_4}
+<description/></term><term>{2_5G_2_6}
+<description/></term><term>{2_5G_2_8}
+<description/></term><term>{2_5G_2_10}
+<description/></term><term>{2_5G_2_12}
+<description/></term><term>{2_5G_2_14}
+<description/></term><term>{2_5G_2_16}
+<description/></term></term><term>{3_}
+<description/><term>{2_5G_3_2}
+<description/></term><term>{2_5G_3_4}
+<description/></term><term>{2_5G_3_6}
+<description/></term><term>{2_5G_3_8}
+<description/></term><term>{2_5G_3_10}
+<description/></term><term>{2_5G_3_12}
+<description/></term><term>{2_5G_3_14}
+<description/></term><term>{2_5G_3_16}
+<description/></term><term>{2_5G_3_18}
+<description/></term><term>{2_5G_3_20}
+<description/></term><term>{2_5G_3_22}
+<description/></term></term><term>{4_}
+<description/><term>{2_5G_4_2}
+<description/></term><term>{2_5G_4_4}
+<description/></term><term>{2_5G_4_6}
+<description/></term><term>{2_5G_4_8}
+<description/></term><term>{2_5G_4_10}
+<description/></term><term>{2_5G_4_12}
+<description/></term><term>{2_5G_4_14}
+<description/></term><term>{2_5G_4_16}
+<description/></term><term>{2_5G_4_18}
+<description/></term><term>{2_5G_4_20}
+<description/></term><term>{2_5G_4_22}
+<description/></term><term>{2_5G_4_24}
+<description/></term><term>{2_5G_4_26}
+<description/></term></term><term>{5_}
+<description/><term>{2_5G_5_2}
+<description/></term><term>{2_5G_5_4}
+<description/></term><term>{2_5G_5_6}
+<description/></term><term>{2_5G_5_8}
+<description/></term><term>{2_5G_5_10}
+<description/></term><term>{2_5G_5_12}
+<description/></term><term>{2_5G_5_14}
+<description/></term><term>{2_5G_5_16}
+<description/></term><term>{2_5G_5_18}
+<description/></term><term>{2_5G_5_20}
+<description/></term><term>{2_5G_5_22}
+<description/></term><term>{2_5G_5_24}
+<description/></term><term>{2_5G_5_26}
+<description/></term><term>{2_5G_5_28}
+<description/></term></term><term>{6_}
+<description/><term>{2_5G_6_2}
+<description/></term><term>{2_5G_6_4}
+<description/></term><term>{2_5G_6_6}
+<description/></term><term>{2_5G_6_8}
+<description/></term><term>{2_5G_6_10}
+<description/></term><term>{2_5G_6_12}
+<description/></term><term>{2_5G_6_14}
+<description/></term><term>{2_5G_6_16}
+<description/></term><term>{2_5G_6_18}
+<description/></term><term>{2_5G_6_20}
+<description/></term><term>{2_5G_6_22}
+<description/></term><term>{2_5G_6_24}
+<description/></term><term>{2_5G_6_26}
+<description/></term><term>{2_5G_6_28}
+<description/></term></term><term>{7_}
+<description/><term>{2_5G_7_2}
+<description/></term><term>{2_5G_7_4}
+<description/></term><term>{2_5G_7_6}
+<description/></term><term>{2_5G_7_8}
+<description/></term><term>{2_5G_7_10}
+<description/></term><term>{2_5G_7_12}
+<description/></term><term>{2_5G_7_14}
+<description/></term><term>{2_5G_7_16}
+<description/></term><term>{2_5G_7_18}
+<description/></term><term>{2_5G_7_20}
+<description/></term><term>{2_5G_7_22}
+<description/></term><term>{2_5G_7_24}
+<description/></term><term>{2_5G_7_26}
+<description/></term></term><term>{8_}
+<description/><term>{2_5G_8_2}
+<description/></term><term>{2_5G_8_4}
+<description/></term><term>{2_5G_8_6}
+<description/></term><term>{2_5G_8_8}
+<description/></term><term>{2_5G_8_10}
+<description/></term><term>{2_5G_8_12}
+<description/></term><term>{2_5G_8_14}
+<description/></term><term>{2_5G_8_16}
+<description/></term><term>{2_5G_8_18}
+<description/></term><term>{2_5G_8_20}
+<description/></term><term>{2_5G_8_22}
+<description/></term><term>{2_5G_8_24}
+<description/></term></term><term>{9_}
+<description/><term>{2_5G_9_2}
+<description/></term><term>{2_5G_9_4}
+<description/></term><term>{2_5G_9_6}
+<description/></term><term>{2_5G_9_8}
+<description/></term><term>{2_5G_9_10}
+<description/></term><term>{2_5G_9_12}
+<description/></term><term>{2_5G_9_14}
+<description/></term><term>{2_5G_9_16}
+<description/></term></term></term><term>{5G}
+<description/><term>{1_}
+<description/><term>{5G_1_2}
+<description/></term><term>{5G_1_4}
+<description/></term><term>{5G_1_6}
+<description/></term><term>{5G_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{5G_2_2}
+<description/></term><term>{5G_2_4}
+<description/></term><term>{5G_2_6}
+<description/></term><term>{5G_2_8}
+<description/></term><term>{5G_2_10}
+<description/></term><term>{5G_2_12}
+<description/></term><term>{5G_2_14}
+<description/></term><term>{5G_2_16}
+<description/></term></term><term>{3_}
+<description/><term>{5G_3_2}
+<description/></term><term>{5G_3_4}
+<description/></term><term>{5G_3_6}
+<description/></term><term>{5G_3_8}
+<description/></term><term>{5G_3_10}
+<description/></term><term>{5G_3_12}
+<description/></term><term>{5G_3_14}
+<description/></term><term>{5G_3_16}
+<description/></term><term>{5G_3_18}
+<description/></term><term>{5G_3_20}
+<description/></term><term>{5G_3_22}
+<description/></term></term><term>{4_}
+<description/><term>{5G_4_2}
+<description/></term><term>{5G_4_4}
+<description/></term><term>{5G_4_6}
+<description/></term><term>{5G_4_8}
+<description/></term><term>{5G_4_10}
+<description/></term><term>{5G_4_12}
+<description/></term><term>{5G_4_14}
+<description/></term><term>{5G_4_16}
+<description/></term><term>{5G_4_18}
+<description/></term><term>{5G_4_20}
+<description/></term><term>{5G_4_22}
+<description/></term><term>{5G_4_24}
+<description/></term><term>{5G_4_26}
+<description/></term></term><term>{5_}
+<description/><term>{5G_5_2}
+<description/></term><term>{5G_5_4}
+<description/></term><term>{5G_5_6}
+<description/></term><term>{5G_5_8}
+<description/></term><term>{5G_5_10}
+<description/></term><term>{5G_5_12}
+<description/></term><term>{5G_5_14}
+<description/></term><term>{5G_5_16}
+<description/></term><term>{5G_5_18}
+<description/></term><term>{5G_5_20}
+<description/></term><term>{5G_5_22}
+<description/></term><term>{5G_5_24}
+<description/></term><term>{5G_5_26}
+<description/></term><term>{5G_5_28}
+<description/></term></term><term>{6_}
+<description/><term>{5G_6_2}
+<description/></term><term>{5G_6_4}
+<description/></term><term>{5G_6_6}
+<description/></term><term>{5G_6_8}
+<description/></term><term>{5G_6_10}
+<description/></term><term>{5G_6_12}
+<description/></term><term>{5G_6_14}
+<description/></term><term>{5G_6_16}
+<description/></term><term>{5G_6_18}
+<description/></term><term>{5G_6_20}
+<description/></term><term>{5G_6_22}
+<description/></term><term>{5G_6_24}
+<description/></term><term>{5G_6_26}
+<description/></term><term>{5G_6_28}
+<description/></term></term><term>{7_}
+<description/><term>{5G_7_2}
+<description/></term><term>{5G_7_4}
+<description/></term><term>{5G_7_6}
+<description/></term><term>{5G_7_8}
+<description/></term><term>{5G_7_10}
+<description/></term><term>{5G_7_12}
+<description/></term><term>{5G_7_14}
+<description/></term><term>{5G_7_16}
+<description/></term><term>{5G_7_18}
+<description/></term><term>{5G_7_20}
+<description/></term><term>{5G_7_22}
+<description/></term><term>{5G_7_24}
+<description/></term><term>{5G_7_26}
+<description/></term></term><term>{8_}
+<description/><term>{5G_8_2}
+<description/></term><term>{5G_8_4}
+<description/></term><term>{5G_8_6}
+<description/></term><term>{5G_8_8}
+<description/></term><term>{5G_8_10}
+<description/></term><term>{5G_8_12}
+<description/></term><term>{5G_8_14}
+<description/></term><term>{5G_8_16}
+<description/></term><term>{5G_8_18}
+<description/></term><term>{5G_8_20}
+<description/></term><term>{5G_8_22}
+<description/></term></term><term>{9_}
+<description/><term>{5G_9_2}
+<description/></term><term>{5G_9_4}
+<description/></term><term>{5G_9_6}
+<description/></term><term>{5G_9_8}
+<description/></term><term>{5G_9_10}
+<description/></term><term>{5G_9_12}
+<description/></term></term></term><term>{7_5G}
+<description/><term>{1_}
+<description/><term>{7_5G_1_2}
+<description/></term><term>{7_5G_1_4}
+<description/></term><term>{7_5G_1_6}
+<description/></term><term>{7_5G_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{7_5G_2_2}
+<description/></term><term>{7_5G_2_4}
+<description/></term><term>{7_5G_2_6}
+<description/></term><term>{7_5G_2_8}
+<description/></term><term>{7_5G_2_10}
+<description/></term><term>{7_5G_2_12}
+<description/></term><term>{7_5G_2_14}
+<description/></term><term>{7_5G_2_16}
+<description/></term></term><term>{3_}
+<description/><term>{7_5G_3_2}
+<description/></term><term>{7_5G_3_4}
+<description/></term><term>{7_5G_3_6}
+<description/></term><term>{7_5G_3_8}
+<description/></term><term>{7_5G_3_10}
+<description/></term><term>{7_5G_3_12}
+<description/></term><term>{7_5G_3_14}
+<description/></term><term>{7_5G_3_16}
+<description/></term><term>{7_5G_3_18}
+<description/></term><term>{7_5G_3_20}
+<description/></term><term>{7_5G_3_22}
+<description/></term></term><term>{4_}
+<description/><term>{7_5G_4_2}
+<description/></term><term>{7_5G_4_4}
+<description/></term><term>{7_5G_4_6}
+<description/></term><term>{7_5G_4_8}
+<description/></term><term>{7_5G_4_10}
+<description/></term><term>{7_5G_4_12}
+<description/></term><term>{7_5G_4_14}
+<description/></term><term>{7_5G_4_16}
+<description/></term><term>{7_5G_4_18}
+<description/></term><term>{7_5G_4_20}
+<description/></term><term>{7_5G_4_22}
+<description/></term><term>{7_5G_4_24}
+<description/></term><term>{7_5G_4_26}
+<description/></term></term><term>{5_}
+<description/><term>{7_5G_5_2}
+<description/></term><term>{7_5G_5_4}
+<description/></term><term>{7_5G_5_6}
+<description/></term><term>{7_5G_5_8}
+<description/></term><term>{7_5G_5_10}
+<description/></term><term>{7_5G_5_12}
+<description/></term><term>{7_5G_5_14}
+<description/></term><term>{7_5G_5_16}
+<description/></term><term>{7_5G_5_18}
+<description/></term><term>{7_5G_5_20}
+<description/></term><term>{7_5G_5_22}
+<description/></term><term>{7_5G_5_24}
+<description/></term><term>{7_5G_5_26}
+<description/></term><term>{7_5G_5_28}
+<description/></term></term><term>{6_}
+<description/><term>{7_5G_6_2}
+<description/></term><term>{7_5G_6_4}
+<description/></term><term>{7_5G_6_6}
+<description/></term><term>{7_5G_6_8}
+<description/></term><term>{7_5G_6_10}
+<description/></term><term>{7_5G_6_12}
+<description/></term><term>{7_5G_6_14}
+<description/></term><term>{7_5G_6_16}
+<description/></term><term>{7_5G_6_18}
+<description/></term><term>{7_5G_6_20}
+<description/></term><term>{7_5G_6_22}
+<description/></term><term>{7_5G_6_24}
+<description/></term><term>{7_5G_6_26}
+<description/></term><term>{7_5G_6_28}
+<description/></term></term><term>{7_}
+<description/><term>{7_5G_7_2}
+<description/></term><term>{7_5G_7_4}
+<description/></term><term>{7_5G_7_6}
+<description/></term><term>{7_5G_7_8}
+<description/></term><term>{7_5G_7_10}
+<description/></term><term>{7_5G_7_12}
+<description/></term><term>{7_5G_7_14}
+<description/></term><term>{7_5G_7_16}
+<description/></term><term>{7_5G_7_18}
+<description/></term><term>{7_5G_7_20}
+<description/></term><term>{7_5G_7_22}
+<description/></term><term>{7_5G_7_24}
+<description/></term><term>{7_5G_7_26}
+<description/></term></term><term>{8_}
+<description/><term>{7_5G_8_2}
+<description/></term><term>{7_5G_8_4}
+<description/></term><term>{7_5G_8_6}
+<description/></term><term>{7_5G_8_8}
+<description/></term><term>{7_5G_8_10}
+<description/></term><term>{7_5G_8_12}
+<description/></term><term>{7_5G_8_14}
+<description/></term><term>{7_5G_8_16}
+<description/></term><term>{7_5G_8_18}
+<description/></term><term>{7_5G_8_20}
+<description/></term></term><term>{9_}
+<description/><term>{7_5G_9_2}
+<description/></term><term>{7_5G_9_4}
+<description/></term><term>{7_5G_9_6}
+<description/></term><term>{7_5G_9_8}
+<description/></term><term>{7_5G_9_10}
+<description/></term><term>{7_5G_9_12}
+<description/></term></term></term><term>{10G}
+<description/><term>{1_}
+<description/><term>{10G_1_2}
+<description/></term><term>{10G_1_4}
+<description/></term><term>{10G_1_6}
+<description/></term><term>{10G_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{10G_2_2}
+<description/></term><term>{10G_2_4}
+<description/></term><term>{10G_2_6}
+<description/></term><term>{10G_2_8}
+<description/></term><term>{10G_2_10}
+<description/></term><term>{10G_2_12}
+<description/></term><term>{10G_2_14}
+<description/></term><term>{10G_2_16}
+<description/></term></term><term>{3_}
+<description/><term>{10G_3_2}
+<description/></term><term>{10G_3_4}
+<description/></term><term>{10G_3_6}
+<description/></term><term>{10G_3_8}
+<description/></term><term>{10G_3_10}
+<description/></term><term>{10G_3_12}
+<description/></term><term>{10G_3_14}
+<description/></term><term>{10G_3_16}
+<description/></term><term>{10G_3_18}
+<description/></term><term>{10G_3_20}
+<description/></term><term>{10G_3_22}
+<description/></term></term><term>{4_}
+<description/><term>{10G_4_2}
+<description/></term><term>{10G_4_4}
+<description/></term><term>{10G_4_6}
+<description/></term><term>{10G_4_8}
+<description/></term><term>{10G_4_10}
+<description/></term><term>{10G_4_12}
+<description/></term><term>{10G_4_14}
+<description/></term><term>{10G_4_16}
+<description/></term><term>{10G_4_18}
+<description/></term><term>{10G_4_20}
+<description/></term><term>{10G_4_22}
+<description/></term><term>{10G_4_24}
+<description/></term><term>{10G_4_26}
+<description/></term></term><term>{5_}
+<description/><term>{10G_5_2}
+<description/></term><term>{10G_5_4}
+<description/></term><term>{10G_5_6}
+<description/></term><term>{10G_5_8}
+<description/></term><term>{10G_5_10}
+<description/></term><term>{10G_5_12}
+<description/></term><term>{10G_5_14}
+<description/></term><term>{10G_5_16}
+<description/></term><term>{10G_5_18}
+<description/></term><term>{10G_5_20}
+<description/></term><term>{10G_5_22}
+<description/></term><term>{10G_5_24}
+<description/></term><term>{10G_5_26}
+<description/></term><term>{10G_5_28}
+<description/></term></term><term>{6_}
+<description/><term>{10G_6_2}
+<description/></term><term>{10G_6_4}
+<description/></term><term>{10G_6_6}
+<description/></term><term>{10G_6_8}
+<description/></term><term>{10G_6_10}
+<description/></term><term>{10G_6_12}
+<description/></term><term>{10G_6_14}
+<description/></term><term>{10G_6_16}
+<description/></term><term>{10G_6_18}
+<description/></term><term>{10G_6_20}
+<description/></term><term>{10G_6_22}
+<description/></term><term>{10G_6_24}
+<description/></term><term>{10G_6_26}
+<description/></term></term><term>{7_}
+<description/><term>{10G_7_2}
+<description/></term><term>{10G_7_4}
+<description/></term><term>{10G_7_6}
+<description/></term><term>{10G_7_8}
+<description/></term><term>{10G_7_10}
+<description/></term><term>{10G_7_12}
+<description/></term><term>{10G_7_14}
+<description/></term><term>{10G_7_16}
+<description/></term><term>{10G_7_18}
+<description/></term><term>{10G_7_20}
+<description/></term><term>{10G_7_22}
+<description/></term><term>{10G_7_24}
+<description/></term></term><term>{8_}
+<description/><term>{10G_8_2}
+<description/></term><term>{10G_8_4}
+<description/></term><term>{10G_8_6}
+<description/></term><term>{10G_8_8}
+<description/></term><term>{10G_8_10}
+<description/></term><term>{10G_8_12}
+<description/></term><term>{10G_8_14}
+<description/></term><term>{10G_8_16}
+<description/></term><term>{10G_8_18}
+<description/></term><term>{10G_8_20}
+<description/></term></term><term>{9_}
+<description/><term>{10G_9_2}
+<description/></term><term>{10G_9_4}
+<description/></term><term>{10G_9_6}
+<description/></term><term>{10G_9_8}
+<description/></term><term>{10G_9_10}
+<description/></term><term>{10G_9_12}
+<description/></term></term></term></term>
+        <term>{BG}
+<description/><term>{2_5BG}
+<description/><term>{1_}
+<description/><term>{2_5BG_1_2}
+<description/></term><term>{2_5BG_1_4}
+<description/></term><term>{2_5BG_1_6}
+<description/></term><term>{2_5BG_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{2_5BG_2_2}
+<description/></term><term>{2_5BG_2_4}
+<description/></term><term>{2_5BG_2_6}
+<description/></term><term>{2_5BG_2_8}
+<description/></term><term>{2_5BG_2_10}
+<description/></term><term>{2_5BG_2_12}
+<description/></term><term>{2_5BG_2_14}
+<description/></term></term><term>{3_}
+<description/><term>{2_5BG_3_2}
+<description/></term><term>{2_5BG_3_4}
+<description/></term><term>{2_5BG_3_6}
+<description/></term><term>{2_5BG_3_8}
+<description/></term><term>{2_5BG_3_10}
+<description/></term><term>{2_5BG_3_12}
+<description/></term><term>{2_5BG_3_14}
+<description/></term><term>{2_5BG_3_16}
+<description/></term><term>{2_5BG_3_18}
+<description/></term><term>{2_5BG_3_20}
+<description/></term></term><term>{4_}
+<description/><term>{2_5BG_4_2}
+<description/></term><term>{2_5BG_4_4}
+<description/></term><term>{2_5BG_4_6}
+<description/></term><term>{2_5BG_4_8}
+<description/></term><term>{2_5BG_4_10}
+<description/></term><term>{2_5BG_4_12}
+<description/></term><term>{2_5BG_4_14}
+<description/></term><term>{2_5BG_4_16}
+<description/></term><term>{2_5BG_4_18}
+<description/></term><term>{2_5BG_4_20}
+<description/></term><term>{2_5BG_4_22}
+<description/></term><term>{2_5BG_4_24}
+<description/></term></term><term>{5_}
+<description/><term>{2_5BG_5_2}
+<description/></term><term>{2_5BG_5_4}
+<description/></term><term>{2_5BG_5_6}
+<description/></term><term>{2_5BG_5_8}
+<description/></term><term>{2_5BG_5_10}
+<description/></term><term>{2_5BG_5_12}
+<description/></term><term>{2_5BG_5_14}
+<description/></term><term>{2_5BG_5_16}
+<description/></term><term>{2_5BG_5_18}
+<description/></term><term>{2_5BG_5_20}
+<description/></term><term>{2_5BG_5_22}
+<description/></term><term>{2_5BG_5_24}
+<description/></term></term><term>{6_}
+<description/><term>{2_5BG_6_2}
+<description/></term><term>{2_5BG_6_4}
+<description/></term><term>{2_5BG_6_6}
+<description/></term><term>{2_5BG_6_8}
+<description/></term><term>{2_5BG_6_10}
+<description/></term><term>{2_5BG_6_12}
+<description/></term><term>{2_5BG_6_14}
+<description/></term><term>{2_5BG_6_16}
+<description/></term><term>{2_5BG_6_18}
+<description/></term><term>{2_5BG_6_20}
+<description/></term><term>{2_5BG_6_22}
+<description/></term></term><term>{7_}
+<description/><term>{2_5BG_7_2}
+<description/></term><term>{2_5BG_7_4}
+<description/></term><term>{2_5BG_7_6}
+<description/></term><term>{2_5BG_7_8}
+<description/></term><term>{2_5BG_7_10}
+<description/></term><term>{2_5BG_7_12}
+<description/></term><term>{2_5BG_7_14}
+<description/></term><term>{2_5BG_7_16}
+<description/></term><term>{2_5BG_7_18}
+<description/></term><term>{2_5BG_7_20}
+<description/></term><term>{2_5BG_7_22}
+<description/></term></term><term>{8_}
+<description/><term>{2_5BG_8_2}
+<description/></term><term>{2_5BG_8_4}
+<description/></term><term>{2_5BG_8_6}
+<description/></term><term>{2_5BG_8_8}
+<description/></term><term>{2_5BG_8_10}
+<description/></term><term>{2_5BG_8_12}
+<description/></term><term>{2_5BG_8_14}
+<description/></term><term>{2_5BG_8_16}
+<description/></term><term>{2_5BG_8_18}
+<description/></term></term><term>{9_}
+<description/><term>{2_5BG_9_2}
+<description/></term><term>{2_5BG_9_4}
+<description/></term><term>{2_5BG_9_6}
+<description/></term><term>{2_5BG_9_8}
+<description/></term><term>{2_5BG_9_10}
+<description/></term></term></term><term>{5BG}
+<description/><term>{1_}
+<description/><term>{5BG_1_2}
+<description/></term><term>{5BG_1_4}
+<description/></term><term>{5BG_1_6}
+<description/></term></term><term>{2_}
+<description/><term>{5BG_2_2}
+<description/></term><term>{5BG_2_4}
+<description/></term><term>{5BG_2_6}
+<description/></term><term>{5BG_2_8}
+<description/></term><term>{5BG_2_10}
+<description/></term><term>{5BG_2_12}
+<description/></term></term><term>{3_}
+<description/><term>{5BG_3_2}
+<description/></term><term>{5BG_3_4}
+<description/></term><term>{5BG_3_6}
+<description/></term><term>{5BG_3_8}
+<description/></term><term>{5BG_3_10}
+<description/></term><term>{5BG_3_12}
+<description/></term><term>{5BG_3_14}
+<description/></term><term>{5BG_3_16}
+<description/></term><term>{5BG_3_18}
+<description/></term></term><term>{4_}
+<description/><term>{5BG_4_2}
+<description/></term><term>{5BG_4_4}
+<description/></term><term>{5BG_4_6}
+<description/></term><term>{5BG_4_8}
+<description/></term><term>{5BG_4_10}
+<description/></term><term>{5BG_4_12}
+<description/></term><term>{5BG_4_14}
+<description/></term><term>{5BG_4_16}
+<description/></term><term>{5BG_4_18}
+<description/></term><term>{5BG_4_20}
+<description/></term></term><term>{5_}
+<description/><term>{5BG_5_2}
+<description/></term><term>{5BG_5_4}
+<description/></term><term>{5BG_5_6}
+<description/></term><term>{5BG_5_8}
+<description/></term><term>{5BG_5_10}
+<description/></term><term>{5BG_5_12}
+<description/></term><term>{5BG_5_14}
+<description/></term><term>{5BG_5_16}
+<description/></term><term>{5BG_5_18}
+<description/></term><term>{5BG_5_20}
+<description/></term><term>{5BG_5_22}
+<description/></term></term><term>{6_}
+<description/><term>{5BG_6_2}
+<description/></term><term>{5BG_6_4}
+<description/></term><term>{5BG_6_6}
+<description/></term><term>{5BG_6_8}
+<description/></term><term>{5BG_6_10}
+<description/></term><term>{5BG_6_12}
+<description/></term><term>{5BG_6_14}
+<description/></term><term>{5BG_6_16}
+<description/></term><term>{5BG_6_18}
+<description/></term><term>{5BG_6_20}
+<description/></term></term><term>{7_}
+<description/><term>{5BG_7_2}
+<description/></term><term>{5BG_7_4}
+<description/></term><term>{5BG_7_6}
+<description/></term><term>{5BG_7_8}
+<description/></term><term>{5BG_7_10}
+<description/></term><term>{5BG_7_12}
+<description/></term><term>{5BG_7_14}
+<description/></term><term>{5BG_7_16}
+<description/></term><term>{5BG_7_18}
+<description/></term><term>{5BG_7_20}
+<description/></term></term><term>{8_}
+<description/><term>{5BG_8_2}
+<description/></term><term>{5BG_8_4}
+<description/></term><term>{5BG_8_6}
+<description/></term><term>{5BG_8_8}
+<description/></term><term>{5BG_8_10}
+<description/></term><term>{5BG_8_12}
+<description/></term><term>{5BG_8_14}
+<description/></term><term>{5BG_8_16}
+<description/></term></term><term>{9_}
+<description/><term>{5BG_9_2}
+<description/></term><term>{5BG_9_4}
+<description/></term><term>{5BG_9_6}
+<description/></term><term>{5BG_9_8}
+<description/></term><term>{5BG_9_10}
+<description/></term></term></term><term>{7_5BG}
+<description/><term>{1_}
+<description/><term>{7_5BG_1_2}
+<description/></term><term>{7_5BG_1_4}
+<description/></term><term>{7_5BG_1_6}
+<description/></term></term><term>{2_}
+<description/><term>{7_5BG_2_2}
+<description/></term><term>{7_5BG_2_4}
+<description/></term><term>{7_5BG_2_6}
+<description/></term><term>{7_5BG_2_8}
+<description/></term><term>{7_5BG_2_10}
+<description/></term><term>{7_5BG_2_12}
+<description/></term></term><term>{3_}
+<description/><term>{7_5BG_3_2}
+<description/></term><term>{7_5BG_3_4}
+<description/></term><term>{7_5BG_3_6}
+<description/></term><term>{7_5BG_3_8}
+<description/></term><term>{7_5BG_3_10}
+<description/></term><term>{7_5BG_3_12}
+<description/></term><term>{7_5BG_3_14}
+<description/></term><term>{7_5BG_3_16}
+<description/></term></term><term>{4_}
+<description/><term>{7_5BG_4_2}
+<description/></term><term>{7_5BG_4_4}
+<description/></term><term>{7_5BG_4_6}
+<description/></term><term>{7_5BG_4_8}
+<description/></term><term>{7_5BG_4_10}
+<description/></term><term>{7_5BG_4_12}
+<description/></term><term>{7_5BG_4_14}
+<description/></term><term>{7_5BG_4_16}
+<description/></term><term>{7_5BG_4_18}
+<description/></term></term><term>{5_}
+<description/><term>{7_5BG_5_2}
+<description/></term><term>{7_5BG_5_4}
+<description/></term><term>{7_5BG_5_6}
+<description/></term><term>{7_5BG_5_8}
+<description/></term><term>{7_5BG_5_10}
+<description/></term><term>{7_5BG_5_12}
+<description/></term><term>{7_5BG_5_14}
+<description/></term><term>{7_5BG_5_16}
+<description/></term><term>{7_5BG_5_18}
+<description/></term></term><term>{6_}
+<description/><term>{7_5BG_6_2}
+<description/></term><term>{7_5BG_6_4}
+<description/></term><term>{7_5BG_6_6}
+<description/></term><term>{7_5BG_6_8}
+<description/></term><term>{7_5BG_6_10}
+<description/></term><term>{7_5BG_6_12}
+<description/></term><term>{7_5BG_6_14}
+<description/></term><term>{7_5BG_6_16}
+<description/></term><term>{7_5BG_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{7_5BG_7_2}
+<description/></term><term>{7_5BG_7_4}
+<description/></term><term>{7_5BG_7_6}
+<description/></term><term>{7_5BG_7_8}
+<description/></term><term>{7_5BG_7_10}
+<description/></term><term>{7_5BG_7_12}
+<description/></term><term>{7_5BG_7_14}
+<description/></term><term>{7_5BG_7_16}
+<description/></term><term>{7_5BG_7_18}
+<description/></term></term><term>{8_}
+<description/><term>{7_5BG_8_2}
+<description/></term><term>{7_5BG_8_4}
+<description/></term><term>{7_5BG_8_6}
+<description/></term><term>{7_5BG_8_8}
+<description/></term><term>{7_5BG_8_10}
+<description/></term><term>{7_5BG_8_12}
+<description/></term><term>{7_5BG_8_14}
+<description/></term><term>{7_5BG_8_16}
+<description/></term></term><term>{9_}
+<description/><term>{7_5BG_9_2}
+<description/></term><term>{7_5BG_9_4}
+<description/></term><term>{7_5BG_9_6}
+<description/></term><term>{7_5BG_9_8}
+<description/></term><term>{7_5BG_9_10}
+<description/></term></term></term><term>{10BG}
+<description/><term>{1_}
+<description/><term>{10BG_1_2}
+<description/></term><term>{10BG_1_4}
+<description/></term><term>{10BG_1_6}
+<description/></term></term><term>{2_}
+<description/><term>{10BG_2_2}
+<description/></term><term>{10BG_2_4}
+<description/></term><term>{10BG_2_6}
+<description/></term><term>{10BG_2_8}
+<description/></term><term>{10BG_2_10}
+<description/></term></term><term>{3_}
+<description/><term>{10BG_3_2}
+<description/></term><term>{10BG_3_4}
+<description/></term><term>{10BG_3_6}
+<description/></term><term>{10BG_3_8}
+<description/></term><term>{10BG_3_10}
+<description/></term><term>{10BG_3_12}
+<description/></term><term>{10BG_3_14}
+<description/></term></term><term>{4_}
+<description/><term>{10BG_4_2}
+<description/></term><term>{10BG_4_4}
+<description/></term><term>{10BG_4_6}
+<description/></term><term>{10BG_4_8}
+<description/></term><term>{10BG_4_10}
+<description/></term><term>{10BG_4_12}
+<description/></term><term>{10BG_4_14}
+<description/></term><term>{10BG_4_16}
+<description/></term></term><term>{5_}
+<description/><term>{10BG_5_2}
+<description/></term><term>{10BG_5_4}
+<description/></term><term>{10BG_5_6}
+<description/></term><term>{10BG_5_8}
+<description/></term><term>{10BG_5_10}
+<description/></term><term>{10BG_5_12}
+<description/></term><term>{10BG_5_14}
+<description/></term><term>{10BG_5_16}
+<description/></term></term><term>{6_}
+<description/><term>{10BG_6_2}
+<description/></term><term>{10BG_6_4}
+<description/></term><term>{10BG_6_6}
+<description/></term><term>{10BG_6_8}
+<description/></term><term>{10BG_6_10}
+<description/></term><term>{10BG_6_12}
+<description/></term><term>{10BG_6_14}
+<description/></term><term>{10BG_6_16}
+<description/></term><term>{10BG_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{10BG_7_2}
+<description/></term><term>{10BG_7_4}
+<description/></term><term>{10BG_7_6}
+<description/></term><term>{10BG_7_8}
+<description/></term><term>{10BG_7_10}
+<description/></term><term>{10BG_7_12}
+<description/></term><term>{10BG_7_14}
+<description/></term><term>{10BG_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{10BG_8_2}
+<description/></term><term>{10BG_8_4}
+<description/></term><term>{10BG_8_6}
+<description/></term><term>{10BG_8_8}
+<description/></term><term>{10BG_8_10}
+<description/></term><term>{10BG_8_12}
+<description/></term><term>{10BG_8_14}
+<description/></term></term><term>{9_}
+<description/><term>{10BG_9_2}
+<description/></term><term>{10BG_9_4}
+<description/></term><term>{10BG_9_6}
+<description/></term></term></term></term>
+        <term>{B}
+<description/><term>{2_5B}
+<description/><term>{1_}
+<description/><term>{2_5B_1_2}
+<description/></term><term>{2_5B_1_4}
+<description/></term><term>{2_5B_1_6}
+<description/></term></term><term>{2_}
+<description/><term>{2_5B_2_2}
+<description/></term><term>{2_5B_2_4}
+<description/></term><term>{2_5B_2_6}
+<description/></term><term>{2_5B_2_8}
+<description/></term><term>{2_5B_2_10}
+<description/></term></term><term>{3_}
+<description/><term>{2_5B_3_2}
+<description/></term><term>{2_5B_3_4}
+<description/></term><term>{2_5B_3_6}
+<description/></term><term>{2_5B_3_8}
+<description/></term><term>{2_5B_3_10}
+<description/></term><term>{2_5B_3_12}
+<description/></term></term><term>{4_}
+<description/><term>{2_5B_4_2}
+<description/></term><term>{2_5B_4_4}
+<description/></term><term>{2_5B_4_6}
+<description/></term><term>{2_5B_4_8}
+<description/></term><term>{2_5B_4_10}
+<description/></term><term>{2_5B_4_12}
+<description/></term><term>{2_5B_4_14}
+<description/></term><term>{2_5B_4_16}
+<description/></term></term><term>{5_}
+<description/><term>{2_5B_5_2}
+<description/></term><term>{2_5B_5_4}
+<description/></term><term>{2_5B_5_6}
+<description/></term><term>{2_5B_5_8}
+<description/></term><term>{2_5B_5_10}
+<description/></term><term>{2_5B_5_12}
+<description/></term><term>{2_5B_5_14}
+<description/></term><term>{2_5B_5_16}
+<description/></term></term><term>{6_}
+<description/><term>{2_5B_6_2}
+<description/></term><term>{2_5B_6_4}
+<description/></term><term>{2_5B_6_6}
+<description/></term><term>{2_5B_6_8}
+<description/></term><term>{2_5B_6_10}
+<description/></term><term>{2_5B_6_12}
+<description/></term><term>{2_5B_6_14}
+<description/></term><term>{2_5B_6_16}
+<description/></term></term><term>{7_}
+<description/><term>{2_5B_7_2}
+<description/></term><term>{2_5B_7_4}
+<description/></term><term>{2_5B_7_6}
+<description/></term><term>{2_5B_7_8}
+<description/></term><term>{2_5B_7_10}
+<description/></term><term>{2_5B_7_12}
+<description/></term><term>{2_5B_7_14}
+<description/></term><term>{2_5B_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{2_5B_8_2}
+<description/></term><term>{2_5B_8_4}
+<description/></term><term>{2_5B_8_6}
+<description/></term><term>{2_5B_8_8}
+<description/></term><term>{2_5B_8_10}
+<description/></term><term>{2_5B_8_12}
+<description/></term></term><term>{9_}
+<description/><term>{2_5B_9_2}
+<description/></term><term>{2_5B_9_4}
+<description/></term></term></term><term>{5B}
+<description/><term>{1_}
+<description/><term>{5B_1_2}
+<description/></term><term>{5B_1_4}
+<description/></term><term>{5B_1_6}
+<description/></term></term><term>{2_}
+<description/><term>{5B_2_2}
+<description/></term><term>{5B_2_4}
+<description/></term><term>{5B_2_6}
+<description/></term><term>{5B_2_8}
+<description/></term><term>{5B_2_10}
+<description/></term></term><term>{3_}
+<description/><term>{5B_3_2}
+<description/></term><term>{5B_3_4}
+<description/></term><term>{5B_3_6}
+<description/></term><term>{5B_3_8}
+<description/></term><term>{5B_3_10}
+<description/></term><term>{5B_3_12}
+<description/></term></term><term>{4_}
+<description/><term>{5B_4_2}
+<description/></term><term>{5B_4_4}
+<description/></term><term>{5B_4_6}
+<description/></term><term>{5B_4_8}
+<description/></term><term>{5B_4_10}
+<description/></term><term>{5B_4_12}
+<description/></term><term>{5B_4_14}
+<description/></term></term><term>{5_}
+<description/><term>{5B_5_2}
+<description/></term><term>{5B_5_4}
+<description/></term><term>{5B_5_6}
+<description/></term><term>{5B_5_8}
+<description/></term><term>{5B_5_10}
+<description/></term><term>{5B_5_12}
+<description/></term><term>{5B_5_14}
+<description/></term><term>{5B_5_16}
+<description/></term></term><term>{6_}
+<description/><term>{5B_6_2}
+<description/></term><term>{5B_6_4}
+<description/></term><term>{5B_6_6}
+<description/></term><term>{5B_6_8}
+<description/></term><term>{5B_6_10}
+<description/></term><term>{5B_6_12}
+<description/></term><term>{5B_6_14}
+<description/></term><term>{5B_6_16}
+<description/></term></term><term>{7_}
+<description/><term>{5B_7_2}
+<description/></term><term>{5B_7_4}
+<description/></term><term>{5B_7_6}
+<description/></term><term>{5B_7_8}
+<description/></term><term>{5B_7_10}
+<description/></term><term>{5B_7_12}
+<description/></term><term>{5B_7_14}
+<description/></term></term><term>{8_}
+<description/><term>{5B_8_2}
+<description/></term><term>{5B_8_4}
+<description/></term><term>{5B_8_6}
+<description/></term><term>{5B_8_8}
+<description/></term></term><term>{9_}
+<description/><term>{5B_9_2}
+<description/></term><term>{5B_9_4}
+<description/></term></term></term><term>{7_5B}
+<description/><term>{1_}
+<description/><term>{7_5B_1_2}
+<description/></term><term>{7_5B_1_4}
+<description/></term><term>{7_5B_1_6}
+<description/></term><term>{7_5B_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{7_5B_2_2}
+<description/></term><term>{7_5B_2_4}
+<description/></term><term>{7_5B_2_6}
+<description/></term><term>{7_5B_2_8}
+<description/></term><term>{7_5B_2_10}
+<description/></term></term><term>{3_}
+<description/><term>{7_5B_3_2}
+<description/></term><term>{7_5B_3_4}
+<description/></term><term>{7_5B_3_6}
+<description/></term><term>{7_5B_3_8}
+<description/></term><term>{7_5B_3_10}
+<description/></term><term>{7_5B_3_12}
+<description/></term></term><term>{4_}
+<description/><term>{7_5B_4_2}
+<description/></term><term>{7_5B_4_4}
+<description/></term><term>{7_5B_4_6}
+<description/></term><term>{7_5B_4_8}
+<description/></term><term>{7_5B_4_10}
+<description/></term><term>{7_5B_4_12}
+<description/></term><term>{7_5B_4_14}
+<description/></term></term><term>{5_}
+<description/><term>{7_5B_5_2}
+<description/></term><term>{7_5B_5_4}
+<description/></term><term>{7_5B_5_6}
+<description/></term><term>{7_5B_5_8}
+<description/></term><term>{7_5B_5_10}
+<description/></term><term>{7_5B_5_12}
+<description/></term><term>{7_5B_5_14}
+<description/></term><term>{7_5B_5_16}
+<description/></term></term><term>{6_}
+<description/><term>{7_5B_6_2}
+<description/></term><term>{7_5B_6_4}
+<description/></term><term>{7_5B_6_6}
+<description/></term><term>{7_5B_6_8}
+<description/></term><term>{7_5B_6_10}
+<description/></term><term>{7_5B_6_12}
+<description/></term><term>{7_5B_6_14}
+<description/></term><term>{7_5B_6_16}
+<description/></term></term><term>{7_}
+<description/><term>{7_5B_7_2}
+<description/></term><term>{7_5B_7_4}
+<description/></term><term>{7_5B_7_6}
+<description/></term><term>{7_5B_7_8}
+<description/></term><term>{7_5B_7_10}
+<description/></term><term>{7_5B_7_12}
+<description/></term></term><term>{8_}
+<description/><term>{7_5B_8_2}
+<description/></term><term>{7_5B_8_4}
+<description/></term><term>{7_5B_8_6}
+<description/></term><term>{7_5B_8_8}
+<description/></term></term><term>{9_}
+<description/><term>{7_5B_9_2}
+<description/></term><term>{7_5B_9_4}
+<description/></term></term></term><term>{10B}
+<description/><term>{1_}
+<description/><term>{10B_1_2}
+<description/></term><term>{10B_1_4}
+<description/></term><term>{10B_1_6}
+<description/></term><term>{10B_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{10B_2_2}
+<description/></term><term>{10B_2_4}
+<description/></term><term>{10B_2_6}
+<description/></term><term>{10B_2_8}
+<description/></term><term>{10B_2_10}
+<description/></term></term><term>{3_}
+<description/><term>{10B_3_2}
+<description/></term><term>{10B_3_4}
+<description/></term><term>{10B_3_6}
+<description/></term><term>{10B_3_8}
+<description/></term><term>{10B_3_10}
+<description/></term><term>{10B_3_12}
+<description/></term><term>{10B_3_14}
+<description/></term></term><term>{4_}
+<description/><term>{10B_4_2}
+<description/></term><term>{10B_4_4}
+<description/></term><term>{10B_4_6}
+<description/></term><term>{10B_4_8}
+<description/></term><term>{10B_4_10}
+<description/></term><term>{10B_4_12}
+<description/></term><term>{10B_4_14}
+<description/></term><term>{10B_4_16}
+<description/></term></term><term>{5_}
+<description/><term>{10B_5_2}
+<description/></term><term>{10B_5_4}
+<description/></term><term>{10B_5_6}
+<description/></term><term>{10B_5_8}
+<description/></term><term>{10B_5_10}
+<description/></term><term>{10B_5_12}
+<description/></term><term>{10B_5_14}
+<description/></term><term>{10B_5_16}
+<description/></term><term>{10B_5_18}
+<description/></term></term><term>{6_}
+<description/><term>{10B_6_2}
+<description/></term><term>{10B_6_4}
+<description/></term><term>{10B_6_6}
+<description/></term><term>{10B_6_8}
+<description/></term><term>{10B_6_10}
+<description/></term><term>{10B_6_12}
+<description/></term><term>{10B_6_14}
+<description/></term><term>{10B_6_16}
+<description/></term></term><term>{7_}
+<description/><term>{10B_7_2}
+<description/></term><term>{10B_7_4}
+<description/></term><term>{10B_7_6}
+<description/></term><term>{10B_7_8}
+<description/></term><term>{10B_7_10}
+<description/></term><term>{10B_7_12}
+<description/></term></term><term>{8_}
+<description/><term>{10B_8_2}
+<description/></term><term>{10B_8_4}
+<description/></term><term>{10B_8_6}
+<description/></term><term>{10B_8_8}
+<description/></term></term><term>{9_}
+<description/><term>{10B_9_2}
+<description/></term><term>{10B_9_4}
+<description/></term></term></term></term>
+        <term>{PB}
+<description/><term>{2_5PB}
+<description/><term>{1_}
+<description/><term>{2_5PB_1_2}
+<description/></term><term>{2_5PB_1_4}
+<description/></term><term>{2_5PB_1_6}
+<description/></term><term>{2_5PB_1_8}
+<description/></term></term><term>{2_}
+<description/><term>{2_5PB_2_2}
+<description/></term><term>{2_5PB_2_4}
+<description/></term><term>{2_5PB_2_6}
+<description/></term><term>{2_5PB_2_8}
+<description/></term><term>{2_5PB_2_10}
+<description/></term><term>{2_5PB_2_12}
+<description/></term></term><term>{3_}
+<description/><term>{2_5PB_3_2}
+<description/></term><term>{2_5PB_3_4}
+<description/></term><term>{2_5PB_3_6}
+<description/></term><term>{2_5PB_3_8}
+<description/></term><term>{2_5PB_3_10}
+<description/></term><term>{2_5PB_3_12}
+<description/></term><term>{2_5PB_3_14}
+<description/></term></term><term>{4_}
+<description/><term>{2_5PB_4_2}
+<description/></term><term>{2_5PB_4_4}
+<description/></term><term>{2_5PB_4_6}
+<description/></term><term>{2_5PB_4_8}
+<description/></term><term>{2_5PB_4_10}
+<description/></term><term>{2_5PB_4_12}
+<description/></term><term>{2_5PB_4_14}
+<description/></term><term>{2_5PB_4_16}
+<description/></term><term>{2_5PB_4_18}
+<description/></term></term><term>{5_}
+<description/><term>{2_5PB_5_2}
+<description/></term><term>{2_5PB_5_4}
+<description/></term><term>{2_5PB_5_6}
+<description/></term><term>{2_5PB_5_8}
+<description/></term><term>{2_5PB_5_10}
+<description/></term><term>{2_5PB_5_12}
+<description/></term><term>{2_5PB_5_14}
+<description/></term><term>{2_5PB_5_16}
+<description/></term><term>{2_5PB_5_18}
+<description/></term></term><term>{6_}
+<description/><term>{2_5PB_6_2}
+<description/></term><term>{2_5PB_6_4}
+<description/></term><term>{2_5PB_6_6}
+<description/></term><term>{2_5PB_6_8}
+<description/></term><term>{2_5PB_6_10}
+<description/></term><term>{2_5PB_6_12}
+<description/></term><term>{2_5PB_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{2_5PB_7_2}
+<description/></term><term>{2_5PB_7_4}
+<description/></term><term>{2_5PB_7_6}
+<description/></term><term>{2_5PB_7_8}
+<description/></term><term>{2_5PB_7_10}
+<description/></term></term><term>{8_}
+<description/><term>{2_5PB_8_2}
+<description/></term><term>{2_5PB_8_4}
+<description/></term><term>{2_5PB_8_6}
+<description/></term></term><term>{9_}
+<description/><term>{2_5PB_9_2}
+<description/></term></term></term><term>{5PB}
+<description/><term>{1_}
+<description/><term>{5PB_1_2}
+<description/></term><term>{5PB_1_4}
+<description/></term><term>{5PB_1_6}
+<description/></term><term>{5PB_1_8}
+<description/></term><term>{5PB_1_10}
+<description/></term></term><term>{2_}
+<description/><term>{5PB_2_2}
+<description/></term><term>{5PB_2_4}
+<description/></term><term>{5PB_2_6}
+<description/></term><term>{5PB_2_8}
+<description/></term><term>{5PB_2_10}
+<description/></term><term>{5PB_2_12}
+<description/></term><term>{5PB_2_14}
+<description/></term></term><term>{3_}
+<description/><term>{5PB_3_2}
+<description/></term><term>{5PB_3_4}
+<description/></term><term>{5PB_3_6}
+<description/></term><term>{5PB_3_8}
+<description/></term><term>{5PB_3_10}
+<description/></term><term>{5PB_3_12}
+<description/></term><term>{5PB_3_14}
+<description/></term><term>{5PB_3_16}
+<description/></term><term>{5PB_3_18}
+<description/></term></term><term>{4_}
+<description/><term>{5PB_4_2}
+<description/></term><term>{5PB_4_4}
+<description/></term><term>{5PB_4_6}
+<description/></term><term>{5PB_4_8}
+<description/></term><term>{5PB_4_10}
+<description/></term><term>{5PB_4_12}
+<description/></term><term>{5PB_4_14}
+<description/></term><term>{5PB_4_16}
+<description/></term><term>{5PB_4_18}
+<description/></term><term>{5PB_4_20}
+<description/></term></term><term>{5_}
+<description/><term>{5PB_5_2}
+<description/></term><term>{5PB_5_4}
+<description/></term><term>{5PB_5_6}
+<description/></term><term>{5PB_5_8}
+<description/></term><term>{5PB_5_10}
+<description/></term><term>{5PB_5_12}
+<description/></term><term>{5PB_5_14}
+<description/></term><term>{5PB_5_16}
+<description/></term><term>{5PB_5_18}
+<description/></term></term><term>{6_}
+<description/><term>{5PB_6_2}
+<description/></term><term>{5PB_6_4}
+<description/></term><term>{5PB_6_6}
+<description/></term><term>{5PB_6_8}
+<description/></term><term>{5PB_6_10}
+<description/></term><term>{5PB_6_12}
+<description/></term><term>{5PB_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{5PB_7_2}
+<description/></term><term>{5PB_7_4}
+<description/></term><term>{5PB_7_6}
+<description/></term><term>{5PB_7_8}
+<description/></term><term>{5PB_7_10}
+<description/></term></term><term>{8_}
+<description/><term>{5PB_8_2}
+<description/></term><term>{5PB_8_4}
+<description/></term><term>{5PB_8_6}
+<description/></term></term><term>{9_}
+<description/><term>{5PB_9_2}
+<description/></term></term></term><term>{7_5PB}
+<description/><term>{1_}
+<description/><term>{7_5PB_1_2}
+<description/></term><term>{7_5PB_1_4}
+<description/></term><term>{7_5PB_1_6}
+<description/></term><term>{7_5PB_1_8}
+<description/></term><term>{7_5PB_1_10}
+<description/></term><term>{7_5PB_1_12}
+<description/></term><term>{7_5PB_1_14}
+<description/></term><term>{7_5PB_1_16}
+<description/></term><term>{7_5PB_1_18}
+<description/></term><term>{7_5PB_1_20}
+<description/></term><term>{7_5PB_1_22}
+<description/></term><term>{7_5PB_1_24}
+<description/></term><term>{7_5PB_1_26}
+<description/></term><term>{7_5PB_1_28}
+<description/></term><term>{7_5PB_1_30}
+<description/></term><term>{7_5PB_1_32}
+<description/></term><term>{7_5PB_1_34}
+<description/></term><term>{7_5PB_1_36}
+<description/></term><term>{7_5PB_1_38}
+<description/></term></term><term>{2_}
+<description/><term>{7_5PB_2_2}
+<description/></term><term>{7_5PB_2_4}
+<description/></term><term>{7_5PB_2_6}
+<description/></term><term>{7_5PB_2_8}
+<description/></term><term>{7_5PB_2_10}
+<description/></term><term>{7_5PB_2_12}
+<description/></term><term>{7_5PB_2_14}
+<description/></term><term>{7_5PB_2_16}
+<description/></term><term>{7_5PB_2_18}
+<description/></term><term>{7_5PB_2_20}
+<description/></term><term>{7_5PB_2_22}
+<description/></term><term>{7_5PB_2_24}
+<description/></term><term>{7_5PB_2_26}
+<description/></term><term>{7_5PB_2_28}
+<description/></term><term>{7_5PB_2_30}
+<description/></term><term>{7_5PB_2_32}
+<description/></term><term>{7_5PB_2_34}
+<description/></term><term>{7_5PB_2_36}
+<description/></term><term>{7_5PB_2_38}
+<description/></term></term><term>{3_}
+<description/><term>{7_5PB_3_2}
+<description/></term><term>{7_5PB_3_4}
+<description/></term><term>{7_5PB_3_6}
+<description/></term><term>{7_5PB_3_8}
+<description/></term><term>{7_5PB_3_10}
+<description/></term><term>{7_5PB_3_12}
+<description/></term><term>{7_5PB_3_14}
+<description/></term><term>{7_5PB_3_16}
+<description/></term><term>{7_5PB_3_18}
+<description/></term><term>{7_5PB_3_20}
+<description/></term><term>{7_5PB_3_22}
+<description/></term><term>{7_5PB_3_24}
+<description/></term><term>{7_5PB_3_26}
+<description/></term><term>{7_5PB_3_28}
+<description/></term><term>{7_5PB_3_30}
+<description/></term><term>{7_5PB_3_32}
+<description/></term><term>{7_5PB_3_34}
+<description/></term></term><term>{4_}
+<description/><term>{7_5PB_4_2}
+<description/></term><term>{7_5PB_4_4}
+<description/></term><term>{7_5PB_4_6}
+<description/></term><term>{7_5PB_4_8}
+<description/></term><term>{7_5PB_4_10}
+<description/></term><term>{7_5PB_4_12}
+<description/></term><term>{7_5PB_4_14}
+<description/></term><term>{7_5PB_4_16}
+<description/></term><term>{7_5PB_4_18}
+<description/></term><term>{7_5PB_4_20}
+<description/></term><term>{7_5PB_4_22}
+<description/></term><term>{7_5PB_4_24}
+<description/></term><term>{7_5PB_4_26}
+<description/></term></term><term>{5_}
+<description/><term>{7_5PB_5_2}
+<description/></term><term>{7_5PB_5_4}
+<description/></term><term>{7_5PB_5_6}
+<description/></term><term>{7_5PB_5_8}
+<description/></term><term>{7_5PB_5_10}
+<description/></term><term>{7_5PB_5_12}
+<description/></term><term>{7_5PB_5_14}
+<description/></term><term>{7_5PB_5_16}
+<description/></term><term>{7_5PB_5_18}
+<description/></term><term>{7_5PB_5_20}
+<description/></term></term><term>{6_}
+<description/><term>{7_5PB_6_2}
+<description/></term><term>{7_5PB_6_4}
+<description/></term><term>{7_5PB_6_6}
+<description/></term><term>{7_5PB_6_8}
+<description/></term><term>{7_5PB_6_10}
+<description/></term><term>{7_5PB_6_12}
+<description/></term><term>{7_5PB_6_14}
+<description/></term></term><term>{7_}
+<description/><term>{7_5PB_7_2}
+<description/></term><term>{7_5PB_7_4}
+<description/></term><term>{7_5PB_7_6}
+<description/></term><term>{7_5PB_7_8}
+<description/></term><term>{7_5PB_7_10}
+<description/></term></term><term>{8_}
+<description/><term>{7_5PB_8_2}
+<description/></term><term>{7_5PB_8_4}
+<description/></term><term>{7_5PB_8_6}
+<description/></term></term><term>{9_}
+<description/><term>{7_5PB_9_2}
+<description/></term></term></term><term>{10PB}
+<description/><term>{1_}
+<description/><term>{10PB_1_2}
+<description/></term><term>{10PB_1_4}
+<description/></term><term>{10PB_1_6}
+<description/></term><term>{10PB_1_8}
+<description/></term><term>{10PB_1_10}
+<description/></term><term>{10PB_1_12}
+<description/></term><term>{10PB_1_14}
+<description/></term><term>{10PB_1_16}
+<description/></term><term>{10PB_1_18}
+<description/></term><term>{10PB_1_20}
+<description/></term><term>{10PB_1_22}
+<description/></term><term>{10PB_1_24}
+<description/></term><term>{10PB_1_26}
+<description/></term><term>{10PB_1_28}
+<description/></term><term>{10PB_1_30}
+<description/></term></term><term>{2_}
+<description/><term>{10PB_2_2}
+<description/></term><term>{10PB_2_4}
+<description/></term><term>{10PB_2_6}
+<description/></term><term>{10PB_2_8}
+<description/></term><term>{10PB_2_10}
+<description/></term><term>{10PB_2_12}
+<description/></term><term>{10PB_2_14}
+<description/></term><term>{10PB_2_16}
+<description/></term><term>{10PB_2_18}
+<description/></term><term>{10PB_2_20}
+<description/></term><term>{10PB_2_22}
+<description/></term><term>{10PB_2_24}
+<description/></term><term>{10PB_2_26}
+<description/></term><term>{10PB_2_28}
+<description/></term><term>{10PB_2_30}
+<description/></term><term>{10PB_2_32}
+<description/></term><term>{10PB_2_34}
+<description/></term></term><term>{3_}
+<description/><term>{10PB_3_2}
+<description/></term><term>{10PB_3_4}
+<description/></term><term>{10PB_3_6}
+<description/></term><term>{10PB_3_8}
+<description/></term><term>{10PB_3_10}
+<description/></term><term>{10PB_3_12}
+<description/></term><term>{10PB_3_14}
+<description/></term><term>{10PB_3_16}
+<description/></term><term>{10PB_3_18}
+<description/></term><term>{10PB_3_20}
+<description/></term><term>{10PB_3_22}
+<description/></term><term>{10PB_3_24}
+<description/></term><term>{10PB_3_26}
+<description/></term><term>{10PB_3_28}
+<description/></term><term>{10PB_3_30}
+<description/></term><term>{10PB_3_32}
+<description/></term><term>{10PB_3_34}
+<description/></term></term><term>{4_}
+<description/><term>{10PB_4_2}
+<description/></term><term>{10PB_4_4}
+<description/></term><term>{10PB_4_6}
+<description/></term><term>{10PB_4_8}
+<description/></term><term>{10PB_4_10}
+<description/></term><term>{10PB_4_12}
+<description/></term><term>{10PB_4_14}
+<description/></term><term>{10PB_4_16}
+<description/></term><term>{10PB_4_18}
+<description/></term><term>{10PB_4_20}
+<description/></term><term>{10PB_4_22}
+<description/></term><term>{10PB_4_24}
+<description/></term><term>{10PB_4_26}
+<description/></term><term>{10PB_4_28}
+<description/></term><term>{10PB_4_30}
+<description/></term></term><term>{5_}
+<description/><term>{10PB_5_2}
+<description/></term><term>{10PB_5_4}
+<description/></term><term>{10PB_5_6}
+<description/></term><term>{10PB_5_8}
+<description/></term><term>{10PB_5_10}
+<description/></term><term>{10PB_5_12}
+<description/></term><term>{10PB_5_14}
+<description/></term><term>{10PB_5_16}
+<description/></term><term>{10PB_5_18}
+<description/></term><term>{10PB_5_20}
+<description/></term><term>{10PB_5_22}
+<description/></term></term><term>{6_}
+<description/><term>{10PB_6_2}
+<description/></term><term>{10PB_6_4}
+<description/></term><term>{10PB_6_6}
+<description/></term><term>{10PB_6_8}
+<description/></term><term>{10PB_6_10}
+<description/></term><term>{10PB_6_12}
+<description/></term><term>{10PB_6_14}
+<description/></term><term>{10PB_6_16}
+<description/></term></term><term>{7_}
+<description/><term>{10PB_7_2}
+<description/></term><term>{10PB_7_4}
+<description/></term><term>{10PB_7_6}
+<description/></term><term>{10PB_7_8}
+<description/></term><term>{10PB_7_10}
+<description/></term><term>{10PB_7_12}
+<description/></term></term><term>{8_}
+<description/><term>{10PB_8_2}
+<description/></term><term>{10PB_8_4}
+<description/></term><term>{10PB_8_6}
+<description/></term><term>{10PB_8_8}
+<description/></term></term><term>{9_}
+<description/><term>{10PB_9_2}
+<description/></term><term>{10PB_9_4}
+<description/></term></term></term></term>
+        <term>{P}
+<description/><term>{2_5P}
+<description/><term>{1_}
+<description/><term>{2_5P_1_2}
+<description/></term><term>{2_5P_1_4}
+<description/></term><term>{2_5P_1_6}
+<description/></term><term>{2_5P_1_8}
+<description/></term><term>{2_5P_1_10}
+<description/></term><term>{2_5P_1_12}
+<description/></term><term>{2_5P_1_14}
+<description/></term><term>{2_5P_1_16}
+<description/></term><term>{2_5P_1_18}
+<description/></term><term>{2_5P_1_20}
+<description/></term><term>{2_5P_1_22}
+<description/></term><term>{2_5P_1_24}
+<description/></term><term>{2_5P_1_26}
+<description/></term></term><term>{2_}
+<description/><term>{2_5P_2_2}
+<description/></term><term>{2_5P_2_4}
+<description/></term><term>{2_5P_2_6}
+<description/></term><term>{2_5P_2_8}
+<description/></term><term>{2_5P_2_10}
+<description/></term><term>{2_5P_2_12}
+<description/></term><term>{2_5P_2_14}
+<description/></term><term>{2_5P_2_16}
+<description/></term><term>{2_5P_2_18}
+<description/></term><term>{2_5P_2_20}
+<description/></term><term>{2_5P_2_22}
+<description/></term><term>{2_5P_2_24}
+<description/></term><term>{2_5P_2_26}
+<description/></term><term>{2_5P_2_28}
+<description/></term><term>{2_5P_2_30}
+<description/></term></term><term>{3_}
+<description/><term>{2_5P_3_2}
+<description/></term><term>{2_5P_3_4}
+<description/></term><term>{2_5P_3_6}
+<description/></term><term>{2_5P_3_8}
+<description/></term><term>{2_5P_3_10}
+<description/></term><term>{2_5P_3_12}
+<description/></term><term>{2_5P_3_14}
+<description/></term><term>{2_5P_3_16}
+<description/></term><term>{2_5P_3_18}
+<description/></term><term>{2_5P_3_20}
+<description/></term><term>{2_5P_3_22}
+<description/></term><term>{2_5P_3_24}
+<description/></term><term>{2_5P_3_26}
+<description/></term><term>{2_5P_3_28}
+<description/></term><term>{2_5P_3_30}
+<description/></term><term>{2_5P_3_32}
+<description/></term><term>{2_5P_3_34}
+<description/></term></term><term>{4_}
+<description/><term>{2_5P_4_2}
+<description/></term><term>{2_5P_4_4}
+<description/></term><term>{2_5P_4_6}
+<description/></term><term>{2_5P_4_8}
+<description/></term><term>{2_5P_4_10}
+<description/></term><term>{2_5P_4_12}
+<description/></term><term>{2_5P_4_14}
+<description/></term><term>{2_5P_4_16}
+<description/></term><term>{2_5P_4_18}
+<description/></term><term>{2_5P_4_20}
+<description/></term><term>{2_5P_4_22}
+<description/></term><term>{2_5P_4_24}
+<description/></term><term>{2_5P_4_26}
+<description/></term><term>{2_5P_4_28}
+<description/></term><term>{2_5P_4_30}
+<description/></term><term>{2_5P_4_32}
+<description/></term></term><term>{5_}
+<description/><term>{2_5P_5_2}
+<description/></term><term>{2_5P_5_4}
+<description/></term><term>{2_5P_5_6}
+<description/></term><term>{2_5P_5_8}
+<description/></term><term>{2_5P_5_10}
+<description/></term><term>{2_5P_5_12}
+<description/></term><term>{2_5P_5_14}
+<description/></term><term>{2_5P_5_16}
+<description/></term><term>{2_5P_5_18}
+<description/></term><term>{2_5P_5_20}
+<description/></term><term>{2_5P_5_22}
+<description/></term><term>{2_5P_5_24}
+<description/></term><term>{2_5P_5_26}
+<description/></term></term><term>{6_}
+<description/><term>{2_5P_6_2}
+<description/></term><term>{2_5P_6_4}
+<description/></term><term>{2_5P_6_6}
+<description/></term><term>{2_5P_6_8}
+<description/></term><term>{2_5P_6_10}
+<description/></term><term>{2_5P_6_12}
+<description/></term><term>{2_5P_6_14}
+<description/></term><term>{2_5P_6_16}
+<description/></term><term>{2_5P_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{2_5P_7_2}
+<description/></term><term>{2_5P_7_4}
+<description/></term><term>{2_5P_7_6}
+<description/></term><term>{2_5P_7_8}
+<description/></term><term>{2_5P_7_10}
+<description/></term><term>{2_5P_7_12}
+<description/></term></term><term>{8_}
+<description/><term>{2_5P_8_2}
+<description/></term><term>{2_5P_8_4}
+<description/></term><term>{2_5P_8_6}
+<description/></term><term>{2_5P_8_8}
+<description/></term></term><term>{9_}
+<description/><term>{2_5P_9_2}
+<description/></term><term>{2_5P_9_4}
+<description/></term></term></term><term>{5P}
+<description/><term>{1_}
+<description/><term>{5P_1_2}
+<description/></term><term>{5P_1_4}
+<description/></term><term>{5P_1_6}
+<description/></term><term>{5P_1_8}
+<description/></term><term>{5P_1_10}
+<description/></term><term>{5P_1_12}
+<description/></term><term>{5P_1_14}
+<description/></term><term>{5P_1_16}
+<description/></term><term>{5P_1_18}
+<description/></term><term>{5P_1_20}
+<description/></term><term>{5P_1_22}
+<description/></term></term><term>{2_}
+<description/><term>{5P_2_2}
+<description/></term><term>{5P_2_4}
+<description/></term><term>{5P_2_6}
+<description/></term><term>{5P_2_8}
+<description/></term><term>{5P_2_10}
+<description/></term><term>{5P_2_12}
+<description/></term><term>{5P_2_14}
+<description/></term><term>{5P_2_16}
+<description/></term><term>{5P_2_18}
+<description/></term><term>{5P_2_20}
+<description/></term><term>{5P_2_22}
+<description/></term><term>{5P_2_24}
+<description/></term><term>{5P_2_26}
+<description/></term><term>{5P_2_28}
+<description/></term></term><term>{3_}
+<description/><term>{5P_3_2}
+<description/></term><term>{5P_3_4}
+<description/></term><term>{5P_3_6}
+<description/></term><term>{5P_3_8}
+<description/></term><term>{5P_3_10}
+<description/></term><term>{5P_3_12}
+<description/></term><term>{5P_3_14}
+<description/></term><term>{5P_3_16}
+<description/></term><term>{5P_3_18}
+<description/></term><term>{5P_3_20}
+<description/></term><term>{5P_3_22}
+<description/></term><term>{5P_3_24}
+<description/></term><term>{5P_3_26}
+<description/></term><term>{5P_3_28}
+<description/></term><term>{5P_3_30}
+<description/></term><term>{5P_3_32}
+<description/></term></term><term>{4_}
+<description/><term>{5P_4_2}
+<description/></term><term>{5P_4_4}
+<description/></term><term>{5P_4_6}
+<description/></term><term>{5P_4_8}
+<description/></term><term>{5P_4_10}
+<description/></term><term>{5P_4_12}
+<description/></term><term>{5P_4_14}
+<description/></term><term>{5P_4_16}
+<description/></term><term>{5P_4_18}
+<description/></term><term>{5P_4_20}
+<description/></term><term>{5P_4_22}
+<description/></term><term>{5P_4_24}
+<description/></term><term>{5P_4_26}
+<description/></term><term>{5P_4_28}
+<description/></term><term>{5P_4_30}
+<description/></term><term>{5P_4_32}
+<description/></term></term><term>{5_}
+<description/><term>{5P_5_2}
+<description/></term><term>{5P_5_4}
+<description/></term><term>{5P_5_6}
+<description/></term><term>{5P_5_8}
+<description/></term><term>{5P_5_10}
+<description/></term><term>{5P_5_12}
+<description/></term><term>{5P_5_14}
+<description/></term><term>{5P_5_16}
+<description/></term><term>{5P_5_18}
+<description/></term><term>{5P_5_20}
+<description/></term><term>{5P_5_22}
+<description/></term><term>{5P_5_24}
+<description/></term><term>{5P_5_26}
+<description/></term><term>{5P_5_28}
+<description/></term></term><term>{6_}
+<description/><term>{5P_6_2}
+<description/></term><term>{5P_6_4}
+<description/></term><term>{5P_6_6}
+<description/></term><term>{5P_6_8}
+<description/></term><term>{5P_6_10}
+<description/></term><term>{5P_6_12}
+<description/></term><term>{5P_6_14}
+<description/></term><term>{5P_6_16}
+<description/></term><term>{5P_6_18}
+<description/></term><term>{5P_6_20}
+<description/></term></term><term>{7_}
+<description/><term>{5P_7_2}
+<description/></term><term>{5P_7_4}
+<description/></term><term>{5P_7_6}
+<description/></term><term>{5P_7_8}
+<description/></term><term>{5P_7_10}
+<description/></term><term>{5P_7_12}
+<description/></term><term>{5P_7_14}
+<description/></term></term><term>{8_}
+<description/><term>{5P_8_2}
+<description/></term><term>{5P_8_4}
+<description/></term><term>{5P_8_6}
+<description/></term><term>{5P_8_8}
+<description/></term><term>{5P_8_10}
+<description/></term></term><term>{9_}
+<description/><term>{5P_9_2}
+<description/></term><term>{5P_9_4}
+<description/></term></term></term><term>{7_5P}
+<description/><term>{1_}
+<description/><term>{7_5P_1_2}
+<description/></term><term>{7_5P_1_4}
+<description/></term><term>{7_5P_1_6}
+<description/></term><term>{7_5P_1_8}
+<description/></term><term>{7_5P_1_10}
+<description/></term><term>{7_5P_1_12}
+<description/></term><term>{7_5P_1_14}
+<description/></term><term>{7_5P_1_16}
+<description/></term><term>{7_5P_1_18}
+<description/></term><term>{7_5P_1_20}
+<description/></term></term><term>{2_}
+<description/><term>{7_5P_2_2}
+<description/></term><term>{7_5P_2_4}
+<description/></term><term>{7_5P_2_6}
+<description/></term><term>{7_5P_2_8}
+<description/></term><term>{7_5P_2_10}
+<description/></term><term>{7_5P_2_12}
+<description/></term><term>{7_5P_2_14}
+<description/></term><term>{7_5P_2_16}
+<description/></term><term>{7_5P_2_18}
+<description/></term><term>{7_5P_2_20}
+<description/></term><term>{7_5P_2_22}
+<description/></term><term>{7_5P_2_24}
+<description/></term></term><term>{3_}
+<description/><term>{7_5P_3_2}
+<description/></term><term>{7_5P_3_4}
+<description/></term><term>{7_5P_3_6}
+<description/></term><term>{7_5P_3_8}
+<description/></term><term>{7_5P_3_10}
+<description/></term><term>{7_5P_3_12}
+<description/></term><term>{7_5P_3_14}
+<description/></term><term>{7_5P_3_16}
+<description/></term><term>{7_5P_3_18}
+<description/></term><term>{7_5P_3_20}
+<description/></term><term>{7_5P_3_22}
+<description/></term><term>{7_5P_3_24}
+<description/></term><term>{7_5P_3_26}
+<description/></term><term>{7_5P_3_28}
+<description/></term><term>{7_5P_3_30}
+<description/></term></term><term>{4_}
+<description/><term>{7_5P_4_2}
+<description/></term><term>{7_5P_4_4}
+<description/></term><term>{7_5P_4_6}
+<description/></term><term>{7_5P_4_8}
+<description/></term><term>{7_5P_4_10}
+<description/></term><term>{7_5P_4_12}
+<description/></term><term>{7_5P_4_14}
+<description/></term><term>{7_5P_4_16}
+<description/></term><term>{7_5P_4_18}
+<description/></term><term>{7_5P_4_20}
+<description/></term><term>{7_5P_4_22}
+<description/></term><term>{7_5P_4_24}
+<description/></term><term>{7_5P_4_26}
+<description/></term><term>{7_5P_4_28}
+<description/></term><term>{7_5P_4_30}
+<description/></term><term>{7_5P_4_32}
+<description/></term></term><term>{5_}
+<description/><term>{7_5P_5_2}
+<description/></term><term>{7_5P_5_4}
+<description/></term><term>{7_5P_5_6}
+<description/></term><term>{7_5P_5_8}
+<description/></term><term>{7_5P_5_10}
+<description/></term><term>{7_5P_5_12}
+<description/></term><term>{7_5P_5_14}
+<description/></term><term>{7_5P_5_16}
+<description/></term><term>{7_5P_5_18}
+<description/></term><term>{7_5P_5_20}
+<description/></term><term>{7_5P_5_22}
+<description/></term><term>{7_5P_5_24}
+<description/></term><term>{7_5P_5_26}
+<description/></term><term>{7_5P_5_28}
+<description/></term><term>{7_5P_5_30}
+<description/></term></term><term>{6_}
+<description/><term>{7_5P_6_2}
+<description/></term><term>{7_5P_6_4}
+<description/></term><term>{7_5P_6_6}
+<description/></term><term>{7_5P_6_8}
+<description/></term><term>{7_5P_6_10}
+<description/></term><term>{7_5P_6_12}
+<description/></term><term>{7_5P_6_14}
+<description/></term><term>{7_5P_6_16}
+<description/></term><term>{7_5P_6_18}
+<description/></term><term>{7_5P_6_20}
+<description/></term><term>{7_5P_6_22}
+<description/></term><term>{7_5P_6_24}
+<description/></term></term><term>{7_}
+<description/><term>{7_5P_7_2}
+<description/></term><term>{7_5P_7_4}
+<description/></term><term>{7_5P_7_6}
+<description/></term><term>{7_5P_7_8}
+<description/></term><term>{7_5P_7_10}
+<description/></term><term>{7_5P_7_12}
+<description/></term><term>{7_5P_7_14}
+<description/></term><term>{7_5P_7_16}
+<description/></term><term>{7_5P_7_18}
+<description/></term></term><term>{8_}
+<description/><term>{7_5P_8_2}
+<description/></term><term>{7_5P_8_4}
+<description/></term><term>{7_5P_8_6}
+<description/></term><term>{7_5P_8_8}
+<description/></term><term>{7_5P_8_10}
+<description/></term><term>{7_5P_8_12}
+<description/></term></term><term>{9_}
+<description/><term>{7_5P_9_2}
+<description/></term><term>{7_5P_9_4}
+<description/></term><term>{7_5P_9_6}
+<description/></term></term></term><term>{10P}
+<description/><term>{1_}
+<description/><term>{10P_1_2}
+<description/></term><term>{10P_1_4}
+<description/></term><term>{10P_1_6}
+<description/></term><term>{10P_1_8}
+<description/></term><term>{10P_1_10}
+<description/></term><term>{10P_1_12}
+<description/></term><term>{10P_1_14}
+<description/></term><term>{10P_1_16}
+<description/></term><term>{10P_1_18}
+<description/></term></term><term>{2_}
+<description/><term>{10P_2_2}
+<description/></term><term>{10P_2_4}
+<description/></term><term>{10P_2_6}
+<description/></term><term>{10P_2_8}
+<description/></term><term>{10P_2_10}
+<description/></term><term>{10P_2_12}
+<description/></term><term>{10P_2_14}
+<description/></term><term>{10P_2_16}
+<description/></term><term>{10P_2_18}
+<description/></term><term>{10P_2_20}
+<description/></term><term>{10P_2_22}
+<description/></term></term><term>{3_}
+<description/><term>{10P_3_2}
+<description/></term><term>{10P_3_4}
+<description/></term><term>{10P_3_6}
+<description/></term><term>{10P_3_8}
+<description/></term><term>{10P_3_10}
+<description/></term><term>{10P_3_12}
+<description/></term><term>{10P_3_14}
+<description/></term><term>{10P_3_16}
+<description/></term><term>{10P_3_18}
+<description/></term><term>{10P_3_20}
+<description/></term><term>{10P_3_22}
+<description/></term><term>{10P_3_24}
+<description/></term><term>{10P_3_26}
+<description/></term></term><term>{4_}
+<description/><term>{10P_4_2}
+<description/></term><term>{10P_4_4}
+<description/></term><term>{10P_4_6}
+<description/></term><term>{10P_4_8}
+<description/></term><term>{10P_4_10}
+<description/></term><term>{10P_4_12}
+<description/></term><term>{10P_4_14}
+<description/></term><term>{10P_4_16}
+<description/></term><term>{10P_4_18}
+<description/></term><term>{10P_4_20}
+<description/></term><term>{10P_4_22}
+<description/></term><term>{10P_4_24}
+<description/></term><term>{10P_4_26}
+<description/></term><term>{10P_4_28}
+<description/></term><term>{10P_4_30}
+<description/></term></term><term>{5_}
+<description/><term>{10P_5_2}
+<description/></term><term>{10P_5_4}
+<description/></term><term>{10P_5_6}
+<description/></term><term>{10P_5_8}
+<description/></term><term>{10P_5_10}
+<description/></term><term>{10P_5_12}
+<description/></term><term>{10P_5_14}
+<description/></term><term>{10P_5_16}
+<description/></term><term>{10P_5_18}
+<description/></term><term>{10P_5_20}
+<description/></term><term>{10P_5_22}
+<description/></term><term>{10P_5_24}
+<description/></term><term>{10P_5_26}
+<description/></term><term>{10P_5_28}
+<description/></term><term>{10P_5_30}
+<description/></term></term><term>{6_}
+<description/><term>{10P_6_2}
+<description/></term><term>{10P_6_4}
+<description/></term><term>{10P_6_6}
+<description/></term><term>{10P_6_8}
+<description/></term><term>{10P_6_10}
+<description/></term><term>{10P_6_12}
+<description/></term><term>{10P_6_14}
+<description/></term><term>{10P_6_16}
+<description/></term><term>{10P_6_18}
+<description/></term><term>{10P_6_20}
+<description/></term><term>{10P_6_22}
+<description/></term><term>{10P_6_24}
+<description/></term><term>{10P_6_26}
+<description/></term></term><term>{7_}
+<description/><term>{10P_7_2}
+<description/></term><term>{10P_7_4}
+<description/></term><term>{10P_7_6}
+<description/></term><term>{10P_7_8}
+<description/></term><term>{10P_7_10}
+<description/></term><term>{10P_7_12}
+<description/></term><term>{10P_7_14}
+<description/></term><term>{10P_7_16}
+<description/></term><term>{10P_7_18}
+<description/></term><term>{10P_7_20}
+<description/></term><term>{10P_7_22}
+<description/></term></term><term>{8_}
+<description/><term>{10P_8_2}
+<description/></term><term>{10P_8_4}
+<description/></term><term>{10P_8_6}
+<description/></term><term>{10P_8_8}
+<description/></term><term>{10P_8_10}
+<description/></term><term>{10P_8_12}
+<description/></term><term>{10P_8_14}
+<description/></term></term><term>{9_}
+<description/><term>{10P_9_2}
+<description/></term><term>{10P_9_4}
+<description/></term><term>{10P_9_6}
+<description/></term></term></term></term>
+        <term>{RP}
+<description/><term>{2_5RP}
+<description/><term>{1_}
+<description/><term>{2_5RP_1_2}
+<description/></term><term>{2_5RP_1_4}
+<description/></term><term>{2_5RP_1_6}
+<description/></term><term>{2_5RP_1_8}
+<description/></term><term>{2_5RP_1_10}
+<description/></term><term>{2_5RP_1_12}
+<description/></term><term>{2_5RP_1_14}
+<description/></term><term>{2_5RP_1_16}
+<description/></term></term><term>{2_}
+<description/><term>{2_5RP_2_2}
+<description/></term><term>{2_5RP_2_4}
+<description/></term><term>{2_5RP_2_6}
+<description/></term><term>{2_5RP_2_8}
+<description/></term><term>{2_5RP_2_10}
+<description/></term><term>{2_5RP_2_12}
+<description/></term><term>{2_5RP_2_14}
+<description/></term><term>{2_5RP_2_16}
+<description/></term><term>{2_5RP_2_18}
+<description/></term><term>{2_5RP_2_20}
+<description/></term></term><term>{3_}
+<description/><term>{2_5RP_3_2}
+<description/></term><term>{2_5RP_3_4}
+<description/></term><term>{2_5RP_3_6}
+<description/></term><term>{2_5RP_3_8}
+<description/></term><term>{2_5RP_3_10}
+<description/></term><term>{2_5RP_3_12}
+<description/></term><term>{2_5RP_3_14}
+<description/></term><term>{2_5RP_3_16}
+<description/></term><term>{2_5RP_3_18}
+<description/></term><term>{2_5RP_3_20}
+<description/></term><term>{2_5RP_3_22}
+<description/></term></term><term>{4_}
+<description/><term>{2_5RP_4_2}
+<description/></term><term>{2_5RP_4_4}
+<description/></term><term>{2_5RP_4_6}
+<description/></term><term>{2_5RP_4_8}
+<description/></term><term>{2_5RP_4_10}
+<description/></term><term>{2_5RP_4_12}
+<description/></term><term>{2_5RP_4_14}
+<description/></term><term>{2_5RP_4_16}
+<description/></term><term>{2_5RP_4_18}
+<description/></term><term>{2_5RP_4_20}
+<description/></term><term>{2_5RP_4_22}
+<description/></term><term>{2_5RP_4_24}
+<description/></term><term>{2_5RP_4_26}
+<description/></term></term><term>{5_}
+<description/><term>{2_5RP_5_2}
+<description/></term><term>{2_5RP_5_4}
+<description/></term><term>{2_5RP_5_6}
+<description/></term><term>{2_5RP_5_8}
+<description/></term><term>{2_5RP_5_10}
+<description/></term><term>{2_5RP_5_12}
+<description/></term><term>{2_5RP_5_14}
+<description/></term><term>{2_5RP_5_16}
+<description/></term><term>{2_5RP_5_18}
+<description/></term><term>{2_5RP_5_20}
+<description/></term><term>{2_5RP_5_22}
+<description/></term><term>{2_5RP_5_24}
+<description/></term><term>{2_5RP_5_26}
+<description/></term></term><term>{6_}
+<description/><term>{2_5RP_6_2}
+<description/></term><term>{2_5RP_6_4}
+<description/></term><term>{2_5RP_6_6}
+<description/></term><term>{2_5RP_6_8}
+<description/></term><term>{2_5RP_6_10}
+<description/></term><term>{2_5RP_6_12}
+<description/></term><term>{2_5RP_6_14}
+<description/></term><term>{2_5RP_6_16}
+<description/></term><term>{2_5RP_6_18}
+<description/></term><term>{2_5RP_6_20}
+<description/></term><term>{2_5RP_6_22}
+<description/></term><term>{2_5RP_6_24}
+<description/></term></term><term>{7_}
+<description/><term>{2_5RP_7_2}
+<description/></term><term>{2_5RP_7_4}
+<description/></term><term>{2_5RP_7_6}
+<description/></term><term>{2_5RP_7_8}
+<description/></term><term>{2_5RP_7_10}
+<description/></term><term>{2_5RP_7_12}
+<description/></term><term>{2_5RP_7_14}
+<description/></term><term>{2_5RP_7_16}
+<description/></term><term>{2_5RP_7_18}
+<description/></term><term>{2_5RP_7_20}
+<description/></term></term><term>{8_}
+<description/><term>{2_5RP_8_2}
+<description/></term><term>{2_5RP_8_4}
+<description/></term><term>{2_5RP_8_6}
+<description/></term><term>{2_5RP_8_8}
+<description/></term><term>{2_5RP_8_10}
+<description/></term><term>{2_5RP_8_12}
+<description/></term><term>{2_5RP_8_14}
+<description/></term></term><term>{9_}
+<description/><term>{2_5RP_9_2}
+<description/></term><term>{2_5RP_9_4}
+<description/></term><term>{2_5RP_9_6}
+<description/></term></term></term><term>{5RP}
+<description/><term>{1_}
+<description/><term>{5RP_1_2}
+<description/></term><term>{5RP_1_4}
+<description/></term><term>{5RP_1_6}
+<description/></term><term>{5RP_1_8}
+<description/></term><term>{5RP_1_10}
+<description/></term><term>{5RP_1_12}
+<description/></term><term>{5RP_1_14}
+<description/></term></term><term>{2_}
+<description/><term>{5RP_2_2}
+<description/></term><term>{5RP_2_4}
+<description/></term><term>{5RP_2_6}
+<description/></term><term>{5RP_2_8}
+<description/></term><term>{5RP_2_10}
+<description/></term><term>{5RP_2_12}
+<description/></term><term>{5RP_2_14}
+<description/></term><term>{5RP_2_16}
+<description/></term><term>{5RP_2_18}
+<description/></term></term><term>{3_}
+<description/><term>{5RP_3_2}
+<description/></term><term>{5RP_3_4}
+<description/></term><term>{5RP_3_6}
+<description/></term><term>{5RP_3_8}
+<description/></term><term>{5RP_3_10}
+<description/></term><term>{5RP_3_12}
+<description/></term><term>{5RP_3_14}
+<description/></term><term>{5RP_3_16}
+<description/></term><term>{5RP_3_18}
+<description/></term><term>{5RP_3_20}
+<description/></term></term><term>{4_}
+<description/><term>{5RP_4_2}
+<description/></term><term>{5RP_4_4}
+<description/></term><term>{5RP_4_6}
+<description/></term><term>{5RP_4_8}
+<description/></term><term>{5RP_4_10}
+<description/></term><term>{5RP_4_12}
+<description/></term><term>{5RP_4_14}
+<description/></term><term>{5RP_4_16}
+<description/></term><term>{5RP_4_18}
+<description/></term><term>{5RP_4_20}
+<description/></term><term>{5RP_4_22}
+<description/></term></term><term>{5_}
+<description/><term>{5RP_5_2}
+<description/></term><term>{5RP_5_4}
+<description/></term><term>{5RP_5_6}
+<description/></term><term>{5RP_5_8}
+<description/></term><term>{5RP_5_10}
+<description/></term><term>{5RP_5_12}
+<description/></term><term>{5RP_5_14}
+<description/></term><term>{5RP_5_16}
+<description/></term><term>{5RP_5_18}
+<description/></term><term>{5RP_5_20}
+<description/></term><term>{5RP_5_22}
+<description/></term><term>{5RP_5_24}
+<description/></term></term><term>{6_}
+<description/><term>{5RP_6_2}
+<description/></term><term>{5RP_6_4}
+<description/></term><term>{5RP_6_6}
+<description/></term><term>{5RP_6_8}
+<description/></term><term>{5RP_6_10}
+<description/></term><term>{5RP_6_12}
+<description/></term><term>{5RP_6_14}
+<description/></term><term>{5RP_6_16}
+<description/></term><term>{5RP_6_18}
+<description/></term><term>{5RP_6_20}
+<description/></term><term>{5RP_6_22}
+<description/></term></term><term>{7_}
+<description/><term>{5RP_7_2}
+<description/></term><term>{5RP_7_4}
+<description/></term><term>{5RP_7_6}
+<description/></term><term>{5RP_7_8}
+<description/></term><term>{5RP_7_10}
+<description/></term><term>{5RP_7_12}
+<description/></term><term>{5RP_7_14}
+<description/></term><term>{5RP_7_16}
+<description/></term><term>{5RP_7_18}
+<description/></term></term><term>{8_}
+<description/><term>{5RP_8_2}
+<description/></term><term>{5RP_8_4}
+<description/></term><term>{5RP_8_6}
+<description/></term><term>{5RP_8_8}
+<description/></term><term>{5RP_8_10}
+<description/></term><term>{5RP_8_12}
+<description/></term></term><term>{9_}
+<description/><term>{5RP_9_2}
+<description/></term><term>{5RP_9_4}
+<description/></term><term>{5RP_9_6}
+<description/></term></term></term><term>{7_5RP}
+<description/><term>{1_}
+<description/><term>{7_5RP_1_2}
+<description/></term><term>{7_5RP_1_4}
+<description/></term><term>{7_5RP_1_6}
+<description/></term><term>{7_5RP_1_8}
+<description/></term><term>{7_5RP_1_10}
+<description/></term><term>{7_5RP_1_12}
+<description/></term></term><term>{2_}
+<description/><term>{7_5RP_2_2}
+<description/></term><term>{7_5RP_2_4}
+<description/></term><term>{7_5RP_2_6}
+<description/></term><term>{7_5RP_2_8}
+<description/></term><term>{7_5RP_2_10}
+<description/></term><term>{7_5RP_2_12}
+<description/></term><term>{7_5RP_2_14}
+<description/></term><term>{7_5RP_2_16}
+<description/></term></term><term>{3_}
+<description/><term>{7_5RP_3_2}
+<description/></term><term>{7_5RP_3_4}
+<description/></term><term>{7_5RP_3_6}
+<description/></term><term>{7_5RP_3_8}
+<description/></term><term>{7_5RP_3_10}
+<description/></term><term>{7_5RP_3_12}
+<description/></term><term>{7_5RP_3_14}
+<description/></term><term>{7_5RP_3_16}
+<description/></term><term>{7_5RP_3_18}
+<description/></term></term><term>{4_}
+<description/><term>{7_5RP_4_2}
+<description/></term><term>{7_5RP_4_4}
+<description/></term><term>{7_5RP_4_6}
+<description/></term><term>{7_5RP_4_8}
+<description/></term><term>{7_5RP_4_10}
+<description/></term><term>{7_5RP_4_12}
+<description/></term><term>{7_5RP_4_14}
+<description/></term><term>{7_5RP_4_16}
+<description/></term><term>{7_5RP_4_18}
+<description/></term><term>{7_5RP_4_20}
+<description/></term></term><term>{5_}
+<description/><term>{7_5RP_5_2}
+<description/></term><term>{7_5RP_5_4}
+<description/></term><term>{7_5RP_5_6}
+<description/></term><term>{7_5RP_5_8}
+<description/></term><term>{7_5RP_5_10}
+<description/></term><term>{7_5RP_5_12}
+<description/></term><term>{7_5RP_5_14}
+<description/></term><term>{7_5RP_5_16}
+<description/></term><term>{7_5RP_5_18}
+<description/></term><term>{7_5RP_5_20}
+<description/></term><term>{7_5RP_5_22}
+<description/></term></term><term>{6_}
+<description/><term>{7_5RP_6_2}
+<description/></term><term>{7_5RP_6_4}
+<description/></term><term>{7_5RP_6_6}
+<description/></term><term>{7_5RP_6_8}
+<description/></term><term>{7_5RP_6_10}
+<description/></term><term>{7_5RP_6_12}
+<description/></term><term>{7_5RP_6_14}
+<description/></term><term>{7_5RP_6_16}
+<description/></term><term>{7_5RP_6_18}
+<description/></term><term>{7_5RP_6_20}
+<description/></term></term><term>{7_}
+<description/><term>{7_5RP_7_2}
+<description/></term><term>{7_5RP_7_4}
+<description/></term><term>{7_5RP_7_6}
+<description/></term><term>{7_5RP_7_8}
+<description/></term><term>{7_5RP_7_10}
+<description/></term><term>{7_5RP_7_12}
+<description/></term><term>{7_5RP_7_14}
+<description/></term><term>{7_5RP_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{7_5RP_8_2}
+<description/></term><term>{7_5RP_8_4}
+<description/></term><term>{7_5RP_8_6}
+<description/></term><term>{7_5RP_8_8}
+<description/></term><term>{7_5RP_8_10}
+<description/></term><term>{7_5RP_8_12}
+<description/></term></term><term>{9_}
+<description/><term>{7_5RP_9_2}
+<description/></term><term>{7_5RP_9_4}
+<description/></term><term>{7_5RP_9_6}
+<description/></term></term></term><term>{10RP}
+<description/><term>{1_}
+<description/><term>{10RP_1_2}
+<description/></term><term>{10RP_1_4}
+<description/></term><term>{10RP_1_6}
+<description/></term><term>{10RP_1_8}
+<description/></term><term>{10RP_1_10}
+<description/></term><term>{10RP_1_12}
+<description/></term></term><term>{2_}
+<description/><term>{10RP_2_2}
+<description/></term><term>{10RP_2_4}
+<description/></term><term>{10RP_2_6}
+<description/></term><term>{10RP_2_8}
+<description/></term><term>{10RP_2_10}
+<description/></term><term>{10RP_2_12}
+<description/></term><term>{10RP_2_14}
+<description/></term></term><term>{3_}
+<description/><term>{10RP_3_2}
+<description/></term><term>{10RP_3_4}
+<description/></term><term>{10RP_3_6}
+<description/></term><term>{10RP_3_8}
+<description/></term><term>{10RP_3_10}
+<description/></term><term>{10RP_3_12}
+<description/></term><term>{10RP_3_14}
+<description/></term><term>{10RP_3_16}
+<description/></term></term><term>{4_}
+<description/><term>{10RP_4_2}
+<description/></term><term>{10RP_4_4}
+<description/></term><term>{10RP_4_6}
+<description/></term><term>{10RP_4_8}
+<description/></term><term>{10RP_4_10}
+<description/></term><term>{10RP_4_12}
+<description/></term><term>{10RP_4_14}
+<description/></term><term>{10RP_4_16}
+<description/></term><term>{10RP_4_18}
+<description/></term><term>{10RP_4_20}
+<description/></term></term><term>{5_}
+<description/><term>{10RP_5_2}
+<description/></term><term>{10RP_5_4}
+<description/></term><term>{10RP_5_6}
+<description/></term><term>{10RP_5_8}
+<description/></term><term>{10RP_5_10}
+<description/></term><term>{10RP_5_12}
+<description/></term><term>{10RP_5_14}
+<description/></term><term>{10RP_5_16}
+<description/></term><term>{10RP_5_18}
+<description/></term><term>{10RP_5_20}
+<description/></term></term><term>{6_}
+<description/><term>{10RP_6_2}
+<description/></term><term>{10RP_6_4}
+<description/></term><term>{10RP_6_6}
+<description/></term><term>{10RP_6_8}
+<description/></term><term>{10RP_6_10}
+<description/></term><term>{10RP_6_12}
+<description/></term><term>{10RP_6_14}
+<description/></term><term>{10RP_6_16}
+<description/></term><term>{10RP_6_18}
+<description/></term></term><term>{7_}
+<description/><term>{10RP_7_2}
+<description/></term><term>{10RP_7_4}
+<description/></term><term>{10RP_7_6}
+<description/></term><term>{10RP_7_8}
+<description/></term><term>{10RP_7_10}
+<description/></term><term>{10RP_7_12}
+<description/></term><term>{10RP_7_14}
+<description/></term><term>{10RP_7_16}
+<description/></term></term><term>{8_}
+<description/><term>{10RP_8_2}
+<description/></term><term>{10RP_8_4}
+<description/></term><term>{10RP_8_6}
+<description/></term><term>{10RP_8_8}
+<description/></term><term>{10RP_8_10}
+<description/></term></term><term>{9_}
+<description/><term>{10RP_9_2}
+<description/></term><term>{10RP_9_4}
+<description/></term><term>{10RP_9_6}
+<description/></term></term></term></term>
+      </lookup>
     </property>
-    <property name="Artefact Status Modification" type="measure">
+    <property name="Artefact Status Modification" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Broken}
+<description/></term>
+        <term>{Modified}
+<description/></term>
+        <term>{Unworked}
+<description/></term>
+        <term>{Whole}
+<description/></term>
+        <term>{Usewear}
+<description/></term>
+        <term>{Burnt}
+<description/></term>
+        <term>{Carved_Cut}
+<description/></term>
+        <term>{Chewed}
+<description/></term>
+        <term>{Chipped}
+<description/></term>
+        <term>{Corroded}
+<description/></term>
+        <term>{Stained}
+<description/></term>
+        <term>{Drilled}
+<description/></term>
+        <term>{Encrusted}
+<description/></term>
+        <term>{Fabric_Decay}
+<description/></term>
+        <term>{Ground}
+<description/></term>
+        <term>{Melted}
+<description/></term>
+        <term>{Other_heat_modification}
+<description/></term>
+        <term>{Opalescence}
+<description/></term>
+        <term>{Perforated}
+<description/></term>
+        <term>{Polished}
+<description/></term>
+        <term>{Repaired}
+<description/></term>
+        <term>{Shattered}
+<description/></term>
+        <term>{Weathered}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Platform Surface for Aboriginal stone artefacts" type="measure">
+    <property name="Platform Surface for Aboriginal stone artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Cortex}
+<description/></term>
+        <term>{One_flake_scar}
+<description/></term>
+        <term>{More_than_one_flake_scar}
+<description/></term>
+        <term>{Faceted}
+<description/></term>
+        <term>{Ground}
+<description/></term>
+        <term>{Indeterminate}
+<description/></term>
+        <term>{Bipolar}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Platform Type for Aboriginal stone artefacts" type="measure">
+    <property name="Platform Type for Aboriginal stone artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Wide}
+<description/></term>
+        <term>{Focal}
+<description/></term>
+        <term>{Shattered}
+<description/></term>
+        <term>{Indeterminate}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Termination for Aboriginal stone artefacts" type="measure">
+    <property name="Termination for Aboriginal stone artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Feather}
+<description/></term>
+        <term>{Hinge}
+<description/></term>
+        <term>{Step}
+<description/></term>
+        <term>{Plunge}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Cross Section for Aboriginal artefacts" type="measure">
+    <property name="Cross Section for Aboriginal artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{High_Strong}
+<description/></term>
+        <term>{High_Weak}
+<description/></term>
+        <term>{Low_Weak}
+<description/></term>
+        <term>{Irregular}
+<description/></term>
+      </lookup>
     </property>
     <property name="Length mm" type="measure">
       <description/>
@@ -369,10 +3893,22 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Intangible Value Type" type="measure">
+    <property name="Intangible Value Type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Aboriginal_Ceremony__no_physical_evidence_}
+<description/></term>
+        <term>{Song}
+<description/></term>
+        <term>{Story}
+<description/></term>
+        <term>{Dreaming}
+<description/></term>
+        <term>{Gathering__non_physical_evidence__}
+<description/></term>
+      </lookup>
     </property>
     <property name="Description" type="measure">
       <description/>
@@ -384,50 +3920,208 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Pigment Engraved" type="measure">
+    <property name="Pigment Engraved" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Super-impositioning" type="measure">
+    <property name="Super-impositioning" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Motif s" type="measure">
+    <property name="Motif s" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Anthropomorphic}
+<description/></term>
+        <term>{Bird}
+<description/></term>
+        <term>{Bird_track}
+<description/></term>
+        <term>{Canoe}
+<description/></term>
+        <term>{Circle}
+<description/></term>
+        <term>{Contact_material_Culture}
+<description/></term>
+        <term>{Duck}
+<description/></term>
+        <term>{Eel}
+<description/></term>
+        <term>{Emu}
+<description/></term>
+        <term>{Emu_track}
+<description/></term>
+        <term>{European_figure}
+<description/></term>
+        <term>{Female}
+<description/></term>
+        <term>{Fish}
+<description/></term>
+        <term>{Foot}
+<description/></term>
+        <term>{Hand}
+<description/></term>
+        <term>{Jellyfish}
+<description/></term>
+        <term>{Kangaroo}
+<description/></term>
+        <term>{Line}
+<description/></term>
+        <term>{Lizard}
+<description/></term>
+        <term>{Macropod}
+<description/></term>
+        <term>{Macropod_track}
+<description/></term>
+        <term>{Male}
+<description/></term>
+        <term>{Marine_other}
+<description/></term>
+        <term>{Other}
+<description/></term>
+        <term>{Pattern}
+<description/></term>
+        <term>{Quadruped}
+<description/></term>
+        <term>{Reptile}
+<description/></term>
+        <term>{Rifle}
+<description/></term>
+        <term>{Shield}
+<description/></term>
+        <term>{Ship}
+<description/></term>
+        <term>{Snake}
+<description/></term>
+        <term>{Spear}
+<description/></term>
+        <term>{Wallaby}
+<description/></term>
+        <term>{Whale}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Application Technique" type="measure">
+    <property name="Application Technique" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Abraded}
+<description/></term>
+        <term>{Drawn}
+<description/></term>
+        <term>{Other}
+<description/></term>
+        <term>{Painted}
+<description/></term>
+        <term>{Pecked}
+<description/></term>
+        <term>{Pigment___engraved}
+<description/></term>
+        <term>{Stencilled}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Form" type="measure">
+    <property name="Form" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Fill}
+<description/></term>
+        <term>{Line}
+<description/></term>
+        <term>{Line___fill}
+<description/></term>
+        <term>{Other}
+<description/></term>
+        <term>{Pattern}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Main Colour" type="measure">
+    <property name="Main Colour" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Black}
+<description/></term>
+        <term>{Mauve}
+<description/></term>
+        <term>{N_A}
+<description/></term>
+        <term>{Orange}
+<description/></term>
+        <term>{Other}
+<description/></term>
+        <term>{Red}
+<description/></term>
+        <term>{White}
+<description/></term>
+        <term>{Yellow}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Art Location" type="measure">
+    <property name="Art Location" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{All_over_shelter_or_rock_platform_surface}
+<description/></term>
+        <term>{Ceiling}
+<description/></term>
+        <term>{Floor}
+<description/></term>
+        <term>{Mostly_near_largest_sheltered_space}
+<description/></term>
+        <term>{Mostly_on_out_of_the_way_spaces}
+<description/></term>
+        <term>{Other}
+<description/></term>
+        <term>{Wall}
+<description/></term>
+      </lookup>
     </property>
     <property name="Associated Story Significance Interpretation" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Art Condition" type="measure">
+    <property name="Art Condition" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Faded}
+<description/></term>
+        <term>{Stained}
+<description/></term>
+        <term>{Mineralisation_evident}
+<description/></term>
+        <term>{Very_brant_colours}
+<description/></term>
+        <term>{Unweathered}
+<description/></term>
+        <term>{Weathered}
+<description/></term>
+      </lookup>
     </property>
     <property name="Sketch plan" type="measure">
       <description/>
@@ -477,15 +4171,33 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Type" type="measure">
+    <property name="Type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Broad}
+<description/></term>
+        <term>{Narrow_point}
+<description/></term>
+        <term>{Hollow}
+<description/></term>
+        <term>{Flat}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Profile Shape" type="measure">
+    <property name="Profile Shape" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{U__shaped}
+<description/></term>
+        <term>{_V__shaped}
+<description/></term>
+        <term>{Flat}
+<description/></term>
+      </lookup>
     </property>
     <property name="Seed species present" type="measure">
       <description/>
@@ -553,30 +4265,132 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Distribution" type="measure">
+    <property name="Distribution" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Surface_scatter}
+<description/></term>
+        <term>{Stratified_deposit}
+<description/></term>
+        <term>{Mounded}
+<description/></term>
+      </lookup>
     </property>
     <property name="Distance to high water mark metres" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Species present" type="measure">
+    <property name="Species present" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Anadara}
+<description/></term>
+        <term>{Bimbala}
+<description/></term>
+        <term>{Chiton}
+<description/></term>
+        <term>{Cowrie}
+<description/></term>
+        <term>{Dog_Cockle}
+<description/></term>
+        <term>{Duck_Bill}
+<description/></term>
+        <term>{Limpit}
+<description/></term>
+        <term>{Mud_oyster}
+<description/></term>
+        <term>{Mutton_Fish}
+<description/></term>
+        <term>{Nerita}
+<description/></term>
+        <term>{Ocean_Snail}
+<description/></term>
+        <term>{Periwinkle}
+<description/></term>
+        <term>{Ribbed_Cockle}
+<description/></term>
+        <term>{Rock_Oyster}
+<description/></term>
+        <term>{Triton}
+<description/></term>
+        <term>{Turban__large_}
+<description/></term>
+        <term>{Other_Unknown}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Dominant Species" type="measure">
+    <property name="Dominant Species" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Anadara}
+<description/></term>
+        <term>{Bimbala}
+<description/></term>
+        <term>{Chiton}
+<description/></term>
+        <term>{Cowrie}
+<description/></term>
+        <term>{Dog_Cockle}
+<description/></term>
+        <term>{Duck_Bill}
+<description/></term>
+        <term>{Limpit}
+<description/></term>
+        <term>{Mud_oyster}
+<description/></term>
+        <term>{Mutton_Fish}
+<description/></term>
+        <term>{Nerita}
+<description/></term>
+        <term>{Ocean_Snail}
+<description/></term>
+        <term>{Periwinkle}
+<description/></term>
+        <term>{Ribbed_Cockle}
+<description/></term>
+        <term>{Rock_Oyster}
+<description/></term>
+        <term>{Triton}
+<description/></term>
+        <term>{Turban__large_}
+<description/></term>
+        <term>{Other_Unknown}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Approximate percentage of dominant species as part of assemblage" type="measure">
+    <property name="Approximate percentage of dominant species as part of assemblage" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{0_9_}
+<description/></term>
+        <term>{10_19_}
+<description/></term>
+        <term>{20_29_}
+<description/></term>
+        <term>{30_39_}
+<description/></term>
+        <term>{40_49_}
+<description/></term>
+        <term>{50_59_}
+<description/></term>
+        <term>{60_69_}
+<description/></term>
+        <term>{70_79_}
+<description/></term>
+        <term>{80_89_}
+<description/></term>
+        <term>{90_100_}
+<description/></term>
+      </lookup>
     </property>
     <property name="Sketch Plan" type="measure">
       <description/>
@@ -613,10 +4427,26 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Components" type="measure">
+    <property name="Components" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Baked_clay_balls}
+<description/></term>
+        <term>{Charcoal}
+<description/></term>
+        <term>{Wood}
+<description/></term>
+        <term>{Heat_affected_basal_clay}
+<description/></term>
+        <term>{Bone___Other_animal_material}
+<description/></term>
+        <term>{Seeds___other_Plant_material}
+<description/></term>
+        <term>{Stone}
+<description/></term>
+      </lookup>
     </property>
     <property name="Descriptive Notes" type="measure">
       <description/>
@@ -638,43 +4468,97 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Insitu" type="measure">
+    <property name="Insitu" type="vocab">
       <!--ERROR: This view's name is a duplicate of one or more other views' in this tab group-->
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+        <term>{Potentially}
+<description/></term>
+        <term>{Unknown}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Stratified" type="measure">
+    <property name="Stratified" type="vocab">
       <!--ERROR: This view's name is a duplicate of one or more other views' in this tab group-->
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+        <term>{Potentially}
+<description/></term>
+        <term>{Unknown}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Deposit Type" type="measure">
+    <property name="Deposit Type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Historical}
+<description/></term>
+        <term>{Aboriginal_Stone_Artefact}
+<description/></term>
+        <term>{Shell}
+<description/></term>
+        <term>{Burial}
+<description/></term>
+        <term>{Oven__Hearth}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Surface Artefacts" type="measure">
+    <property name="Surface Artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+      </lookup>
     </property>
     <property name="CM Tree ID" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Type" type="measure">
+    <property name="Type" type="vocab">
       <!--ERROR: This view's name is a duplicate of one or more other views' in this tab group-->
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Carved}
+<description/></term>
+        <term>{Scarred}
+<description/></term>
+        <term>{Carved_and_Scarred}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Tree Species" type="measure">
+    <property name="Tree Species" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Eucalypt}
+<description/></term>
+        <term>{Red_Gum}
+<description/></term>
+        <term>{Angotha}
+<description/></term>
+      </lookup>
     </property>
     <property name="Number of Scars" type="measure">
       <description/>
@@ -686,30 +4570,72 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Living Status" type="measure">
+    <property name="Living Status" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Dead}
+<description/></term>
+        <term>{Alive}
+<description/></term>
+        <term>{Dying}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Tree Status" type="measure">
+    <property name="Tree Status" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Standing}
+<description/></term>
+        <term>{Lying_down}
+<description/></term>
+        <term>{Partially_felled}
+<description/></term>
+        <term>{Subject_to_salinity}
+<description/></term>
+        <term>{Not_in_situ}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Damage" type="measure">
+    <property name="Damage" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Ringbarked}
+<description/></term>
+        <term>{Rot}
+<description/></term>
+        <term>{Limb_fall}
+<description/></term>
+        <term>{None}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Regrowth" type="measure">
+    <property name="Regrowth" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Is a tree health assessment required" type="measure">
+    <property name="Is a tree health assessment required" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+      </lookup>
     </property>
     <property name="Length of Scar mm" type="measure">
       <description/>
@@ -731,26 +4657,72 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Shape" type="measure">
+    <property name="Shape" type="vocab">
       <!--ERROR: This view's name is a duplicate of one or more other views' in this tab group-->
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Oval}
+<description/></term>
+        <term>{Rectangular_square}
+<description/></term>
+        <term>{Round}
+<description/></term>
+        <term>{Other}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Orientation" type="measure">
+    <property name="Orientation" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{North_East}
+<description/></term>
+        <term>{East}
+<description/></term>
+        <term>{South_East}
+<description/></term>
+        <term>{South}
+<description/></term>
+        <term>{South_West}
+<description/></term>
+        <term>{West}
+<description/></term>
+        <term>{North_West}
+<description/></term>
+        <term>{North}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Carving type" type="measure">
+    <property name="Carving type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Linear}
+<description/></term>
+        <term>{Geometric}
+<description/></term>
+        <term>{Pictorial}
+<description/></term>
+        <term>{N_A}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Axe Marks" type="measure">
+    <property name="Axe Marks" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Metal}
+<description/></term>
+        <term>{Stone}
+<description/></term>
+        <term>{Indeterminate}
+<description/></term>
+      </lookup>
     </property>
   </ArchaeologicalElement>
   <ArchaeologicalElement name="Cultural Management Comments">

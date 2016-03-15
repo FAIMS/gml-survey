@@ -402,10 +402,13 @@
         <input ref="Timestamp" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{timestamp}</label>
         </input>
-        <input faims_attribute_type="measure" ref="Device_ID" faims_attribute_name="Device ID" faims_style_class="required">
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Device_ID" faims_attribute_name="Device ID" faims_style_class="required">
           <label>{Device_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Logger_ID" faims_attribute_name="Logger ID" faims_style_class="required">
           <label>{Logger_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -422,14 +425,22 @@
           <label>{Participants}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Landform" faims_attribute_name="Landform" faims_style_class="required">
+        <select1 faims_attribute_type="vocab" ref="Landform" faims_attribute_name="Landform" faims_style_class="required">
           <label>{Landform}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Slope_Gradient" faims_attribute_name="Slope Gradient" faims_style_class="required">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Slope_Gradient" faims_attribute_name="Slope Gradient" faims_style_class="required">
           <label>{Slope_Gradient}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Aspect" faims_attribute_name="Aspect">
           <label>{Aspect}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -454,10 +465,14 @@
           <label>{Soil_observations}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Geomorphological_Activity" faims_attribute_name="Geomorphological Activity" faims_style_class="required">
+        <select1 faims_attribute_type="vocab" ref="Geomorphological_Activity" faims_attribute_name="Geomorphological Activity" faims_style_class="required">
           <label>{Geomorphological_Activity}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Disturbance" faims_attribute_name="Disturbance">
           <label>{Disturbance}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -530,10 +545,14 @@
           <label>{Open_Closed_Site}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Site_Aspect_Orientation" faims_attribute_name="Site Aspect Orientation">
+        <select1 faims_attribute_type="vocab" ref="Site_Aspect_Orientation" faims_attribute_name="Site Aspect Orientation">
           <label>{Site_Aspect_Orientation}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Distance_to_permanent_water_source" faims_attribute_name="Distance to permanent water source">
           <label>{Distance_to_permanent_water_source}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -550,10 +569,13 @@
           <label>{Name_of_nearest_temporary_water}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="General_Condition_of_Site" faims_attribute_name="General Condition of Site" faims_style_class="required">
+        <select faims_attribute_type="vocab" ref="General_Condition_of_Site" faims_attribute_name="General Condition of Site" faims_style_class="required">
           <label>{General_Condition_of_Site}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
       </group>
       <group ref="Open_Site">
         <label>{Open_Site}</label>
@@ -591,14 +613,22 @@
       </group>
       <group ref="Closed_Site">
         <label>{Closed_Site}</label>
-        <input faims_attribute_type="measure" ref="Shelter_Cave_Formation" faims_attribute_name="Shelter Cave Formation">
+        <select1 faims_attribute_type="vocab" ref="Shelter_Cave_Formation" faims_attribute_name="Shelter Cave Formation">
           <label>{Shelter_Cave_Formation}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Rock_Surface_Condition" faims_attribute_name="Rock Surface Condition">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Rock_Surface_Condition" faims_attribute_name="Rock Surface Condition">
           <label>{Rock_Surface_Condition}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Internal_Length" faims_attribute_name="Internal Length" faims_style_class="required">
           <label>{Internal_Length}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -625,28 +655,43 @@
           <label>{Feature_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Feature_Type" faims_attribute_name="Feature Type">
+        <select faims_attribute_type="vocab" ref="Feature_Type" faims_attribute_name="Feature Type">
           <label>{Feature_Type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Feature_Condition" faims_attribute_name="Feature Condition">
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <select1 faims_attribute_type="vocab" ref="Feature_Condition" faims_attribute_name="Feature Condition">
           <label>{Feature_Condition}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
       </group>
     </group>
     <group ref="Objects_IV" faims_archent_type="Objects IV">
       <label>{Objects___IV}</label>
       <group ref="Artefact">
         <label>{Artefact}</label>
-        <input faims_attribute_type="measure" ref="Insitu" faims_attribute_name="Insitu">
+        <select1 faims_attribute_type="vocab" ref="Insitu" faims_attribute_name="Insitu">
           <label>{Insitu}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Stratified" faims_attribute_name="Stratified">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Stratified" faims_attribute_name="Stratified">
           <label>{Stratified}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Total_Number_of_Artefacts" faims_attribute_name="Total Number of Artefacts">
           <label>{Total_Number_of_Artefacts}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -655,46 +700,82 @@
           <label>{Instance_No_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Artefact_Raw_Material" faims_attribute_name="Artefact Raw Material">
+        <select1 faims_attribute_type="vocab" ref="Artefact_Raw_Material" faims_attribute_name="Artefact Raw Material">
           <label>{Artefact_Raw_Material}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Artefact_Type" faims_attribute_name="Artefact Type">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Artefact_Type" faims_attribute_name="Artefact Type">
           <label>{Artefact_Type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Artefact_Description_for_Aboriginal_Stone_Artefacts" faims_attribute_name="Artefact Description for Aboriginal Stone Artefacts">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Artefact_Description_for_Aboriginal_Stone_Artefacts" faims_attribute_name="Artefact Description for Aboriginal Stone Artefacts">
           <label>{Artefact_Description__for_Aboriginal_Stone_Artefacts_}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Artefact_Description_for_Historical_Artefacts" faims_attribute_name="Artefact Description for Historical Artefacts">
           <label>{Artefact_Description__for_Historical_Artefacts_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Artefact_Colour" faims_attribute_name="Artefact Colour">
+        <select1 faims_attribute_type="vocab" ref="Artefact_Colour" faims_attribute_name="Artefact Colour">
           <label>{Artefact_Colour}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Artefact_Status_Modification" faims_attribute_name="Artefact Status Modification">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Artefact_Status_Modification" faims_attribute_name="Artefact Status Modification">
           <label>{Artefact_Status_Modification}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Platform_Surface_for_Aboriginal_stone_artefacts" faims_attribute_name="Platform Surface for Aboriginal stone artefacts">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Platform_Surface_for_Aboriginal_stone_artefacts" faims_attribute_name="Platform Surface for Aboriginal stone artefacts">
           <label>{Platform_Surface__for_Aboriginal_stone_artefacts_}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Platform_Type_for_Aboriginal_stone_artefacts" faims_attribute_name="Platform Type for Aboriginal stone artefacts">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Platform_Type_for_Aboriginal_stone_artefacts" faims_attribute_name="Platform Type for Aboriginal stone artefacts">
           <label>{Platform_Type__for_Aboriginal_stone_artefacts_}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Termination_for_Aboriginal_stone_artefacts" faims_attribute_name="Termination for Aboriginal stone artefacts">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Termination_for_Aboriginal_stone_artefacts" faims_attribute_name="Termination for Aboriginal stone artefacts">
           <label>{Termination__for_Aboriginal_stone_artefacts_}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Cross_Section_for_Aboriginal_artefacts" faims_attribute_name="Cross Section for Aboriginal artefacts">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Cross_Section_for_Aboriginal_artefacts" faims_attribute_name="Cross Section for Aboriginal artefacts">
           <label>{Cross_Section__for_Aboriginal_artefacts_}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Length_mm" faims_attribute_name="Length mm">
           <label>{Length__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -726,10 +807,14 @@
           <label>{Intangible_Value_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Intangible_Value_Type" faims_attribute_name="Intangible Value Type">
+        <select1 faims_attribute_type="vocab" ref="Intangible_Value_Type" faims_attribute_name="Intangible Value Type">
           <label>{Intangible_Value_Type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Description" faims_attribute_name="Description">
           <label>{Description}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -741,42 +826,71 @@
           <label>{Art_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Pigment_Engraved" faims_attribute_name="Pigment Engraved">
+        <select1 faims_attribute_type="vocab" ref="Pigment_Engraved" faims_attribute_name="Pigment Engraved">
           <label>{Pigment_Engraved}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Super-impositioning" faims_attribute_name="Super-impositioning">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Super-impositioning" faims_attribute_name="Super-impositioning">
           <label>{Super-impositioning}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Motif_s" faims_attribute_name="Motif s">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select faims_attribute_type="vocab" ref="Motif_s" faims_attribute_name="Motif s">
           <label>{Motif_s}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Application_Technique" faims_attribute_name="Application Technique">
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <select faims_attribute_type="vocab" ref="Application_Technique" faims_attribute_name="Application Technique">
           <label>{Application_Technique}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Form" faims_attribute_name="Form">
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <select1 faims_attribute_type="vocab" ref="Form" faims_attribute_name="Form">
           <label>{Form}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Main_Colour" faims_attribute_name="Main Colour">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Main_Colour" faims_attribute_name="Main Colour">
           <label>{Main_Colour}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Art_Location" faims_attribute_name="Art Location">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select faims_attribute_type="vocab" ref="Art_Location" faims_attribute_name="Art Location">
           <label>{Art_Location}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
         <input faims_attribute_type="measure" ref="Associated_Story_Significance_Interpretation" faims_attribute_name="Associated Story Significance Interpretation">
           <label>{Associated_Story_Significance_Interpretation}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Art_Condition" faims_attribute_name="Art Condition">
+        <select1 faims_attribute_type="vocab" ref="Art_Condition" faims_attribute_name="Art Condition">
           <label>{Art_Condition}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Sketch_plan" faims_attribute_name="Sketch plan">
           <label>{Sketch_plan}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -819,14 +933,22 @@
           <label>{Grinding_Grove_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Type" faims_attribute_name="Type">
+        <select1 faims_attribute_type="vocab" ref="Type" faims_attribute_name="Type">
           <label>{Type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Profile_Shape" faims_attribute_name="Profile Shape">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Profile_Shape" faims_attribute_name="Profile Shape">
           <label>{Profile_Shape}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Seed_species_present" faims_attribute_name="Seed species present">
           <label>{Seed_species_present}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -882,26 +1004,41 @@
           <label>{Shell_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Distribution" faims_attribute_name="Distribution">
+        <select1 faims_attribute_type="vocab" ref="Distribution" faims_attribute_name="Distribution">
           <label>{Distribution}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Distance_to_high_water_mark_metres" faims_attribute_name="Distance to high water mark metres">
           <label>{Distance_to_high_water_mark__metres_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Species_present" faims_attribute_name="Species present">
+        <select faims_attribute_type="vocab" ref="Species_present" faims_attribute_name="Species present">
           <label>{Species_present}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Dominant_Species" faims_attribute_name="Dominant Species">
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <select1 faims_attribute_type="vocab" ref="Dominant_Species" faims_attribute_name="Dominant Species">
           <label>{Dominant_Species}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Approximate_percentage_of_dominant_species_as_part_of_assemblage" faims_attribute_name="Approximate percentage of dominant species as part of assemblage">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Approximate_percentage_of_dominant_species_as_part_of_assemblage" faims_attribute_name="Approximate percentage of dominant species as part of assemblage">
           <label>{Approximate_percentage_of_dominant_species_as_part_of_assemblage}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Sketch_Plan" faims_attribute_name="Sketch Plan">
           <label>{Sketch_Plan}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -933,10 +1070,14 @@
           <label>{Estimated_Depth}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Components" faims_attribute_name="Components">
+        <select1 faims_attribute_type="vocab" ref="Components" faims_attribute_name="Components">
           <label>{Components}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Descriptive_Notes" faims_attribute_name="Descriptive Notes">
           <label>{Descriptive_Notes}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -956,22 +1097,38 @@
           <label>{Arch_Dep_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Insitu" faims_attribute_name="Insitu">
+        <select1 faims_attribute_type="vocab" ref="Insitu" faims_attribute_name="Insitu">
           <label>{Insitu}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Stratified" faims_attribute_name="Stratified">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Stratified" faims_attribute_name="Stratified">
           <label>{Stratified}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Deposit_Type" faims_attribute_name="Deposit Type">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Deposit_Type" faims_attribute_name="Deposit Type">
           <label>{Deposit_Type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Surface_Artefacts" faims_attribute_name="Surface Artefacts">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Surface_Artefacts" faims_attribute_name="Surface Artefacts">
           <label>{Surface_Artefacts}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
       </group>
       <group ref="Culturally_Modified_Tree">
         <label>{Culturally_Modified_Tree}</label>
@@ -979,14 +1136,22 @@
           <label>{CM_Tree_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Type" faims_attribute_name="Type">
+        <select1 faims_attribute_type="vocab" ref="Type" faims_attribute_name="Type">
           <label>{Type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Tree_Species" faims_attribute_name="Tree Species">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Tree_Species" faims_attribute_name="Tree Species">
           <label>{Tree_Species}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Number_of_Scars" faims_attribute_name="Number of Scars">
           <label>{Number_of_Scars}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -995,26 +1160,45 @@
           <label>{Number_of_Carved_Panels}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Living_Status" faims_attribute_name="Living Status">
+        <select1 faims_attribute_type="vocab" ref="Living_Status" faims_attribute_name="Living Status">
           <label>{Living_Status}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Tree_Status" faims_attribute_name="Tree Status">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Tree_Status" faims_attribute_name="Tree Status">
           <label>{Tree_Status}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Damage" faims_attribute_name="Damage">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Damage" faims_attribute_name="Damage">
           <label>{Damage}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Regrowth" faims_attribute_name="Regrowth">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select faims_attribute_type="vocab" ref="Regrowth" faims_attribute_name="Regrowth">
           <label>{Regrowth}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Is_a_tree_health_assessment_required" faims_attribute_name="Is a tree health assessment required">
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <select1 faims_attribute_type="vocab" ref="Is_a_tree_health_assessment_required" faims_attribute_name="Is a tree health assessment required">
           <label>{Is_a_tree_health_assessment_required}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Length_of_Scar_mm" faims_attribute_name="Length of Scar mm">
           <label>{Length_of_Scar__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -1031,22 +1215,38 @@
           <label>{Height_Above_Ground__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Shape" faims_attribute_name="Shape">
+        <select1 faims_attribute_type="vocab" ref="Shape" faims_attribute_name="Shape">
           <label>{Shape}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Orientation" faims_attribute_name="Orientation">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Orientation" faims_attribute_name="Orientation">
           <label>{Orientation}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Carving_type" faims_attribute_name="Carving type">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Carving_type" faims_attribute_name="Carving type">
           <label>{Carving_type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Axe_Marks" faims_attribute_name="Axe Marks">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Axe_Marks" faims_attribute_name="Axe Marks">
           <label>{Axe_Marks}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
       </group>
     </group>
     <group ref="Cultural_Management_Comments" faims_archent_type="Cultural Management Comments">

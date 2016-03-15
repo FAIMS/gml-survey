@@ -30,7 +30,14 @@
     <gps><!--Start Survey Unit--></gps>
     <Transect_ID f="id notnull autonum"/>
     <timestamp/>
-    <Device_ID f="notnull"/>
+    <Device_ID t="radio" f="notnull">
+      <opts>
+        <opt>A</opt>
+        <opt>B</opt>
+        <opt>C</opt>
+        <opt>D</opt>
+      </opts>
+    </Device_ID>
     <Logger_ID f="notnull"/>
     <Total_Transect_Width_m>Total Transect Width (m)</Total_Transect_Width_m>
     <Number_of_Participants_in_Transect f="notnull"/>
@@ -45,15 +52,48 @@
         Include definitions of these terms from p.12 of Australian Soil and Land
         Survey Handbook
       </desc>
+      <opts>
+        <opt>Crest / Hill-top</opt>
+        <opt>Upper Slope</opt>
+        <opt>Mid-slope</opt>
+        <opt>Lower Slope</opt>
+        <opt>Simple Slope</opt>
+        <opt>Flat</opt>
+        <opt>Open Depression (vale)</opt>
+        <opt>Closed Depression</opt>
+      </opts>
     </Landform>
-    <Slope_Gradient f="notnull">Slope/Gradient</Slope_Gradient>
+    <Slope_Gradient f="notnull">
+      Slope/Gradient
+      <opts>
+        <opt>Level</opt>
+        <opt>Very gently inclined</opt>
+        <opt>Gently inclined</opt>
+        <opt>Moderately inclined</opt>
+        <opt>Steep</opt>
+        <opt>Very steep</opt>
+        <opt>Precipitous</opt>
+        <opt>Cliffed</opt>
+      </opts>
+    </Slope_Gradient>
     <Aspect/>
     <Vegetation_notes f="notnull"/>
     <Ground_surface_visibility f="notnull"/>
     <Ground_surface_exposure f="notnull"/>
     <Ground_surface_notes/>
     <Soil_observations/>
-    <Geomorphological_Activity f="notnull"/>
+    <Geomorphological_Activity f="notnull">
+      <opts>
+        <opts>Eroded</opts>
+        <opts>Eroded or Aggraded</opts>
+        <opts>Aggraded</opts>
+        <opts>Heaved up or Elevated</opts>
+        <opts>Built Up</opts>
+        <opts>Excavated or Dug Out</opts>
+        <opts>Subsided or Depressed</opts>
+        <opts>No Observation Made</opts>
+      </opts>
+    </Geomorphological_Activity>
     <Disturbance/>
     <Photo/>
     <Photo_Caption/>
@@ -71,12 +111,36 @@
   <Site>
     <Site_ID_Number f="id notnull autonum"/>
     <Open_Closed_Site>Open/Closed Site</Open_Closed_Site>
-    <Site_Aspect_Orientation>Site Aspect/Orientation</Site_Aspect_Orientation>
+    <Site_Aspect_Orientation>
+      Site Aspect/Orientation
+      <opts>
+        <opt>N-S</opt>
+        <opt>NE-SW</opt>
+        <opt>E-W</opt>
+        <opt>SE-NW</opt>
+        <opt>N/A</opt>
+      </opts>
+    </Site_Aspect_Orientation>
     <Distance_to_permanent_water_source/>
     <Distance_to_temporary_water_source/>
     <Name_of_nearest_permanent_water_source/>
     <Name_of_nearest_temporary_water/>
-    <General_Condition_of_Site f="notnull"/>
+    <General_Condition_of_Site t="checkbox" f="notnull">
+      <opts>
+        <opt>Weathered</opt>
+        <opt>Vehicle damage</opt>
+        <opt>Surface water Wash</opt>
+        <opt>Fire damage</opt>
+        <opt>Erosion</opt>
+        <opt>Stock damage</opt>
+        <opt>Exposed archaeological / Other material</opt>
+        <opt>Fire damage</opt>
+        <opt>Animal damage</opt>
+        <opt>Graffitti / Vandalism</opt>
+        <opt>Mineralisation</opt>
+        <opt>Unstable structure / Landform</opt>
+      </opts>
+    </General_Condition_of_Site>
   </Site>
   <Open_Site>
     <Total_length_of_visible_site f="notnull"/>
@@ -85,8 +149,7 @@
     <Length_of_assessed_site_area f="notnull"/>
     <Subsurfance_potential t="radio">
       <opts>
-        <opt>Yes</opt>
-        <opt>No</opt>
+        <!--BOOLEAN-->
       </opts>
     </Subsurfance_potential>
     <Length_of_potential_site_area/>
@@ -95,8 +158,22 @@
   <Closed_Site>
     <Shelter_Cave_Formation>
       Shelter/Cave Formation
+      <opts>
+        <opt>Boulder</opt>
+        <opt>Wind erosion</opt>
+        <opt>Water erosion</opt>
+        <opt>Rock collapse</opt>
+        <opt>Other</opt>
+      </opts>
     </Shelter_Cave_Formation>
-    <Rock_Surface_Condition/>
+    <Rock_Surface_Condition>
+      <opts>
+        <opt>Silica gloss</opt>
+        <opt>Tessellated</opt>
+        <opt>Weathered</opt>
+        <opt>Other</opt>
+      </opts>
+    </Rock_Surface_Condition>
     <Internal_Length f="notnull"/>
     <Internal_Width f="notnull"/>
     <Shelter_Height f="notnull"/>
@@ -107,43 +184,192 @@
 <Feature>
   <Feature>
     <Feature_ID f="id autonum"/>
-    <Feature_Type/>
-    <Feature_Condition/>
+    <Feature_Type t="checkbox">
+      <opts>
+        <opt>Intangible values</opt>
+        <opt>Aboriginal Ceremony</opt>
+        <opt>Aboriginal Resource</opt>
+        <opt>Dreaming</opt>
+        <opt>Gathering</opt>
+        <opt>Art</opt>
+        <opt>Artefact</opt>
+        <opt>Burial</opt>
+        <opt>Conflict</opt>
+        <opt>Mound</opt>
+        <opt>Fish Trap</opt>
+        <opt>Grinding Groove</opt>
+        <opt>Habitation Structure</opt>
+        <opt>Hearth / Ground Oven</opt>
+        <opt>Non Human Bone &amp; Organic Material</opt>
+        <opt>Ochre quarry</opt>
+        <opt>Potential Archaeological Deposit</opt>
+        <opt>Stone Quarry</opt>
+        <opt>Shell</opt>
+        <opt>Stone Arrangement</opt>
+        <opt>Culturally Modified Tree</opt>
+        <opt>Water Hole</opt>
+      </opts>
+    </Feature_Type>
+    <Feature_Condition>
+      <opts>
+        <opt>Excellent</opt>
+        <opt>Good</opt>
+        <opt>Fair</opt>
+        <opt>Poor</opt>
+      </opts>
+    </Feature_Condition>
   </Feature>
 </Feature>
 
 <Objects_IV>
   Objects &amp; IV
   <Artefact>
-    <Insitu/>
-    <Stratified/>
+    <Insitu>
+      <opts>
+        <!--BOOLEAN_MODAL-->
+      </opts>
+    </Insitu>
+    <Stratified>
+      <opts>
+        <!--BOOLEAN_MODAL-->
+      </opts>
+    </Stratified>
     <Total_Number_of_Artefacts/>
     <Instance_No f="id">
       Instance No.
     </Instance_No>
-    <Artefact_Raw_Material/>
-    <Artefact_Type/>
+    <Artefact_Raw_Material>
+      <opts>
+        <opt>Basalt</opt>
+        <opt>Chert</opt>
+        <opt>Fine grained siliceous</opt>
+        <opt>Granite</opt>
+        <opt>Quartz</opt>
+        <opt>Quartzite</opt>
+        <opt>Sandstone</opt>
+        <opt>Silcrete</opt>
+        <opt>Glass</opt>
+        <opt>Mudstone</opt>
+        <opt>Silcrete</opt>
+        <opt>Petrified wood</opt>
+        <opt>Chalcedony</opt>
+        <opt>Chalcedonic chert</opt>
+        <opt>Ceramic</opt>
+        <opt>Metal</opt>
+        <opt>Shell</opt>
+        <opt>Bone</opt>
+        <opt>Wood</opt>
+        <opt>Resin</opt>
+        <opt>Plastic</opt>
+        <opt>Building material</opt>
+        <opt>Synthetic</opt>
+        <opt>Textile</opt>
+        <opt>Other animal Material</opt>
+        <opt>Other plant material</opt>
+        <opt>Other unknown material</opt>
+      </opts>
+    </Artefact_Raw_Material>
+    <Artefact_Type>
+      <opts>
+        <opt>Aboriginal</opt>
+        <opt>Historical</opt>
+      </opts>
+    </Artefact_Type>
     <Artefact_Description_for_Aboriginal_Stone_Artefacts>
       Artefact Description (for Aboriginal Stone Artefacts)
+      <opts>
+        <opt>Anvil</opt>
+        <opt>Axe</opt>
+        <opt>Core</opt>
+        <opt>Flake</opt>
+        <opt>Hammerstone</opt>
+        <opt>Manuport</opt>
+        <opt>Groundstone Implement
+          <opt>Milling slab</opt>
+          <opt>Mortar</opt>
+          <opt>Muller</opt>
+        </opt>
+        <opt>Retouched Flake</opt>
+        <opt>Core Fragment</opt>
+        <opt>Flake Fragment</opt>
+        <opt>Retouched Flake Fragment</opt>
+        <opt>Other - Unknown</opt>
+      </opts>
     </Artefact_Description_for_Aboriginal_Stone_Artefacts>
     <Artefact_Description_for_Historical_Artefacts>
       Artefact Description (for Historical Artefacts)
     </Artefact_Description_for_Historical_Artefacts>
-    <Artefact_Colour/>
+    <Artefact_Colour>
+      <opts>
+        <!--MUNSEL-->
+      </opts>
+    </Artefact_Colour>
     <Artefact_Status_Modification>
       Artefact Status/Modification
+      <opts>
+        <opt>Broken</opt>
+        <opt>Modified</opt>
+        <opt>Unworked</opt>
+        <opt>Whole</opt>
+        <opt>Usewear</opt>
+        <opt>Burnt</opt>
+        <opt>Carved/Cut</opt>
+        <opt>Chewed</opt>
+        <opt>Chipped</opt>
+        <opt>Corroded</opt>
+        <opt>Stained</opt>
+        <opt>Drilled</opt>
+        <opt>Encrusted</opt>
+        <opt>Fabric Decay</opt>
+        <opt>Ground</opt>
+        <opt>Melted</opt>
+        <opt>Other heat modification</opt>
+        <opt>Opalescence</opt>
+        <opt>Perforated</opt>
+        <opt>Polished</opt>
+        <opt>Repaired</opt>
+        <opt>Shattered</opt>
+        <opt>Weathered</opt>
+      </opts>
     </Artefact_Status_Modification>
     <Platform_Surface_for_Aboriginal_stone_artefacts>
       Platform Surface (for Aboriginal stone artefacts)
+      <opts>
+        <opt>Cortex</opt>
+        <opt>One flake scar</opt>
+        <opt>More than one flake scar</opt>
+        <opt>Faceted</opt>
+        <opt>Ground</opt>
+        <opt>Indeterminate</opt>
+        <opt>Bipolar</opt>
+      </opts>
     </Platform_Surface_for_Aboriginal_stone_artefacts>
     <Platform_Type_for_Aboriginal_stone_artefacts>
       Platform Type (for Aboriginal stone artefacts)
+      <opts>
+        <opt>Wide</opt>
+        <opt>Focal</opt>
+        <opt>Shattered</opt>
+        <opt>Indeterminate</opt>
+      </opts>
     </Platform_Type_for_Aboriginal_stone_artefacts>
     <Termination_for_Aboriginal_stone_artefacts>
       Termination (for Aboriginal stone artefacts)
+      <opts>
+        <opt>Feather</opt>
+        <opt>Hinge</opt>
+        <opt>Step</opt>
+        <opt>Plunge</opt>
+      </opts>
     </Termination_for_Aboriginal_stone_artefacts>
     <Cross_Section_for_Aboriginal_artefacts>
       Cross Section (for Aboriginal artefacts)
+      <opts>
+        <opt>High/Strong</opt>
+        <opt>High/Weak</opt>
+        <opt>Low/Weak</opt>
+        <opt>Irregular</opt>
+      </opts>
     </Cross_Section_for_Aboriginal_artefacts>
     <Length_mm>Length (mm)</Length_mm>
     <Width_mm>Width (mm)</Width_mm>
@@ -154,22 +380,125 @@
   </Artefact>
   <Intangible_Values>
     <Intangible_Value_ID f="autonum"/>
-    <Intangible_Value_Type/>
+    <Intangible_Value_Type>
+      <opts>
+        <opt>Aboriginal Ceremony (no physical evidence)</opt>
+        <opt>Song</opt>
+        <opt>Story</opt>
+        <opt>Dreaming</opt>
+        <opt>Gathering (non physical evidence).</opt>
+      </opts>
+    </Intangible_Value_Type>
     <Description/>
   </Intangible_Values>
   <Art>
     <Art_ID/>
-    <Pigment_Engraved>Pigment/Engraved</Pigment_Engraved>
-    <Super-impositioning/>
-    <Motif_s>Motif/s</Motif_s>
-    <Application_Technique/>
-    <Form/>
-    <Main_Colour/>
-    <Art_Location/>
+    <Pigment_Engraved>
+      Pigment/Engraved
+      <opts>
+        <!--BOOLEAN-->
+      </opts>
+    </Pigment_Engraved>
+    <Super-impositioning>
+      <opts>
+        <!--BOOLEAN-->
+      </opts>
+    </Super-impositioning>
+    <Motif_s t="checkbox">
+      Motif/s
+      <opts>
+        <opt>Anthropomorphic</opt>
+        <opt>Bird</opt>
+        <opt>Bird track</opt>
+        <opt>Canoe</opt>
+        <opt>Circle</opt>
+        <opt>Contact material Culture</opt>
+        <opt>Duck</opt>
+        <opt>Eel</opt>
+        <opt>Emu</opt>
+        <opt>Emu track</opt>
+        <opt>European figure</opt>
+        <opt>Female</opt>
+        <opt>Fish</opt>
+        <opt>Foot</opt>
+        <opt>Hand</opt>
+        <opt>Jellyfish</opt>
+        <opt>Kangaroo</opt>
+        <opt>Line</opt>
+        <opt>Lizard</opt>
+        <opt>Macropod</opt>
+        <opt>Macropod track</opt>
+        <opt>Male</opt>
+        <opt>Marine-other</opt>
+        <opt>Other</opt>
+        <opt>Pattern</opt>
+        <opt>Quadruped</opt>
+        <opt>Reptile</opt>
+        <opt>Rifle</opt>
+        <opt>Shield</opt>
+        <opt>Ship</opt>
+        <opt>Snake</opt>
+        <opt>Spear</opt>
+        <opt>Wallaby</opt>
+        <opt>Whale</opt>
+      </opts>
+    </Motif_s>
+    <Application_Technique t="checkbox">
+      <opts>
+        <opt>Abraded</opt>
+        <opt>Drawn</opt>
+        <opt>Other</opt>
+        <opt>Painted</opt>
+        <opt>Pecked</opt>
+        <opt>Pigment &amp; engraved</opt>
+        <opt>Stencilled</opt>
+      </opts>
+    </Application_Technique>
+    <Form>
+      <opts>
+        <opt>Fill</opt>
+        <opt>Line</opt>
+        <opt>Line + fill</opt>
+        <opt>Other</opt>
+        <opt>Pattern</opt>
+      </opts>
+    </Form>
+    <Main_Colour>
+      <opts>
+        <opt>Black</opt>
+        <opt>Mauve</opt>
+        <opt>N/A</opt>
+        <opt>Orange</opt>
+        <opt>Other</opt>
+        <opt>Red</opt>
+        <opt>White</opt>
+        <opt>Yellow</opt>
+      </opts>
+    </Main_Colour>
+    <Art_Location t="checkbox">
+      <opts>
+        <opt>All over shelter or rock platform surface</opt>
+        <opt>Ceiling</opt>
+        <opt>Floor</opt>
+        <opt>Mostly near largest sheltered space</opt>
+        <opt>Mostly on out of the way spaces</opt>
+        <opt>Other</opt>
+        <opt>Wall</opt>
+      </opts>
+    </Art_Location>
     <Associated_Story_Significance_Interpretation>
       Associated Story/Significance/Interpretation
     </Associated_Story_Significance_Interpretation>
-    <Art_Condition/>
+    <Art_Condition>
+      <opts>
+        <opt>Faded</opt>
+        <opt>Stained</opt>
+        <opt>Mineralisation evident</opt>
+        <opt>Very brant colours</opt>
+        <opt>Unweathered</opt>
+        <opt>Weathered</opt>
+      </opts>
+    </Art_Condition>
     <Sketch_plan/>
     <Photo/>
     <Other_Observations/>
@@ -185,8 +514,21 @@
   </Other_Feature>
   <Grinding_Grove>
     <Grinding_Grove_ID f="autonum"/>
-    <Type/>
-    <Profile_Shape/>
+    <Type>
+      <opts>
+        <opt>Broad</opt>
+        <opt>Narrow/point</opt>
+        <opt>Hollow</opt>
+        <opt>Flat</opt>
+      </opts>
+    </Type>
+    <Profile_Shape>
+      <opts>
+        <opt>U' shaped</opt>
+        <opt>'V' shaped</opt>
+        <opt>Flat</opt>
+      </opts>
+    </Profile_Shape>
     <Seed_species_present/>
     <Groove_function/>
     <Dimensions_-_length_of_smallest_part_mm>
@@ -214,13 +556,31 @@
   </Grinding_Grove>
   <Shell>
     <Shell_ID f="autonum"/>
-    <Distribution/>
+    <Distribution>
+      <opts>
+        <opt>Surface scatter</opt>
+        <opt>Stratified deposit</opt>
+        <opt>Mounded</opt>
+      </opts>
+    </Distribution>
     <Distance_to_high_water_mark_metres>
       Distance to high water mark (metres)
     </Distance_to_high_water_mark_metres>
-    <Species_present/>
-    <Dominant_Species/>
-    <Approximate_percentage_of_dominant_species_as_part_of_assemblage/>
+    <Species_present t="checkbox">
+      <opts>
+        <!--SPECIES-->
+      </opts>
+    </Species_present>
+    <Dominant_Species>
+      <opts>
+        <!--SPECIES-->
+      </opts>
+    </Dominant_Species>
+    <Approximate_percentage_of_dominant_species_as_part_of_assemblage>
+      <opts>
+        <!--PERCENTAGE_INTERVALS-->
+      </opts>
+    </Approximate_percentage_of_dominant_species_as_part_of_assemblage>
     <Sketch_Plan/>
     <Photo/>
   </Shell>
@@ -231,37 +591,139 @@
     <Length/>
     <Width/>
     <Estimated_Depth/>
-    <Components/>
+    <Components>
+      <opts>
+        <opt>Baked clay balls</opt>
+        <opt>Charcoal</opt>
+        <opt>Wood</opt>
+        <opt>Heat affected basal clay</opt>
+        <opt>Bone / Other animal material</opt>
+        <opt>Seeds / other Plant material</opt>
+        <opt>Stone</opt>
+      </opts>
+    </Components>
     <Descriptive_Notes/>
     <Sketch_Plan/>
     <Photo/>
   </Hearth_Ground_Oven>
   <Potential_Archaeological_Deposit>
     <Arch_Dep_ID f="id autonum"/>
-    <Insitu/>
-    <Stratified/>
-    <Deposit_Type/>
-    <Surface_Artefacts/>
+    <Insitu>
+      <opts>
+        <!--BOOLEAN_MODAL-->
+      </opts>
+    </Insitu>
+    <Stratified>
+      <opts>
+        <!--BOOLEAN_MODAL-->
+      </opts>
+    </Stratified>
+    <Deposit_Type>
+      <opts>
+        <opt>Historical</opt>
+        <opt>Aboriginal Stone Artefact</opt>
+        <opt>Shell</opt>
+        <opt>Burial</opt>
+        <opt>Oven/ Hearth</opt>
+      </opts>
+    </Deposit_Type>
+    <Surface_Artefacts>
+      <opts>
+        <!--BOOLEAN-->
+      </opts>
+    </Surface_Artefacts>
   </Potential_Archaeological_Deposit>
   <Culturally_Modified_Tree>
     <CM_Tree_ID f="id autonum"/>
-    <Type/>
-    <Tree_Species/>
+    <Type>
+      <opts>
+        <opt>Carved</opt>
+        <opt>Scarred</opt>
+        <opt>Carved and Scarred</opt>
+      </opts>
+    </Type>
+    <Tree_Species>
+      <opts>
+        <opt>Eucalypt</opt>
+        <opt>Red Gum</opt>
+        <opt>Angotha</opt>
+      </opts>
+    </Tree_Species>
     <Number_of_Scars/>
     <Number_of_Carved_Panels/>
-    <Living_Status/>
-    <Tree_Status/>
-    <Damage/>
-    <Regrowth/>
-    <Is_a_tree_health_assessment_required/>
+    <Living_Status>
+      <opts>
+        <opt>Dead</opt>
+        <opt>Alive</opt>
+        <opt>Dying</opt>
+      </opts>
+    </Living_Status>
+    <Tree_Status>
+      <opts>
+        <opt>Standing</opt>
+        <opt>Lying down</opt>
+        <opt>Partially felled</opt>
+        <opt>Subject to salinity</opt>
+        <opt>Not in situ</opt>
+      </opts>
+    </Tree_Status>
+    <Damage>
+      <opts>
+        <opt>Ringbarked</opt>
+        <opt>Rot</opt>
+        <opt>Limb fall</opt>
+        <opt>None</opt>
+      </opts>
+    </Damage>
+    <Regrowth t="checkbox">
+      <opts>
+        <!--BOOLEAN-->
+      </opts>
+    </Regrowth>
+    <Is_a_tree_health_assessment_required>
+      <opts>
+        <!--BOOLEAN-->
+      </opts>
+    </Is_a_tree_health_assessment_required>
     <Length_of_Scar_mm>Length of Scar (mm)</Length_of_Scar_mm>
     <Width_of_Scar_mm>Width of Scar (mm)</Width_of_Scar_mm>
     <Depth_of_Scar_mm>Depth of Scar (mm)</Depth_of_Scar_mm>
     <Height_Above_Ground_mm>Height Above Ground (mm)</Height_Above_Ground_mm>
-    <Shape/>
-    <Orientation/>
-    <Carving_type/>
-    <Axe_Marks/>
+    <Shape>
+      <opts>
+        <opt>Oval</opt>
+        <opt>Rectangular square</opt>
+        <opt>Round</opt>
+        <opt>Other</opt>
+      </opts>
+    </Shape>
+    <Orientation>
+      <opts>
+        <opt>North East</opt>
+        <opt>East</opt>
+        <opt>South East</opt>
+        <opt>South</opt>
+        <opt>South West</opt>
+        <opt>West</opt>
+        <opt>North West</opt>
+        <opt>North</opt>
+      </opts>
+    </Orientation>
+    <Carving_type>
+      <opts>
+        <opt>Linear</opt>
+        <opt>Geometric</opt>
+        <opt>Pictorial</opt>
+        <opt>N/A</opt>
+      </opts>
+    </Carving_type>
+    <Axe_Marks>
+      <opts>
+        <opt>Metal</opt>
+        <opt>Stone</opt>
+        <opt>Indeterminate</opt>
+      </opts>
+    </Axe_Marks>
   </Culturally_Modified_Tree>
 </Objects_IV>
 
