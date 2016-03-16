@@ -51,8 +51,8 @@
       </opts>
     </Device_ID>
     <author>Logger ID</author>
-    <Total_Transect_Width_m>Total Transect Width (m)</Total_Transect_Width_m>
-    <Number_of_Participants_in_Transect f="notnull"/>
+    <Total_Transect_Width_m b="decimal">Total Transect Width (m)</Total_Transect_Width_m>
+    <Number_of_Participants_in_Transect b="decimal" f="notnull"/>
     <Participants>
       <desc>
         Enter the names of assistants and other people walking your survey
@@ -188,10 +188,10 @@
         <opt>N/A</opt>
       </opts>
     </Site_Aspect_Orientation>
-    <Distance_to_permanent_water_source>
+    <Distance_to_permanent_water_source b="decimal">
       <desc>Distance to permanent water source in metres.</desc>
     </Distance_to_permanent_water_source>
-    <Distance_to_temporary_water_source>
+    <Distance_to_temporary_water_source b="decimal">
       <desc>Distance to temporary water source in metres.</desc>
     </Distance_to_temporary_water_source>
     <Name_of_nearest_permanent_water_source>
@@ -219,17 +219,17 @@
     </General_Condition_of_Site>
   </Site>
   <Open_Site>
-    <Total_length_of_visible_site f="notnull"/>
-    <Average_width_of_visible_site f="notnull"/>
-    <Estimated_area_of_visible_site f="notnull"/>
-    <Length_of_assessed_site_area f="notnull"/>
+    <Total_length_of_visible_site b="decimal" f="notnull"/>
+    <Average_width_of_visible_site b="decimal" f="notnull"/>
+    <Estimated_area_of_visible_site b="decimal" f="notnull"/>
+    <Length_of_assessed_site_area b="decimal" f="notnull"/>
     <Subsurfance_potential t="radio">
       <opts>
         <!--BOOLEAN-->
       </opts>
     </Subsurfance_potential>
-    <Length_of_potential_site_area/>
-    <Average_width_of_potential_site_area f="notnull"/>
+    <Length_of_potential_site_area b="decimal"/>
+    <Average_width_of_potential_site_area b="decimal" f="notnull"/>
   </Open_Site>
   <Closed_Site>
     <Shelter_Cave_Formation>
@@ -250,10 +250,10 @@
         <opt>Other</opt>
       </opts>
     </Rock_Surface_Condition>
-    <Internal_Length f="notnull"/>
-    <Internal_Width f="notnull"/>
-    <Shelter_Height f="notnull"/>
-    <Shelter_Floor_Area f="notnull"/>
+    <Internal_Length b="decimal" f="notnull"/>
+    <Internal_Width b="decimal" f="notnull"/>
+    <Shelter_Height b="decimal" f="notnull"/>
+    <Shelter_Floor_Area b="decimal" f="notnull"/>
   </Closed_Site>
   <Features f="noscroll">
     <Add_Feature t="button" lc="Feature"/>
@@ -360,8 +360,8 @@
         <!--BOOLEAN_MODAL-->
       </opts>
     </Stratified_Artefact>
-    <Total_Number_of_Artefacts/>
-    <Instance_No f="id">
+    <Total_Number_of_Artefacts b="decimal"/>
+    <Instance_No b="decimal" f="id notnull">
       Instance No.
     </Instance_No>
     <Artefact_Raw_Material>
@@ -501,18 +501,18 @@
         <opt>Irregular</opt>
       </opts>
     </Cross_Section_for_Aboriginal_artefacts>
-    <Length_mm>
+    <Length_mm b="decimal">
       Length (mm)
       <desc>Maximum length of the object - longest side.</desc>
     </Length_mm>
-    <Width_mm>
+    <Width_mm b="decimal">
       Width (mm)
       <desc>
         Maximum width of the object (taken 90 degrees to the length
         measurement).
       </desc>
     </Width_mm>
-    <Thickness_mm>
+    <Thickness_mm b="decimal">
       Thickness (mm)
       <desc>
         Maximum thickness of the object measurement is taken at its thickest
@@ -712,26 +712,26 @@
     </Profile_Shape>
     <Seed_species_present/>
     <Groove_function/>
-    <Dimensions_-_length_of_smallest_part_mm>
+    <Dimensions_-_length_of_smallest_part_mm b="decimal">
       Dimensions - length of smallest part (mm)
     </Dimensions_-_length_of_smallest_part_mm>
-    <Dimensions_-_width_of_smallest_part_mm>
+    <Dimensions_-_width_of_smallest_part_mm b="decimal">
       Dimensions - width of smallest part (mm)
     </Dimensions_-_width_of_smallest_part_mm>
-    <Dimensions_-_depth_of_smallest_part_mm>
+    <Dimensions_-_depth_of_smallest_part_mm b="decimal">
       Dimensions - depth of smallest part (mm)
     </Dimensions_-_depth_of_smallest_part_mm>
-    <Dimensions_-_length_of_largest_part_mm>
+    <Dimensions_-_length_of_largest_part_mm b="decimal">
       Dimensions - length of largest part (mm)
     </Dimensions_-_length_of_largest_part_mm>
-    <Dimensions_-_width_of_largest_part_mm>
+    <Dimensions_-_width_of_largest_part_mm b="decimal">
       Dimensions - width of largest part (mm)
     </Dimensions_-_width_of_largest_part_mm>
-    <Dimensions_-_depth_of_largest_part_mm>
+    <Dimensions_-_depth_of_largest_part_mm b="decimal">
       Dimensions - depth of largest part (mm)
     </Dimensions_-_depth_of_largest_part_mm>
-    <Groove_count/>
-    <Cluster_count/>
+    <Groove_count b="decimal"/>
+    <Cluster_count b="decimal"/>
     <Sketch_Plan_Grinding_Grove/>
     <Photo_Grinding_Grove/>
   </Grinding_Grove>
@@ -747,7 +747,7 @@
         <opt>Mounded</opt>
       </opts>
     </Distribution>
-    <Distance_to_high_water_mark_metres>
+    <Distance_to_high_water_mark_metres b="decimal">
       Distance to high water mark (metres)
     </Distance_to_high_water_mark_metres>
     <Species_present t="checkbox">
@@ -846,8 +846,8 @@
         <opt>Angotha</opt>
       </opts>
     </Tree_Species>
-    <Number_of_Scars/>
-    <Number_of_Carved_Panels/>
+    <Number_of_Scars b="decimal"/>
+    <Number_of_Carved_Panels b="decimal"/>
     <Living_Status>
       <opts>
         <opt>Dead</opt>
@@ -883,10 +883,10 @@
         <!--BOOLEAN-->
       </opts>
     </Is_a_tree_health_assessment_required>
-    <Length_of_Scar_mm>Length of Scar (mm)</Length_of_Scar_mm>
-    <Width_of_Scar_mm>Width of Scar (mm)</Width_of_Scar_mm>
-    <Depth_of_Scar_mm>Depth of Scar (mm)</Depth_of_Scar_mm>
-    <Height_Above_Ground_mm>Height Above Ground (mm)</Height_Above_Ground_mm>
+    <Length_of_Scar_mm b="decimal">Length of Scar (mm)</Length_of_Scar_mm>
+    <Width_of_Scar_mm b="decimal">Width of Scar (mm)</Width_of_Scar_mm>
+    <Depth_of_Scar_mm b="decimal">Depth of Scar (mm)</Depth_of_Scar_mm>
+    <Height_Above_Ground_mm b="decimal">Height Above Ground (mm)</Height_Above_Ground_mm>
     <Shape_CM_Tree>
       <opts>
         <opt>Oval</opt>
