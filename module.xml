@@ -51,7 +51,9 @@
       </opts>
     </Device_ID>
     <author>Logger ID</author>
-    <Total_Transect_Width_m b="decimal">Total Transect Width (m)</Total_Transect_Width_m>
+    <Total_Transect_Width_m b="decimal">
+      Total Transect Width (m)
+    </Total_Transect_Width_m>
     <Number_of_Participants_in_Transect b="decimal" f="notnull"/>
     <Participants>
       <desc>
@@ -146,7 +148,7 @@
       </opts>
     </Geomorphological_Activity>
     <Disturbance/>
-    <Photo_Transect>
+    <Photo_Transect t="camera">
       <desc>
         Take a photo that best represents the survey unit. Note direction photo
         is facing and what it includes in relation to the survey unit.
@@ -158,7 +160,7 @@
         survey unit.
       </desc>
     </Photo_Caption_Transect>
-    <Sketch_Transect/>
+    <Sketch_Transect t="file"/>
     <Other_Notes/>
     <gps><!--Finish Survey Unit--></gps>
   </Transect>
@@ -522,7 +524,7 @@
     <Other_Observations_Artefact>
       <desc>Note any other things like texture, e.g., waxy / lustre.</desc>
     </Other_Observations_Artefact>
-    <Photo_Artefact>
+    <Photo_Artefact t="camera">
       <desc>
         Take a photo that best represents the artefacts present. Use scale and
         colour reference (IFRAO). Use north arrow where appropriate.
@@ -674,8 +676,8 @@
         <opt>Weathered</opt>
       </opts>
     </Art_Condition>
-    <Sketch_Plan_Art/>
-    <Photo_Art/>
+    <Sketch_Plan_Art t="file"/>
+    <Photo_Art t="camera"/>
     <Other_Observations_Art/>
   </Art>
 </Art>
@@ -687,8 +689,8 @@
     <Chain_of_Custody_Notes_for_human_remains>
       Chain of Custody Notes (for human remains)
     </Chain_of_Custody_Notes_for_human_remains>
-    <Sketch_Plan_Feature/>
-    <Photo_Feature/>
+    <Sketch_Plan_Feature t="file"/>
+    <Photo_Feature t="camera"/>
   </Other_Feature>
 </Other_Feature>
 
@@ -732,8 +734,8 @@
     </Dimensions_-_depth_of_largest_part_mm>
     <Groove_count b="decimal"/>
     <Cluster_count b="decimal"/>
-    <Sketch_Plan_Grinding_Grove/>
-    <Photo_Grinding_Grove/>
+    <Sketch_Plan_Grinding_Grove t="file"/>
+    <Photo_Grinding_Grove t="camera"/>
   </Grinding_Grove>
 </Grinding_Grove>
 
@@ -765,8 +767,8 @@
         <!--PERCENTAGE_INTERVALS-->
       </opts>
     </Approximate_percentage_of_dominant_species_as_part_of_assemblage>
-    <Sketch_Plan_Shell/>
-    <Photo_Shell/>
+    <Sketch_Plan_Shell t="file"/>
+    <Photo_Shell t="camera"/>
   </Shell>
 </Shell>
 
@@ -791,8 +793,8 @@
       </opts>
     </Components>
     <Descriptive_Notes/>
-    <Sketch_Plan_Hearth/>
-    <Photo_Hearth/>
+    <Sketch_Plan_Hearth t="file"/>
+    <Photo_Hearth t="camera"/>
   </Hearth_Ground_Oven>
 </Hearth_Ground_Oven>
 
@@ -883,10 +885,18 @@
         <!--BOOLEAN-->
       </opts>
     </Is_a_tree_health_assessment_required>
-    <Length_of_Scar_mm b="decimal">Length of Scar (mm)</Length_of_Scar_mm>
-    <Width_of_Scar_mm b="decimal">Width of Scar (mm)</Width_of_Scar_mm>
-    <Depth_of_Scar_mm b="decimal">Depth of Scar (mm)</Depth_of_Scar_mm>
-    <Height_Above_Ground_mm b="decimal">Height Above Ground (mm)</Height_Above_Ground_mm>
+    <Length_of_Scar_mm b="decimal">
+      Length of Scar (mm)
+    </Length_of_Scar_mm>
+    <Width_of_Scar_mm b="decimal">
+      Width of Scar (mm)
+    </Width_of_Scar_mm>
+    <Depth_of_Scar_mm b="decimal">
+      Depth of Scar (mm)
+    </Depth_of_Scar_mm>
+    <Height_Above_Ground_mm b="decimal">
+      Height Above Ground (mm)
+    </Height_Above_Ground_mm>
     <Shape_CM_Tree>
       <opts>
         <opt>Oval</opt>
