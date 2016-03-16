@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
+
+<!--The following preprocessor directive inserts vocab entries.-->
 <!--@PREPROC:  ./preproc.sh-->
+
 <module>
 
 <User f="nodata">
@@ -10,15 +13,21 @@
 
 <Control f="nodata">
   <Control>
-    <New_Transect                     t="button" l="Transect"/>
-    <New_Site                         t="button" l="Site"/>
-    <New_Feature                      t="button" l="Feature"/>
-    <New_Objects_IV                   t="button" l="Objects_IV">
-      Objects &amp; IV
-    </New_Objects_IV>
-    <New_Cultural_Management_Comments t="button" l="Cultural_Management_Comments">
-      Cultural &amp; Management Comments
-    </New_Cultural_Management_Comments>
+    <New_Transect                         t="button" l="Transect"/>
+    <New_Site                             t="button" l="Site"/>
+    <New_Feature                          t="button" l="Feature"/>
+    <New_Artefact                         t="button" l="Artefact"/>
+    <New_Intangible_Value                 t="button" l="Intangible_Value"/>
+    <New_Art                              t="button" l="Art"/>
+    <New_Other_Feature                    t="button" l="Other_Feature"/>
+    <New_Grinding_Grove                   t="button" l="Grinding_Grove"/>
+    <New_Shell                            t="button" l="Shell"/>
+    <New_Hearth_Ground_Oven               t="button" l="Hearth_Ground_Oven"/>
+    <New_Potential_Archaeological_Deposit t="button" l="Potential_Archaeological_Deposit"/>
+    <New_Culturally_Modified_Tree         t="button" l="Culturally_Modified_Tree"/>
+    <New_Cultural_Management_Comment      t="button" l="Cultural_Management_Comment">
+      Cultural &amp; Management Comment
+    </New_Cultural_Management_Comment>
     <autonum/>
   </Control>
 </Control>
@@ -41,7 +50,7 @@
         <opt>D</opt>
       </opts>
     </Device_ID>
-    <Logger_ID f="notnull"/>
+    <author>Logger ID</author>
     <Total_Transect_Width_m>Total Transect Width (m)</Total_Transect_Width_m>
     <Number_of_Participants_in_Transect f="notnull"/>
     <Participants>
@@ -137,19 +146,19 @@
       </opts>
     </Geomorphological_Activity>
     <Disturbance/>
-    <Photo>
+    <Photo_Transect>
       <desc>
         Take a photo that best represents the survey unit. Note direction photo
         is facing and what it includes in relation to the survey unit.
       </desc>
-    </Photo>
-    <Photo_Caption>
+    </Photo_Transect>
+    <Photo_Caption_Transect>
       <desc>
         Note direction photo is facing and what it includes in relation to the
         survey unit.
       </desc>
-    </Photo_Caption>
-    <Sketch/>
+    </Photo_Caption_Transect>
+    <Sketch_Transect/>
     <Other_Notes/>
     <gps><!--Finish Survey Unit--></gps>
   </Transect>
@@ -246,11 +255,15 @@
     <Shelter_Height f="notnull"/>
     <Shelter_Floor_Area f="notnull"/>
   </Closed_Site>
+  <Features f="noscroll">
+    <Add_Feature t="button" lc="Feature"/>
+    <List_of_Features ec="Feature"/>
+  </Features>
 </Site>
 
 <Feature>
   <Feature>
-    <Feature_ID f="id autonum"/>
+    <Feature_ID f="id notnull autonum"/>
     <Feature_Type t="checkbox">
       <desc>Select all relevant site features.</desc>
       <opts>
@@ -287,21 +300,66 @@
       </opts>
     </Feature_Condition>
   </Feature>
+
+  <Artefact f="noscroll">
+    <Add_Artefact t="button" lc="Artefact"/>
+    <List_of_Artefact_Records ec="Artefact"/>
+  </Artefact>
+
+  <Intangible_Value f="noscroll">
+    <Add_Intangible_Value t="button" lc="Intangible_Value"/>
+    <List_of_Intangible_Value_Records ec="Intangible_Value"/>
+  </Intangible_Value>
+
+  <Art f="noscroll">
+    <Add_Art t="button" lc="Art"/>
+    <List_of_Art_Records ec="Art"/>
+  </Art>
+
+  <Other_Feature f="noscroll">
+    <Add_Other_Feature t="button" lc="Other_Feature"/>
+    <List_of_Other_Feature_Records ec="Other_Feature"/>
+  </Other_Feature>
+
+  <Grinding_Grove f="noscroll">
+    <Add_Grinding_Grove t="button" lc="Grinding_Grove"/>
+    <List_of_Grinding_Grove_Records ec="Grinding_Grove"/>
+  </Grinding_Grove>
+
+  <Shell f="noscroll">
+    <Add_Shell t="button" lc="Shell"/>
+    <List_of_Shell_Records ec="Shell"/>
+  </Shell>
+
+  <Hearth_Ground_Oven f="noscroll">
+    Hearth/Ground Oven
+    <Add_Hearth_Ground_Oven t="button" lc="Hearth_Ground_Oven"/>
+    <List_of_Hearth_Ground_Oven_Records ec="Hearth_Ground_Oven"/>
+  </Hearth_Ground_Oven>
+
+  <Potential_Archaeological_Deposit f="noscroll">
+    <Add_Potential_Archaeological_Deposit t="button" lc="Potential_Archaeological_Deposit"/>
+    <List_of_Potential_Archaeological_Deposit_Records ec="Potential_Archaeological_Deposit"/>
+  </Potential_Archaeological_Deposit>
+
+  <Culturally_Modified_Tree f="noscroll">
+    <Add_Culturally_Modified_Tree t="button" lc="Culturally_Modified_Tree"/>
+    <List_of_Culturally_Modified_Tree_Records ec="Culturally_Modified_Tree"/>
+  </Culturally_Modified_Tree>
 </Feature>
 
-<Objects_IV>
-  Objects &amp; IV
+<Artefact>
   <Artefact>
-    <Insitu>
+    <Insitu_Artefact>
       <opts>
         <!--BOOLEAN_MODAL-->
       </opts>
-    </Insitu>
-    <Stratified>
+    </Insitu_Artefact>
+    <Stratified_Artefact>
       <opts>
         <!--BOOLEAN_MODAL-->
       </opts>
-    </Stratified>
+    </Stratified_Artefact>
     <Total_Number_of_Artefacts/>
     <Instance_No f="id">
       Instance No.
@@ -461,24 +519,27 @@
         part.
       </desc>
     </Thickness_mm>
-    <Other_Observations>
+    <Other_Observations_Artefact>
       <desc>Note any other things like texture, e.g., waxy / lustre.</desc>
-    </Other_Observations>
-    <Photo>
+    </Other_Observations_Artefact>
+    <Photo_Artefact>
       <desc>
         Take a photo that best represents the artefacts present. Use scale and
         colour reference (IFRAO). Use north arrow where appropriate.
       </desc>
-    </Photo>
-    <Photo_Caption>
+    </Photo_Artefact>
+    <Photo_Caption_Artefact>
       <desc>
         Note direction photo is facing and what it includes in relation to the
         survey unit.
       </desc>
-    </Photo_Caption>
+    </Photo_Caption_Artefact>
   </Artefact>
-  <Intangible_Values>
-    <Intangible_Value_ID f="autonum"/>
+</Artefact>
+
+<Intangible_Value>
+  <Intangible_Value>
+    <Intangible_Value_ID f="id notnull autonum"/>
     <Intangible_Value_Type>
       <opts>
         <opt>Aboriginal Ceremony (no physical evidence)</opt>
@@ -488,17 +549,20 @@
         <opt>Gathering (non physical evidence).</opt>
       </opts>
     </Intangible_Value_Type>
-    <Description/>
-  </Intangible_Values>
+    <Description_Intangible_Value/>
+  </Intangible_Value>
+</Intangible_Value>
+
+<Art>
   <Art>
-    <Art_ID/>
-    <Pigment_Engraved>
+    <Art_ID f="id notnull autonum"/>
+    <Pigment_Engraved t="radio">
       Pigment/Engraved
       <opts>
         <!--BOOLEAN-->
       </opts>
     </Pigment_Engraved>
-    <Super-impositioning>
+    <Super-impositioning t="radio">
       <opts>
         <!--BOOLEAN-->
       </opts>
@@ -610,29 +674,35 @@
         <opt>Weathered</opt>
       </opts>
     </Art_Condition>
-    <Sketch_plan/>
-    <Photo/>
-    <Other_Observations/>
+    <Sketch_Plan_Art/>
+    <Photo_Art/>
+    <Other_Observations_Art/>
   </Art>
+</Art>
+
+<Other_Feature>
   <Other_Feature>
-    <Other_Feature_ID f="autonum"/>
-    <Description/>
+    <Other_Feature_ID f="id notnull autonum"/>
+    <Description_Other_Feature/>
     <Chain_of_Custody_Notes_for_human_remains>
       Chain of Custody Notes (for human remains)
     </Chain_of_Custody_Notes_for_human_remains>
-    <Sketch_Plan/>
-    <Photo/>
+    <Sketch_Plan_Feature/>
+    <Photo_Feature/>
   </Other_Feature>
+</Other_Feature>
+
+<Grinding_Grove>
   <Grinding_Grove>
-    <Grinding_Grove_ID f="autonum"/>
-    <Type>
+    <Grinding_Grove_ID f="id notnull autonum"/>
+    <Type_Grinding_Grove>
       <opts>
         <opt>Broad</opt>
         <opt>Narrow/point</opt>
         <opt>Hollow</opt>
         <opt>Flat</opt>
       </opts>
-    </Type>
+    </Type_Grinding_Grove>
     <Profile_Shape>
       <opts>
         <opt>U' shaped</opt>
@@ -662,11 +732,14 @@
     </Dimensions_-_depth_of_largest_part_mm>
     <Groove_count/>
     <Cluster_count/>
-    <Sketch_Plan/>
-    <Photo/>
+    <Sketch_Plan_Grinding_Grove/>
+    <Photo_Grinding_Grove/>
   </Grinding_Grove>
+</Grinding_Grove>
+
+<Shell>
   <Shell>
-    <Shell_ID f="autonum"/>
+    <Shell_ID f="id notnull autonum"/>
     <Distribution>
       <opts>
         <opt>Surface scatter</opt>
@@ -692,13 +765,16 @@
         <!--PERCENTAGE_INTERVALS-->
       </opts>
     </Approximate_percentage_of_dominant_species_as_part_of_assemblage>
-    <Sketch_Plan/>
-    <Photo/>
+    <Sketch_Plan_Shell/>
+    <Photo_Shell/>
   </Shell>
+</Shell>
+
+<Hearth_Ground_Oven>
   <Hearth_Ground_Oven>
     Hearth/Ground Oven
-    <Hearth_ID/>
-    <Shape/>
+    <Hearth_ID f="id notnull autonum"/>
+    <Shape_Hearth/>
     <Length/>
     <Width/>
     <Estimated_Depth/>
@@ -715,22 +791,28 @@
       </opts>
     </Components>
     <Descriptive_Notes/>
-    <Sketch_Plan/>
-    <Photo/>
+    <Sketch_Plan_Hearth/>
+    <Photo_Hearth/>
   </Hearth_Ground_Oven>
+</Hearth_Ground_Oven>
+
+<Potential_Archaeological_Deposit>
   <Potential_Archaeological_Deposit>
-    <Arch_Dep_ID f="id autonum"/>
-    <Insitu>
+    <Arch_Dep_ID f="id notnull autonum"/>
+    <Insitu_Potential_Arch_Deposit>
+      Insitu Potential Arch. Deposit
       <opts>
         <!--BOOLEAN_MODAL-->
       </opts>
-    </Insitu>
-    <Stratified>
+    </Insitu_Potential_Arch_Deposit>
+    <Stratified_Arch_Deposit>
+      Stratified Arch. Deposit
       <opts>
         <!--BOOLEAN_MODAL-->
       </opts>
-    </Stratified>
-    <Deposit_Type>
+    </Stratified_Arch_Deposit>
+    <Arch_Deposit_Type>
+      Arch. Deposit Type
       <opts>
         <opt>Historical</opt>
         <opt>Aboriginal Stone Artefact</opt>
@@ -738,22 +820,25 @@
         <opt>Burial</opt>
         <opt>Oven/ Hearth</opt>
       </opts>
-    </Deposit_Type>
-    <Surface_Artefacts>
+    </Arch_Deposit_Type>
+    <Surface_Artefacts t="radio">
       <opts>
         <!--BOOLEAN-->
       </opts>
     </Surface_Artefacts>
   </Potential_Archaeological_Deposit>
+</Potential_Archaeological_Deposit>
+
+<Culturally_Modified_Tree>
   <Culturally_Modified_Tree>
-    <CM_Tree_ID f="id autonum"/>
-    <Type>
+    <CM_Tree_ID f="id notnull autonum"/>
+    <Type_CM_Tree>
       <opts>
         <opt>Carved</opt>
         <opt>Scarred</opt>
         <opt>Carved and Scarred</opt>
       </opts>
-    </Type>
+    </Type_CM_Tree>
     <Tree_Species>
       <opts>
         <opt>Eucalypt</opt>
@@ -788,14 +873,12 @@
         <opt>None</opt>
       </opts>
     </Damage>
-    <Regrowth>
-      <desc>Select only one.</desc>
+    <Regrowth t="radio">
       <opts>
         <!--BOOLEAN-->
       </opts>
     </Regrowth>
-    <Is_a_tree_health_assessment_required>
-      <desc>Select only one.</desc>
+    <Is_a_tree_health_assessment_required t="radio">
       <opts>
         <!--BOOLEAN-->
       </opts>
@@ -804,14 +887,14 @@
     <Width_of_Scar_mm>Width of Scar (mm)</Width_of_Scar_mm>
     <Depth_of_Scar_mm>Depth of Scar (mm)</Depth_of_Scar_mm>
     <Height_Above_Ground_mm>Height Above Ground (mm)</Height_Above_Ground_mm>
-    <Shape>
+    <Shape_CM_Tree>
       <opts>
         <opt>Oval</opt>
         <opt>Rectangular square</opt>
         <opt>Round</opt>
         <opt>Other</opt>
       </opts>
-    </Shape>
+    </Shape_CM_Tree>
     <Orientation>
       <opts>
         <opt>North East</opt>
@@ -840,13 +923,13 @@
       </opts>
     </Axe_Marks>
   </Culturally_Modified_Tree>
-</Objects_IV>
+</Culturally_Modified_Tree>
 
-<Cultural_Management_Comments>
-  Cultural &amp; Management Comments
+<Cultural_Management_Comment>
+  Cultural &amp; Management Comment
   <C_M_Comments>
     C &amp; M Comments
-    <Comment_ID f="id autonum"/>
+    <Comment_ID f="id notnull autonum"/>
     <Aboriginal_community_interpretation>
       <desc>Note informants name and what they have said.</desc>
     </Aboriginal_community_interpretation>
@@ -866,7 +949,7 @@
       </desc>
     </Other_management_recommendations>
   </C_M_Comments>
-</Cultural_Management_Comments>
+</Cultural_Management_Comment>
 
 <logic><![CDATA[
 ]]></logic>
