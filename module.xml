@@ -3,6 +3,9 @@
 <!--The following preprocessor directive inserts vocab entries.-->
 <!--@PREPROC:  ./preproc.sh-->
 
+<!--I should really put this in its own file at some point...-->
+<!--@POSTPROC: cd module && echo "Take_From_GPS=Start Survey Unit" >> english.0.properties-->
+
 <module>
 
 <User f="nodata">
@@ -26,10 +29,11 @@
     <New_Potential_Archaeological_Deposit t="button" l="Potential_Archaeological_Deposit"/>
     <New_Culturally_Modified_Tree         t="button" l="Culturally_Modified_Tree"/>
     <New_Cultural_Management_Comment      t="button" l="Cultural_Management_Comment">
-      Cultural &amp; Management Comment
+      New Cultural &amp; Management Comment
     </New_Cultural_Management_Comment>
     <autonum/>
   </Control>
+  <search/>
 </Control>
 
 <Transect>
@@ -162,7 +166,8 @@
     </Photo_Caption_Transect>
     <Sketch_Transect t="file"/>
     <Other_Notes/>
-    <gps><!--Finish Survey Unit--></gps>
+    <!--<gps>[>Finish Survey Unit<]</gps>-->
+    <Finish_Survey_Unit t="button"/>
   </Transect>
   <Map>
     <Map t="map"/>
@@ -178,7 +183,13 @@
         devices are in use, uniqueness rules must be defined.
       </desc>
     </Site_ID_Number>
-    <Open_Closed_Site>Open/Closed Site</Open_Closed_Site>
+    <Open_Closed_Site t="radio">
+      Open/Closed Site
+      <opts>
+        <opt>Open</opt>
+        <opt>Closed</opt>
+      </opts>
+    </Open_Closed_Site>
     <Site_Aspect_Orientation>
       Site Aspect/Orientation
       <desc>As per the descriptions in the AHIMS site recording form.</desc>
@@ -335,8 +346,12 @@
 
   <Hearth_Ground_Oven f="noscroll">
     Hearth/Ground Oven
-    <Add_Hearth_Ground_Oven t="button" lc="Hearth_Ground_Oven"/>
-    <List_of_Hearth_Ground_Oven_Records ec="Hearth_Ground_Oven"/>
+    <Add_Hearth_Ground_Oven t="button" lc="Hearth_Ground_Oven">
+      Add Hearth/Ground Oven
+    </Add_Hearth_Ground_Oven>
+    <List_of_Hearth_Ground_Oven_Records ec="Hearth_Ground_Oven">
+      List of Hearth/Ground Oven Records
+    </List_of_Hearth_Ground_Oven_Records>
   </Hearth_Ground_Oven>
 
   <Potential_Archaeological_Deposit f="noscroll">

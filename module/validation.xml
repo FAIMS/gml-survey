@@ -11,11 +11,6 @@
         <param value="vocab" type="field"/>
       </validator>
     </property>
-    <property name="Logger ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
     <property name="Number of Participants in Transect">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
@@ -109,7 +104,81 @@
       </validator>
     </property>
   </ArchaeologicalElement>
-  <ArchaeologicalElement name="Feature"/>
-  <ArchaeologicalElement name="Objects_IV"/>
-  <ArchaeologicalElement name="Cultural_Management_Comments"/>
+  <ArchaeologicalElement name="Feature">
+    <property name="Feature ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Artefact">
+    <property name="Instance No">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Intangible_Value">
+    <property name="Intangible Value ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Art">
+    <property name="Art ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Other_Feature">
+    <property name="Other Feature ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Grinding_Grove">
+    <property name="Grinding Grove ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Shell">
+    <property name="Shell ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Hearth_Ground_Oven">
+    <property name="Hearth ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Potential_Archaeological_Deposit">
+    <property name="Arch Dep ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Culturally_Modified_Tree">
+    <property name="CM Tree ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Cultural_Management_Comment">
+    <property name="Comment ID">
+      <validator type="blankchecker">
+        <param value="measure" type="field"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
 </ValidationSchema>

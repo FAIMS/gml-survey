@@ -147,48 +147,42 @@ getDropdownItemValue() {
 addOnEvent("Transect/Transect/Landform", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Landform\")");
 addOnEvent("Transect/Transect/Slope_Gradient", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Slope_Gradient\")");
 addOnEvent("Transect/Transect/Geomorphological_Activity", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Geomorphological_Activity\")");
-addOnEvent("Transect/Transect/opts", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/opts\")");
 addOnEvent("Site/Site/Site_Aspect_Orientation", "click", "dropdownItemValue = getFieldValue(\"Site/Site/Site_Aspect_Orientation\")");
 addOnEvent("Site/Closed_Site/Shelter_Cave_Formation", "click", "dropdownItemValue = getFieldValue(\"Site/Closed_Site/Shelter_Cave_Formation\")");
 addOnEvent("Site/Closed_Site/Rock_Surface_Condition", "click", "dropdownItemValue = getFieldValue(\"Site/Closed_Site/Rock_Surface_Condition\")");
 addOnEvent("Feature/Feature/Feature_Condition", "click", "dropdownItemValue = getFieldValue(\"Feature/Feature/Feature_Condition\")");
-addOnEvent("Objects_IV/Artefact/Insitu", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Insitu\")");
-addOnEvent("Objects_IV/Artefact/Stratified", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Stratified\")");
-addOnEvent("Objects_IV/Artefact/Artefact_Raw_Material", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Raw_Material\")");
-addOnEvent("Objects_IV/Artefact/Artefact_Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Type\")");
-addOnEvent("Objects_IV/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts\")");
-addOnEvent("Objects_IV/Artefact/Artefact_Colour", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Colour\")");
-addOnEvent("Objects_IV/Artefact/Artefact_Status_Modification", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Artefact_Status_Modification\")");
-addOnEvent("Objects_IV/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts\")");
-addOnEvent("Objects_IV/Artefact/Platform_Type_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Platform_Type_for_Aboriginal_stone_artefacts\")");
-addOnEvent("Objects_IV/Artefact/Termination_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Termination_for_Aboriginal_stone_artefacts\")");
-addOnEvent("Objects_IV/Artefact/Cross_Section_for_Aboriginal_artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Artefact/Cross_Section_for_Aboriginal_artefacts\")");
-addOnEvent("Objects_IV/Intangible_Values/Intangible_Value_Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Intangible_Values/Intangible_Value_Type\")");
-addOnEvent("Objects_IV/Art/Pigment_Engraved", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Pigment_Engraved\")");
-addOnEvent("Objects_IV/Art/Super-impositioning", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Super-impositioning\")");
-addOnEvent("Objects_IV/Art/Form", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Form\")");
-addOnEvent("Objects_IV/Art/Main_Colour", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Main_Colour\")");
-addOnEvent("Objects_IV/Art/Art_Condition", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Art/Art_Condition\")");
-addOnEvent("Objects_IV/Grinding_Grove/Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Grinding_Grove/Type\")");
-addOnEvent("Objects_IV/Grinding_Grove/Profile_Shape", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Grinding_Grove/Profile_Shape\")");
-addOnEvent("Objects_IV/Shell/Distribution", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Shell/Distribution\")");
-addOnEvent("Objects_IV/Shell/Dominant_Species", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Shell/Dominant_Species\")");
-addOnEvent("Objects_IV/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage\")");
-addOnEvent("Objects_IV/Hearth_Ground_Oven/Components", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Hearth_Ground_Oven/Components\")");
-addOnEvent("Objects_IV/Potential_Archaeological_Deposit/Insitu", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Potential_Archaeological_Deposit/Insitu\")");
-addOnEvent("Objects_IV/Potential_Archaeological_Deposit/Stratified", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Potential_Archaeological_Deposit/Stratified\")");
-addOnEvent("Objects_IV/Potential_Archaeological_Deposit/Deposit_Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Potential_Archaeological_Deposit/Deposit_Type\")");
-addOnEvent("Objects_IV/Potential_Archaeological_Deposit/Surface_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Potential_Archaeological_Deposit/Surface_Artefacts\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Type\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Tree_Species", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Tree_Species\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Living_Status", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Living_Status\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Tree_Status", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Tree_Status\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Regrowth", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Regrowth\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Is_a_tree_health_assessment_required", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Is_a_tree_health_assessment_required\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Shape", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Shape\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Orientation", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Orientation\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Carving_type", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Carving_type\")");
-addOnEvent("Objects_IV/Culturally_Modified_Tree/Axe_Marks", "click", "dropdownItemValue = getFieldValue(\"Objects_IV/Culturally_Modified_Tree/Axe_Marks\")");
+addOnEvent("Artefact/Artefact/Insitu_Artefact", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Insitu_Artefact\")");
+addOnEvent("Artefact/Artefact/Stratified_Artefact", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Stratified_Artefact\")");
+addOnEvent("Artefact/Artefact/Artefact_Raw_Material", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Artefact_Raw_Material\")");
+addOnEvent("Artefact/Artefact/Artefact_Type", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Artefact_Type\")");
+addOnEvent("Artefact/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts\")");
+addOnEvent("Artefact/Artefact/Artefact_Colour", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Artefact_Colour\")");
+addOnEvent("Artefact/Artefact/Artefact_Status_Modification", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Artefact_Status_Modification\")");
+addOnEvent("Artefact/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts\")");
+addOnEvent("Artefact/Artefact/Platform_Type_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Platform_Type_for_Aboriginal_stone_artefacts\")");
+addOnEvent("Artefact/Artefact/Termination_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Termination_for_Aboriginal_stone_artefacts\")");
+addOnEvent("Artefact/Artefact/Cross_Section_for_Aboriginal_artefacts", "click", "dropdownItemValue = getFieldValue(\"Artefact/Artefact/Cross_Section_for_Aboriginal_artefacts\")");
+addOnEvent("Intangible_Value/Intangible_Value/Intangible_Value_Type", "click", "dropdownItemValue = getFieldValue(\"Intangible_Value/Intangible_Value/Intangible_Value_Type\")");
+addOnEvent("Art/Art/Form", "click", "dropdownItemValue = getFieldValue(\"Art/Art/Form\")");
+addOnEvent("Art/Art/Main_Colour", "click", "dropdownItemValue = getFieldValue(\"Art/Art/Main_Colour\")");
+addOnEvent("Art/Art/Art_Condition", "click", "dropdownItemValue = getFieldValue(\"Art/Art/Art_Condition\")");
+addOnEvent("Grinding_Grove/Grinding_Grove/Type_Grinding_Grove", "click", "dropdownItemValue = getFieldValue(\"Grinding_Grove/Grinding_Grove/Type_Grinding_Grove\")");
+addOnEvent("Grinding_Grove/Grinding_Grove/Profile_Shape", "click", "dropdownItemValue = getFieldValue(\"Grinding_Grove/Grinding_Grove/Profile_Shape\")");
+addOnEvent("Shell/Shell/Distribution", "click", "dropdownItemValue = getFieldValue(\"Shell/Shell/Distribution\")");
+addOnEvent("Shell/Shell/Dominant_Species", "click", "dropdownItemValue = getFieldValue(\"Shell/Shell/Dominant_Species\")");
+addOnEvent("Shell/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "click", "dropdownItemValue = getFieldValue(\"Shell/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage\")");
+addOnEvent("Hearth_Ground_Oven/Hearth_Ground_Oven/Components", "click", "dropdownItemValue = getFieldValue(\"Hearth_Ground_Oven/Hearth_Ground_Oven/Components\")");
+addOnEvent("Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Insitu_Potential_Arch_Deposit", "click", "dropdownItemValue = getFieldValue(\"Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Insitu_Potential_Arch_Deposit\")");
+addOnEvent("Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Stratified_Arch_Deposit", "click", "dropdownItemValue = getFieldValue(\"Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Stratified_Arch_Deposit\")");
+addOnEvent("Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Arch_Deposit_Type", "click", "dropdownItemValue = getFieldValue(\"Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Arch_Deposit_Type\")");
+addOnEvent("Culturally_Modified_Tree/Culturally_Modified_Tree/Type_CM_Tree", "click", "dropdownItemValue = getFieldValue(\"Culturally_Modified_Tree/Culturally_Modified_Tree/Type_CM_Tree\")");
+addOnEvent("Culturally_Modified_Tree/Culturally_Modified_Tree/Tree_Species", "click", "dropdownItemValue = getFieldValue(\"Culturally_Modified_Tree/Culturally_Modified_Tree/Tree_Species\")");
+addOnEvent("Culturally_Modified_Tree/Culturally_Modified_Tree/Living_Status", "click", "dropdownItemValue = getFieldValue(\"Culturally_Modified_Tree/Culturally_Modified_Tree/Living_Status\")");
+addOnEvent("Culturally_Modified_Tree/Culturally_Modified_Tree/Tree_Status", "click", "dropdownItemValue = getFieldValue(\"Culturally_Modified_Tree/Culturally_Modified_Tree/Tree_Status\")");
+addOnEvent("Culturally_Modified_Tree/Culturally_Modified_Tree/Shape_CM_Tree", "click", "dropdownItemValue = getFieldValue(\"Culturally_Modified_Tree/Culturally_Modified_Tree/Shape_CM_Tree\")");
+addOnEvent("Culturally_Modified_Tree/Culturally_Modified_Tree/Orientation", "click", "dropdownItemValue = getFieldValue(\"Culturally_Modified_Tree/Culturally_Modified_Tree/Orientation\")");
+addOnEvent("Culturally_Modified_Tree/Culturally_Modified_Tree/Carving_type", "click", "dropdownItemValue = getFieldValue(\"Culturally_Modified_Tree/Culturally_Modified_Tree/Carving_type\")");
+addOnEvent("Culturally_Modified_Tree/Culturally_Modified_Tree/Axe_Marks", "click", "dropdownItemValue = getFieldValue(\"Culturally_Modified_Tree/Culturally_Modified_Tree/Axe_Marks\")");
 
 /******************************************************************************/
 /*                                 ACTION BAR                                 */
@@ -507,7 +501,7 @@ makeVocab("RadioGroup", "Transect/Transect/Device_ID", "Device ID");
 makeVocab("DropDown", "Transect/Transect/Landform", "Landform");
 makeVocab("DropDown", "Transect/Transect/Slope_Gradient", "Slope Gradient");
 makeVocab("DropDown", "Transect/Transect/Geomorphological_Activity", "Geomorphological Activity");
-makeVocab("DropDown", "Transect/Transect/opts", "opts");
+makeVocab("RadioGroup", "Site/Site/Open_Closed_Site", "Open Closed Site");
 makeVocab("DropDown", "Site/Site/Site_Aspect_Orientation", "Site Aspect Orientation");
 makeVocab("CheckBoxGroup", "Site/Site/General_Condition_of_Site", "General Condition of Site");
 makeVocab("RadioGroup", "Site/Open_Site/Subsurfance_potential", "Subsurfance potential");
@@ -515,48 +509,48 @@ makeVocab("DropDown", "Site/Closed_Site/Shelter_Cave_Formation", "Shelter Cave F
 makeVocab("DropDown", "Site/Closed_Site/Rock_Surface_Condition", "Rock Surface Condition");
 makeVocab("CheckBoxGroup", "Feature/Feature/Feature_Type", "Feature Type");
 makeVocab("DropDown", "Feature/Feature/Feature_Condition", "Feature Condition");
-makeVocab("DropDown", "Objects_IV/Artefact/Insitu", "Insitu");
-makeVocab("DropDown", "Objects_IV/Artefact/Stratified", "Stratified");
-makeVocab("DropDown", "Objects_IV/Artefact/Artefact_Raw_Material", "Artefact Raw Material");
-makeVocab("DropDown", "Objects_IV/Artefact/Artefact_Type", "Artefact Type");
-makeVocab("HierarchicalDropDown", "Objects_IV/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "Artefact Description for Aboriginal Stone Artefacts");
-makeVocab("HierarchicalDropDown", "Objects_IV/Artefact/Artefact_Colour", "Artefact Colour");
-makeVocab("DropDown", "Objects_IV/Artefact/Artefact_Status_Modification", "Artefact Status Modification");
-makeVocab("DropDown", "Objects_IV/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts", "Platform Surface for Aboriginal stone artefacts");
-makeVocab("DropDown", "Objects_IV/Artefact/Platform_Type_for_Aboriginal_stone_artefacts", "Platform Type for Aboriginal stone artefacts");
-makeVocab("DropDown", "Objects_IV/Artefact/Termination_for_Aboriginal_stone_artefacts", "Termination for Aboriginal stone artefacts");
-makeVocab("DropDown", "Objects_IV/Artefact/Cross_Section_for_Aboriginal_artefacts", "Cross Section for Aboriginal artefacts");
-makeVocab("DropDown", "Objects_IV/Intangible_Values/Intangible_Value_Type", "Intangible Value Type");
-makeVocab("DropDown", "Objects_IV/Art/Pigment_Engraved", "Pigment Engraved");
-makeVocab("DropDown", "Objects_IV/Art/Super-impositioning", "Super-impositioning");
-makeVocab("CheckBoxGroup", "Objects_IV/Art/Motif_s", "Motif s");
-makeVocab("CheckBoxGroup", "Objects_IV/Art/Application_Technique", "Application Technique");
-makeVocab("DropDown", "Objects_IV/Art/Form", "Form");
-makeVocab("DropDown", "Objects_IV/Art/Main_Colour", "Main Colour");
-makeVocab("CheckBoxGroup", "Objects_IV/Art/Art_Location", "Art Location");
-makeVocab("DropDown", "Objects_IV/Art/Art_Condition", "Art Condition");
-makeVocab("DropDown", "Objects_IV/Grinding_Grove/Type", "Type");
-makeVocab("DropDown", "Objects_IV/Grinding_Grove/Profile_Shape", "Profile Shape");
-makeVocab("DropDown", "Objects_IV/Shell/Distribution", "Distribution");
-makeVocab("CheckBoxGroup", "Objects_IV/Shell/Species_present", "Species present");
-makeVocab("DropDown", "Objects_IV/Shell/Dominant_Species", "Dominant Species");
-makeVocab("DropDown", "Objects_IV/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "Approximate percentage of dominant species as part of assemblage");
-makeVocab("DropDown", "Objects_IV/Hearth_Ground_Oven/Components", "Components");
-makeVocab("DropDown", "Objects_IV/Potential_Archaeological_Deposit/Insitu", "Insitu");
-makeVocab("DropDown", "Objects_IV/Potential_Archaeological_Deposit/Stratified", "Stratified");
-makeVocab("DropDown", "Objects_IV/Potential_Archaeological_Deposit/Deposit_Type", "Deposit Type");
-makeVocab("DropDown", "Objects_IV/Potential_Archaeological_Deposit/Surface_Artefacts", "Surface Artefacts");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Type", "Type");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Tree_Species", "Tree Species");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Living_Status", "Living Status");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Tree_Status", "Tree Status");
-makeVocab("CheckBoxGroup", "Objects_IV/Culturally_Modified_Tree/Damage", "Damage");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Regrowth", "Regrowth");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Is_a_tree_health_assessment_required", "Is a tree health assessment required");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Shape", "Shape");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Orientation", "Orientation");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Carving_type", "Carving type");
-makeVocab("DropDown", "Objects_IV/Culturally_Modified_Tree/Axe_Marks", "Axe Marks");
+makeVocab("DropDown", "Artefact/Artefact/Insitu_Artefact", "Insitu Artefact");
+makeVocab("DropDown", "Artefact/Artefact/Stratified_Artefact", "Stratified Artefact");
+makeVocab("DropDown", "Artefact/Artefact/Artefact_Raw_Material", "Artefact Raw Material");
+makeVocab("DropDown", "Artefact/Artefact/Artefact_Type", "Artefact Type");
+makeVocab("HierarchicalDropDown", "Artefact/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "Artefact Description for Aboriginal Stone Artefacts");
+makeVocab("HierarchicalDropDown", "Artefact/Artefact/Artefact_Colour", "Artefact Colour");
+makeVocab("DropDown", "Artefact/Artefact/Artefact_Status_Modification", "Artefact Status Modification");
+makeVocab("DropDown", "Artefact/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts", "Platform Surface for Aboriginal stone artefacts");
+makeVocab("DropDown", "Artefact/Artefact/Platform_Type_for_Aboriginal_stone_artefacts", "Platform Type for Aboriginal stone artefacts");
+makeVocab("DropDown", "Artefact/Artefact/Termination_for_Aboriginal_stone_artefacts", "Termination for Aboriginal stone artefacts");
+makeVocab("DropDown", "Artefact/Artefact/Cross_Section_for_Aboriginal_artefacts", "Cross Section for Aboriginal artefacts");
+makeVocab("DropDown", "Intangible_Value/Intangible_Value/Intangible_Value_Type", "Intangible Value Type");
+makeVocab("RadioGroup", "Art/Art/Pigment_Engraved", "Pigment Engraved");
+makeVocab("RadioGroup", "Art/Art/Super-impositioning", "Super-impositioning");
+makeVocab("CheckBoxGroup", "Art/Art/Motif_s", "Motif s");
+makeVocab("CheckBoxGroup", "Art/Art/Application_Technique", "Application Technique");
+makeVocab("DropDown", "Art/Art/Form", "Form");
+makeVocab("DropDown", "Art/Art/Main_Colour", "Main Colour");
+makeVocab("CheckBoxGroup", "Art/Art/Art_Location", "Art Location");
+makeVocab("DropDown", "Art/Art/Art_Condition", "Art Condition");
+makeVocab("DropDown", "Grinding_Grove/Grinding_Grove/Type_Grinding_Grove", "Type Grinding Grove");
+makeVocab("DropDown", "Grinding_Grove/Grinding_Grove/Profile_Shape", "Profile Shape");
+makeVocab("DropDown", "Shell/Shell/Distribution", "Distribution");
+makeVocab("CheckBoxGroup", "Shell/Shell/Species_present", "Species present");
+makeVocab("DropDown", "Shell/Shell/Dominant_Species", "Dominant Species");
+makeVocab("DropDown", "Shell/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "Approximate percentage of dominant species as part of assemblage");
+makeVocab("DropDown", "Hearth_Ground_Oven/Hearth_Ground_Oven/Components", "Components");
+makeVocab("DropDown", "Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Insitu_Potential_Arch_Deposit", "Insitu Potential Arch Deposit");
+makeVocab("DropDown", "Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Stratified_Arch_Deposit", "Stratified Arch Deposit");
+makeVocab("DropDown", "Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Arch_Deposit_Type", "Arch Deposit Type");
+makeVocab("RadioGroup", "Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Surface_Artefacts", "Surface Artefacts");
+makeVocab("DropDown", "Culturally_Modified_Tree/Culturally_Modified_Tree/Type_CM_Tree", "Type CM Tree");
+makeVocab("DropDown", "Culturally_Modified_Tree/Culturally_Modified_Tree/Tree_Species", "Tree Species");
+makeVocab("DropDown", "Culturally_Modified_Tree/Culturally_Modified_Tree/Living_Status", "Living Status");
+makeVocab("DropDown", "Culturally_Modified_Tree/Culturally_Modified_Tree/Tree_Status", "Tree Status");
+makeVocab("CheckBoxGroup", "Culturally_Modified_Tree/Culturally_Modified_Tree/Damage", "Damage");
+makeVocab("RadioGroup", "Culturally_Modified_Tree/Culturally_Modified_Tree/Regrowth", "Regrowth");
+makeVocab("RadioGroup", "Culturally_Modified_Tree/Culturally_Modified_Tree/Is_a_tree_health_assessment_required", "Is a tree health assessment required");
+makeVocab("DropDown", "Culturally_Modified_Tree/Culturally_Modified_Tree/Shape_CM_Tree", "Shape CM Tree");
+makeVocab("DropDown", "Culturally_Modified_Tree/Culturally_Modified_Tree/Orientation", "Orientation");
+makeVocab("DropDown", "Culturally_Modified_Tree/Culturally_Modified_Tree/Carving_type", "Carving type");
+makeVocab("DropDown", "Culturally_Modified_Tree/Culturally_Modified_Tree/Axe_Marks", "Axe Marks");
 
 
 /******************************************************************************/
@@ -630,7 +624,6 @@ validateTransect() {
 
   f.add(fieldPair("Transect/Transect/Transect_ID", "{Transect_ID}"));
   f.add(fieldPair("Transect/Transect/Device_ID", "{Device_ID}"));
-  f.add(fieldPair("Transect/Transect/Logger_ID", "{Logger_ID}"));
   f.add(fieldPair("Transect/Transect/Number_of_Participants_in_Transect", "{Number_of_Participants_in_Transect}"));
   f.add(fieldPair("Transect/Transect/Landform", "{Landform}"));
   f.add(fieldPair("Transect/Transect/Slope_Gradient", "{Slope_Gradient}"));
@@ -657,6 +650,105 @@ validateSite() {
   f.add(fieldPair("Site/Closed_Site/Internal_Width", "{Internal_Width}"));
   f.add(fieldPair("Site/Closed_Site/Shelter_Height", "{Shelter_Height}"));
   f.add(fieldPair("Site/Closed_Site/Shelter_Floor_Area", "{Shelter_Floor_Area}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateFeature() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Feature/Feature/Feature_ID", "{Feature_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateArtefact() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Artefact/Artefact/Instance_No", "{Instance_No_}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateIntangibleValue() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Intangible_Value/Intangible_Value/Intangible_Value_ID", "{Intangible_Value_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateArt() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Art/Art/Art_ID", "{Art_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateOtherFeature() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Other_Feature/Other_Feature/Other_Feature_ID", "{Other_Feature_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateGrindingGrove() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Grinding_Grove/Grinding_Grove/Grinding_Grove_ID", "{Grinding_Grove_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateShell() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Shell/Shell/Shell_ID", "{Shell_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateHearthGroundOven() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Hearth_Ground_Oven/Hearth_Ground_Oven/Hearth_ID", "{Hearth_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validatePotentialArchaeologicalDeposit() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Arch_Dep_ID", "{Arch_Dep_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateCulturallyModifiedTree() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Culturally_Modified_Tree/Culturally_Modified_Tree/CM_Tree_ID", "{CM_Tree_ID}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateCulturalManagementComment() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Cultural_Management_Comment/C_M_Comments/Comment_ID", "{Comment_ID}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("Validation Results", validationMessage);
@@ -736,6 +828,7 @@ saveTabGroup(String tabgroup, String callback) {
 populateAuthorAndTimestamp(String tabgroup) {
   Map tabgroupToAuthor    = new HashMap();
   Map tabgroupToTimestamp = new HashMap();
+  tabgroupToAuthor.put("Transect", "Transect/Transect/Author");
   tabgroupToTimestamp.put("Transect", "Transect/Transect/Timestamp");
 
   String uuid          = getUuid(tabgroup);
@@ -776,20 +869,60 @@ onShowFeature () {
   // TODO: Add some things which should happen when this tabgroup is shown
   saveTabGroup("Feature");
 }
-onShowObjectsIV () {
+onShowArtefact () {
   // TODO: Add some things which should happen when this tabgroup is shown
-  saveTabGroup("Objects_IV");
+  saveTabGroup("Artefact");
 }
-onShowCulturalManagementComments () {
+onShowIntangibleValue () {
   // TODO: Add some things which should happen when this tabgroup is shown
-  saveTabGroup("Cultural_Management_Comments");
+  saveTabGroup("Intangible_Value");
+}
+onShowArt () {
+  // TODO: Add some things which should happen when this tabgroup is shown
+  saveTabGroup("Art");
+}
+onShowOtherFeature () {
+  // TODO: Add some things which should happen when this tabgroup is shown
+  saveTabGroup("Other_Feature");
+}
+onShowGrindingGrove () {
+  // TODO: Add some things which should happen when this tabgroup is shown
+  saveTabGroup("Grinding_Grove");
+}
+onShowShell () {
+  // TODO: Add some things which should happen when this tabgroup is shown
+  saveTabGroup("Shell");
+}
+onShowHearthGroundOven () {
+  // TODO: Add some things which should happen when this tabgroup is shown
+  saveTabGroup("Hearth_Ground_Oven");
+}
+onShowPotentialArchaeologicalDeposit () {
+  // TODO: Add some things which should happen when this tabgroup is shown
+  saveTabGroup("Potential_Archaeological_Deposit");
+}
+onShowCulturallyModifiedTree () {
+  // TODO: Add some things which should happen when this tabgroup is shown
+  saveTabGroup("Culturally_Modified_Tree");
+}
+onShowCulturalManagementComment () {
+  // TODO: Add some things which should happen when this tabgroup is shown
+  saveTabGroup("Cultural_Management_Comment");
 }
 
 addOnEvent("Transect", "show", "onShowTransect()");
 addOnEvent("Site", "show", "onShowSite()");
 addOnEvent("Feature", "show", "onShowFeature()");
-addOnEvent("Objects_IV", "show", "onShowObjectsIV()");
-addOnEvent("Cultural_Management_Comments", "show", "onShowCulturalManagementComments()");
+addOnEvent("Artefact", "show", "onShowArtefact()");
+addOnEvent("Intangible_Value", "show", "onShowIntangibleValue()");
+addOnEvent("Art", "show", "onShowArt()");
+addOnEvent("Other_Feature", "show", "onShowOtherFeature()");
+addOnEvent("Grinding_Grove", "show", "onShowGrindingGrove()");
+addOnEvent("Shell", "show", "onShowShell()");
+addOnEvent("Hearth_Ground_Oven", "show", "onShowHearthGroundOven()");
+addOnEvent("Potential_Archaeological_Deposit", "show", "onShowPotentialArchaeologicalDeposit()");
+addOnEvent("Culturally_Modified_Tree", "show", "onShowCulturallyModifiedTree()");
+addOnEvent("Cultural_Management_Comment", "show", "onShowCulturalManagementComment()");
 
 onClickUserUser () {
   // TODO: Add some things which should happen when this element is clicked
@@ -807,22 +940,189 @@ onClickControlNewFeature () {
   // TODO: Add some things which should happen when this element is clicked
   newFeature();
 }
-onClickControlNewObjectsIV () {
+onClickControlNewArtefact () {
   // TODO: Add some things which should happen when this element is clicked
-  newObjectsIV();
+  newArtefact();
 }
-onClickControlNewCulturalManagementComments () {
+onClickControlNewIntangibleValue () {
   // TODO: Add some things which should happen when this element is clicked
-  newCulturalManagementComments();
+  newIntangibleValue();
+}
+onClickControlNewArt () {
+  // TODO: Add some things which should happen when this element is clicked
+  newArt();
+}
+onClickControlNewOtherFeature () {
+  // TODO: Add some things which should happen when this element is clicked
+  newOtherFeature();
+}
+onClickControlNewGrindingGrove () {
+  // TODO: Add some things which should happen when this element is clicked
+  newGrindingGrove();
+}
+onClickControlNewShell () {
+  // TODO: Add some things which should happen when this element is clicked
+  newShell();
+}
+onClickControlNewHearthGroundOven () {
+  // TODO: Add some things which should happen when this element is clicked
+  newHearthGroundOven();
+}
+onClickControlNewPotentialArchaeologicalDeposit () {
+  // TODO: Add some things which should happen when this element is clicked
+  newPotentialArchaeologicalDeposit();
+}
+onClickControlNewCulturallyModifiedTree () {
+  // TODO: Add some things which should happen when this element is clicked
+  newCulturallyModifiedTree();
+}
+onClickControlNewCulturalManagementComment () {
+  // TODO: Add some things which should happen when this element is clicked
+  newCulturalManagementComment();
+}
+onClickSiteAddFeature () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Site";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newFeature();
+}
+onClickFeatureAddArtefact () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newArtefact();
+}
+onClickFeatureAddIntangibleValue () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newIntangibleValue();
+}
+onClickFeatureAddArt () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newArt();
+}
+onClickFeatureAddOtherFeature () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newOtherFeature();
+}
+onClickFeatureAddGrindingGrove () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newGrindingGrove();
+}
+onClickFeatureAddShell () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newShell();
+}
+onClickFeatureAddHearthGroundOven () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newHearthGroundOven();
+}
+onClickFeatureAddPotentialArchaeologicalDeposit () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newPotentialArchaeologicalDeposit();
+}
+onClickFeatureAddCulturallyModifiedTree () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Feature";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup = tabgroup;
+  newCulturallyModifiedTree();
 }
 
 addOnEvent("User/User/User", "click", "onClickUserUser()");
 addOnEvent("Control/Control/New_Transect", "click", "onClickControlNewTransect()");
 addOnEvent("Control/Control/New_Site", "click", "onClickControlNewSite()");
 addOnEvent("Control/Control/New_Feature", "click", "onClickControlNewFeature()");
-addOnEvent("Control/Control/New_Objects_IV", "click", "onClickControlNewObjectsIV()");
-addOnEvent("Control/Control/New_Cultural_Management_Comments", "click", "onClickControlNewCulturalManagementComments()");
+addOnEvent("Control/Control/New_Artefact", "click", "onClickControlNewArtefact()");
+addOnEvent("Control/Control/New_Intangible_Value", "click", "onClickControlNewIntangibleValue()");
+addOnEvent("Control/Control/New_Art", "click", "onClickControlNewArt()");
+addOnEvent("Control/Control/New_Other_Feature", "click", "onClickControlNewOtherFeature()");
+addOnEvent("Control/Control/New_Grinding_Grove", "click", "onClickControlNewGrindingGrove()");
+addOnEvent("Control/Control/New_Shell", "click", "onClickControlNewShell()");
+addOnEvent("Control/Control/New_Hearth_Ground_Oven", "click", "onClickControlNewHearthGroundOven()");
+addOnEvent("Control/Control/New_Potential_Archaeological_Deposit", "click", "onClickControlNewPotentialArchaeologicalDeposit()");
+addOnEvent("Control/Control/New_Culturally_Modified_Tree", "click", "onClickControlNewCulturallyModifiedTree()");
+addOnEvent("Control/Control/New_Cultural_Management_Comment", "click", "onClickControlNewCulturalManagementComment()");
+addOnEvent("Site/Features/Add_Feature", "click", "onClickSiteAddFeature()");
+addOnEvent("Feature/Artefact/Add_Artefact", "click", "onClickFeatureAddArtefact()");
+addOnEvent("Feature/Intangible_Value/Add_Intangible_Value", "click", "onClickFeatureAddIntangibleValue()");
+addOnEvent("Feature/Art/Add_Art", "click", "onClickFeatureAddArt()");
+addOnEvent("Feature/Other_Feature/Add_Other_Feature", "click", "onClickFeatureAddOtherFeature()");
+addOnEvent("Feature/Grinding_Grove/Add_Grinding_Grove", "click", "onClickFeatureAddGrindingGrove()");
+addOnEvent("Feature/Shell/Add_Shell", "click", "onClickFeatureAddShell()");
+addOnEvent("Feature/Hearth_Ground_Oven/Add_Hearth_Ground_Oven", "click", "onClickFeatureAddHearthGroundOven()");
+addOnEvent("Feature/Potential_Archaeological_Deposit/Add_Potential_Archaeological_Deposit", "click", "onClickFeatureAddPotentialArchaeologicalDeposit()");
+addOnEvent("Feature/Culturally_Modified_Tree/Add_Culturally_Modified_Tree", "click", "onClickFeatureAddCulturallyModifiedTree()");
 
+
+/******************************************************************************/
+/*                   AUDIO, CAMERA, FILE AND VIDEO BINDINGS                   */
+/******************************************************************************/
+addOnEvent("Transect/Transect/Button_Photo_Transect", "click", "attachPictureTo(\"Transect/Transect/Photo_Transect\")");
+addOnEvent("Artefact/Artefact/Button_Photo_Artefact", "click", "attachPictureTo(\"Artefact/Artefact/Photo_Artefact\")");
+addOnEvent("Art/Art/Button_Photo_Art", "click", "attachPictureTo(\"Art/Art/Photo_Art\")");
+addOnEvent("Other_Feature/Other_Feature/Button_Photo_Feature", "click", "attachPictureTo(\"Other_Feature/Other_Feature/Photo_Feature\")");
+addOnEvent("Grinding_Grove/Grinding_Grove/Button_Photo_Grinding_Grove", "click", "attachPictureTo(\"Grinding_Grove/Grinding_Grove/Photo_Grinding_Grove\")");
+addOnEvent("Shell/Shell/Button_Photo_Shell", "click", "attachPictureTo(\"Shell/Shell/Photo_Shell\")");
+addOnEvent("Hearth_Ground_Oven/Hearth_Ground_Oven/Button_Photo_Hearth", "click", "attachPictureTo(\"Hearth_Ground_Oven/Hearth_Ground_Oven/Photo_Hearth\")");
+addOnEvent("Transect/Transect/Button_Sketch_Transect", "click", "attachFileTo(\"Transect/Transect/Sketch_Transect\")");
+addOnEvent("Art/Art/Button_Sketch_Plan_Art", "click", "attachFileTo(\"Art/Art/Sketch_Plan_Art\")");
+addOnEvent("Other_Feature/Other_Feature/Button_Sketch_Plan_Feature", "click", "attachFileTo(\"Other_Feature/Other_Feature/Sketch_Plan_Feature\")");
+addOnEvent("Grinding_Grove/Grinding_Grove/Button_Sketch_Plan_Grinding_Grove", "click", "attachFileTo(\"Grinding_Grove/Grinding_Grove/Sketch_Plan_Grinding_Grove\")");
+addOnEvent("Shell/Shell/Button_Sketch_Plan_Shell", "click", "attachFileTo(\"Shell/Shell/Sketch_Plan_Shell\")");
+addOnEvent("Hearth_Ground_Oven/Hearth_Ground_Oven/Button_Sketch_Plan_Hearth", "click", "attachFileTo(\"Hearth_Ground_Oven/Hearth_Ground_Oven/Sketch_Plan_Hearth\")");
 
 /******************************************************************************/
 /*                             NAVIGATION DRAWER                              */
@@ -839,6 +1139,17 @@ addNavigationButtons(String tabgroup) {
   List tabgroupsToValidate = new ArrayList();
   tabgroupsToValidate.add("Transect");
   tabgroupsToValidate.add("Site");
+  tabgroupsToValidate.add("Feature");
+  tabgroupsToValidate.add("Artefact");
+  tabgroupsToValidate.add("Intangible_Value");
+  tabgroupsToValidate.add("Art");
+  tabgroupsToValidate.add("Other_Feature");
+  tabgroupsToValidate.add("Grinding_Grove");
+  tabgroupsToValidate.add("Shell");
+  tabgroupsToValidate.add("Hearth_Ground_Oven");
+  tabgroupsToValidate.add("Potential_Archaeological_Deposit");
+  tabgroupsToValidate.add("Culturally_Modified_Tree");
+  tabgroupsToValidate.add("Cultural_Management_Comment");
 
   addNavigationButton("new", new ActionButtonCallback() {
     actionOnLabel() {
@@ -1059,6 +1370,8 @@ duplicateTransect(){
   autoNumDest = "Transect/Transect/Transect_ID";
   incAutoNum(autoNumDest);
 
+  populateCameraPictureGallery("Transect/Transect/Photo_Transect", new ArrayList());
+  populateFileList("Transect/Transect/Sketch_Transect", new ArrayList());
 
 
   saveCallback = new SaveCallback() {
@@ -1089,6 +1402,8 @@ duplicateTransect(){
   fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
     onFetch(result) {
       excludeAttributes = new ArrayList();
+      excludeAttributes.add("Photo Transect");
+      excludeAttributes.add("Sketch Transect");
 
       duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
     }
@@ -1271,36 +1586,81 @@ reallyDeleteFeature(){
   cancelTabGroup(tabgroup, false);
 }
 
-newObjectsIV(){
-  String tabgroup = "Objects_IV";
+newArtefact(){
+  String tabgroup = "Artefact";
+
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+
+}
+
+duplicateArtefact(){
+  String tabgroup = "Artefact";
+  String uuidOld = getUuid(tabgroup);
+
+  disableAutoSave(tabgroup);
+
+
+  populateCameraPictureGallery("Artefact/Artefact/Photo_Artefact", new ArrayList());
+
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+      populateAuthorAndTimestamp(tabgroup);
+
+      Boolean enable_autosave = true;
+
+      fetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup, getUuid(tabgroup), null, null, new SaveCallback(){
+        onSave(autosaveUuid, autosaveNewRecord) {
+          setUuid(tabgroup, autosaveUuid);
+        }
+      }, enable_autosave);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+      excludeAttributes.add("Photo Artefact");
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
+}
+
+deleteArtefact(){
+  String tabgroup = "Artefact";
+
+  if (isNull(getUuid(tabgroup))) {
+    cancelTabGroup(tabgroup, true);
+  } else {
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteArtefact()", "doNotDelete()");
+  }
+}
+
+reallyDeleteArtefact(){
+  String tabgroup = "Artefact";
+  deleteArchEnt(getUuid(tabgroup));
+  cancelTabGroup(tabgroup, false);
+}
+
+newIntangibleValue(){
+  String tabgroup = "Intangible_Value";
 
   String autoNumSource = "";
   autoNumSource = getFieldValue("Control/Control/Next_Intangible_Value_ID");
-  if (isNull(autoNumSource)) {
-    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
-    return;
-  }
-  autoNumSource = getFieldValue("Control/Control/Next_Other_Feature_ID");
-  if (isNull(autoNumSource)) {
-    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
-    return;
-  }
-  autoNumSource = getFieldValue("Control/Control/Next_Grinding_Grove_ID");
-  if (isNull(autoNumSource)) {
-    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
-    return;
-  }
-  autoNumSource = getFieldValue("Control/Control/Next_Shell_ID");
-  if (isNull(autoNumSource)) {
-    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
-    return;
-  }
-  autoNumSource = getFieldValue("Control/Control/Next_Arch_Dep_ID");
-  if (isNull(autoNumSource)) {
-    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
-    return;
-  }
-  autoNumSource = getFieldValue("Control/Control/Next_CM_Tree_ID");
   if (isNull(autoNumSource)) {
     showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
     return;
@@ -1310,38 +1670,18 @@ newObjectsIV(){
   newTabGroup(tabgroup);
 
   String autoNumDest = "";
-  autoNumDest = "Objects_IV/Intangible_Values/Intangible_Value_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Other_Feature/Other_Feature_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Grinding_Grove/Grinding_Grove_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Shell/Shell_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Potential_Archaeological_Deposit/Arch_Dep_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Culturally_Modified_Tree/CM_Tree_ID";
+  autoNumDest = "Intangible_Value/Intangible_Value/Intangible_Value_ID";
   incAutoNum(autoNumDest);
 }
 
-duplicateObjectsIV(){
-  String tabgroup = "Objects_IV";
+duplicateIntangibleValue(){
+  String tabgroup = "Intangible_Value";
   String uuidOld = getUuid(tabgroup);
 
   disableAutoSave(tabgroup);
 
   String autoNumDest = "";
-  autoNumDest = "Objects_IV/Intangible_Values/Intangible_Value_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Other_Feature/Other_Feature_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Grinding_Grove/Grinding_Grove_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Shell/Shell_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Potential_Archaeological_Deposit/Arch_Dep_ID";
-  incAutoNum(autoNumDest);
-  autoNumDest = "Objects_IV/Culturally_Modified_Tree/CM_Tree_ID";
+  autoNumDest = "Intangible_Value/Intangible_Value/Intangible_Value_ID";
   incAutoNum(autoNumDest);
 
 
@@ -1380,24 +1720,604 @@ duplicateObjectsIV(){
   });
 }
 
-deleteObjectsIV(){
-  String tabgroup = "Objects_IV";
+deleteIntangibleValue(){
+  String tabgroup = "Intangible_Value";
 
   if (isNull(getUuid(tabgroup))) {
     cancelTabGroup(tabgroup, true);
   } else {
-    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteObjectsIV()", "doNotDelete()");
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteIntangibleValue()", "doNotDelete()");
   }
 }
 
-reallyDeleteObjectsIV(){
-  String tabgroup = "Objects_IV";
+reallyDeleteIntangibleValue(){
+  String tabgroup = "Intangible_Value";
   deleteArchEnt(getUuid(tabgroup));
   cancelTabGroup(tabgroup, false);
 }
 
-newCulturalManagementComments(){
-  String tabgroup = "Cultural_Management_Comments";
+newArt(){
+  String tabgroup = "Art";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Control/Next_Art_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Art/Art/Art_ID";
+  incAutoNum(autoNumDest);
+}
+
+duplicateArt(){
+  String tabgroup = "Art";
+  String uuidOld = getUuid(tabgroup);
+
+  disableAutoSave(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Art/Art/Art_ID";
+  incAutoNum(autoNumDest);
+
+  populateFileList("Art/Art/Sketch_Plan_Art", new ArrayList());
+  populateCameraPictureGallery("Art/Art/Photo_Art", new ArrayList());
+
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+      populateAuthorAndTimestamp(tabgroup);
+
+      Boolean enable_autosave = true;
+
+      fetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup, getUuid(tabgroup), null, null, new SaveCallback(){
+        onSave(autosaveUuid, autosaveNewRecord) {
+          setUuid(tabgroup, autosaveUuid);
+        }
+      }, enable_autosave);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+      excludeAttributes.add("Sketch Plan Art");
+      excludeAttributes.add("Photo Art");
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
+}
+
+deleteArt(){
+  String tabgroup = "Art";
+
+  if (isNull(getUuid(tabgroup))) {
+    cancelTabGroup(tabgroup, true);
+  } else {
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteArt()", "doNotDelete()");
+  }
+}
+
+reallyDeleteArt(){
+  String tabgroup = "Art";
+  deleteArchEnt(getUuid(tabgroup));
+  cancelTabGroup(tabgroup, false);
+}
+
+newOtherFeature(){
+  String tabgroup = "Other_Feature";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Control/Next_Other_Feature_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Other_Feature/Other_Feature/Other_Feature_ID";
+  incAutoNum(autoNumDest);
+}
+
+duplicateOtherFeature(){
+  String tabgroup = "Other_Feature";
+  String uuidOld = getUuid(tabgroup);
+
+  disableAutoSave(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Other_Feature/Other_Feature/Other_Feature_ID";
+  incAutoNum(autoNumDest);
+
+  populateFileList("Other_Feature/Other_Feature/Sketch_Plan_Feature", new ArrayList());
+  populateCameraPictureGallery("Other_Feature/Other_Feature/Photo_Feature", new ArrayList());
+
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+      populateAuthorAndTimestamp(tabgroup);
+
+      Boolean enable_autosave = true;
+
+      fetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup, getUuid(tabgroup), null, null, new SaveCallback(){
+        onSave(autosaveUuid, autosaveNewRecord) {
+          setUuid(tabgroup, autosaveUuid);
+        }
+      }, enable_autosave);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+      excludeAttributes.add("Sketch Plan Feature");
+      excludeAttributes.add("Photo Feature");
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
+}
+
+deleteOtherFeature(){
+  String tabgroup = "Other_Feature";
+
+  if (isNull(getUuid(tabgroup))) {
+    cancelTabGroup(tabgroup, true);
+  } else {
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteOtherFeature()", "doNotDelete()");
+  }
+}
+
+reallyDeleteOtherFeature(){
+  String tabgroup = "Other_Feature";
+  deleteArchEnt(getUuid(tabgroup));
+  cancelTabGroup(tabgroup, false);
+}
+
+newGrindingGrove(){
+  String tabgroup = "Grinding_Grove";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Control/Next_Grinding_Grove_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Grinding_Grove/Grinding_Grove/Grinding_Grove_ID";
+  incAutoNum(autoNumDest);
+}
+
+duplicateGrindingGrove(){
+  String tabgroup = "Grinding_Grove";
+  String uuidOld = getUuid(tabgroup);
+
+  disableAutoSave(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Grinding_Grove/Grinding_Grove/Grinding_Grove_ID";
+  incAutoNum(autoNumDest);
+
+  populateFileList("Grinding_Grove/Grinding_Grove/Sketch_Plan_Grinding_Grove", new ArrayList());
+  populateCameraPictureGallery("Grinding_Grove/Grinding_Grove/Photo_Grinding_Grove", new ArrayList());
+
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+      populateAuthorAndTimestamp(tabgroup);
+
+      Boolean enable_autosave = true;
+
+      fetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup, getUuid(tabgroup), null, null, new SaveCallback(){
+        onSave(autosaveUuid, autosaveNewRecord) {
+          setUuid(tabgroup, autosaveUuid);
+        }
+      }, enable_autosave);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+      excludeAttributes.add("Sketch Plan Grinding Grove");
+      excludeAttributes.add("Photo Grinding Grove");
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
+}
+
+deleteGrindingGrove(){
+  String tabgroup = "Grinding_Grove";
+
+  if (isNull(getUuid(tabgroup))) {
+    cancelTabGroup(tabgroup, true);
+  } else {
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteGrindingGrove()", "doNotDelete()");
+  }
+}
+
+reallyDeleteGrindingGrove(){
+  String tabgroup = "Grinding_Grove";
+  deleteArchEnt(getUuid(tabgroup));
+  cancelTabGroup(tabgroup, false);
+}
+
+newShell(){
+  String tabgroup = "Shell";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Control/Next_Shell_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Shell/Shell/Shell_ID";
+  incAutoNum(autoNumDest);
+}
+
+duplicateShell(){
+  String tabgroup = "Shell";
+  String uuidOld = getUuid(tabgroup);
+
+  disableAutoSave(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Shell/Shell/Shell_ID";
+  incAutoNum(autoNumDest);
+
+  populateFileList("Shell/Shell/Sketch_Plan_Shell", new ArrayList());
+  populateCameraPictureGallery("Shell/Shell/Photo_Shell", new ArrayList());
+
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+      populateAuthorAndTimestamp(tabgroup);
+
+      Boolean enable_autosave = true;
+
+      fetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup, getUuid(tabgroup), null, null, new SaveCallback(){
+        onSave(autosaveUuid, autosaveNewRecord) {
+          setUuid(tabgroup, autosaveUuid);
+        }
+      }, enable_autosave);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+      excludeAttributes.add("Sketch Plan Shell");
+      excludeAttributes.add("Photo Shell");
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
+}
+
+deleteShell(){
+  String tabgroup = "Shell";
+
+  if (isNull(getUuid(tabgroup))) {
+    cancelTabGroup(tabgroup, true);
+  } else {
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteShell()", "doNotDelete()");
+  }
+}
+
+reallyDeleteShell(){
+  String tabgroup = "Shell";
+  deleteArchEnt(getUuid(tabgroup));
+  cancelTabGroup(tabgroup, false);
+}
+
+newHearthGroundOven(){
+  String tabgroup = "Hearth_Ground_Oven";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Control/Next_Hearth_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Hearth_Ground_Oven/Hearth_Ground_Oven/Hearth_ID";
+  incAutoNum(autoNumDest);
+}
+
+duplicateHearthGroundOven(){
+  String tabgroup = "Hearth_Ground_Oven";
+  String uuidOld = getUuid(tabgroup);
+
+  disableAutoSave(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Hearth_Ground_Oven/Hearth_Ground_Oven/Hearth_ID";
+  incAutoNum(autoNumDest);
+
+  populateFileList("Hearth_Ground_Oven/Hearth_Ground_Oven/Sketch_Plan_Hearth", new ArrayList());
+  populateCameraPictureGallery("Hearth_Ground_Oven/Hearth_Ground_Oven/Photo_Hearth", new ArrayList());
+
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+      populateAuthorAndTimestamp(tabgroup);
+
+      Boolean enable_autosave = true;
+
+      fetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup, getUuid(tabgroup), null, null, new SaveCallback(){
+        onSave(autosaveUuid, autosaveNewRecord) {
+          setUuid(tabgroup, autosaveUuid);
+        }
+      }, enable_autosave);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+      excludeAttributes.add("Sketch Plan Hearth");
+      excludeAttributes.add("Photo Hearth");
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
+}
+
+deleteHearthGroundOven(){
+  String tabgroup = "Hearth_Ground_Oven";
+
+  if (isNull(getUuid(tabgroup))) {
+    cancelTabGroup(tabgroup, true);
+  } else {
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteHearthGroundOven()", "doNotDelete()");
+  }
+}
+
+reallyDeleteHearthGroundOven(){
+  String tabgroup = "Hearth_Ground_Oven";
+  deleteArchEnt(getUuid(tabgroup));
+  cancelTabGroup(tabgroup, false);
+}
+
+newPotentialArchaeologicalDeposit(){
+  String tabgroup = "Potential_Archaeological_Deposit";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Control/Next_Arch_Dep_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Arch_Dep_ID";
+  incAutoNum(autoNumDest);
+}
+
+duplicatePotentialArchaeologicalDeposit(){
+  String tabgroup = "Potential_Archaeological_Deposit";
+  String uuidOld = getUuid(tabgroup);
+
+  disableAutoSave(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Arch_Dep_ID";
+  incAutoNum(autoNumDest);
+
+
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+      populateAuthorAndTimestamp(tabgroup);
+
+      Boolean enable_autosave = true;
+
+      fetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup, getUuid(tabgroup), null, null, new SaveCallback(){
+        onSave(autosaveUuid, autosaveNewRecord) {
+          setUuid(tabgroup, autosaveUuid);
+        }
+      }, enable_autosave);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
+}
+
+deletePotentialArchaeologicalDeposit(){
+  String tabgroup = "Potential_Archaeological_Deposit";
+
+  if (isNull(getUuid(tabgroup))) {
+    cancelTabGroup(tabgroup, true);
+  } else {
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeletePotentialArchaeologicalDeposit()", "doNotDelete()");
+  }
+}
+
+reallyDeletePotentialArchaeologicalDeposit(){
+  String tabgroup = "Potential_Archaeological_Deposit";
+  deleteArchEnt(getUuid(tabgroup));
+  cancelTabGroup(tabgroup, false);
+}
+
+newCulturallyModifiedTree(){
+  String tabgroup = "Culturally_Modified_Tree";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Control/Next_CM_Tree_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Culturally_Modified_Tree/Culturally_Modified_Tree/CM_Tree_ID";
+  incAutoNum(autoNumDest);
+}
+
+duplicateCulturallyModifiedTree(){
+  String tabgroup = "Culturally_Modified_Tree";
+  String uuidOld = getUuid(tabgroup);
+
+  disableAutoSave(tabgroup);
+
+  String autoNumDest = "";
+  autoNumDest = "Culturally_Modified_Tree/Culturally_Modified_Tree/CM_Tree_ID";
+  incAutoNum(autoNumDest);
+
+
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabgroup, uuid);
+      populateAuthorAndTimestamp(tabgroup);
+
+      Boolean enable_autosave = true;
+
+      fetchAll(getDuplicateRelnQuery(uuidOld), new FetchCallback(){
+        onFetch(result) {
+          Log.e("Module", result.toString());
+          makeDuplicateRelationships(result, getUuid(tabgroup));
+          showToast("{Duplicated_record}");
+          dialog.dismiss();
+        }
+      });
+
+      saveTabGroup(tabgroup, getUuid(tabgroup), null, null, new SaveCallback(){
+        onSave(autosaveUuid, autosaveNewRecord) {
+          setUuid(tabgroup, autosaveUuid);
+        }
+      }, enable_autosave);
+    }
+  };
+
+  String extraDupeAttributes = "";
+  fetchAll(getDuplicateAttributeQuery(getUuid(tabgroup), extraDupeAttributes), new FetchCallback(){
+    onFetch(result) {
+      excludeAttributes = new ArrayList();
+
+      duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
+    }
+  });
+}
+
+deleteCulturallyModifiedTree(){
+  String tabgroup = "Culturally_Modified_Tree";
+
+  if (isNull(getUuid(tabgroup))) {
+    cancelTabGroup(tabgroup, true);
+  } else {
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteCulturallyModifiedTree()", "doNotDelete()");
+  }
+}
+
+reallyDeleteCulturallyModifiedTree(){
+  String tabgroup = "Culturally_Modified_Tree";
+  deleteArchEnt(getUuid(tabgroup));
+  cancelTabGroup(tabgroup, false);
+}
+
+newCulturalManagementComment(){
+  String tabgroup = "Cultural_Management_Comment";
 
   String autoNumSource = "";
   autoNumSource = getFieldValue("Control/Control/Next_Comment_ID");
@@ -1410,18 +2330,18 @@ newCulturalManagementComments(){
   newTabGroup(tabgroup);
 
   String autoNumDest = "";
-  autoNumDest = "Cultural_Management_Comments/C_M_Comments/Comment_ID";
+  autoNumDest = "Cultural_Management_Comment/C_M_Comments/Comment_ID";
   incAutoNum(autoNumDest);
 }
 
-duplicateCulturalManagementComments(){
-  String tabgroup = "Cultural_Management_Comments";
+duplicateCulturalManagementComment(){
+  String tabgroup = "Cultural_Management_Comment";
   String uuidOld = getUuid(tabgroup);
 
   disableAutoSave(tabgroup);
 
   String autoNumDest = "";
-  autoNumDest = "Cultural_Management_Comments/C_M_Comments/Comment_ID";
+  autoNumDest = "Cultural_Management_Comment/C_M_Comments/Comment_ID";
   incAutoNum(autoNumDest);
 
 
@@ -1460,18 +2380,18 @@ duplicateCulturalManagementComments(){
   });
 }
 
-deleteCulturalManagementComments(){
-  String tabgroup = "Cultural_Management_Comments";
+deleteCulturalManagementComment(){
+  String tabgroup = "Cultural_Management_Comment";
 
   if (isNull(getUuid(tabgroup))) {
     cancelTabGroup(tabgroup, true);
   } else {
-    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteCulturalManagementComments()", "doNotDelete()");
+    showAlert("{Confirm_Deletion}", "{Press_OK_to_Delete_this_Record}", "reallyDeleteCulturalManagementComment()", "doNotDelete()");
   }
 }
 
-reallyDeleteCulturalManagementComments(){
-  String tabgroup = "Cultural_Management_Comments";
+reallyDeleteCulturalManagementComment(){
+  String tabgroup = "Cultural_Management_Comment";
   deleteArchEnt(getUuid(tabgroup));
   cancelTabGroup(tabgroup, false);
 }
@@ -1485,13 +2405,180 @@ addOnEvent("Control", "show", "removeNavigationButtons()");
 addOnEvent("Transect", "show", "addNavigationButtons(\"Transect\")");
 addOnEvent("Site", "show", "addNavigationButtons(\"Site\")");
 addOnEvent("Feature", "show", "addNavigationButtons(\"Feature\")");
-addOnEvent("Objects_IV", "show", "addNavigationButtons(\"Objects_IV\")");
-addOnEvent("Cultural_Management_Comments", "show", "addNavigationButtons(\"Cultural_Management_Comments\")");
+addOnEvent("Artefact", "show", "addNavigationButtons(\"Artefact\")");
+addOnEvent("Intangible_Value", "show", "addNavigationButtons(\"Intangible_Value\")");
+addOnEvent("Art", "show", "addNavigationButtons(\"Art\")");
+addOnEvent("Other_Feature", "show", "addNavigationButtons(\"Other_Feature\")");
+addOnEvent("Grinding_Grove", "show", "addNavigationButtons(\"Grinding_Grove\")");
+addOnEvent("Shell", "show", "addNavigationButtons(\"Shell\")");
+addOnEvent("Hearth_Ground_Oven", "show", "addNavigationButtons(\"Hearth_Ground_Oven\")");
+addOnEvent("Potential_Archaeological_Deposit", "show", "addNavigationButtons(\"Potential_Archaeological_Deposit\")");
+addOnEvent("Culturally_Modified_Tree", "show", "addNavigationButtons(\"Culturally_Modified_Tree\")");
+addOnEvent("Cultural_Management_Comment", "show", "addNavigationButtons(\"Cultural_Management_Comment\")");
+
+/******************************************************************************/
+/*                                   SEARCH                                   */
+/******************************************************************************/
+addOnEvent("Control/Search"               , "show"  , "search();");
+addOnEvent("Control/Search/Entity_List"   , "click" , "loadEntity();");
+addOnEvent("Control/Search/Search_Button" , "click" , "search()");
+addOnEvent("Control/Search/Search_Term"   , "click" , "clearSearch()");
+addOnEvent("Control/Search/Entity_Types"  , "click" , "search()");
+
+entityTypes = new ArrayList();
+entityTypes.add(new NameValuePair("{All}", ""));
+entityTypes.add(new NameValuePair("{Transect}", "Transect"));
+entityTypes.add(new NameValuePair("{Site}", "Site"));
+entityTypes.add(new NameValuePair("{Feature}", "Feature"));
+entityTypes.add(new NameValuePair("{Artefact}", "Artefact"));
+entityTypes.add(new NameValuePair("{Intangible_Value}", "Intangible Value"));
+entityTypes.add(new NameValuePair("{Art}", "Art"));
+entityTypes.add(new NameValuePair("{Other_Feature}", "Other Feature"));
+entityTypes.add(new NameValuePair("{Grinding_Grove}", "Grinding Grove"));
+entityTypes.add(new NameValuePair("{Shell}", "Shell"));
+entityTypes.add(new NameValuePair("{Hearth_Ground_Oven}", "Hearth Ground Oven"));
+entityTypes.add(new NameValuePair("{Potential_Archaeological_Deposit}", "Potential Archaeological Deposit"));
+entityTypes.add(new NameValuePair("{Culturally_Modified_Tree}", "Culturally Modified Tree"));
+entityTypes.add(new NameValuePair("{Cultural_Management_Comment}", "Cultural Management Comment"));
+populateDropDown("Control/Search/Entity_Types", entityTypes);
+
+clearSearch(){
+  setFieldValue("Control/Search/Search_Term","");
+}
+
+search(){
+  String tabgroup = "Control";
+  String refEntityList  = tabgroup + "/Search/Entity_List";
+  String refSearchTerm  = tabgroup + "/Search/Search_Term";
+  String refEntityTypes = tabgroup + "/Search/Entity_Types";
+
+  String type = getFieldValue(refEntityTypes);
+  String term = getFieldValue(refSearchTerm);
+  String searchQuery = "SELECT uuid, response "+
+                       "  FROM latestNonDeletedArchEntFormattedIdentifiers  "+
+                       " WHERE uuid in (SELECT uuid "+
+                       "                  FROM latestNonDeletedArchEntIdentifiers "+
+                       "                 WHERE measure LIKE '"+term+"'||'%'  "+
+                       "                   AND ( aenttypename LIKE '"+type+"' OR '' = '"+type+"' ) "+
+                       "                )  "+
+                       " ORDER BY response "+
+                       " LIMIT ? "+
+                       "OFFSET ? ";
+
+  populateCursorList(refEntityList, searchQuery, 25);
+  refreshTabgroupCSS(tabgroup);
+
+  Log.d("Module", "Search query: " + searchQuery);
+}
+
+loadTransectFrom(String uuid) {
+  String tabgroup = "Transect";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadSiteFrom(String uuid) {
+  String tabgroup = "Site";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadFeatureFrom(String uuid) {
+  String tabgroup = "Feature";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadArtefactFrom(String uuid) {
+  String tabgroup = "Artefact";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadIntangibleValueFrom(String uuid) {
+  String tabgroup = "Intangible_Value";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadArtFrom(String uuid) {
+  String tabgroup = "Art";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadOtherFeatureFrom(String uuid) {
+  String tabgroup = "Other_Feature";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadGrindingGroveFrom(String uuid) {
+  String tabgroup = "Grinding_Grove";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadShellFrom(String uuid) {
+  String tabgroup = "Shell";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadHearthGroundOvenFrom(String uuid) {
+  String tabgroup = "Hearth_Ground_Oven";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadPotentialArchaeologicalDepositFrom(String uuid) {
+  String tabgroup = "Potential_Archaeological_Deposit";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadCulturallyModifiedTreeFrom(String uuid) {
+  String tabgroup = "Culturally_Modified_Tree";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
+loadCulturalManagementCommentFrom(String uuid) {
+  String tabgroup = "Cultural_Management_Comment";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
 
 /******************************************************************************/
 /*                          TAKE FROM GPS BUTTON(S)                           */
 /******************************************************************************/
-addOnEvent("Transect/Transect/Take_From_GPS", "click", "takePoint(\"Transect\")");
 addOnEvent("Transect/Transect/Take_From_GPS", "click", "takePoint(\"Transect\")");
 
 /* Takes the current point using gps. */
@@ -1532,7 +2619,6 @@ takePoint(String tabgroup) {
 /* Sets the value of GPS views for the given tab path. */
 fillInGPS(String tabgroup) {
   Map tabgroupToTabRef = new HashMap();
-  tabgroupToTabRef.put("Transect", "Transect/Transect/");
   tabgroupToTabRef.put("Transect", "Transect/Transect/");
 
   String currentUuid = getUuid(tabgroup);
@@ -1600,9 +2686,11 @@ onShowAutonum() {
   l.add("Control/Control/Next_Site_ID_Number");
   l.add("Control/Control/Next_Feature_ID");
   l.add("Control/Control/Next_Intangible_Value_ID");
+  l.add("Control/Control/Next_Art_ID");
   l.add("Control/Control/Next_Other_Feature_ID");
   l.add("Control/Control/Next_Grinding_Grove_ID");
   l.add("Control/Control/Next_Shell_ID");
+  l.add("Control/Control/Next_Hearth_ID");
   l.add("Control/Control/Next_Arch_Dep_ID");
   l.add("Control/Control/Next_CM_Tree_ID");
   l.add("Control/Control/Next_Comment_ID");
@@ -1634,19 +2722,190 @@ incAutoNum(String destPath) {
   destToSource.put("Transect/Transect/Transect_ID", "Control/Control/Next_Transect_ID");
   destToSource.put("Site/Site/Site_ID_Number", "Control/Control/Next_Site_ID_Number");
   destToSource.put("Feature/Feature/Feature_ID", "Control/Control/Next_Feature_ID");
-  destToSource.put("Objects_IV/Intangible_Values/Intangible_Value_ID", "Control/Control/Next_Intangible_Value_ID");
-  destToSource.put("Objects_IV/Other_Feature/Other_Feature_ID", "Control/Control/Next_Other_Feature_ID");
-  destToSource.put("Objects_IV/Grinding_Grove/Grinding_Grove_ID", "Control/Control/Next_Grinding_Grove_ID");
-  destToSource.put("Objects_IV/Shell/Shell_ID", "Control/Control/Next_Shell_ID");
-  destToSource.put("Objects_IV/Potential_Archaeological_Deposit/Arch_Dep_ID", "Control/Control/Next_Arch_Dep_ID");
-  destToSource.put("Objects_IV/Culturally_Modified_Tree/CM_Tree_ID", "Control/Control/Next_CM_Tree_ID");
-  destToSource.put("Cultural_Management_Comments/C_M_Comments/Comment_ID", "Control/Control/Next_Comment_ID");
+  destToSource.put("Intangible_Value/Intangible_Value/Intangible_Value_ID", "Control/Control/Next_Intangible_Value_ID");
+  destToSource.put("Art/Art/Art_ID", "Control/Control/Next_Art_ID");
+  destToSource.put("Other_Feature/Other_Feature/Other_Feature_ID", "Control/Control/Next_Other_Feature_ID");
+  destToSource.put("Grinding_Grove/Grinding_Grove/Grinding_Grove_ID", "Control/Control/Next_Grinding_Grove_ID");
+  destToSource.put("Shell/Shell/Shell_ID", "Control/Control/Next_Shell_ID");
+  destToSource.put("Hearth_Ground_Oven/Hearth_Ground_Oven/Hearth_ID", "Control/Control/Next_Hearth_ID");
+  destToSource.put("Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Arch_Dep_ID", "Control/Control/Next_Arch_Dep_ID");
+  destToSource.put("Culturally_Modified_Tree/Culturally_Modified_Tree/CM_Tree_ID", "Control/Control/Next_CM_Tree_ID");
+  destToSource.put("Cultural_Management_Comment/C_M_Comments/Comment_ID", "Control/Control/Next_Comment_ID");
 
   String sourcePath = destToSource.get(destPath);
   String destVal    = getFieldValue(sourcePath);
   setFieldValue(destPath, destVal);
   incField(sourcePath);
 }
+
+/******************************************************************************/
+/*                POPULATION OF ENTITY AND CHILD ENTITY LISTS                 */
+/******************************************************************************/
+/*
+ * `viewType`   the type of GUI element to be populated. It can either equal
+ *              "DropDown" or "List".
+ * `path`       the reference of the GUI element to be populated.
+ * `parentUuid` the parent in the relationship denoted by `relType`.
+ * `entType`    the type of the entities the menu will be populated with.
+ * `relType`    the name of the relationship the children are to be in with the
+ *              entity denoted by `parentUuid`.
+ */
+populateMenuWithEntities (
+  String viewType,
+  String path,
+  String parentUuid,
+  String entType,
+  String relType
+) {
+  String getChildEntitiesQ = "" +
+    "SELECT childuuid, response "+
+    "  FROM parentchild JOIN latestNonDeletedArchEntFormattedIdentifiers ON (childuuid = uuid) " +
+    "  JOIN createdmodifiedatby USING (uuid) " +
+    " WHERE relationshipid IN (SELECT relationshipid  " +
+    "                            FROM latestnondeletedrelationship JOIN relntype USING (relntypeid) " +
+    "                           WHERE relntypename = '"+relType+"') " +
+    "   AND parentuuid = " + parentUuid + " " +
+    "   AND (childaenttypename = '"+entType+"' OR '"+entType+"' = '') " +
+    " ORDER BY createdat DESC ";
+
+  String getEntitiesQ = "" +
+    "SELECT uuid, response "+
+    "  FROM latestNonDeletedArchEntFormattedIdentifiers  "+
+    " WHERE uuid in (SELECT uuid "+
+    "                  FROM latestNonDeletedArchEntIdentifiers "+
+    "                 WHERE aenttypename = '"+entType+"' OR '"+entType+"' = '' " +
+    "               )  "+
+    " ORDER BY response ";
+
+  String q = null;
+  if (relType.equals("")) {
+    q = getEntitiesQ;
+  } else {
+    q = getChildEntitiesQ;
+  }
+
+  FetchCallback cbPopulateDropDown = new FetchCallback() {
+    onFetch(result) {
+      populateDropDown(path, result, true);
+    }
+  };
+
+  switch (viewType) {
+    case "DropDown":
+      fetchAll(q, cbPopulateDropDown);
+      break;
+    case "List":
+      q += " LIMIT ? OFFSET ? ";
+      populateCursorList(path, q, 25);
+      break;
+    default:
+      Log.e("populateMenuWithEntities ", "Unexpected type '" + viewType + "'");
+  }
+}
+
+menus = new ArrayList();
+menus.add(new String[] {
+  "List",
+  "Site/Features/List_of_Features",
+  "getUuid(\"Site\")",
+  "Feature",
+  "Site - Feature",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Artefact/List_of_Artefact_Records",
+  "getUuid(\"Feature\")",
+  "Artefact",
+  "Feature - Artefact",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Intangible_Value/List_of_Intangible_Value_Records",
+  "getUuid(\"Feature\")",
+  "Intangible Value",
+  "Feature - Intangible Value",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Art/List_of_Art_Records",
+  "getUuid(\"Feature\")",
+  "Art",
+  "Feature - Art",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Other_Feature/List_of_Other_Feature_Records",
+  "getUuid(\"Feature\")",
+  "Other Feature",
+  "Feature - Other Feature",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Grinding_Grove/List_of_Grinding_Grove_Records",
+  "getUuid(\"Feature\")",
+  "Grinding Grove",
+  "Feature - Grinding Grove",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Shell/List_of_Shell_Records",
+  "getUuid(\"Feature\")",
+  "Shell",
+  "Feature - Shell",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Hearth_Ground_Oven/List_of_Hearth_Ground_Oven_Records",
+  "getUuid(\"Feature\")",
+  "Hearth Ground Oven",
+  "Feature - Hearth Ground Oven",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Potential_Archaeological_Deposit/List_of_Potential_Archaeological_Deposit_Records",
+  "getUuid(\"Feature\")",
+  "Potential Archaeological Deposit",
+  "Feature - Potential Archaeological Deposit",
+});
+menus.add(new String[] {
+  "List",
+  "Feature/Culturally_Modified_Tree/List_of_Culturally_Modified_Tree_Records",
+  "getUuid(\"Feature\")",
+  "Culturally Modified Tree",
+  "Feature - Culturally Modified Tree",
+});
+for (m : menus) {
+  String viewType       = m[0];
+  String path           = m[1];
+  String parentUuidCall = m[2];
+  String entType        = m[3];
+  String relType        = m[4];
+
+  String functionCall = "";
+  functionCall += "populateMenuWithEntities(";
+  functionCall += "\"" + viewType       + "\"";
+  functionCall += ", ";
+  functionCall += "\"" + path           + "\"";
+  functionCall += ", ";
+  functionCall +=        parentUuidCall       ;
+  functionCall += ", ";
+  functionCall += "\"" + entType        + "\"";
+  functionCall += ", ";
+  functionCall += "\"" + relType        + "\"";
+  functionCall += ")";
+
+  addOnEvent(path, "show", functionCall);
+}
+addOnEvent("Site/Features/List_of_Features", "click", "loadEntity()");
+addOnEvent("Feature/Artefact/List_of_Artefact_Records", "click", "loadEntity()");
+addOnEvent("Feature/Intangible_Value/List_of_Intangible_Value_Records", "click", "loadEntity()");
+addOnEvent("Feature/Art/List_of_Art_Records", "click", "loadEntity()");
+addOnEvent("Feature/Other_Feature/List_of_Other_Feature_Records", "click", "loadEntity()");
+addOnEvent("Feature/Grinding_Grove/List_of_Grinding_Grove_Records", "click", "loadEntity()");
+addOnEvent("Feature/Shell/List_of_Shell_Records", "click", "loadEntity()");
+addOnEvent("Feature/Hearth_Ground_Oven/List_of_Hearth_Ground_Oven_Records", "click", "loadEntity()");
+addOnEvent("Feature/Potential_Archaeological_Deposit/List_of_Potential_Archaeological_Deposit_Records", "click", "loadEntity()");
+addOnEvent("Feature/Culturally_Modified_Tree/List_of_Culturally_Modified_Tree_Records", "click", "loadEntity()");
 
 /******************************************************************************/
 /*                             HANDWRITTEN LOGIC                              */
