@@ -2439,7 +2439,7 @@ entityTypes.add(new NameValuePair("{Shell}", "Shell"));
 entityTypes.add(new NameValuePair("{Hearth_Ground_Oven}", "Hearth Ground Oven"));
 entityTypes.add(new NameValuePair("{Potential_Archaeological_Deposit}", "Potential Archaeological Deposit"));
 entityTypes.add(new NameValuePair("{Culturally_Modified_Tree}", "Culturally Modified Tree"));
-entityTypes.add(new NameValuePair("{Cultural_Management_Comment}", "Cultural Management Comment"));
+entityTypes.add(new NameValuePair("{Cultural___Management_Comment}", "Cultural Management Comment"));
 populateDropDown("Control/Search/Entity_Types", entityTypes);
 
 clearSearch(){
