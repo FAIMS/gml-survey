@@ -443,6 +443,10 @@
       Artefact Description (for Historical Artefacts)
     </Artefact_Description_for_Historical_Artefacts>
     <Artefact_Colour>
+      <desc>
+        Please provide Munsell colour code and its descriptor, e.g., 10YR3/4
+        Dark Yellowish Brown.
+      </desc>
       <opts>
         <!--MUNSEL-->
       </opts>
