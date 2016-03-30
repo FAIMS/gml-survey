@@ -8,32 +8,25 @@
 
 <module>
 
-<User f="nodata">
-  <User>
-    <User f="user" l="Control"/>
-  </User>
-</User>
+<Login f="nodata">
+  <Login>
+    <Logger_ID b="decimal"/>
+    <Device_ID t="radio">
+      <!--TODO: Manually populated in logic-->
+    </Device_ID>
+    <Login t="button"/>
+  </Login>
+</Login>
 
 <Control f="nodata">
   <Control>
-    <New_Transect                         t="button" l="Transect"/>
-    <New_Site                             t="button" l="Site"/>
-    <New_Feature                          t="button" l="Feature"/>
-    <New_Artefact                         t="button" l="Artefact"/>
-    <New_Intangible_Value                 t="button" l="Intangible_Value"/>
-    <New_Art                              t="button" l="Art"/>
-    <New_Other_Feature                    t="button" l="Other_Feature"/>
-    <New_Grinding_Grove                   t="button" l="Grinding_Grove"/>
-    <New_Shell                            t="button" l="Shell"/>
-    <New_Hearth_Ground_Oven               t="button" l="Hearth_Ground_Oven"/>
-    <New_Potential_Archaeological_Deposit t="button" l="Potential_Archaeological_Deposit"/>
-    <New_Culturally_Modified_Tree         t="button" l="Culturally_Modified_Tree"/>
-    <New_Cultural_Management_Comment      t="button" l="Cultural_Management_Comment">
-      New Cultural &amp; Management Comment
-    </New_Cultural_Management_Comment>
+    <New_Transect t="button" l="Transect"/>
+    <New_Site     t="button" l="Site"/>
     <autonum/>
   </Control>
-  <search/>
+  <search>
+    <!--TODO: Add "Limit by" field-->
+  </search>
 </Control>
 
 <Transect>
@@ -152,20 +145,20 @@
       </opts>
     </Geomorphological_Activity>
     <Disturbance/>
-    <Photo_Transect t="camera">
+    <Transect_Photo t="camera">
       <desc>
         Take a photo that best represents the survey unit. Note direction photo
         is facing and what it includes in relation to the survey unit.
       </desc>
-    </Photo_Transect>
-    <Photo_Caption_Transect>
+    </Transect_Photo>
+    <Transect_Photo_Caption>
       <desc>
         Note direction photo is facing and what it includes in relation to the
         survey unit.
       </desc>
-    </Photo_Caption_Transect>
-    <Sketch_Transect t="file"/>
-    <Other_Notes/>
+    </Transect_Photo_Caption>
+    <Transect_Sketch t="file"/>
+    <Transect_Other_Notes/>
     <!--<gps>[>Finish Survey Unit<]</gps>-->
     <Finish_Survey_Unit t="button"/>
   </Transect>
@@ -183,6 +176,8 @@
         devices are in use, uniqueness rules must be defined.
       </desc>
     </Site_ID_Number>
+    <timestamp/>
+    <gps/>
     <Open_Closed_Site t="radio">
       Open/Closed Site
       <opts>
@@ -231,6 +226,9 @@
       </opts>
     </General_Condition_of_Site>
   </Site>
+  <Map>
+    <Map t="map"/>
+  </Map>
   <Open_Site>
     <Total_length_of_visible_site b="decimal" f="notnull"/>
     <Average_width_of_visible_site b="decimal" f="notnull"/>
@@ -244,7 +242,7 @@
     <Length_of_potential_site_area b="decimal"/>
     <Average_width_of_potential_site_area b="decimal" f="notnull"/>
   </Open_Site>
-  <Closed_Site>
+  <Close_Site>
     <Shelter_Cave_Formation>
       Shelter/Cave Formation
       <opts>
@@ -267,16 +265,28 @@
     <Internal_Width b="decimal" f="notnull"/>
     <Shelter_Height b="decimal" f="notnull"/>
     <Shelter_Floor_Area b="decimal" f="notnull"/>
-  </Closed_Site>
-  <Features f="noscroll">
-    <Add_Feature t="button" lc="Feature"/>
-    <List_of_Features ec="Feature"/>
-  </Features>
-</Site>
-
-<Feature>
-  <Feature>
-    <Feature_ID f="id notnull autonum"/>
+  </Close_Site>
+  <Community_Consultation_Notes>
+    <Aboriginal_community_interpretation>
+      <desc>Note informants name and what they have said.</desc>
+    </Aboriginal_community_interpretation>
+    <Aboriginal_community_management_recommendations>
+      <desc>Note informants name and what they have said.</desc>
+    </Aboriginal_community_management_recommendations>
+    <Other_management_recommendations>
+      <desc>
+        Add any thoughts you have on appropriate/necessary management. The AHIMS
+        site recording form lists the following as options, but there may be
+        other measures that are more appropriate: boardwalk,
+        fencing/cage/barrier, closure to public, continued inspection, fire
+        hazard reduction, expert assessment, meeting with land manager,
+        revegetation, signage, soil erosion control, track closure/re-routing,
+        rubbish removal, insect/animal removal additional recording,
+        interpretation.
+      </desc>
+    </Other_management_recommendations>
+  </Community_Consultation_Notes>
+  <Feature f="noscroll">
     <Feature_Type t="checkbox">
       <desc>Select all relevant site features.</desc>
       <opts>
@@ -304,6 +314,15 @@
         <opt>Water Hole</opt>
       </opts>
     </Feature_Type>
+    <New_Feature t="button" lc="Feature"/>
+    <!--<List_of_Features ec="Feature"/>-->
+  </Feature>
+</Site>
+
+<Feature>
+  <Feature>
+    <Feature_ID f="id notnull autonum"/>
+    <gps/>
     <Feature_Condition>
       <opts>
         <opt>Excellent</opt>
@@ -312,55 +331,68 @@
         <opt>Poor</opt>
       </opts>
     </Feature_Condition>
+    <Select_Feature_Type>
+      <opts>
+        <opt>Artefact</opt>
+        <opt>Intangible Value</opt>
+        <opt>Art</opt>
+        <opt>Other Feature</opt>
+        <opt>Grinding Groovem Shell</opt>
+        <opt>Hearth/Ground Oven</opt>
+        <opt>Potential Archaeological Deposit</opt>
+        <opt>Culturally Mofified Tree</opt>
+      </opts>
+    </Select_Feature_Type>
+    <New_Feature_Type t="button"/>
   </Feature>
 
   <Artefact f="noscroll">
-    <Add_Artefact t="button" lc="Artefact"/>
+    <New_Artefact t="button" lc="Artefact"/>
     <List_of_Artefact_Records ec="Artefact"/>
   </Artefact>
 
   <Intangible_Value f="noscroll">
-    <Add_Intangible_Value t="button" lc="Intangible_Value"/>
+    <New_Intangible_Value t="button" lc="Intangible_Value"/>
     <List_of_Intangible_Value_Records ec="Intangible_Value"/>
   </Intangible_Value>
 
   <Art f="noscroll">
-    <Add_Art t="button" lc="Art"/>
+    <New_Art t="button" lc="Art"/>
     <List_of_Art_Records ec="Art"/>
   </Art>
 
   <Other_Feature f="noscroll">
-    <Add_Other_Feature t="button" lc="Other_Feature"/>
+    <New_Other_Feature t="button" lc="Other_Feature"/>
     <List_of_Other_Feature_Records ec="Other_Feature"/>
   </Other_Feature>
 
   <Grinding_Grove f="noscroll">
-    <Add_Grinding_Grove t="button" lc="Grinding_Grove"/>
+    <New_Grinding_Grove t="button" lc="Grinding_Grove"/>
     <List_of_Grinding_Grove_Records ec="Grinding_Grove"/>
   </Grinding_Grove>
 
   <Shell f="noscroll">
-    <Add_Shell t="button" lc="Shell"/>
+    <New_Shell t="button" lc="Shell"/>
     <List_of_Shell_Records ec="Shell"/>
   </Shell>
 
   <Hearth_Ground_Oven f="noscroll">
     Hearth/Ground Oven
-    <Add_Hearth_Ground_Oven t="button" lc="Hearth_Ground_Oven">
+    <New_Hearth_Ground_Oven t="button" lc="Hearth_Ground_Oven">
       Add Hearth/Ground Oven
-    </Add_Hearth_Ground_Oven>
+    </New_Hearth_Ground_Oven>
     <List_of_Hearth_Ground_Oven_Records ec="Hearth_Ground_Oven">
       List of Hearth/Ground Oven Records
     </List_of_Hearth_Ground_Oven_Records>
   </Hearth_Ground_Oven>
 
   <Potential_Archaeological_Deposit f="noscroll">
-    <Add_Potential_Archaeological_Deposit t="button" lc="Potential_Archaeological_Deposit"/>
+    <New_Potential_Archaeological_Deposit t="button" lc="Potential_Archaeological_Deposit"/>
     <List_of_Potential_Archaeological_Deposit_Records ec="Potential_Archaeological_Deposit"/>
   </Potential_Archaeological_Deposit>
 
   <Culturally_Modified_Tree f="noscroll">
-    <Add_Culturally_Modified_Tree t="button" lc="Culturally_Modified_Tree"/>
+    <New_Culturally_Modified_Tree t="button" lc="Culturally_Modified_Tree"/>
     <List_of_Culturally_Modified_Tree_Records ec="Culturally_Modified_Tree"/>
   </Culturally_Modified_Tree>
 </Feature>
@@ -522,39 +554,39 @@
         <opt>Irregular</opt>
       </opts>
     </Cross_Section_for_Aboriginal_artefacts>
-    <Length_mm b="decimal">
-      Length (mm)
+    <Artefact_Length_mm b="decimal">
+      Artefact Length (mm)
       <desc>Maximum length of the object - longest side.</desc>
-    </Length_mm>
-    <Width_mm b="decimal">
-      Width (mm)
+    </Artefact_Length_mm>
+    <Artefact_Width_mm b="decimal">
+      Artefact Width (mm)
       <desc>
         Maximum width of the object (taken 90 degrees to the length
         measurement).
       </desc>
-    </Width_mm>
-    <Thickness_mm b="decimal">
-      Thickness (mm)
+    </Artefact_Width_mm>
+    <Artefact_Thickness_mm b="decimal">
+      Artefact Thickness (mm)
       <desc>
         Maximum thickness of the object measurement is taken at its thickest
         part.
       </desc>
-    </Thickness_mm>
+    </Artefact_Thickness_mm>
     <Other_Observations_Artefact>
       <desc>Note any other things like texture, e.g., waxy / lustre.</desc>
     </Other_Observations_Artefact>
-    <Photo_Artefact t="camera">
+    <Artefact_Photo t="camera">
       <desc>
         Take a photo that best represents the artefacts present. Use scale and
         colour reference (IFRAO). Use north arrow where appropriate.
       </desc>
-    </Photo_Artefact>
-    <Photo_Caption_Artefact>
+    </Artefact_Photo>
+    <Artefact_Photo_Caption>
       <desc>
         Note direction photo is facing and what it includes in relation to the
         survey unit.
       </desc>
-    </Photo_Caption_Artefact>
+    </Artefact_Photo_Caption>
   </Artefact>
 </Artefact>
 
@@ -570,7 +602,7 @@
         <opt>Gathering (non physical evidence).</opt>
       </opts>
     </Intangible_Value_Type>
-    <Description_Intangible_Value/>
+    <Intangible_Value_Description/>
   </Intangible_Value>
 </Intangible_Value>
 
@@ -588,8 +620,7 @@
         <!--BOOLEAN-->
       </opts>
     </Super-impositioning>
-    <Motif_s t="checkbox">
-      Motif/s
+    <Art_Motif t="checkbox">
       <desc>
         Select all that apply - if other, add in freeform text beside the other
         button.
@@ -630,7 +661,7 @@
         <opt>Wallaby</opt>
         <opt>Whale</opt>
       </opts>
-    </Motif_s>
+    </Art_Motif>
     <Application_Technique t="checkbox">
       <desc>
         Select all that apply - if other, add in freeform text beside the other
@@ -646,7 +677,7 @@
         <opt>Stencilled</opt>
       </opts>
     </Application_Technique>
-    <Form>
+    <Art_Form>
       <opts>
         <opt>Fill</opt>
         <opt>Line</opt>
@@ -654,8 +685,8 @@
         <opt>Other</opt>
         <opt>Pattern</opt>
       </opts>
-    </Form>
-    <Main_Colour>
+    </Art_Form>
+    <Art_Main_Colour>
       <opts>
         <opt>Black</opt>
         <opt>Mauve</opt>
@@ -666,7 +697,7 @@
         <opt>White</opt>
         <opt>Yellow</opt>
       </opts>
-    </Main_Colour>
+    </Art_Main_Colour>
     <Art_Location t="checkbox">
       <desc>
         Select all that apply - if other, add in freeform text beside the other
@@ -695,9 +726,10 @@
         <opt>Weathered</opt>
       </opts>
     </Art_Condition>
-    <Sketch_Plan_Art t="file"/>
-    <Photo_Art t="camera"/>
-    <Other_Observations_Art/>
+    <Art_Sketch_Plan t="file"/>
+    <Art_Photo t="camera"/>
+    <Art_Other_Observations/>
+    <Other_Feature_Description/>
   </Art>
 </Art>
 
@@ -708,22 +740,22 @@
     <Chain_of_Custody_Notes_for_human_remains>
       Chain of Custody Notes (for human remains)
     </Chain_of_Custody_Notes_for_human_remains>
-    <Sketch_Plan_Feature t="file"/>
-    <Photo_Feature t="camera"/>
+    <Other_Feature_Sketch_Plan t="file"/>
+    <Other_Feature_Photo t="camera"/>
   </Other_Feature>
 </Other_Feature>
 
-<Grinding_Grove>
-  <Grinding_Grove>
-    <Grinding_Grove_ID f="id notnull autonum"/>
-    <Type_Grinding_Grove>
+<Grinding_Groove>
+  <Grinding_Groove>
+    <Grinding_Groove_ID f="id notnull autonum"/>
+    <Type_Grinding_Groove>
       <opts>
         <opt>Broad</opt>
         <opt>Narrow/point</opt>
         <opt>Hollow</opt>
         <opt>Flat</opt>
       </opts>
-    </Type_Grinding_Grove>
+    </Type_Grinding_Groove>
     <Profile_Shape>
       <opts>
         <opt>U' shaped</opt>
@@ -753,21 +785,21 @@
     </Dimensions_-_depth_of_largest_part_mm>
     <Groove_count b="decimal"/>
     <Cluster_count b="decimal"/>
-    <Sketch_Plan_Grinding_Grove t="file"/>
-    <Photo_Grinding_Grove t="camera"/>
-  </Grinding_Grove>
-</Grinding_Grove>
+    <Grinding_Groove_Sketch_Plan t="file"/>
+    <Grinding_Groove_Photo t="camera"/>
+  </Grinding_Groove>
+</Grinding_Groove>
 
 <Shell>
   <Shell>
     <Shell_ID f="id notnull autonum"/>
-    <Distribution>
+    <Shell_Distribution>
       <opts>
         <opt>Surface scatter</opt>
         <opt>Stratified deposit</opt>
         <opt>Mounded</opt>
       </opts>
-    </Distribution>
+    </Shell_Distribution>
     <Distance_to_high_water_mark_metres b="decimal">
       Distance to high water mark (metres)
     </Distance_to_high_water_mark_metres>
@@ -786,8 +818,8 @@
         <!--PERCENTAGE_INTERVALS-->
       </opts>
     </Approximate_percentage_of_dominant_species_as_part_of_assemblage>
-    <Sketch_Plan_Shell t="file"/>
-    <Photo_Shell t="camera"/>
+    <Shell_Sketch_Plan t="file"/>
+    <Shell_Photo t="camera"/>
   </Shell>
 </Shell>
 
@@ -795,11 +827,11 @@
   <Hearth_Ground_Oven>
     Hearth/Ground Oven
     <Hearth_ID f="id notnull autonum"/>
-    <Shape_Hearth/>
-    <Length/>
-    <Width/>
-    <Estimated_Depth/>
-    <Components>
+    <Hearth_Shape/>
+    <Hearth_Length/>
+    <Hearth_Width/>
+    <Hearth_Estimated_Depth/>
+    <Hearth_Components>
       <desc>Tick all those that are relevant.</desc>
       <opts>
         <opt>Baked clay balls</opt>
@@ -810,10 +842,10 @@
         <opt>Seeds / other Plant material</opt>
         <opt>Stone</opt>
       </opts>
-    </Components>
-    <Descriptive_Notes/>
-    <Sketch_Plan_Hearth t="file"/>
-    <Photo_Hearth t="camera"/>
+    </Hearth_Components>
+    <Hearth_Descriptive_Notes/>
+    <Hearth_Sketch_Plan t="file"/>
+    <Hearth_Photo t="camera"/>
   </Hearth_Ground_Oven>
 </Hearth_Ground_Oven>
 
@@ -953,32 +985,6 @@
     </Axe_Marks>
   </Culturally_Modified_Tree>
 </Culturally_Modified_Tree>
-
-<Cultural_Management_Comment>
-  Cultural &amp; Management Comment
-  <C_M_Comments>
-    C &amp; M Comments
-    <Comment_ID f="id notnull autonum"/>
-    <Aboriginal_community_interpretation>
-      <desc>Note informants name and what they have said.</desc>
-    </Aboriginal_community_interpretation>
-    <Aboriginal_community_management_recommendations>
-      <desc>Note informants name and what they have said.</desc>
-    </Aboriginal_community_management_recommendations>
-    <Other_management_recommendations>
-      <desc>
-        Add any thoughts you have on appropriate/necessary management. The AHIMS
-        site recording form lists the following as options, but there may be
-        other measures that are more appropriate: boardwalk,
-        fencing/cage/barrier, closure to public, continued inspection, fire
-        hazard reduction, expert assessment, meeting with land manager,
-        revegetation, signage, soil erosion control, track closure/re-routing,
-        rubbish removal, insect/animal removal additional recording,
-        interpretation.
-      </desc>
-    </Other_management_recommendations>
-  </C_M_Comments>
-</Cultural_Management_Comment>
 
 <logic><![CDATA[
 ]]></logic>
