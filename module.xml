@@ -10,9 +10,9 @@
 
 <Login f="nodata">
   <Login>
-    <Logger_ID b="decimal"/>
+    <Logger_ID t="dropdown" f="user"/>
     <Device_ID t="radio">
-      <!--TODO: Manually populated in logic-->
+      <!--TODO: Manually populated in logic from Transect/Transect/Device_ID-->
     </Device_ID>
     <Login t="button" l="Control"/>
   </Login>
@@ -64,7 +64,7 @@
         Survey Handbook
       </desc>
       <opts>
-        <opt>Crest / Hill-top</opt>
+        <opt>Crest/Hill-top</opt>
         <opt>Upper Slope</opt>
         <opt>Mid-slope</opt>
         <opt>Lower Slope</opt>
@@ -217,12 +217,12 @@
         <opt>Fire damage</opt>
         <opt>Erosion</opt>
         <opt>Stock damage</opt>
-        <opt>Exposed archaeological / Other material</opt>
+        <opt>Exposed archaeological/Other material</opt>
         <opt>Fire damage</opt>
         <opt>Animal damage</opt>
-        <opt>Graffitti / Vandalism</opt>
+        <opt>Graffitti/Vandalism</opt>
         <opt>Mineralisation</opt>
-        <opt>Unstable structure / Landform</opt>
+        <opt>Unstable structure/Landform</opt>
       </opts>
     </General_Condition_of_Site>
   </Site>
@@ -303,7 +303,7 @@
         <opt>Fish Trap</opt>
         <opt>Grinding Groove</opt>
         <opt>Habitation Structure</opt>
-        <opt>Hearth / Ground Oven</opt>
+        <opt>Hearth/Ground Oven</opt>
         <opt>Non Human Bone &amp; Organic Material</opt>
         <opt>Ochre quarry</opt>
         <opt>Potential Archaeological Deposit</opt>
@@ -345,59 +345,6 @@
     </Select_Feature_Type>
     <New_Feature_Type t="button"/>
   </Feature>
-
-  <Artefact f="noscroll">
-    <New_Artefact t="button" lc="Artefact"/>
-    <List_of_Artefact_Records ec="Artefact"/>
-  </Artefact>
-
-  <Intangible_Value f="noscroll">
-    <New_Intangible_Value t="button" lc="Intangible_Value"/>
-    <List_of_Intangible_Value_Records ec="Intangible_Value"/>
-  </Intangible_Value>
-
-  <Art f="noscroll">
-    <New_Art t="button" lc="Art"/>
-    <List_of_Art_Records ec="Art"/>
-  </Art>
-
-  <Other_Feature f="noscroll">
-    <New_Other_Feature t="button" lc="Other_Feature"/>
-    <List_of_Other_Feature_Records ec="Other_Feature"/>
-  </Other_Feature>
-
-  <Grinding_Groove f="noscroll">
-    <New_Grinding_Groove t="button" lc="Grinding_Groove"/>
-    <List_of_Grinding_Groove_Records ec="Grinding_Groove"/>
-  </Grinding_Groove>
-
-  <Shell f="noscroll">
-    <New_Shell t="button" lc="Shell"/>
-    <List_of_Shell_Records ec="Shell"/>
-  </Shell>
-
-  <Hearth_Ground_Oven f="noscroll">
-    Hearth/Ground Oven
-    <New_Hearth_Ground_Oven t="button" lc="Hearth_Ground_Oven">
-      Add Hearth/Ground Oven
-    </New_Hearth_Ground_Oven>
-    <List_of_Hearth_Ground_Oven_Records ec="Hearth_Ground_Oven">
-      List of Hearth/Ground Oven Records
-    </List_of_Hearth_Ground_Oven_Records>
-  </Hearth_Ground_Oven>
-
-  <Potential_Archaeological_Deposit f="noscroll">
-    <New_Potential_Archaeological_Deposit t="button" lc="Potential_Archaeological_Deposit"/>
-    <List_of_Potential_Archaeological_Deposit_Records ec="Potential_Archaeological_Deposit"/>
-  </Potential_Archaeological_Deposit>
-
-  <Culturally_Modified_Tree f="noscroll">
-    <New_Culturally_Modified_Tree t="button" lc="Culturally_Modified_Tree"/>
-    <List_of_Culturally_Modified_Tree_Records ec="Culturally_Modified_Tree"/>
-  </Culturally_Modified_Tree>
-</Feature>
-
-<Artefact>
   <Artefact>
     <Insitu_Artefact>
       <opts>
@@ -573,7 +520,7 @@
       </desc>
     </Artefact_Thickness_mm>
     <Other_Observations_Artefact>
-      <desc>Note any other things like texture, e.g., waxy / lustre.</desc>
+      <desc>Note any other things like texture, e.g., waxy/lustre.</desc>
     </Other_Observations_Artefact>
     <Artefact_Photo t="camera">
       <desc>
@@ -588,9 +535,6 @@
       </desc>
     </Artefact_Photo_Caption>
   </Artefact>
-</Artefact>
-
-<Intangible_Value>
   <Intangible_Value>
     <Intangible_Value_ID f="id notnull autonum"/>
     <Intangible_Value_Type>
@@ -604,9 +548,6 @@
     </Intangible_Value_Type>
     <Intangible_Value_Description/>
   </Intangible_Value>
-</Intangible_Value>
-
-<Art>
   <Art>
     <Art_ID f="id notnull autonum"/>
     <Pigment_Engraved t="radio">
@@ -731,9 +672,6 @@
     <Art_Other_Observations/>
     <Other_Feature_Description/>
   </Art>
-</Art>
-
-<Other_Feature>
   <Other_Feature>
     <Other_Feature_ID f="id notnull autonum"/>
     <Description_Other_Feature/>
@@ -743,9 +681,6 @@
     <Other_Feature_Sketch_Plan t="file"/>
     <Other_Feature_Photo t="camera"/>
   </Other_Feature>
-</Other_Feature>
-
-<Grinding_Groove>
   <Grinding_Groove>
     <Grinding_Groove_ID f="id notnull autonum"/>
     <Type_Grinding_Groove>
@@ -788,9 +723,6 @@
     <Grinding_Groove_Sketch_Plan t="file"/>
     <Grinding_Groove_Photo t="camera"/>
   </Grinding_Groove>
-</Grinding_Groove>
-
-<Shell>
   <Shell>
     <Shell_ID f="id notnull autonum"/>
     <Shell_Distribution>
@@ -821,9 +753,6 @@
     <Shell_Sketch_Plan t="file"/>
     <Shell_Photo t="camera"/>
   </Shell>
-</Shell>
-
-<Hearth_Ground_Oven>
   <Hearth_Ground_Oven>
     Hearth/Ground Oven
     <Hearth_ID f="id notnull autonum"/>
@@ -838,8 +767,8 @@
         <opt>Charcoal</opt>
         <opt>Wood</opt>
         <opt>Heat affected basal clay</opt>
-        <opt>Bone / Other animal material</opt>
-        <opt>Seeds / other Plant material</opt>
+        <opt>Bone/Other animal material</opt>
+        <opt>Seeds/other Plant material</opt>
         <opt>Stone</opt>
       </opts>
     </Hearth_Components>
@@ -847,9 +776,6 @@
     <Hearth_Sketch_Plan t="file"/>
     <Hearth_Photo t="camera"/>
   </Hearth_Ground_Oven>
-</Hearth_Ground_Oven>
-
-<Potential_Archaeological_Deposit>
   <Potential_Archaeological_Deposit>
     <Arch_Dep_ID f="id notnull autonum"/>
     <PAD_Insitu>
@@ -877,9 +803,6 @@
       </opts>
     </PAD_Surface_Artefacts>
   </Potential_Archaeological_Deposit>
-</Potential_Archaeological_Deposit>
-
-<Culturally_Modified_Tree>
   <Culturally_Modified_Tree>
     <CM_Tree_ID f="id notnull autonum"/>
     <CM_Tree_Type>
@@ -981,7 +904,9 @@
       </opts>
     </Axe_Marks>
   </Culturally_Modified_Tree>
-</Culturally_Modified_Tree>
+
+</Feature>
+
 
 <logic><![CDATA[
 ]]></logic>
