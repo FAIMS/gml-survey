@@ -3,14 +3,17 @@
 <!--The following preprocessor directive inserts vocab entries.-->
 <!--@PREPROC:  ./preproc.sh-->
 
-<!--I should really put this in its own file at some point...-->
-<!--@POSTPROC: cd module && echo "Take_From_GPS=Start Survey Unit" >> english.0.properties-->
+<!--@POSTPROC: ./postproc.sh-->
 
 <module>
 
 <Login f="nodata">
   <Login>
-    <Logger_ID t="dropdown" f="user"/>
+    <Logger_ID t="dropdown" f="user">
+      <!--TODO: Soft valiadation> Validation button enabling to see missing
+           fields and popping up warnings will appear, but users will not be
+           prevented from further recording if the field is left blank-->
+    </Logger_ID>
     <Device_ID t="radio">
       <!--TODO: Manually populated in logic from Transect/Transect/Device_ID-->
     </Device_ID>
@@ -31,8 +34,11 @@
 
 <Transect>
   <Transect>
-    <gps><!--Start Survey Unit--></gps>
+    <gps><!--TODO: Start Survey Unit--></gps>
     <Transect_ID f="id notnull autonum">
+      <!--TRN-<TransectID>-<Author>-<Date>; Export output format:One column for
+           Identifier (for export), one column for TransectID (with padded
+           zeros):"Transect", <TransectID>-->
       <desc>
         The current autonumbering assumes single device in field. If multiple
         devices are in use, uniqueness rules must be defined.
@@ -105,6 +111,10 @@
         the survey unit as per the definition in the Code of Practice (perhaps
         include the definition from Appendix A of the Code).
       </desc>
+      <opts>
+        <!--TODO: Add images-->
+        <!--PERCENTAGE_NUMBERS-->
+      </opts>
     </Ground_surface_visibility>
     <Ground_surface_exposure f="notnull">
       <desc>
@@ -113,6 +123,10 @@
         the Code of Practice (perhaps include the definition from Appendix A of
         the Code).
       </desc>
+      <opts>
+        <!--TODO: Add images-->
+        <!--PERCENTAGE_NUMBERS-->
+      </opts>
     </Ground_surface_exposure>
     <Ground_surface_notes>
       <desc>
@@ -159,8 +173,7 @@
     </Transect_Photo_Caption>
     <Transect_Sketch t="file"/>
     <Transect_Other_Notes/>
-    <!--<gps>[>Finish Survey Unit<]</gps>-->
-    <Finish_Survey_Unit t="button"/>
+    <!--<gps>[>TODO: Finish Survey Unit<]</gps>-->
   </Transect>
   <Map>
     <Map t="map"/>
@@ -170,6 +183,9 @@
 
 <Site>
   <Site>
+    <!--TODO: Site-<SiteID>-<Author>-<Date>; Export output format:One column for
+         Identifier (for export), one column for SiteID (with padded zeros):
+         "Site", <SiteID>-->
     <Site_ID_Number f="id notnull autonum">
       <desc>
         The current autonumbering assumes single device in field. If multiple
@@ -321,7 +337,9 @@
 
 <Feature>
   <Feature>
-    <Feature_ID f="id notnull autonum"/>
+    <Feature_ID f="id notnull autonum">
+      <!--TODO: <SelectFeatureType>-<FeatureID>-<Author>-<Date>-->
+    </Feature_ID>
     <gps/>
     <Feature_Condition>
       <opts>
@@ -337,7 +355,7 @@
         <opt>Intangible Value</opt>
         <opt>Art</opt>
         <opt>Other Feature</opt>
-        <opt>Grinding Groovem Shell</opt>
+        <opt>Grinding Groove Shell</opt>
         <opt>Hearth/Ground Oven</opt>
         <opt>Potential Archaeological Deposit</opt>
         <opt>Culturally Mofified Tree</opt>
@@ -536,7 +554,6 @@
     </Artefact_Photo_Caption>
   </Artefact>
   <Intangible_Value>
-    <Intangible_Value_ID f="id notnull autonum"/>
     <Intangible_Value_Type>
       <opts>
         <opt>Aboriginal Ceremony (no physical evidence)</opt>
@@ -549,11 +566,12 @@
     <Intangible_Value_Description/>
   </Intangible_Value>
   <Art>
-    <Art_ID f="id notnull autonum"/>
     <Pigment_Engraved t="radio">
       Pigment/Engraved
       <opts>
-        <!--BOOLEAN-->
+        <opt>Pigment</opt>
+        <opt>Engraved</opt>
+        <opt>N/A</opt>
       </opts>
     </Pigment_Engraved>
     <Super-impositioning t="radio">
@@ -673,7 +691,6 @@
     <Other_Feature_Description/>
   </Art>
   <Other_Feature>
-    <Other_Feature_ID f="id notnull autonum"/>
     <Description_Other_Feature/>
     <Chain_of_Custody_Notes_for_human_remains>
       Chain of Custody Notes (for human remains)
@@ -682,7 +699,6 @@
     <Other_Feature_Photo t="camera"/>
   </Other_Feature>
   <Grinding_Groove>
-    <Grinding_Groove_ID f="id notnull autonum"/>
     <Type_Grinding_Groove>
       <opts>
         <opt>Broad</opt>
@@ -724,7 +740,6 @@
     <Grinding_Groove_Photo t="camera"/>
   </Grinding_Groove>
   <Shell>
-    <Shell_ID f="id notnull autonum"/>
     <Shell_Distribution>
       <opts>
         <opt>Surface scatter</opt>
@@ -755,11 +770,18 @@
   </Shell>
   <Hearth_Ground_Oven>
     Hearth/Ground Oven
-    <Hearth_ID f="id notnull autonum"/>
-    <Hearth_Shape/>
-    <Hearth_Length/>
-    <Hearth_Width/>
-    <Hearth_Estimated_Depth/>
+    <Hearth_Shape_mm>
+      Hearth Length (mm)
+    </Hearth_Shape_mm>
+    <Hearth_Length_mm>
+      Hearth Width (mm)
+    </Hearth_Length_mm>
+    <Hearth_Width_mm>
+      Hearth Width (mm)
+    </Hearth_Width_mm>
+    <Hearth_Estimated_Depth>
+      Hearth Estimated Depth (mm)
+    </Hearth_Estimated_Depth>
     <Hearth_Components>
       <desc>Tick all those that are relevant.</desc>
       <opts>
@@ -777,7 +799,6 @@
     <Hearth_Photo t="camera"/>
   </Hearth_Ground_Oven>
   <Potential_Archaeological_Deposit>
-    <Arch_Dep_ID f="id notnull autonum"/>
     <PAD_Insitu>
       <opts>
         <!--BOOLEAN_MODAL-->
@@ -804,7 +825,6 @@
     </PAD_Surface_Artefacts>
   </Potential_Archaeological_Deposit>
   <Culturally_Modified_Tree>
-    <CM_Tree_ID f="id notnull autonum"/>
     <CM_Tree_Type>
       <opts>
         <opt>Carved</opt>
@@ -904,9 +924,7 @@
       </opts>
     </Axe_Marks>
   </Culturally_Modified_Tree>
-
 </Feature>
-
 
 <logic><![CDATA[
 ]]></logic>

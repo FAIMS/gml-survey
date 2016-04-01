@@ -30,14 +30,6 @@
               <Next_Transect_ID/>
               <Next_Site_ID_Number/>
               <Next_Feature_ID/>
-              <Next_Intangible_Value_ID/>
-              <Next_Art_ID/>
-              <Next_Other_Feature_ID/>
-              <Next_Grinding_Groove_ID/>
-              <Next_Shell_ID/>
-              <Next_Hearth_ID/>
-              <Next_Arch_Dep_ID/>
-              <Next_CM_Tree_ID/>
             </Control>
             <Search>
               <Colgroup_0>
@@ -88,7 +80,6 @@
               <Transect_Sketch/>
               <Button_Transect_Sketch/>
               <Transect_Other_Notes/>
-              <Finish_Survey_Unit/>
             </Transect>
             <Map>
               <Map/>
@@ -167,44 +158,6 @@
               <New_Feature_Type/>
             </Feature>
             <Artefact>
-              <New_Artefact/>
-              <List_of_Artefact_Records/>
-            </Artefact>
-            <Intangible_Value>
-              <New_Intangible_Value/>
-              <List_of_Intangible_Value_Records/>
-            </Intangible_Value>
-            <Art>
-              <New_Art/>
-              <List_of_Art_Records/>
-            </Art>
-            <Other_Feature>
-              <New_Other_Feature/>
-              <List_of_Other_Feature_Records/>
-            </Other_Feature>
-            <Grinding_Groove>
-              <New_Grinding_Groove/>
-              <List_of_Grinding_Groove_Records/>
-            </Grinding_Groove>
-            <Shell>
-              <New_Shell/>
-              <List_of_Shell_Records/>
-            </Shell>
-            <Hearth_Ground_Oven>
-              <New_Hearth_Ground_Oven/>
-              <List_of_Hearth_Ground_Oven_Records/>
-            </Hearth_Ground_Oven>
-            <Potential_Archaeological_Deposit>
-              <New_Potential_Archaeological_Deposit/>
-              <List_of_Potential_Archaeological_Deposit_Records/>
-            </Potential_Archaeological_Deposit>
-            <Culturally_Modified_Tree>
-              <New_Culturally_Modified_Tree/>
-              <List_of_Culturally_Modified_Tree_Records/>
-            </Culturally_Modified_Tree>
-          </Feature>
-          <Artefact>
-            <Artefact>
               <Insitu_Artefact/>
               <Stratified_Artefact/>
               <Total_Number_of_Artefacts/>
@@ -227,17 +180,11 @@
               <Button_Artefact_Photo/>
               <Artefact_Photo_Caption/>
             </Artefact>
-          </Artefact>
-          <Intangible_Value>
             <Intangible_Value>
-              <Intangible_Value_ID/>
               <Intangible_Value_Type/>
               <Intangible_Value_Description/>
             </Intangible_Value>
-          </Intangible_Value>
-          <Art>
             <Art>
-              <Art_ID/>
               <Pigment_Engraved/>
               <Super-impositioning/>
               <Art_Motif/>
@@ -254,10 +201,7 @@
               <Art_Other_Observations/>
               <Other_Feature_Description/>
             </Art>
-          </Art>
-          <Other_Feature>
             <Other_Feature>
-              <Other_Feature_ID/>
               <Description_Other_Feature/>
               <Chain_of_Custody_Notes_for_human_remains/>
               <Other_Feature_Sketch_Plan/>
@@ -265,10 +209,7 @@
               <Other_Feature_Photo/>
               <Button_Other_Feature_Photo/>
             </Other_Feature>
-          </Other_Feature>
-          <Grinding_Groove>
             <Grinding_Groove>
-              <Grinding_Groove_ID/>
               <Type_Grinding_Groove/>
               <Profile_Shape/>
               <Seed_species_present/>
@@ -286,10 +227,7 @@
               <Grinding_Groove_Photo/>
               <Button_Grinding_Groove_Photo/>
             </Grinding_Groove>
-          </Grinding_Groove>
-          <Shell>
             <Shell>
-              <Shell_ID/>
               <Shell_Distribution/>
               <Distance_to_high_water_mark_metres/>
               <Species_present/>
@@ -300,10 +238,7 @@
               <Shell_Photo/>
               <Button_Shell_Photo/>
             </Shell>
-          </Shell>
-          <Hearth_Ground_Oven>
             <Hearth_Ground_Oven>
-              <Hearth_ID/>
               <Hearth_Shape/>
               <Hearth_Length/>
               <Hearth_Width/>
@@ -315,53 +250,38 @@
               <Hearth_Photo/>
               <Button_Hearth_Photo/>
             </Hearth_Ground_Oven>
-          </Hearth_Ground_Oven>
-          <Potential_Archaeological_Deposit>
             <Potential_Archaeological_Deposit>
-              <Arch_Dep_ID/>
-              <Insitu_Potential_Arch_Deposit/>
-              <Stratified_Arch_Deposit/>
-              <Arch_Deposit_Type/>
-              <Surface_Artefacts/>
+              <PAD_Insitu/>
+              <PAD_Stratified/>
+              <PAD_Type/>
+              <PAD_Surface_Artefacts/>
             </Potential_Archaeological_Deposit>
-          </Potential_Archaeological_Deposit>
-          <Culturally_Modified_Tree>
             <Culturally_Modified_Tree>
-              <CM_Tree_ID/>
-              <Type_CM_Tree/>
+              <CM_Tree_Type/>
               <Tree_Species/>
               <Number_of_Scars/>
               <Number_of_Carved_Panels/>
               <Living_Status/>
               <Tree_Status/>
-              <Damage/>
+              <CM_Tree_Damage/>
               <Regrowth/>
               <Is_a_tree_health_assessment_required/>
               <Length_of_Scar_mm/>
               <Width_of_Scar_mm/>
               <Depth_of_Scar_mm/>
               <Height_Above_Ground_mm/>
-              <Shape_CM_Tree/>
-              <Orientation/>
+              <CM_Tree_Shape/>
+              <CM_Tree_Orientation/>
               <Carving_type/>
               <Axe_Marks/>
             </Culturally_Modified_Tree>
-          </Culturally_Modified_Tree>
+          </Feature>
           <logic/>
         </faims>
       </instance>
-      <bind type="decimal" nodeset="/faims/Login/Login/Logger_ID"/>
       <bind type="decimal" nodeset="/faims/Control/Control/Next_Transect_ID"/>
       <bind type="decimal" nodeset="/faims/Control/Control/Next_Site_ID_Number"/>
       <bind type="decimal" nodeset="/faims/Control/Control/Next_Feature_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_Intangible_Value_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_Art_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_Other_Feature_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_Grinding_Groove_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_Shell_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_Hearth_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_Arch_Dep_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_CM_Tree_ID"/>
       <bind type="decimal" nodeset="/faims/Transect/Transect/Transect_ID"/>
       <bind type="decimal" nodeset="/faims/Transect/Transect/Total_Transect_Width_m"/>
       <bind type="decimal" nodeset="/faims/Transect/Transect/Number_of_Participants_in_Transect"/>
@@ -379,34 +299,26 @@
       <bind type="decimal" nodeset="/faims/Site/Close_Site/Shelter_Height"/>
       <bind type="decimal" nodeset="/faims/Site/Close_Site/Shelter_Floor_Area"/>
       <bind type="decimal" nodeset="/faims/Feature/Feature/Feature_ID"/>
-      <bind type="decimal" nodeset="/faims/Artefact/Artefact/Total_Number_of_Artefacts"/>
-      <bind type="decimal" nodeset="/faims/Artefact/Artefact/Instance_No"/>
-      <bind type="decimal" nodeset="/faims/Artefact/Artefact/Artefact_Length_mm"/>
-      <bind type="decimal" nodeset="/faims/Artefact/Artefact/Artefact_Width_mm"/>
-      <bind type="decimal" nodeset="/faims/Artefact/Artefact/Artefact_Thickness_mm"/>
-      <bind type="decimal" nodeset="/faims/Intangible_Value/Intangible_Value/Intangible_Value_ID"/>
-      <bind type="decimal" nodeset="/faims/Art/Art/Art_ID"/>
-      <bind type="decimal" nodeset="/faims/Other_Feature/Other_Feature/Other_Feature_ID"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Grinding_Groove_ID"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Dimensions_-_length_of_smallest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Dimensions_-_width_of_smallest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Dimensions_-_depth_of_smallest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Dimensions_-_length_of_largest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Dimensions_-_width_of_largest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Dimensions_-_depth_of_largest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Groove_count"/>
-      <bind type="decimal" nodeset="/faims/Grinding_Groove/Grinding_Groove/Cluster_count"/>
-      <bind type="decimal" nodeset="/faims/Shell/Shell/Shell_ID"/>
-      <bind type="decimal" nodeset="/faims/Shell/Shell/Distance_to_high_water_mark_metres"/>
-      <bind type="decimal" nodeset="/faims/Hearth_Ground_Oven/Hearth_Ground_Oven/Hearth_ID"/>
-      <bind type="decimal" nodeset="/faims/Potential_Archaeological_Deposit/Potential_Archaeological_Deposit/Arch_Dep_ID"/>
-      <bind type="decimal" nodeset="/faims/Culturally_Modified_Tree/Culturally_Modified_Tree/CM_Tree_ID"/>
-      <bind type="decimal" nodeset="/faims/Culturally_Modified_Tree/Culturally_Modified_Tree/Number_of_Scars"/>
-      <bind type="decimal" nodeset="/faims/Culturally_Modified_Tree/Culturally_Modified_Tree/Number_of_Carved_Panels"/>
-      <bind type="decimal" nodeset="/faims/Culturally_Modified_Tree/Culturally_Modified_Tree/Length_of_Scar_mm"/>
-      <bind type="decimal" nodeset="/faims/Culturally_Modified_Tree/Culturally_Modified_Tree/Width_of_Scar_mm"/>
-      <bind type="decimal" nodeset="/faims/Culturally_Modified_Tree/Culturally_Modified_Tree/Depth_of_Scar_mm"/>
-      <bind type="decimal" nodeset="/faims/Culturally_Modified_Tree/Culturally_Modified_Tree/Height_Above_Ground_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Artefact/Total_Number_of_Artefacts"/>
+      <bind type="decimal" nodeset="/faims/Feature/Artefact/Instance_No"/>
+      <bind type="decimal" nodeset="/faims/Feature/Artefact/Artefact_Length_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Artefact/Artefact_Width_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Artefact/Artefact_Thickness_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_length_of_smallest_part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_width_of_smallest_part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_depth_of_smallest_part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_length_of_largest_part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_width_of_largest_part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_depth_of_largest_part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Groove_count"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Cluster_count"/>
+      <bind type="decimal" nodeset="/faims/Feature/Shell/Distance_to_high_water_mark_metres"/>
+      <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Number_of_Scars"/>
+      <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Number_of_Carved_Panels"/>
+      <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Length_of_Scar_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Width_of_Scar_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Depth_of_Scar_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Height_Above_Ground_mm"/>
     </model>
   </h:head>
   <h:body>
@@ -435,10 +347,13 @@
       <label>{Login}</label>
       <group ref="Login">
         <label>{Login}</label>
-        <input ref="Logger_ID">
+        <select1 ref="Logger_ID">
           <label>{Logger_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <select1 appearance="full" ref="Device_ID">
           <label>{Device_ID}</label>
           <item>
@@ -469,30 +384,6 @@
         </input>
         <input ref="Next_Feature_ID" faims_style_class="required">
           <label>{Next_Feature_ID}</label>
-        </input>
-        <input ref="Next_Intangible_Value_ID" faims_style_class="required">
-          <label>{Next_Intangible_Value_ID}</label>
-        </input>
-        <input ref="Next_Art_ID" faims_style_class="required">
-          <label>{Next_Art_ID}</label>
-        </input>
-        <input ref="Next_Other_Feature_ID" faims_style_class="required">
-          <label>{Next_Other_Feature_ID}</label>
-        </input>
-        <input ref="Next_Grinding_Groove_ID" faims_style_class="required">
-          <label>{Next_Grinding_Groove_ID}</label>
-        </input>
-        <input ref="Next_Shell_ID" faims_style_class="required">
-          <label>{Next_Shell_ID}</label>
-        </input>
-        <input ref="Next_Hearth_ID" faims_style_class="required">
-          <label>{Next_Hearth_ID}</label>
-        </input>
-        <input ref="Next_Arch_Dep_ID" faims_style_class="required">
-          <label>{Next_Arch_Dep_ID}</label>
-        </input>
-        <input ref="Next_CM_Tree_ID" faims_style_class="required">
-          <label>{Next_CM_Tree_ID}</label>
         </input>
       </group>
       <group ref="Search" faims_scrollable="false">
@@ -609,14 +500,22 @@
           <label>{Vegetation_notes}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Ground_surface_visibility" faims_attribute_name="Ground surface visibility" faims_style_class="required">
+        <select1 faims_attribute_type="vocab" ref="Ground_surface_visibility" faims_attribute_name="Ground surface visibility" faims_style_class="required">
           <label>{Ground_surface_visibility}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Ground_surface_exposure" faims_attribute_name="Ground surface exposure" faims_style_class="required">
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Ground_surface_exposure" faims_attribute_name="Ground surface exposure" faims_style_class="required">
           <label>{Ground_surface_exposure}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
+          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
         <input faims_attribute_type="measure" ref="Ground_surface_notes" faims_attribute_name="Ground surface notes">
           <label>{Ground_surface_notes}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -665,9 +564,6 @@
           <label>{Transect_Other_Notes}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <trigger ref="Finish_Survey_Unit">
-          <label>{Finish_Survey_Unit}</label>
-        </trigger>
       </group>
       <group ref="Map" faims_scrollable="false">
         <label>{Map}</label>
@@ -910,135 +806,6 @@
           <label>{New_Feature_Type}</label>
         </trigger>
       </group>
-      <group ref="Artefact" faims_scrollable="false">
-        <label>{Artefact}</label>
-        <trigger ref="New_Artefact">
-          <label>{New_Artefact}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Artefact_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Artefact_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="Intangible_Value" faims_scrollable="false">
-        <label>{Intangible_Value}</label>
-        <trigger ref="New_Intangible_Value">
-          <label>{New_Intangible_Value}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Intangible_Value_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Intangible_Value_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="Art" faims_scrollable="false">
-        <label>{Art}</label>
-        <trigger ref="New_Art">
-          <label>{New_Art}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Art_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Art_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="Other_Feature" faims_scrollable="false">
-        <label>{Other_Feature}</label>
-        <trigger ref="New_Other_Feature">
-          <label>{New_Other_Feature}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Other_Feature_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Other_Feature_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="Grinding_Groove" faims_scrollable="false">
-        <label>{Grinding_Groove}</label>
-        <trigger ref="New_Grinding_Groove">
-          <label>{New_Grinding_Groove}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Grinding_Groove_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Grinding_Groove_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="Shell" faims_scrollable="false">
-        <label>{Shell}</label>
-        <trigger ref="New_Shell">
-          <label>{New_Shell}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Shell_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Shell_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="Hearth_Ground_Oven" faims_scrollable="false">
-        <label>{Hearth_Ground_Oven}</label>
-        <trigger ref="New_Hearth_Ground_Oven">
-          <label>{Add_Hearth_Ground_Oven}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Hearth_Ground_Oven_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Hearth_Ground_Oven_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="Potential_Archaeological_Deposit" faims_scrollable="false">
-        <label>{Potential_Archaeological_Deposit}</label>
-        <trigger ref="New_Potential_Archaeological_Deposit">
-          <label>{New_Potential_Archaeological_Deposit}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Potential_Archaeological_Deposit_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Potential_Archaeological_Deposit_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-      <group ref="Culturally_Modified_Tree" faims_scrollable="false">
-        <label>{Culturally_Modified_Tree}</label>
-        <trigger ref="New_Culturally_Modified_Tree">
-          <label>{New_Culturally_Modified_Tree}</label>
-        </trigger>
-        <select1 appearance="compact" ref="List_of_Culturally_Modified_Tree_Records" faims_annotation="false" faims_certainty="false">
-          <label>{List_of_Culturally_Modified_Tree_Records}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a list-->
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-      </group>
-    </group>
-    <group ref="Artefact" faims_archent_type="Artefact">
-      <label>{Artefact}</label>
       <group ref="Artefact">
         <label>{Artefact}</label>
         <select1 faims_attribute_type="vocab" ref="Insitu_Artefact" faims_attribute_name="Insitu Artefact">
@@ -1172,15 +939,8 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
-    </group>
-    <group ref="Intangible_Value" faims_archent_type="Intangible Value">
-      <label>{Intangible_Value}</label>
       <group ref="Intangible_Value">
         <label>{Intangible_Value}</label>
-        <input faims_attribute_type="measure" ref="Intangible_Value_ID" faims_attribute_name="Intangible Value ID" faims_style_class="required">
-          <label>{Intangible_Value_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
         <select1 faims_attribute_type="vocab" ref="Intangible_Value_Type" faims_attribute_name="Intangible Value Type">
           <label>{Intangible_Value_Type}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
@@ -1194,15 +954,8 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
-    </group>
-    <group ref="Art" faims_archent_type="Art">
-      <label>{Art}</label>
       <group ref="Art">
         <label>{Art}</label>
-        <input faims_attribute_type="measure" ref="Art_ID" faims_attribute_name="Art ID" faims_style_class="required">
-          <label>{Art_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Pigment_Engraved" faims_attribute_name="Pigment Engraved">
           <label>{Pigment_Engraved}</label>
           <item>
@@ -1295,15 +1048,8 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
-    </group>
-    <group ref="Other_Feature" faims_archent_type="Other Feature">
-      <label>{Other_Feature}</label>
       <group ref="Other_Feature">
         <label>{Other_Feature}</label>
-        <input faims_attribute_type="measure" ref="Other_Feature_ID" faims_attribute_name="Other Feature ID" faims_style_class="required">
-          <label>{Other_Feature_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
         <input faims_attribute_type="measure" ref="Description_Other_Feature" faims_attribute_name="Description Other Feature">
           <label>{Description_Other_Feature}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -1333,15 +1079,8 @@
           <label>{Button_Other_Feature_Photo}</label>
         </trigger>
       </group>
-    </group>
-    <group ref="Grinding_Groove" faims_archent_type="Grinding Groove">
-      <label>{Grinding_Groove}</label>
       <group ref="Grinding_Groove">
         <label>{Grinding_Groove}</label>
-        <input faims_attribute_type="measure" ref="Grinding_Groove_ID" faims_attribute_name="Grinding Groove ID" faims_style_class="required">
-          <label>{Grinding_Groove_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
         <select1 faims_attribute_type="vocab" ref="Type_Grinding_Groove" faims_attribute_name="Type Grinding Groove">
           <label>{Type_Grinding_Groove}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
@@ -1419,15 +1158,8 @@
           <label>{Button_Grinding_Groove_Photo}</label>
         </trigger>
       </group>
-    </group>
-    <group ref="Shell" faims_archent_type="Shell">
-      <label>{Shell}</label>
       <group ref="Shell">
         <label>{Shell}</label>
-        <input faims_attribute_type="measure" ref="Shell_ID" faims_attribute_name="Shell ID" faims_style_class="required">
-          <label>{Shell_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
         <select1 faims_attribute_type="vocab" ref="Shell_Distribution" faims_attribute_name="Shell Distribution">
           <label>{Shell_Distribution}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
@@ -1484,15 +1216,8 @@
           <label>{Button_Shell_Photo}</label>
         </trigger>
       </group>
-    </group>
-    <group ref="Hearth_Ground_Oven" faims_archent_type="Hearth Ground Oven">
-      <label>{Hearth_Ground_Oven}</label>
       <group ref="Hearth_Ground_Oven">
         <label>{Hearth_Ground_Oven}</label>
-        <input faims_attribute_type="measure" ref="Hearth_ID" faims_attribute_name="Hearth ID" faims_style_class="required">
-          <label>{Hearth_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
         <input faims_attribute_type="measure" ref="Hearth_Shape" faims_attribute_name="Hearth Shape">
           <label>{Hearth_Shape}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -1542,58 +1267,44 @@
           <label>{Button_Hearth_Photo}</label>
         </trigger>
       </group>
-    </group>
-    <group ref="Potential_Archaeological_Deposit" faims_archent_type="Potential Archaeological Deposit">
-      <label>{Potential_Archaeological_Deposit}</label>
       <group ref="Potential_Archaeological_Deposit">
         <label>{Potential_Archaeological_Deposit}</label>
-        <input faims_attribute_type="measure" ref="Arch_Dep_ID" faims_attribute_name="Arch Dep ID" faims_style_class="required">
-          <label>{Arch_Dep_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <select1 faims_attribute_type="vocab" ref="Insitu_Potential_Arch_Deposit" faims_attribute_name="Insitu Potential Arch Deposit">
-          <label>{Insitu_Potential_Arch__Deposit}</label>
+        <select1 faims_attribute_type="vocab" ref="PAD_Insitu" faims_attribute_name="PAD Insitu">
+          <label>{PAD_Insitu}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Stratified_Arch_Deposit" faims_attribute_name="Stratified Arch Deposit">
-          <label>{Stratified_Arch__Deposit}</label>
+        <select1 faims_attribute_type="vocab" ref="PAD_Stratified" faims_attribute_name="PAD Stratified">
+          <label>{PAD_Stratified}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Arch_Deposit_Type" faims_attribute_name="Arch Deposit Type">
-          <label>{Arch__Deposit_Type}</label>
+        <select1 faims_attribute_type="vocab" ref="PAD_Type" faims_attribute_name="PAD Type">
+          <label>{PAD_Type}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 appearance="full" faims_attribute_type="vocab" ref="Surface_Artefacts" faims_attribute_name="Surface Artefacts">
-          <label>{Surface_Artefacts}</label>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="PAD_Surface_Artefacts" faims_attribute_name="PAD Surface Artefacts">
+          <label>{PAD_Surface_Artefacts}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
       </group>
-    </group>
-    <group ref="Culturally_Modified_Tree" faims_archent_type="Culturally Modified Tree">
-      <label>{Culturally_Modified_Tree}</label>
       <group ref="Culturally_Modified_Tree">
         <label>{Culturally_Modified_Tree}</label>
-        <input faims_attribute_type="measure" ref="CM_Tree_ID" faims_attribute_name="CM Tree ID" faims_style_class="required">
-          <label>{CM_Tree_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <select1 faims_attribute_type="vocab" ref="Type_CM_Tree" faims_attribute_name="Type CM Tree">
-          <label>{Type_CM_Tree}</label>
+        <select1 faims_attribute_type="vocab" ref="CM_Tree_Type" faims_attribute_name="CM Tree Type">
+          <label>{CM_Tree_Type}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
@@ -1632,8 +1343,8 @@
             <value>0</value>
           </item>
         </select1>
-        <select faims_attribute_type="vocab" ref="Damage" faims_attribute_name="Damage">
-          <label>{Damage}</label>
+        <select faims_attribute_type="vocab" ref="CM_Tree_Damage" faims_attribute_name="CM Tree Damage">
+          <label>{CM_Tree_Damage}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -1669,16 +1380,16 @@
           <label>{Height_Above_Ground__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <select1 faims_attribute_type="vocab" ref="Shape_CM_Tree" faims_attribute_name="Shape CM Tree">
-          <label>{Shape_CM_Tree}</label>
+        <select1 faims_attribute_type="vocab" ref="CM_Tree_Shape" faims_attribute_name="CM Tree Shape">
+          <label>{CM_Tree_Shape}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Orientation" faims_attribute_name="Orientation">
-          <label>{Orientation}</label>
+        <select1 faims_attribute_type="vocab" ref="CM_Tree_Orientation" faims_attribute_name="CM Tree Orientation">
+          <label>{CM_Tree_Orientation}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>

@@ -5,51 +5,6 @@
     <parent>Parent Of</parent>
     <child>Child Of</child>
   </RelationshipElement>
-  <RelationshipElement name="Feature - Artefact" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
-  <RelationshipElement name="Feature - Intangible Value" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
-  <RelationshipElement name="Feature - Art" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
-  <RelationshipElement name="Feature - Other Feature" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
-  <RelationshipElement name="Feature - Grinding Groove" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
-  <RelationshipElement name="Feature - Shell" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
-  <RelationshipElement name="Feature - Hearth Ground Oven" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
-  <RelationshipElement name="Feature - Potential Archaeological Deposit" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
-  <RelationshipElement name="Feature - Culturally Modified Tree" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
-    <parent>Parent Of</parent>
-    <child>Child Of</child>
-  </RelationshipElement>
   <ArchaeologicalElement name="Transect">
     <description/>
     <property name="Transect ID" isIdentifier="true" type="measure">
@@ -101,7 +56,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{Crest___Hill_top}
+        <term>{Crest_Hill_top}
 <description/></term>
         <term>{Upper_Slope}
 <description/></term>
@@ -158,7 +113,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Ground surface visibility" type="measure">
+    <property name="Ground surface visibility" type="vocab">
       <description>
         Estimate the average percentage of ground surface that is visible for
         the survey unit as per the definition in the Code of Practice (perhaps
@@ -166,8 +121,32 @@
       </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{0_}
+<description/></term>
+        <term>{10_}
+<description/></term>
+        <term>{20_}
+<description/></term>
+        <term>{30_}
+<description/></term>
+        <term>{40_}
+<description/></term>
+        <term>{50_}
+<description/></term>
+        <term>{60_}
+<description/></term>
+        <term>{70_}
+<description/></term>
+        <term>{80_}
+<description/></term>
+        <term>{90_}
+<description/></term>
+        <term>{100_}
+<description/></term>
+      </lookup>
     </property>
-    <property name="Ground surface exposure" type="measure">
+    <property name="Ground surface exposure" type="vocab">
       <description>
         Estimate the average percentage of ground surface that is exposed/
         quantity of exposures within the survey unit as per the definition in
@@ -176,6 +155,30 @@
       </description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{0_}
+<description/></term>
+        <term>{10_}
+<description/></term>
+        <term>{20_}
+<description/></term>
+        <term>{30_}
+<description/></term>
+        <term>{40_}
+<description/></term>
+        <term>{50_}
+<description/></term>
+        <term>{60_}
+<description/></term>
+        <term>{70_}
+<description/></term>
+        <term>{80_}
+<description/></term>
+        <term>{90_}
+<description/></term>
+        <term>{100_}
+<description/></term>
+      </lookup>
     </property>
     <property name="Ground surface notes" type="measure">
       <description>
@@ -345,17 +348,17 @@
 <description/></term>
         <term>{Stock_damage}
 <description/></term>
-        <term>{Exposed_archaeological___Other_material}
+        <term>{Exposed_archaeological_Other_material}
 <description/></term>
         <term>{Fire_damage}
 <description/></term>
         <term>{Animal_damage}
 <description/></term>
-        <term>{Graffitti___Vandalism}
+        <term>{Graffitti_Vandalism}
 <description/></term>
         <term>{Mineralisation}
 <description/></term>
-        <term>{Unstable_structure___Landform}
+        <term>{Unstable_structure_Landform}
 <description/></term>
       </lookup>
     </property>
@@ -507,7 +510,7 @@
 <description/></term>
         <term>{Habitation_Structure}
 <description/></term>
-        <term>{Hearth___Ground_Oven}
+        <term>{Hearth_Ground_Oven}
 <description/></term>
         <term>{Non_Human_Bone___Organic_Material}
 <description/></term>
@@ -575,7 +578,7 @@
 <description/></term>
         <term>{Other_Feature}
 <description/></term>
-        <term>{Grinding_Groovem_Shell}
+        <term>{Grinding_Groove_Shell}
 <description/></term>
         <term>{Hearth_Ground_Oven}
 <description/></term>
@@ -585,21 +588,6 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Latitude" type="measure">
-      <description/>
-    </property>
-    <property name="Longitude" type="measure">
-      <description/>
-    </property>
-    <property name="Northing" type="measure">
-      <description/>
-    </property>
-    <property name="Easting" type="measure">
-      <description/>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Artefact">
-    <description/>
     <property name="Insitu Artefact" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
@@ -4059,7 +4047,7 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Other Observations Artefact" type="measure">
-      <description>Note any other things like texture, e.g., waxy / lustre.</description>
+      <description>Note any other things like texture, e.g., waxy/lustre.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
@@ -4076,14 +4064,6 @@
         Note direction photo is facing and what it includes in relation to the
         survey unit.
       </description>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Intangible Value">
-    <description/>
-    <property name="Intangible Value ID" isIdentifier="true" type="measure">
-      <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
@@ -4105,14 +4085,6 @@
       </lookup>
     </property>
     <property name="Intangible Value Description" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Art">
-    <description/>
-    <property name="Art ID" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4349,14 +4321,6 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Other Feature">
-    <description/>
-    <property name="Other Feature ID" isIdentifier="true" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
     <property name="Description Other Feature" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
@@ -4373,14 +4337,6 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Other Feature Photo" type="file" file="true" thumbnail="true">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Grinding Groove">
-    <description/>
-    <property name="Grinding Groove ID" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4469,14 +4425,6 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Grinding Groove Photo" type="file" file="true" thumbnail="true">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Shell">
-    <description/>
-    <property name="Shell ID" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4618,14 +4566,6 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Hearth Ground Oven">
-    <description/>
-    <property name="Hearth ID" isIdentifier="true" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
     <property name="Hearth Shape" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
@@ -4659,9 +4599,9 @@
 <description/></term>
         <term>{Heat_affected_basal_clay}
 <description/></term>
-        <term>{Bone___Other_animal_material}
+        <term>{Bone_Other_animal_material}
 <description/></term>
-        <term>{Seeds___other_Plant_material}
+        <term>{Seeds_other_Plant_material}
 <description/></term>
         <term>{Stone}
 <description/></term>
@@ -4682,15 +4622,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Potential Archaeological Deposit">
-    <description/>
-    <property name="Arch Dep ID" isIdentifier="true" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
-    <property name="Insitu Potential Arch Deposit" type="vocab">
+    <property name="PAD Insitu" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4705,7 +4637,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Stratified Arch Deposit" type="vocab">
+    <property name="PAD Stratified" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4720,7 +4652,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Arch Deposit Type" type="vocab">
+    <property name="PAD Type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4737,7 +4669,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Surface Artefacts" type="vocab">
+    <property name="PAD Surface Artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4748,15 +4680,7 @@
 <description/></term>
       </lookup>
     </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Culturally Modified Tree">
-    <description/>
-    <property name="CM Tree ID" isIdentifier="true" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
-    <property name="Type CM Tree" type="vocab">
+    <property name="CM Tree Type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4822,7 +4746,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Damage" type="vocab">
+    <property name="CM Tree Damage" type="vocab">
       <description>Tick those that are relevant.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4879,7 +4803,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Shape CM Tree" type="vocab">
+    <property name="CM Tree Shape" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4894,7 +4818,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Orientation" type="vocab">
+    <property name="CM Tree Orientation" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4944,6 +4868,18 @@
         <term>{Indeterminate}
 <description/></term>
       </lookup>
+    </property>
+    <property name="Latitude" type="measure">
+      <description/>
+    </property>
+    <property name="Longitude" type="measure">
+      <description/>
+    </property>
+    <property name="Northing" type="measure">
+      <description/>
+    </property>
+    <property name="Easting" type="measure">
+      <description/>
     </property>
   </ArchaeologicalElement>
 </dataSchema>

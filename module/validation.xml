@@ -110,65 +110,7 @@
         <param value="measure" type="field"/>
       </validator>
     </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Artefact">
     <property name="Instance No">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Intangible_Value">
-    <property name="Intangible Value ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Art">
-    <property name="Art ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Other_Feature">
-    <property name="Other Feature ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Grinding_Groove">
-    <property name="Grinding Groove ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Shell">
-    <property name="Shell ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Hearth_Ground_Oven">
-    <property name="Hearth ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Potential_Archaeological_Deposit">
-    <property name="Arch Dep ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Culturally_Modified_Tree">
-    <property name="CM Tree ID">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
