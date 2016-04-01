@@ -852,20 +852,17 @@
 <Potential_Archaeological_Deposit>
   <Potential_Archaeological_Deposit>
     <Arch_Dep_ID f="id notnull autonum"/>
-    <Insitu_Potential_Arch_Deposit>
-      Insitu Potential Arch. Deposit
+    <PAD_Insitu>
       <opts>
         <!--BOOLEAN_MODAL-->
       </opts>
-    </Insitu_Potential_Arch_Deposit>
-    <Stratified_Arch_Deposit>
-      Stratified Arch. Deposit
+    </PAD_Insitu>
+    <PAD_Stratified>
       <opts>
         <!--BOOLEAN_MODAL-->
       </opts>
-    </Stratified_Arch_Deposit>
-    <Arch_Deposit_Type>
-      Arch. Deposit Type
+    </PAD_Stratified>
+    <PAD_Type>
       <opts>
         <opt>Historical</opt>
         <opt>Aboriginal Stone Artefact</opt>
@@ -873,25 +870,25 @@
         <opt>Burial</opt>
         <opt>Oven/ Hearth</opt>
       </opts>
-    </Arch_Deposit_Type>
-    <Surface_Artefacts t="radio">
+    </PAD_Type>
+    <PAD_Surface_Artefacts t="radio">
       <opts>
         <!--BOOLEAN-->
       </opts>
-    </Surface_Artefacts>
+    </PAD_Surface_Artefacts>
   </Potential_Archaeological_Deposit>
 </Potential_Archaeological_Deposit>
 
 <Culturally_Modified_Tree>
   <Culturally_Modified_Tree>
     <CM_Tree_ID f="id notnull autonum"/>
-    <Type_CM_Tree>
+    <CM_Tree_Type>
       <opts>
         <opt>Carved</opt>
         <opt>Scarred</opt>
         <opt>Carved and Scarred</opt>
       </opts>
-    </Type_CM_Tree>
+    </CM_Tree_Type>
     <Tree_Species>
       <opts>
         <opt>Eucalypt</opt>
@@ -917,7 +914,7 @@
         <opt>Not in situ</opt>
       </opts>
     </Tree_Status>
-    <Damage t="checkbox">
+    <CM_Tree_Damage t="checkbox">
       <desc>Tick those that are relevant.</desc>
       <opts>
         <opt>Ringbarked</opt>
@@ -925,7 +922,7 @@
         <opt>Limb fall</opt>
         <opt>None</opt>
       </opts>
-    </Damage>
+    </CM_Tree_Damage>
     <Regrowth t="radio">
       <opts>
         <!--BOOLEAN-->
@@ -948,15 +945,15 @@
     <Height_Above_Ground_mm b="decimal">
       Height Above Ground (mm)
     </Height_Above_Ground_mm>
-    <Shape_CM_Tree>
+    <CM_Tree_Shape>
       <opts>
         <opt>Oval</opt>
         <opt>Rectangular square</opt>
         <opt>Round</opt>
         <opt>Other</opt>
       </opts>
-    </Shape_CM_Tree>
-    <Orientation>
+    </CM_Tree_Shape>
+    <CM_Tree_Orientation>
       <opts>
         <opt>North East</opt>
         <opt>East</opt>
@@ -967,7 +964,7 @@
         <opt>North West</opt>
         <opt>North</opt>
       </opts>
-    </Orientation>
+    </CM_Tree_Orientation>
     <Carving_type>
       <opts>
         <opt>Linear</opt>
