@@ -14,7 +14,7 @@
     <Device_ID t="radio">
       <!--TODO: Manually populated in logic-->
     </Device_ID>
-    <Login t="button"/>
+    <Login t="button" l="Control"/>
   </Login>
 </Login>
 
@@ -366,10 +366,10 @@
     <List_of_Other_Feature_Records ec="Other_Feature"/>
   </Other_Feature>
 
-  <Grinding_Grove f="noscroll">
-    <New_Grinding_Grove t="button" lc="Grinding_Grove"/>
-    <List_of_Grinding_Grove_Records ec="Grinding_Grove"/>
-  </Grinding_Grove>
+  <Grinding_Groove f="noscroll">
+    <New_Grinding_Groove t="button" lc="Grinding_Groove"/>
+    <List_of_Grinding_Groove_Records ec="Grinding_Groove"/>
+  </Grinding_Groove>
 
   <Shell f="noscroll">
     <New_Shell t="button" lc="Shell"/>

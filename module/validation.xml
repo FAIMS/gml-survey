@@ -139,8 +139,8 @@
       </validator>
     </property>
   </ArchaeologicalElement>
-  <ArchaeologicalElement name="Grinding_Grove">
-    <property name="Grinding Grove ID">
+  <ArchaeologicalElement name="Grinding_Groove">
+    <property name="Grinding Groove ID">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
@@ -169,13 +169,6 @@
   </ArchaeologicalElement>
   <ArchaeologicalElement name="Culturally_Modified_Tree">
     <property name="CM Tree ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-  </ArchaeologicalElement>
-  <ArchaeologicalElement name="Cultural_Management_Comment">
-    <property name="Comment ID">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
