@@ -7,6 +7,14 @@
 
 <module>
 
+<rels>
+  <RelationshipElement name="Transect - Transect Point" type="hierarchical">
+    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
+    <parent>Parent Of</parent>
+    <child>Child Of</child>
+  </RelationshipElement>
+</rels>
+
 <Login f="nodata">
   <Login>
     <Logger_ID t="dropdown" f="user">
@@ -34,7 +42,7 @@
 
 <Transect>
   <Transect>
-    <gps><!--TODO: Start Survey Unit--></gps>
+    <Start_Survey_Unit/>
     <Transect_ID f="id notnull autonum">
       <!--TRN-<TransectID>-<Author>-<Date>; Export output format:One column for
            Identifier (for export), one column for TransectID (with padded
@@ -173,13 +181,19 @@
     </Transect_Photo_Caption>
     <Transect_Sketch t="file"/>
     <Transect_Other_Notes/>
-    <!--<gps>[>TODO: Finish Survey Unit<]</gps>-->
+    <Finish_Survey_Unit/>
   </Transect>
   <Map>
     <Map t="map"/>
     <Survey_extent f="readonly"/>
   </Map>
 </Transect>
+
+<Transect_Point f="noui">
+  <Transect_Point>
+    <ID f="id"/>
+  </Transect_Point>
+</Transect_Point>
 
 <Site>
   <Site>
@@ -927,6 +941,7 @@
 </Feature>
 
 <logic><![CDATA[
+  <!--TRANSECT_GEOMETRY-->
 ]]></logic>
 
 </module>

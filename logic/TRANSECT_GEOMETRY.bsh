@@ -1,108 +1,46 @@
+/***************************** TRANSECT GEOMETREY *****************************/
 addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
-addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "takePoint(\"Transect\")");
+//addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
 
-transectGeolist = new ArrayList();
+isStartedSurvey  = false;
+isFinishedSurvey = false;
 
 startSurveyUnit() {
-  String archEntType = tabgroup.replaceAll("_", " ");
-  String currentUuid = getUuid(tabgroup);
-  if (isNull(currentUuid)){
-    showToast("Please enter data first and let a save occur.");
-  }
-
-  Object position = getGPSPosition();
-  if (position == null) {
-    showToast("{GPS_Not_Initialised}");
+  parentUuid = getUuid(parentTabgroup_);
+  if (isNull(parentUuid)) {
+    showToast("Parent not yet saved");
     return;
   }
+  if (isStartedSurvey) {
+    showToast("Survey already started");
+    return;
+  }
+  id = 0;
 
-  Object projPosition = getGPSPositionProjected();
-  Double latitude     = position.getLatitude();
-  Double longitude    = position.getLongitude();
-  Double northing     = projPosition.getLatitude();
-  Double easting      = projPosition.getLongitude();
+  String lat = positionProj.getLatitude();
+  String lon = positionProj.getLongitude();
+  MapPos pos   = new MapPos(lat, lon);
+  Point  point = new Point(pos, null, (PointStyle) null, null);
+  ArrayList geoList = Array.asList(point);
 
-  samplePoint = new Point(new MapPos(easting, northing), null, (PointStyle) null, null);
-  transectGeolist.add(samplePoint);
+  List attributes = createAttributeList();
+  attributes.add(createEntityAttribute("ID", null, null, id, null));
 
-  attributes = createAttributeList();
-  attributes.add(createEntityAttribute("Starting_Latitude", "Accuracy: "+getGPSEstimatedAccuracy(), null, null, null));
-
-  saveArchEnt(currentUuid, archEntType, transectGeoList, attributes, new SaveCallback() {
+  callback = new SaveCallback() {
     onSave(uuid, newRecord) {
-      print("[startSurveyUnit()] Added geometry: " + transectGeoList);
-      fillInGPSStartSurveyUnit();
+        String rel = "%s - %s";
+        rel.replaceFirst("%s", "Transect");
+        rel.replaceFirst("%s", "Transect Point");
+
+        saveEntitiesToHierRel(
+          rel,
+          parentUuid,
+          uuid,
+          "Parent Of",
+          "Child Of",
+          null
+        );
     }
-  });
-}
-
-
-
-
-
-
-
-
-takePoint(String tabgroup) {
-  String archEntType = tabgroup.replaceAll("_", " ");
-  String currentUuid = getUuid(tabgroup);
-  if (isNull(currentUuid)){
-    showToast("Please enter data first and let a save occur.");
-  }
-
-  Object position = getGPSPosition();
-  if (position == null) {
-    showToast("{GPS_Not_Initialised}");
-    return;
-  }
-
-  Object projPosition = getGPSPositionProjected();
-  Double latitude     = position.getLatitude();
-  Double longitude    = position.getLongitude();
-  Double northing     = projPosition.getLatitude();
-  Double easting      = projPosition.getLongitude();
-
-  samplePoint = new Point(new MapPos(easting, northing), null, (PointStyle) null, null);
-  ArrayList geolist = new ArrayList();
-  geolist.add(samplePoint);
-
-  attributes = createAttributeList();
-  attributes.add(createEntityAttribute("Latitude", "Accuracy: "+getGPSEstimatedAccuracy(), null, null, null));
-
-  saveArchEnt(currentUuid, archEntType, geolist, attributes, new SaveCallback() {
-    onSave(uuid, newRecord) {
-      print("[takePoint()] Added geometry: " + geolist);
-      fillInGPS(tabgroup);
-    }
-  });
-}
-
-/* Sets the value of GPS views for the given tab path. */
-fillInGPS(String tabgroup) {
-  Map tabgroupToTabRef = new HashMap();
-  tabgroupToTabRef.put("Transect", "Transect/Transect/");
-  tabgroupToTabRef.put("Site", "Site/Site/");
-  tabgroupToTabRef.put("Feature", "Feature/Feature/");
-
-  String currentUuid = getUuid(tabgroup);
-  if (isNull(currentUuid)) {
-    return;
-  }
-
-  String query = "SELECT x(transform(geospatialcolumn,                4326)) as longtiude, " +
-                 "       y(transform(geospatialcolumn,                4326)) as latitude, " +
-                 "       x(transform(geospatialcolumn, "+getModuleSrid()+")) as easting, " +
-                 "       y(transform(geospatialcolumn, "+getModuleSrid()+")) as northing " +
-                 "  FROM latestnondeletedarchent, vocabulary " +
-                 " WHERE uuid = '" + currentUuid + "';";
-
-  fetchOne(query, new FetchCallback() {
-    onFetch(result) {
-      print("[fillInGPS()] Fetched DB transformed geometry: " + result);
-      setFieldValue(tabgroupToTabRef.get(tabgroup) + "Longitude" , result.get(0));
-      setFieldValue(tabgroupToTabRef.get(tabgroup) + "Latitude"  , result.get(1));
-      setFieldValue(tabgroupToTabRef.get(tabgroup) + "Easting"   , result.get(2));
-      setFieldValue(tabgroupToTabRef.get(tabgroup) + "Northing"  , result.get(3));
-    }
-  });
+  };
+  saveArchEnt(null, "Transect Point", geoList, attributes, callback);
 }
