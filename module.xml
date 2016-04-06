@@ -42,7 +42,7 @@
 
 <Transect>
   <Transect>
-    <Start_Survey_Unit/>
+    <Start_Survey_Unit t="button"/>
     <Transect_ID f="id notnull autonum">
       <!--TRN-<TransectID>-<Author>-<Date>; Export output format:One column for
            Identifier (for export), one column for TransectID (with padded
@@ -181,7 +181,7 @@
     </Transect_Photo_Caption>
     <Transect_Sketch t="file"/>
     <Transect_Other_Notes/>
-    <Finish_Survey_Unit/>
+    <Finish_Survey_Unit t="button"/>
   </Transect>
   <Map>
     <Map t="map"/>

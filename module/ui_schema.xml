@@ -16,6 +16,13 @@
               <layout_weight/>
             </large>
           </style>
+          <rels>
+            <RelationshipElement>
+              <description/>
+              <parent/>
+              <child/>
+            </RelationshipElement>
+          </rels>
           <Login>
             <Login>
               <Logger_ID/>
@@ -46,17 +53,7 @@
           </Control>
           <Transect>
             <Transect>
-              <Colgroup_GPS>
-                <Col_0>
-                  <Latitude/>
-                  <Northing/>
-                </Col_0>
-                <Col_1>
-                  <Longitude/>
-                  <Easting/>
-                </Col_1>
-              </Colgroup_GPS>
-              <Take_From_GPS/>
+              <Start_Survey_Unit/>
               <Transect_ID/>
               <Timestamp/>
               <Device_ID/>
@@ -80,12 +77,18 @@
               <Transect_Sketch/>
               <Button_Transect_Sketch/>
               <Transect_Other_Notes/>
+              <Finish_Survey_Unit/>
             </Transect>
             <Map>
               <Map/>
               <Survey_extent/>
             </Map>
           </Transect>
+          <Transect_Point>
+            <Transect_Point>
+              <ID/>
+            </Transect_Point>
+          </Transect_Point>
           <Site>
             <Site>
               <Site_ID_Number/>
@@ -239,9 +242,9 @@
               <Button_Shell_Photo/>
             </Shell>
             <Hearth_Ground_Oven>
-              <Hearth_Shape/>
-              <Hearth_Length/>
-              <Hearth_Width/>
+              <Hearth_Shape_mm/>
+              <Hearth_Length_mm/>
+              <Hearth_Width_mm/>
               <Hearth_Estimated_Depth/>
               <Hearth_Components/>
               <Hearth_Descriptive_Notes/>
@@ -423,29 +426,8 @@
       <label>{Transect}</label>
       <group ref="Transect">
         <label>{Transect}</label>
-        <group ref="Colgroup_GPS" faims_style="orientation">
-          <label/>
-          <group ref="Col_0" faims_style="even">
-            <label/>
-            <input ref="Latitude" faims_attribute_name="Latitude" faims_attribute_type="measure" faims_read_only="true">
-              <label>{Latitude}</label>
-            </input>
-            <input ref="Northing" faims_attribute_name="Northing" faims_attribute_type="measure" faims_read_only="true">
-              <label>{Northing}</label>
-            </input>
-          </group>
-          <group ref="Col_1" faims_style="even">
-            <label/>
-            <input ref="Longitude" faims_attribute_name="Longitude" faims_attribute_type="measure" faims_read_only="true">
-              <label>{Longitude}</label>
-            </input>
-            <input ref="Easting" faims_attribute_name="Easting" faims_attribute_type="measure" faims_read_only="true">
-              <label>{Easting}</label>
-            </input>
-          </group>
-        </group>
-        <trigger ref="Take_From_GPS">
-          <label>{Take_From_GPS}</label>
+        <trigger ref="Start_Survey_Unit">
+          <label>{Start_Survey_Unit}</label>
         </trigger>
         <input faims_attribute_type="measure" ref="Transect_ID" faims_attribute_name="Transect ID" faims_style_class="required">
           <label>{Transect_ID}</label>
@@ -564,6 +546,9 @@
           <label>{Transect_Other_Notes}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
+        <trigger ref="Finish_Survey_Unit">
+          <label>{Finish_Survey_Unit}</label>
+        </trigger>
       </group>
       <group ref="Map" faims_scrollable="false">
         <label>{Map}</label>
@@ -572,6 +557,16 @@
         </input>
         <input faims_attribute_type="measure" ref="Survey_extent" faims_attribute_name="Survey extent" faims_read_only="true">
           <label>{Survey_extent}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+    </group>
+    <group ref="Transect_Point" faims_archent_type="Transect Point">
+      <label/>
+      <group ref="Transect_Point">
+        <label>{Transect_Point}</label>
+        <input faims_attribute_type="measure" ref="ID" faims_attribute_name="ID">
+          <label>{ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
@@ -1218,20 +1213,20 @@
       </group>
       <group ref="Hearth_Ground_Oven">
         <label>{Hearth_Ground_Oven}</label>
-        <input faims_attribute_type="measure" ref="Hearth_Shape" faims_attribute_name="Hearth Shape">
-          <label>{Hearth_Shape}</label>
+        <input faims_attribute_type="measure" ref="Hearth_Shape_mm" faims_attribute_name="Hearth Shape mm">
+          <label>{Hearth_Length__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Hearth_Length" faims_attribute_name="Hearth Length">
-          <label>{Hearth_Length}</label>
+        <input faims_attribute_type="measure" ref="Hearth_Length_mm" faims_attribute_name="Hearth Length mm">
+          <label>{Hearth_Width__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Hearth_Width" faims_attribute_name="Hearth Width">
-          <label>{Hearth_Width}</label>
+        <input faims_attribute_type="measure" ref="Hearth_Width_mm" faims_attribute_name="Hearth Width mm">
+          <label>{Hearth_Width__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Hearth_Estimated_Depth" faims_attribute_name="Hearth Estimated Depth">
-          <label>{Hearth_Estimated_Depth}</label>
+          <label>{Hearth_Estimated_Depth__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select1 faims_attribute_type="vocab" ref="Hearth_Components" faims_attribute_name="Hearth Components">

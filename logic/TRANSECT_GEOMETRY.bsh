@@ -5,42 +5,92 @@ addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()")
 isStartedSurvey  = false;
 isFinishedSurvey = false;
 
-startSurveyUnit() {
-  parentUuid = getUuid(parentTabgroup_);
+saveParentTransect(String callback) {
+  tabGroup = "Transect";
+
+  if (getUuid(tabGroup) != null) {
+    execute(callback);
+    return;
+  }
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabGroup, uuid);
+      execute(callback);
+    }
+  };
+
+  saveTabGroup(tabGroup, null, null, null, saveCallback);
+}
+
+saveChildTransectPoint(String callback) {
+  parentTabGroup = "Transect";
+  childTabGroup  = "Transect Point";
+
+  Object positionProj = getGPSPositionProjected();
+  String parentUuid   = getUuid(parentTabGroup);
+
   if (isNull(parentUuid)) {
     showToast("Parent not yet saved");
+    return;
+  }
+  if (positionProj == null) {
+    showToast("Unable to get GPS position");
     return;
   }
   if (isStartedSurvey) {
     showToast("Survey already started");
     return;
   }
-  id = 0;
 
-  String lat = positionProj.getLatitude();
-  String lon = positionProj.getLongitude();
+  Integer id = 0;
+
+  lat = positionProj.getLatitude();
+  lon = positionProj.getLongitude();
   MapPos pos   = new MapPos(lat, lon);
   Point  point = new Point(pos, null, (PointStyle) null, null);
-  ArrayList geoList = Array.asList(point);
+  List geoList = new ArrayList(); geoList.add(point);
 
   List attributes = createAttributeList();
-  attributes.add(createEntityAttribute("ID", null, null, id, null));
+  attributes.add(createEntityAttribute("ID", null, null, id.toString(), null));
 
-  callback = new SaveCallback() {
+  saveCallback = new SaveCallback() {
     onSave(uuid, newRecord) {
-        String rel = "%s - %s";
-        rel.replaceFirst("%s", "Transect");
-        rel.replaceFirst("%s", "Transect Point");
+      isStartedSurvey = true;
 
-        saveEntitiesToHierRel(
-          rel,
-          parentUuid,
-          uuid,
-          "Parent Of",
-          "Child Of",
-          null
-        );
+      String rel = "%s - %s";
+      rel = rel.replaceFirst("%s", parentTabGroup);
+      rel = rel.replaceFirst("%s", childTabGroup);
+
+      saveEntitiesToHierRel(
+        rel,
+        parentUuid,
+        uuid,
+        "Parent Of",
+        "Child Of",
+        callback
+      );
+
+      showToast("Survey unit started");
     }
   };
-  saveArchEnt(null, "Transect Point", geoList, attributes, callback);
+  saveArchEnt(null, childTabGroup, geoList, attributes, saveCallback);
+}
+
+startSurveyUnit() {
+  parentTabgroup       = "Transect";
+  enableParentAutosave = "saveTabGroup(\"%s\")";
+  enableParentAutosave = enableParentAutosave.replaceFirst(
+      "%s",
+      parentTabgroup.replaceAll("\"", "\\\\\\\\\"") // Regex; slashes are double-esc
+  );
+
+  saveChildTransectPoint = "saveChildTransectPoint(\"%s\")";
+  saveChildTransectPoint = saveChildTransectPoint.replaceFirst(
+      "%s",
+      enableParentAutosave.replaceAll("\"", "\\\\\\\\\"")
+  );
+  Log.e("makeVocab()", "" + saveChildTransectPoint);
+
+  saveParentTransect(saveChildTransectPoint);
 }

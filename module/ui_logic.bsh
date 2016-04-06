@@ -1322,6 +1322,7 @@ doNotDelete(){
 }
 addOnEvent("Login", "show", "removeNavigationButtons()");
 addOnEvent("Control", "show", "removeNavigationButtons()");
+addOnEvent("Transect_Point", "show", "removeNavigationButtons()");
 addOnEvent("Transect", "show", "addNavigationButtons(\"Transect\")");
 addOnEvent("Site", "show", "addNavigationButtons(\"Site\")");
 addOnEvent("Feature", "show", "addNavigationButtons(\"Feature\")");
@@ -1338,6 +1339,7 @@ addOnEvent("Control/Search/Entity_Types"  , "click" , "search()");
 entityTypes = new ArrayList();
 entityTypes.add(new NameValuePair("{All}", ""));
 entityTypes.add(new NameValuePair("{Transect}", "Transect"));
+entityTypes.add(new NameValuePair("{Transect_Point}", "Transect Point"));
 entityTypes.add(new NameValuePair("{Site}", "Site"));
 entityTypes.add(new NameValuePair("{Feature}", "Feature"));
 populateDropDown("Control/Search/Entity_Types", entityTypes);
@@ -1379,6 +1381,14 @@ loadTransectFrom(String uuid) {
   showTabGroup(tabgroup, uuid);
 }
 
+loadTransectPointFrom(String uuid) {
+  String tabgroup = "Transect_Point";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}
+
 loadSiteFrom(String uuid) {
   String tabgroup = "Site";
   setUuid(tabgroup, uuid);
@@ -1399,16 +1409,20 @@ loadFeatureFrom(String uuid) {
 /******************************************************************************/
 /*                          TAKE FROM GPS BUTTON(S)                           */
 /******************************************************************************/
-addOnEvent("Transect/Transect/Take_From_GPS", "click", "takePoint(\"Transect\")");
 addOnEvent("Site/Site/Take_From_GPS", "click", "takePoint(\"Site\")");
 addOnEvent("Feature/Feature/Take_From_GPS", "click", "takePoint(\"Feature\")");
 
 /* Takes the current point using gps. */
 takePoint(String tabgroup) {
+  Map tabgroupToTabRef = new HashMap();
+  tabgroupToTabRef.put("Site", "Site/Site/");
+  tabgroupToTabRef.put("Feature", "Feature/Feature/");
+
   String archEntType = tabgroup.replaceAll("_", " ");
   String currentUuid = getUuid(tabgroup);
   if (isNull(currentUuid)){
     showToast("Please enter data first and let a save occur.");
+    return;
   }
 
   Object position = getGPSPosition();
@@ -1427,10 +1441,10 @@ takePoint(String tabgroup) {
   ArrayList geolist = new ArrayList();
   geolist.add(samplePoint);
 
-  attributes = createAttributeList();
-  attributes.add(createEntityAttribute("Latitude", "Accuracy: "+getGPSEstimatedAccuracy(), null, null, null));
+  String accuracy = "Accuracy: " + getGPSEstimatedAccuracy();
+  setFieldAnnotation(tabgroupToTabRef.get(tabgroup) + "Latitude", accuracy);
 
-  saveArchEnt(currentUuid, archEntType, geolist, attributes, new SaveCallback() {
+  saveArchEnt(currentUuid, archEntType, geolist, null, new SaveCallback() {
     onSave(uuid, newRecord) {
       print("[takePoint()] Added geometry: " + geolist);
       fillInGPS(tabgroup);
@@ -1441,7 +1455,6 @@ takePoint(String tabgroup) {
 /* Sets the value of GPS views for the given tab path. */
 fillInGPS(String tabgroup) {
   Map tabgroupToTabRef = new HashMap();
-  tabgroupToTabRef.put("Transect", "Transect/Transect/");
   tabgroupToTabRef.put("Site", "Site/Site/");
   tabgroupToTabRef.put("Feature", "Feature/Feature/");
 
@@ -1548,6 +1561,102 @@ incAutoNum(String destPath) {
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/
 
+/***************************** TRANSECT GEOMETREY *****************************/
+addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
+//addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
+
+isStartedSurvey  = false;
+isFinishedSurvey = false;
+
+saveParentTransect(String callback) {
+  tabGroup = "Transect";
+
+  if (getUuid(tabGroup) != null) {
+    execute(callback);
+    return;
+  }
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      setUuid(tabGroup, uuid);
+      execute(callback);
+    }
+  };
+
+  saveTabGroup(tabGroup, null, null, null, saveCallback);
+}
+
+saveChildTransectPoint(String callback) {
+  parentTabGroup = "Transect";
+  childTabGroup  = "Transect Point";
+
+  Object positionProj = getGPSPositionProjected();
+  String parentUuid   = getUuid(parentTabGroup);
+
+  if (isNull(parentUuid)) {
+    showToast("Parent not yet saved");
+    return;
+  }
+  if (positionProj == null) {
+    showToast("Unable to get GPS position");
+    return;
+  }
+  if (isStartedSurvey) {
+    showToast("Survey already started");
+    return;
+  }
+
+  Integer id = 0;
+
+  lat = positionProj.getLatitude();
+  lon = positionProj.getLongitude();
+  MapPos pos   = new MapPos(lat, lon);
+  Point  point = new Point(pos, null, (PointStyle) null, null);
+  List geoList = new ArrayList(); geoList.add(point);
+
+  List attributes = createAttributeList();
+  attributes.add(createEntityAttribute("ID", null, null, id.toString(), null));
+
+  saveCallback = new SaveCallback() {
+    onSave(uuid, newRecord) {
+      isStartedSurvey = true;
+
+      String rel = "%s - %s";
+      rel = rel.replaceFirst("%s", parentTabGroup);
+      rel = rel.replaceFirst("%s", childTabGroup);
+
+      saveEntitiesToHierRel(
+        rel,
+        parentUuid,
+        uuid,
+        "Parent Of",
+        "Child Of",
+        callback
+      );
+
+      showToast("Survey unit started");
+    }
+  };
+  saveArchEnt(null, childTabGroup, geoList, attributes, saveCallback);
+}
+
+startSurveyUnit() {
+  parentTabgroup       = "Transect";
+  enableParentAutosave = "saveTabGroup(\"%s\")";
+  enableParentAutosave = enableParentAutosave.replaceFirst(
+      "%s",
+      parentTabgroup.replaceAll("\"", "\\\\\\\\\"") // Regex; slashes are double-esc
+  );
+
+  saveChildTransectPoint = "saveChildTransectPoint(\"%s\")";
+  saveChildTransectPoint = saveChildTransectPoint.replaceFirst(
+      "%s",
+      enableParentAutosave.replaceAll("\"", "\\\\\\\\\"")
+  );
+  Log.e("makeVocab()", "" + saveChildTransectPoint);
+
+  saveParentTransect(saveChildTransectPoint);
+}
 
 /******************************************************************************/
 /*                                    INIT                                    */
