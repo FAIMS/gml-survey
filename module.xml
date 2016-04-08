@@ -126,7 +126,6 @@
         include the definition from Appendix A of the Code).
       </desc>
       <opts>
-        <!--TODO: Add images-->
         <!--PERCENTAGE_NUMBERS-->
       </opts>
     </Ground_surface_visibility>
@@ -138,7 +137,6 @@
         the Code).
       </desc>
       <opts>
-        <!--TODO: Add images-->
         <!--PERCENTAGE_NUMBERS-->
       </opts>
     </Ground_surface_exposure>
