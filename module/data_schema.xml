@@ -129,27 +129,27 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{0_}
+        <term pictureURL="files/data/000.png">{0_}
 <description/></term>
-        <term>{10_}
+        <term pictureURL="files/data/010.png">{10_}
 <description/></term>
-        <term>{20_}
+        <term pictureURL="files/data/020.png">{20_}
 <description/></term>
-        <term>{30_}
+        <term pictureURL="files/data/030.png">{30_}
 <description/></term>
-        <term>{40_}
+        <term pictureURL="files/data/040.png">{40_}
 <description/></term>
-        <term>{50_}
+        <term pictureURL="files/data/050.png">{50_}
 <description/></term>
-        <term>{60_}
+        <term pictureURL="files/data/060.png">{60_}
 <description/></term>
-        <term>{70_}
+        <term pictureURL="files/data/070.png">{70_}
 <description/></term>
-        <term>{80_}
+        <term pictureURL="files/data/080.png">{80_}
 <description/></term>
-        <term>{90_}
+        <term pictureURL="files/data/080.png">{90_}
 <description/></term>
-        <term>{100_}
+        <term pictureURL="files/data/100.png">{100_}
 <description/></term>
       </lookup>
     </property>
@@ -163,27 +163,27 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{0_}
+        <term pictureURL="files/data/000.png">{0_}
 <description/></term>
-        <term>{10_}
+        <term pictureURL="files/data/010.png">{10_}
 <description/></term>
-        <term>{20_}
+        <term pictureURL="files/data/020.png">{20_}
 <description/></term>
-        <term>{30_}
+        <term pictureURL="files/data/030.png">{30_}
 <description/></term>
-        <term>{40_}
+        <term pictureURL="files/data/040.png">{40_}
 <description/></term>
-        <term>{50_}
+        <term pictureURL="files/data/050.png">{50_}
 <description/></term>
-        <term>{60_}
+        <term pictureURL="files/data/060.png">{60_}
 <description/></term>
-        <term>{70_}
+        <term pictureURL="files/data/070.png">{70_}
 <description/></term>
-        <term>{80_}
+        <term pictureURL="files/data/080.png">{80_}
 <description/></term>
-        <term>{90_}
+        <term pictureURL="files/data/080.png">{90_}
 <description/></term>
-        <term>{100_}
+        <term pictureURL="files/data/100.png">{100_}
 <description/></term>
       </lookup>
     </property>

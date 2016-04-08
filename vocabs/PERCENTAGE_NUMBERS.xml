@@ -1,11 +1,11 @@
-<opt>0%</opt>
-<opt>10%</opt>
-<opt>20%</opt>
-<opt>30%</opt>
-<opt>40%</opt>
-<opt>50%</opt>
-<opt>60%</opt>
-<opt>70%</opt>
-<opt>80%</opt>
-<opt>90%</opt>
-<opt>100%</opt>
+<opt p="000.png">0%</opt>
+<opt p="010.png">10%</opt>
+<opt p="020.png">20%</opt>
+<opt p="030.png">30%</opt>
+<opt p="040.png">40%</opt>
+<opt p="050.png">50%</opt>
+<opt p="060.png">60%</opt>
+<opt p="070.png">70%</opt>
+<opt p="080.png">80%</opt>
+<opt p="080.png">90%</opt>
+<opt p="100.png">100%</opt>

@@ -147,8 +147,6 @@ getDropdownItemValue() {
 addOnEvent("Login/Login/Logger_ID", "click", "dropdownItemValue = getFieldValue(\"Login/Login/Logger_ID\")");
 addOnEvent("Transect/Transect/Landform", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Landform\")");
 addOnEvent("Transect/Transect/Slope_Gradient", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Slope_Gradient\")");
-addOnEvent("Transect/Transect/Ground_surface_visibility", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Ground_surface_visibility\")");
-addOnEvent("Transect/Transect/Ground_surface_exposure", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Ground_surface_exposure\")");
 addOnEvent("Transect/Transect/Geomorphological_Activity", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Geomorphological_Activity\")");
 addOnEvent("Site/Site/Site_Aspect_Orientation", "click", "dropdownItemValue = getFieldValue(\"Site/Site/Site_Aspect_Orientation\")");
 addOnEvent("Site/Close_Site/Shelter_Cave_Formation", "click", "dropdownItemValue = getFieldValue(\"Site/Close_Site/Shelter_Cave_Formation\")");
@@ -501,8 +499,8 @@ makeVocab(String type, String path, String attrib, List vocabExclusions, String 
 makeVocab("RadioGroup", "Transect/Transect/Device_ID", "Device ID");
 makeVocab("DropDown", "Transect/Transect/Landform", "Landform");
 makeVocab("DropDown", "Transect/Transect/Slope_Gradient", "Slope Gradient");
-makeVocab("DropDown", "Transect/Transect/Ground_surface_visibility", "Ground surface visibility");
-makeVocab("DropDown", "Transect/Transect/Ground_surface_exposure", "Ground surface exposure");
+makeVocab("PictureGallery", "Transect/Transect/Ground_surface_visibility", "Ground surface visibility");
+makeVocab("PictureGallery", "Transect/Transect/Ground_surface_exposure", "Ground surface exposure");
 makeVocab("DropDown", "Transect/Transect/Geomorphological_Activity", "Geomorphological Activity");
 makeVocab("RadioGroup", "Site/Site/Open_Closed_Site", "Open Closed Site");
 makeVocab("DropDown", "Site/Site/Site_Aspect_Orientation", "Site Aspect Orientation");

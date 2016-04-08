@@ -484,17 +484,17 @@
           <label>{Vegetation_notes}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <select1 faims_attribute_type="vocab" ref="Ground_surface_visibility" faims_attribute_name="Ground surface visibility" faims_style_class="required">
+        <select1 type="image" faims_attribute_type="vocab" ref="Ground_surface_visibility" faims_attribute_name="Ground surface visibility" faims_style_class="required">
           <label>{Ground_surface_visibility}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <!--WARNING: No type t was given for this view; assuming it is a picture gallery-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Ground_surface_exposure" faims_attribute_name="Ground surface exposure" faims_style_class="required">
+        <select1 type="image" faims_attribute_type="vocab" ref="Ground_surface_exposure" faims_attribute_name="Ground surface exposure" faims_style_class="required">
           <label>{Ground_surface_exposure}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
+          <!--WARNING: No type t was given for this view; assuming it is a picture gallery-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
