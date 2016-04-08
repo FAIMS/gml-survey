@@ -1,6 +1,9 @@
 <?xml version="1.0" ?>
 
-<!--The following preprocessor directive inserts vocab entries.-->
+<!--The following preprocessor directive inserts:
+      - vocab entries; and
+      - logic
+      -->
 <!--@PREPROC:  ./preproc.sh-->
 
 <!--@POSTPROC: ./postproc.sh-->
