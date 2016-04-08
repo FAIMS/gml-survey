@@ -423,7 +423,7 @@
         <opt>Other unknown material</opt>
       </opts>
     </Artefact_Raw_Material>
-    <Artefact_Type>
+    <Artefact_Type t="radio">
       <opts>
         <opt>Aboriginal</opt>
         <opt>Historical</opt>
@@ -721,7 +721,7 @@
         <opt>Flat</opt>
       </opts>
     </Type_Grinding_Groove>
-    <Profile_Shape>
+    <Profile_Shape t="radio">
       <opts>
         <opt>U' shaped</opt>
         <opt>'V' shaped</opt>
@@ -754,7 +754,7 @@
     <Grinding_Groove_Photo t="camera"/>
   </Grinding_Groove>
   <Shell>
-    <Shell_Distribution>
+    <Shell_Distribution t="radio">
       <opts>
         <opt>Surface scatter</opt>
         <opt>Stratified deposit</opt>
@@ -839,14 +839,14 @@
     </PAD_Surface_Artefacts>
   </Potential_Archaeological_Deposit>
   <Culturally_Modified_Tree>
-    <CM_Tree_Type>
+    <CM_Tree_Type t="radio">
       <opts>
         <opt>Carved</opt>
         <opt>Scarred</opt>
         <opt>Carved and Scarred</opt>
       </opts>
     </CM_Tree_Type>
-    <Tree_Species>
+    <Tree_Species t="radio">
       <opts>
         <opt>Eucalypt</opt>
         <opt>Red Gum</opt>
@@ -855,7 +855,7 @@
     </Tree_Species>
     <Number_of_Scars b="decimal"/>
     <Number_of_Carved_Panels b="decimal"/>
-    <Living_Status>
+    <Living_Status t="radio">
       <opts>
         <opt>Dead</opt>
         <opt>Alive</opt>
