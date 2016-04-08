@@ -1,3 +1,2 @@
 /***************************** POPULATE DEVICE ID *****************************/
-  <!--POPULATE_DEVICE_ID-->
 makeVocab("DropDown", "Login/Login/Device_ID", "Device ID");

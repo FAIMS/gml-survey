@@ -23,7 +23,7 @@
            prevented from further recording if the field is left blank-->
     </Logger_ID>
     <Device_ID t="radio">
-      <!--TODO: Manually populated in logic from Transect/Transect/Device_ID-->
+      <!--Populated manually in logic-->
     </Device_ID>
     <Login t="button" l="Control"/>
   </Login>
@@ -947,6 +947,7 @@
 </Feature>
 
 <logic><![CDATA[
+  <!--POPULATE_DEVICE_ID-->
   <!--TRANSECT_GEOMETRY-->
 ]]></logic>
 
