@@ -158,7 +158,6 @@ addOnEvent("Feature/Feature/Select_Feature_Type", "click", "dropdownItemValue = 
 addOnEvent("Feature/Artefact/Insitu_Artefact", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Insitu_Artefact\")");
 addOnEvent("Feature/Artefact/Stratified_Artefact", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Stratified_Artefact\")");
 addOnEvent("Feature/Artefact/Artefact_Raw_Material", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Raw_Material\")");
-addOnEvent("Feature/Artefact/Artefact_Type", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Type\")");
 addOnEvent("Feature/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts\")");
 addOnEvent("Feature/Artefact/Artefact_Colour", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Colour\")");
 addOnEvent("Feature/Artefact/Artefact_Status_Modification", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Status_Modification\")");
@@ -171,17 +170,12 @@ addOnEvent("Feature/Art/Art_Form", "click", "dropdownItemValue = getFieldValue(\
 addOnEvent("Feature/Art/Art_Main_Colour", "click", "dropdownItemValue = getFieldValue(\"Feature/Art/Art_Main_Colour\")");
 addOnEvent("Feature/Art/Art_Condition", "click", "dropdownItemValue = getFieldValue(\"Feature/Art/Art_Condition\")");
 addOnEvent("Feature/Grinding_Groove/Type_Grinding_Groove", "click", "dropdownItemValue = getFieldValue(\"Feature/Grinding_Groove/Type_Grinding_Groove\")");
-addOnEvent("Feature/Grinding_Groove/Profile_Shape", "click", "dropdownItemValue = getFieldValue(\"Feature/Grinding_Groove/Profile_Shape\")");
-addOnEvent("Feature/Shell/Shell_Distribution", "click", "dropdownItemValue = getFieldValue(\"Feature/Shell/Shell_Distribution\")");
 addOnEvent("Feature/Shell/Dominant_Species", "click", "dropdownItemValue = getFieldValue(\"Feature/Shell/Dominant_Species\")");
 addOnEvent("Feature/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "click", "dropdownItemValue = getFieldValue(\"Feature/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage\")");
 addOnEvent("Feature/Hearth_Ground_Oven/Hearth_Components", "click", "dropdownItemValue = getFieldValue(\"Feature/Hearth_Ground_Oven/Hearth_Components\")");
 addOnEvent("Feature/Potential_Archaeological_Deposit/PAD_Insitu", "click", "dropdownItemValue = getFieldValue(\"Feature/Potential_Archaeological_Deposit/PAD_Insitu\")");
 addOnEvent("Feature/Potential_Archaeological_Deposit/PAD_Stratified", "click", "dropdownItemValue = getFieldValue(\"Feature/Potential_Archaeological_Deposit/PAD_Stratified\")");
 addOnEvent("Feature/Potential_Archaeological_Deposit/PAD_Type", "click", "dropdownItemValue = getFieldValue(\"Feature/Potential_Archaeological_Deposit/PAD_Type\")");
-addOnEvent("Feature/Culturally_Modified_Tree/CM_Tree_Type", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/CM_Tree_Type\")");
-addOnEvent("Feature/Culturally_Modified_Tree/Tree_Species", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/Tree_Species\")");
-addOnEvent("Feature/Culturally_Modified_Tree/Living_Status", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/Living_Status\")");
 addOnEvent("Feature/Culturally_Modified_Tree/Tree_Status", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/Tree_Status\")");
 addOnEvent("Feature/Culturally_Modified_Tree/CM_Tree_Shape", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/CM_Tree_Shape\")");
 addOnEvent("Feature/Culturally_Modified_Tree/CM_Tree_Orientation", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/CM_Tree_Orientation\")");
@@ -522,7 +516,7 @@ makeVocab("DropDown", "Feature/Feature/Select_Feature_Type", "Select Feature Typ
 makeVocab("DropDown", "Feature/Artefact/Insitu_Artefact", "Insitu Artefact");
 makeVocab("DropDown", "Feature/Artefact/Stratified_Artefact", "Stratified Artefact");
 makeVocab("DropDown", "Feature/Artefact/Artefact_Raw_Material", "Artefact Raw Material");
-makeVocab("DropDown", "Feature/Artefact/Artefact_Type", "Artefact Type");
+makeVocab("RadioGroup", "Feature/Artefact/Artefact_Type", "Artefact Type");
 makeVocab("HierarchicalDropDown", "Feature/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "Artefact Description for Aboriginal Stone Artefacts");
 makeVocab("HierarchicalDropDown", "Feature/Artefact/Artefact_Colour", "Artefact Colour");
 makeVocab("DropDown", "Feature/Artefact/Artefact_Status_Modification", "Artefact Status Modification");
@@ -540,8 +534,8 @@ makeVocab("DropDown", "Feature/Art/Art_Main_Colour", "Art Main Colour");
 makeVocab("CheckBoxGroup", "Feature/Art/Art_Location", "Art Location");
 makeVocab("DropDown", "Feature/Art/Art_Condition", "Art Condition");
 makeVocab("DropDown", "Feature/Grinding_Groove/Type_Grinding_Groove", "Type Grinding Groove");
-makeVocab("DropDown", "Feature/Grinding_Groove/Profile_Shape", "Profile Shape");
-makeVocab("DropDown", "Feature/Shell/Shell_Distribution", "Shell Distribution");
+makeVocab("RadioGroup", "Feature/Grinding_Groove/Profile_Shape", "Profile Shape");
+makeVocab("RadioGroup", "Feature/Shell/Shell_Distribution", "Shell Distribution");
 makeVocab("CheckBoxGroup", "Feature/Shell/Species_present", "Species present");
 makeVocab("DropDown", "Feature/Shell/Dominant_Species", "Dominant Species");
 makeVocab("DropDown", "Feature/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "Approximate percentage of dominant species as part of assemblage");
@@ -550,9 +544,9 @@ makeVocab("DropDown", "Feature/Potential_Archaeological_Deposit/PAD_Insitu", "PA
 makeVocab("DropDown", "Feature/Potential_Archaeological_Deposit/PAD_Stratified", "PAD Stratified");
 makeVocab("DropDown", "Feature/Potential_Archaeological_Deposit/PAD_Type", "PAD Type");
 makeVocab("RadioGroup", "Feature/Potential_Archaeological_Deposit/PAD_Surface_Artefacts", "PAD Surface Artefacts");
-makeVocab("DropDown", "Feature/Culturally_Modified_Tree/CM_Tree_Type", "CM Tree Type");
-makeVocab("DropDown", "Feature/Culturally_Modified_Tree/Tree_Species", "Tree Species");
-makeVocab("DropDown", "Feature/Culturally_Modified_Tree/Living_Status", "Living Status");
+makeVocab("RadioGroup", "Feature/Culturally_Modified_Tree/CM_Tree_Type", "CM Tree Type");
+makeVocab("RadioGroup", "Feature/Culturally_Modified_Tree/Tree_Species", "Tree Species");
+makeVocab("RadioGroup", "Feature/Culturally_Modified_Tree/Living_Status", "Living Status");
 makeVocab("DropDown", "Feature/Culturally_Modified_Tree/Tree_Status", "Tree Status");
 makeVocab("CheckBoxGroup", "Feature/Culturally_Modified_Tree/CM_Tree_Damage", "CM Tree Damage");
 makeVocab("RadioGroup", "Feature/Culturally_Modified_Tree/Regrowth", "Regrowth");
@@ -1563,30 +1557,73 @@ incAutoNum(String destPath) {
 
 /***************************** TRANSECT GEOMETREY *****************************/
 addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
-//addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
+addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
 
-isStartedSurvey  = false;
-isFinishedSurvey = false;
+STATE_NONE     = "NONE";
+STATE_STARTED  = "STARTED";
+STATE_FINISHED = "FINISHED";
 
-saveParentTransect(String callback) {
-  tabGroup = "Transect";
+state = STATE_NONE;
 
+startSurveyUnit() {
+  if      (state.equals(STATE_NONE    )) tryIncrementingState();
+  else if (state.equals(STATE_STARTED )) showToast("Survey already started");
+  else if (state.equals(STATE_FINISHED)) showToast("Survey already finished");
+}
+
+finishSurveyUnit() {
+  if      (state.equals(STATE_NONE    )) showToast("Survey not yet started");
+  else if (state.equals(STATE_STARTED )) tryIncrementingState();
+  else if (state.equals(STATE_FINISHED)) showToast("Survey already finished");
+}
+
+tryIncrementingState() {
+  // Make a chain of callbacks. It should go:
+  //
+  //             __________-> identifier ->_______________
+  //            /                                         \
+  //   saveParentTransect(...) -> saveChildTransectPoint(identifier, ...)
+  //     -> saveTabGroup(...)
+  //
+  // The last call should be the original, autogenerated saveTabGroup call from
+  // the onShowTransect function definition.
+
+  Object positionProj = getGPSPositionProjected();
+  if (positionProj == null) {
+    showToast("Unable to get GPS position");
+    return;
+  }
+  saveParentTransect();
+}
+
+saveParentTransect() {
+  tabGroup               = "Transect";
+  saveChildTransectPoint = "saveChildTransectPoint";
+
+  // Already saved
   if (getUuid(tabGroup) != null) {
-    execute(callback);
+    uuid = getUuid(tabGroup);
+    fetchIdentifier(uuid, saveChildTransectPoint);
     return;
   }
 
+  // Not already saved. Save it immediately then enable autosaving.
   saveCallback = new SaveCallback() {
     onSave(uuid, newRecord) {
       setUuid(tabGroup, uuid);
-      execute(callback);
+
+      // This should be equivalent to the autogenerated saveTabGroup call from
+      // the onShowTransect function definition. This enables autosave after the
+      // below saveTabGroup call is complete.
+      saveTabGroup(tabGroup);
+
+      fetchIdentifier(uuid, saveChildTransectPoint);
     }
   };
-
   saveTabGroup(tabGroup, null, null, null, saveCallback);
 }
 
-saveChildTransectPoint(String callback) {
+saveChildTransectPoint(String parentId) {
   parentTabGroup = "Transect";
   childTabGroup  = "Transect Point";
 
@@ -1594,68 +1631,83 @@ saveChildTransectPoint(String callback) {
   String parentUuid   = getUuid(parentTabGroup);
 
   if (isNull(parentUuid)) {
-    showToast("Parent not yet saved");
+    // Shouldn't happen because `saveParentTransect` should've set this.
+    Log.e("saveChildTransectPoint()", "Parent UUID is null");
     return;
   }
   if (positionProj == null) {
-    showToast("Unable to get GPS position");
     return;
   }
-  if (isStartedSurvey) {
-    showToast("Survey already started");
-    return;
-  }
-
-  Integer id = 0;
 
   lat = positionProj.getLatitude();
   lon = positionProj.getLongitude();
   MapPos pos   = new MapPos(lat, lon);
   Point  point = new Point(pos, null, (PointStyle) null, null);
-  List geoList = new ArrayList(); geoList.add(point);
+  List   geoList = new ArrayList(); geoList.add(point);
 
-  List attributes = createAttributeList();
-  attributes.add(createEntityAttribute("ID", null, null, id.toString(), null));
+  String stateNext;
+  if      (state.equals(STATE_NONE   )) stateNext = STATE_STARTED;
+  else if (state.equals(STATE_STARTED)) stateNext = STATE_FINISHED;
+  else {
+    // Shouldn't ever happen
+    Log.e("saveChildTransectPoint()", "Unexpected state");
+    showWarning("Error", "A critial error has occurred. Point not saved.");
+    return;
+  }
+
+  String order;
+  if (stateNext.equals(STATE_STARTED )) order = "0";
+  if (stateNext.equals(STATE_FINISHED)) order = "1";
+
+  List attribs = createAttributeList();
+  attribs.add(createEntityAttribute("State",     null, null, stateNext, null));
+  attribs.add(createEntityAttribute("Parent ID", null, null, parentId,  null));
+  attribs.add(createEntityAttribute("Order",     null, null, order,     null));
 
   saveCallback = new SaveCallback() {
     onSave(uuid, newRecord) {
-      isStartedSurvey = true;
+      state = stateNext;
+      showToast("Survey " + state.toLowerCase());
 
       String rel = "%s - %s";
-      rel = rel.replaceFirst("%s", parentTabGroup);
-      rel = rel.replaceFirst("%s", childTabGroup);
+      rel = replaceFirst(rel, "%s", parentTabGroup);
+      rel = replaceFirst(rel, "%s", childTabGroup);
 
-      saveEntitiesToHierRel(
-        rel,
-        parentUuid,
-        uuid,
-        "Parent Of",
-        "Child Of",
-        callback
-      );
-
-      showToast("Survey unit started");
+      saveEntitiesToHierRel(rel, parentUuid, uuid, "Parent Of", "Child Of", "");
     }
   };
-  saveArchEnt(null, childTabGroup, geoList, attributes, saveCallback);
+  saveArchEnt(null, childTabGroup, geoList, attribs, saveCallback);
 }
 
-startSurveyUnit() {
-  parentTabgroup       = "Transect";
-  enableParentAutosave = "saveTabGroup(\"%s\")";
-  enableParentAutosave = enableParentAutosave.replaceFirst(
-      "%s",
-      parentTabgroup.replaceAll("\"", "\\\\\\\\\"") // Regex; slashes are double-esc
-  );
+// Regex-free string replacement functions
+replaceFirst(haystack, needle, replacement) {
+  i = haystack.indexOf(needle);
+  if (i == -1)           return haystack;
+  if (needle.equals("")) return haystack;
+  pre  = haystack.substring(0, i                                   );
+  post = haystack.substring(   i+needle.length(), haystack.length());
+  return pre + replacement + post;
+}
 
-  saveChildTransectPoint = "saveChildTransectPoint(\"%s\")";
-  saveChildTransectPoint = saveChildTransectPoint.replaceFirst(
-      "%s",
-      enableParentAutosave.replaceAll("\"", "\\\\\\\\\"")
-  );
-  Log.e("makeVocab()", "" + saveChildTransectPoint);
+fetchIdentifier(String uuid, String callback) {
+  String q = "";
+  q += "SELECT uuid, response ";
+  q += "FROM latestnondeletedarchentformattedidentifiers ";
+  q += "WHERE uuid = '%s' ";
+  q  = replaceFirst(q, "%s", uuid);
 
-  saveParentTransect(saveChildTransectPoint);
+  cb = new FetchCallback() {
+    onFetch(result) {
+      identifier  = result.get(1);
+
+      callbackStr = "%s(\"%s\")";
+      callbackStr = replaceFirst(callbackStr, "%s", callback);
+      callbackStr = replaceFirst(callbackStr, "%s", identifier);
+      execute(callbackStr);
+    }
+  };
+
+  fetchOne(q, cb);
 }
 
 /******************************************************************************/

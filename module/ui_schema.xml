@@ -86,7 +86,9 @@
           </Transect>
           <Transect_Point>
             <Transect_Point>
-              <ID/>
+              <State/>
+              <Parent_ID/>
+              <Order/>
             </Transect_Point>
           </Transect_Point>
           <Site>
@@ -565,8 +567,16 @@
       <label/>
       <group ref="Transect_Point">
         <label>{Transect_Point}</label>
-        <input faims_attribute_type="measure" ref="ID" faims_attribute_name="ID">
-          <label>{ID}</label>
+        <input faims_attribute_type="measure" ref="State" faims_attribute_name="State">
+          <label>{State}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Parent_ID" faims_attribute_name="Parent ID">
+          <label>{Parent_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Order" faims_attribute_name="Order">
+          <label>{Order}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
@@ -835,9 +845,8 @@
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Artefact_Type" faims_attribute_name="Artefact Type">
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Artefact_Type" faims_attribute_name="Artefact Type">
           <label>{Artefact_Type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -1084,9 +1093,8 @@
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Profile_Shape" faims_attribute_name="Profile Shape">
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Profile_Shape" faims_attribute_name="Profile Shape">
           <label>{Profile_Shape}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -1155,9 +1163,8 @@
       </group>
       <group ref="Shell">
         <label>{Shell}</label>
-        <select1 faims_attribute_type="vocab" ref="Shell_Distribution" faims_attribute_name="Shell Distribution">
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Shell_Distribution" faims_attribute_name="Shell Distribution">
           <label>{Shell_Distribution}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -1298,17 +1305,15 @@
       </group>
       <group ref="Culturally_Modified_Tree">
         <label>{Culturally_Modified_Tree}</label>
-        <select1 faims_attribute_type="vocab" ref="CM_Tree_Type" faims_attribute_name="CM Tree Type">
+        <select1 appearance="full" faims_attribute_type="vocab" ref="CM_Tree_Type" faims_attribute_name="CM Tree Type">
           <label>{CM_Tree_Type}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Tree_Species" faims_attribute_name="Tree Species">
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Tree_Species" faims_attribute_name="Tree Species">
           <label>{Tree_Species}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -1322,9 +1327,8 @@
           <label>{Number_of_Carved_Panels}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <select1 faims_attribute_type="vocab" ref="Living_Status" faims_attribute_name="Living Status">
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Living_Status" faims_attribute_name="Living Status">
           <label>{Living_Status}</label>
-          <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
