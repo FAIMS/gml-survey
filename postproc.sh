@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
-#cd module
+cd module
 
-#echo "Take_From_GPS=Start Survey Unit" >> english.0.properties
+string="
+  String autoNumDest = \"\";
+  autoNumDest = \"Transect\/Transect\/Transect_ID\";
+  incAutoNum(autoNumDest);"
+replacement="
+  String autoNumDest = \"\";
+  autoNumDest = \"Transect\/Transect\/Transect_ID\";
+  incAutoNum(autoNumDest);
+  copyDeviceId();"
+perl -0777 -i.original -pe "s/\\Q$string/$replacement/igs" ui_logic.bsh
 
-#string="<input ref=\"Table\">"
-#replacement="<input ref=\"Table\" faims_table=\"true\">"
-#perl -0777 -i.original -pe "s/\\Q$string/$replacement/igs" ui_schema.xml
-
-#rm ui_schema.xml.original
+rm ui_logic.bsh.original

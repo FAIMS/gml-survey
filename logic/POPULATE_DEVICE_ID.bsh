@@ -1,2 +1,0 @@
-/***************************** POPULATE DEVICE ID *****************************/
-makeVocab("DropDown", "Login/Login/Device_ID", "Device ID");

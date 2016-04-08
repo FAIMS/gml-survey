@@ -9,7 +9,9 @@
 
 <rels>
   <RelationshipElement name="Transect - Transect Point" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
+    <description>
+      A 1-to-n relationship between the parent and its children, respectively.
+    </description>
     <parent>Parent Of</parent>
     <child>Child Of</child>
   </RelationshipElement>
@@ -23,7 +25,6 @@
            prevented from further recording if the field is left blank-->
     </Logger_ID>
     <Device_ID t="radio">
-      <!--TODO: Copy to Transect-->
       <!--Populated manually in logic from Transect/Transect/Device_ID-->
     </Device_ID>
     <Login t="button" l="Control"/>
@@ -55,6 +56,7 @@
     </Transect_ID>
     <timestamp/>
     <Device_ID t="radio" f="notnull">
+      <!--Set from value in Login/Login/Device_ID-->
       <opts>
         <opt>A</opt>
         <opt>B</opt>
@@ -946,7 +948,8 @@
 </Feature>
 
 <logic><![CDATA[
-  <!--DEVICE_ID-->
+  <!--DEVICE_ID_POPULATION-->
+  <!--DEVICE_ID_COPYING-->
   <!--TRANSECT_GEOMETRY-->
 ]]></logic>
 

@@ -1,0 +1,16 @@
+/**************************** DEVICE ID POPULATION ****************************/
+makeVocab("RadioGroup", "Login/Login/Device_ID", "Device ID");
+
+addOnEvent("Login",                 "show",  "loadDeviceId()");
+addOnEvent("Login/Login/Device_ID", "click", "saveDeviceId()");
+
+loadDeviceId() {
+  dst = "Login/Login/Device_ID";
+  setFieldValueFromLocalSettings(dst, dst);
+}
+
+saveDeviceId() {
+  src = "Login/Login/Device_ID";
+  val = getFieldValue(src);
+  insertIntoLocalSettings(src, val);
+}

@@ -6,7 +6,9 @@
     <child>Child Of</child>
   </RelationshipElement>
   <RelationshipElement name="Transect - Transect Point" type="hierarchical">
-    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
+    <description>
+      A 1-to-n relationship between the parent and its children, respectively.
+    </description>
     <parent>Parent Of</parent>
     <child>Child Of</child>
   </RelationshipElement>

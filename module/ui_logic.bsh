@@ -1060,6 +1060,7 @@ newTransect(){
   String autoNumDest = "";
   autoNumDest = "Transect/Transect/Transect_ID";
   incAutoNum(autoNumDest);
+  copyDeviceId();
 }
 
 duplicateTransect(){
@@ -1071,6 +1072,7 @@ duplicateTransect(){
   String autoNumDest = "";
   autoNumDest = "Transect/Transect/Transect_ID";
   incAutoNum(autoNumDest);
+  copyDeviceId();
 
   populateCameraPictureGallery("Transect/Transect/Transect_Photo", new ArrayList());
   populateFileList("Transect/Transect/Transect_Sketch", new ArrayList());
@@ -1555,8 +1557,33 @@ incAutoNum(String destPath) {
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/
 
-/***************************** POPULATE DEVICE ID *****************************/
+/**************************** DEVICE ID POPULATION ****************************/
 makeVocab("RadioGroup", "Login/Login/Device_ID", "Device ID");
+
+addOnEvent("Login",                 "show",  "loadDeviceId()");
+addOnEvent("Login/Login/Device_ID", "click", "saveDeviceId()");
+
+loadDeviceId() {
+  dst = "Login/Login/Device_ID";
+  setFieldValueFromLocalSettings(dst, dst);
+}
+
+saveDeviceId() {
+  src = "Login/Login/Device_ID";
+  val = getFieldValue(src);
+  insertIntoLocalSettings(src, val);
+}
+/***************************** DEVICE ID COPYING ******************************/
+/* Triggered upon Transect creation using @POSTPROC.                          */
+/******************************************************************************/
+
+copyDeviceId() {
+  src = "Login/Login/Device_ID";
+  dst = "Transect/Transect/Device_ID";
+  val = getFieldValue(src);
+
+  setFieldValue(dst, val);
+}
 /***************************** TRANSECT GEOMETREY *****************************/
 addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
 addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");

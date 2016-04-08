@@ -1,0 +1,11 @@
+/***************************** DEVICE ID COPYING ******************************/
+/* Triggered upon Transect creation using @POSTPROC.                          */
+/******************************************************************************/
+
+copyDeviceId() {
+  src = "Login/Login/Device_ID";
+  dst = "Transect/Transect/Device_ID";
+  val = getFieldValue(src);
+
+  setFieldValue(dst, val);
+}
