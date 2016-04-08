@@ -23,7 +23,8 @@
            prevented from further recording if the field is left blank-->
     </Logger_ID>
     <Device_ID t="radio">
-      <!--Populated manually in logic-->
+      <!--TODO: Copy to Transect-->
+      <!--Populated manually in logic from Transect/Transect/Device_ID-->
     </Device_ID>
     <Login t="button" l="Control"/>
   </Login>
@@ -42,13 +43,11 @@
 
 <Transect>
   <Transect>
-    <Start_Survey_Unit t="button">
-      <!--TODO-->
-    </Start_Survey_Unit>
+    <Start_Survey_Unit t="button"/>
     <Transect_ID f="id notnull autonum">
-      <!--TRN-<TransectID>-<Author>-<Date>; Export output format:One column for
-           Identifier (for export), one column for TransectID (with padded
-           zeros):"Transect", <TransectID>-->
+      <!--TODO: TRN-<TransectID>-<Author>-<Date>; Export output format:One
+           column for Identifier (for export), one column for TransectID (with
+           padded zeros):"Transect", <TransectID>-->
       <desc>
         The current autonumbering assumes single device in field. If multiple
         devices are in use, uniqueness rules must be defined.
@@ -183,21 +182,21 @@
     </Transect_Photo_Caption>
     <Transect_Sketch t="file"/>
     <Transect_Other_Notes/>
-    <Finish_Survey_Unit t="button">
-      <!--TODO-->
-    </Finish_Survey_Unit>
+    <Finish_Survey_Unit t="button"/>
   </Transect>
   <Map>
     <Map t="map"/>
-    <Survey_extent f="readonly"/>
+    <Survey_extent f="readonly">
+      <!--TODO: This needs to be populated-->
+    </Survey_extent>
   </Map>
 </Transect>
 
 <Transect_Point f="noui">
   <Transect_Point>
-    <State     f="id"/>
-    <Parent_ID f="id"/>
-    <Order     f="id"/>
+    <State     f="id"><str><fmt>$2 </fmt></str></State>
+    <Parent_ID f="id"><str><fmt>$2 </fmt></str></Parent_ID>
+    <Order     f="id"><str><fmt>$2</fmt> </str></Order>
   </Transect_Point>
 </Transect_Point>
 
@@ -947,7 +946,7 @@
 </Feature>
 
 <logic><![CDATA[
-  <!--POPULATE_DEVICE_ID-->
+  <!--DEVICE_ID-->
   <!--TRANSECT_GEOMETRY-->
 ]]></logic>
 
