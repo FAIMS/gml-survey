@@ -949,9 +949,11 @@
 </Feature>
 
 <logic><![CDATA[
+  <!--UTILS-->
   <!--DEVICE_ID_POPULATION-->
   <!--DEVICE_ID_COPYING-->
   <!--TRANSECT_GEOMETRY-->
+  <!--LOGGER_ID_VALIDATION-->
 ]]></logic>
 
 </module>
