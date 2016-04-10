@@ -2,7 +2,7 @@
 addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
 addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
 
-stateRef = "Transect/Vars/State";
+REF_STATE = "Transect/Vars/State";
 
 STATE_NONE     = "";
 STATE_STARTED  = "STARTED";
@@ -136,7 +136,7 @@ fetchIdentifier(String uuid, String callback) {
 }
 
 getState() {
-  return getFieldValue(stateRef);
+  return getFieldValue(REF_STATE);
 }
 
 getNextState() {
@@ -146,7 +146,7 @@ getNextState() {
 }
 
 setState(val) {
-  setFieldValue(stateRef, val);
+  setFieldValue(REF_STATE, val);
   return val;
 }
 
