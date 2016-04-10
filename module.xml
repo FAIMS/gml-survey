@@ -324,7 +324,7 @@
       </desc>
     </Other_management_recommendations>
   </Community_Consultation_Notes>
-  <Feature f="noscroll">
+  <Feature>
     <Feature_Type t="checkbox">
       <desc>Select all relevant site features.</desc>
       <opts>
