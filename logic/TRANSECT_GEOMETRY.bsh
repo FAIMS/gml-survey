@@ -140,8 +140,8 @@ getState() {
 }
 
 getNextState() {
-  if (state.equals(STATE_NONE   )) return STATE_STARTED;
-  if (state.equals(STATE_STARTED)) return STATE_FINISHED;
+  if (getState().equals(STATE_NONE   )) return STATE_STARTED;
+  if (getState().equals(STATE_STARTED)) return STATE_FINISHED;
   return null;
 }
 
