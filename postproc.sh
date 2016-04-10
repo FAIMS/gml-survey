@@ -12,7 +12,7 @@ perl -0777 -i.original -pe "s/\\Q$string/$replacement/igs" ui_logic.bsh
 
 string="
 onClickLoginLogin () {
-  // TODO: Add some things which should happen when this element is clicked
+  \/\/ TODO: Add some things which should happen when this element is clicked
   newTab(\"Control\", true);
 }"
 replacement=""
