@@ -62,8 +62,9 @@
         devices are in use, uniqueness rules must be defined.
       </desc>
     </Transect_ID>
-    <timestamp>
+    <timestamp f="id">
       <str>
+        <fmt>$2</fmt>
         <pos>2</pos>
         <app>-</app>
       </str>
@@ -206,6 +207,7 @@
     <State/>
     <author f="id">
       <str>
+        <fmt>$2</fmt>
         <pos>1</pos>
         <app>-</app>
       </str>
@@ -237,9 +239,12 @@
         <app>-</app>
       </str>
     </Site_ID_Number>
-    <timestamp>
-      <pos>2</pos>
-      <app>-</app>
+    <timestamp f="id">
+      <str>
+        <fmt>$2</fmt>
+        <pos>2</pos>
+        <app>-</app>
+      </str>
     </timestamp>
     <gps/>
     <Open_Closed_Site t="radio">
@@ -382,9 +387,12 @@
     <!--<List_of_Features ec="Feature"/>-->
   </Feature>
   <Vars f="hidden">
-    <author>
-      <pos>1</pos>
-      <app>-</app>
+    <author f="id">
+      <str>
+        <fmt>$2</fmt>
+        <pos>1</pos>
+        <app>-</app>
+      </str>
     </author>
   </Vars>
 </Site>
@@ -987,14 +995,16 @@
     </Axe_Marks>
   </Culturally_Modified_Tree>
   <Vars f="hidden">
-    <author    f="id">
+    <author f="id">
       <str>
+        <fmt>$2</fmt>
         <pos>2</pos>
         <app>-</app>
       </str>
     </author>
     <timestamp f="id">
       <str>
+        <fmt>$2</fmt>
         <pos>3</pos>
         <app>-</app>
       </str>
