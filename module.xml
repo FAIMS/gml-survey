@@ -193,6 +193,9 @@
       <!--TODO: This needs to be populated-->
     </Survey_extent>
   </Map>
+  <Vars f="hidden">
+    <State/>
+  </Vars>
 </Transect>
 
 <Transect_Point f="noui">
