@@ -52,12 +52,22 @@
       <!--TODO: TRN-<TransectID>-<Author>-<Date>; Export output format:One
            column for Identifier (for export), one column for TransectID (with
            padded zeros):"Transect", <TransectID>-->
+      <str>
+        <pos>0</pos>
+        <fmt>TRN-$2</fmt>
+        <app>-</app>
+      </str>
       <desc>
         The current autonumbering assumes single device in field. If multiple
         devices are in use, uniqueness rules must be defined.
       </desc>
     </Transect_ID>
-    <timestamp/>
+    <timestamp>
+      <str>
+        <pos>2</pos>
+        <app>-</app>
+      </str>
+    </timestamp>
     <Device_ID t="radio" f="notnull">
       <!--Set from value in Login/Login/Device_ID-->
       <opts>
@@ -67,7 +77,6 @@
         <opt>D</opt>
       </opts>
     </Device_ID>
-    <author>Logger ID</author>
     <Total_Transect_Width_m b="decimal">
       Total Transect Width (m)
     </Total_Transect_Width_m>
@@ -195,6 +204,12 @@
   </Map>
   <Vars f="hidden">
     <State/>
+    <author f="id">
+      <str>
+        <pos>1</pos>
+        <app>-</app>
+      </str>
+    </author>
   </Vars>
 </Transect>
 
@@ -216,8 +231,16 @@
         The current autonumbering assumes single device in field. If multiple
         devices are in use, uniqueness rules must be defined.
       </desc>
+      <str>
+        <pos>0</pos>
+        <fmt>Site-$2</fmt>
+        <app>-</app>
+      </str>
     </Site_ID_Number>
-    <timestamp/>
+    <timestamp>
+      <pos>2</pos>
+      <app>-</app>
+    </timestamp>
     <gps/>
     <Open_Closed_Site t="radio">
       Open/Closed Site
@@ -358,12 +381,22 @@
     <New_Feature t="button" lc="Feature"/>
     <!--<List_of_Features ec="Feature"/>-->
   </Feature>
+  <Vars f="hidden">
+    <author>
+      <pos>1</pos>
+      <app>-</app>
+    </author>
+  </Vars>
 </Site>
 
 <Feature>
   <Feature>
     <Feature_ID f="id notnull autonum">
       <!--TODO: <SelectFeatureType>-<FeatureID>-<Author>-<Date>-->
+      <str>
+        <pos>1</pos>
+        <app>-</app>
+      </str>
     </Feature_ID>
     <gps/>
     <Feature_Condition>
@@ -374,7 +407,11 @@
         <opt>Poor</opt>
       </opts>
     </Feature_Condition>
-    <Select_Feature_Type>
+    <Select_Feature_Type f="id">
+      <str>
+        <pos>0</pos>
+        <app>-</app>
+      </str>
       <opts>
         <opt>Artefact</opt>
         <opt>Intangible Value</opt>
@@ -949,6 +986,20 @@
       </opts>
     </Axe_Marks>
   </Culturally_Modified_Tree>
+  <Vars f="hidden">
+    <author    f="id">
+      <str>
+        <pos>2</pos>
+        <app>-</app>
+      </str>
+    </author>
+    <timestamp f="id">
+      <str>
+        <pos>3</pos>
+        <app>-</app>
+      </str>
+    </timestamp>
+  </Vars>
 </Feature>
 
 <logic><![CDATA[
