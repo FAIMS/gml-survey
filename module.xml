@@ -311,7 +311,7 @@
     <Length_of_potential_site_area b="decimal"/>
     <Average_width_of_potential_site_area b="decimal" f="notnull"/>
   </Open_Site>
-  <Close_Site>
+  <Closed_Site>
     <Shelter_Cave_Formation>
       Shelter/Cave Formation
       <opts>
@@ -334,7 +334,7 @@
     <Internal_Width b="decimal" f="notnull"/>
     <Shelter_Height b="decimal" f="notnull"/>
     <Shelter_Floor_Area b="decimal" f="notnull"/>
-  </Close_Site>
+  </Closed_Site>
   <Community_Consultation_Notes>
     <Aboriginal_community_interpretation>
       <desc>Note informants name and what they have said.</desc>
@@ -1014,10 +1014,11 @@
 
 <logic><![CDATA[
   <!--UTILS-->
-  <!--DEVICE_ID_POPULATION-->
   <!--DEVICE_ID_COPYING-->
-  <!--TRANSECT_GEOMETRY-->
+  <!--DEVICE_ID_POPULATION-->
+  <!--DYNAMIC_UI_OPEN_CLOSED-->
   <!--LOGGER_ID_VALIDATION-->
+  <!--TRANSECT_GEOMETRY-->
 ]]></logic>
 
 </module>

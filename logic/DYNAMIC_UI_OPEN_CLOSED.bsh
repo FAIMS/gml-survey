@@ -1,0 +1,67 @@
+/*********************** DYNAMIC UI - OPEN/CLOSED SITE ************************/
+/* There are two cases to handle:                                             */
+/*   (a) When a Site is newly created.                                        */
+/*   (b) When a Site has been loaded.                                         */
+/*                                                                            */
+/* Case (a) is handled by an on-click events which triggers                   */
+/* `updateOpenClosedTabs()`.                                                  */
+/*                                                                            */
+/* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
+/* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
+/******************************************************************************/
+addOnEvent("Site",                       "show",  "updateOpenClosedTabs()");
+addOnEvent("Site/Site/Open_Closed_Site", "click", "updateOpenClosedTabs()");
+
+VOCAB_ID_OPEN   = null;
+VOCAB_ID_CLOSED = null;
+OPEN_CLOSED_SITE_VALS = new ArrayList();
+fetchVocab("Open Closed Site", OPEN_CLOSED_SITE_VALS, "setOpenClosedVocabIds()");
+
+getVocabId(vocabName, vocabVals) {
+  vocabName = "{" + vocabName + "}";
+  vocabId   = null;
+  for (List val : OPEN_CLOSED_SITE_VALS) {
+    String thisVocabId   = val.get(0);
+    String thisVocabName = val.get(1);
+
+    if (vocabName.equals(thisVocabName)) {
+      return thisVocabId;
+    }
+  }
+}
+
+setOpenClosedVocabIds() {
+  VOCAB_ID_OPEN   = getVocabId("Open",   OPEN_CLOSED_SITE_VALS);
+  VOCAB_ID_CLOSED = getVocabId("Closed", OPEN_CLOSED_SITE_VALS);
+}
+
+updateOpenClosedTabs() {
+  cancelSites();
+
+  selectedId       = getFieldValue("Site/Site/Open_Closed_Site");
+  isSelectedOpen   = VOCAB_ID_OPEN  .equals(selectedId);
+  isSelectedClosed = VOCAB_ID_CLOSED.equals(selectedId);
+
+  if (isSelectedOpen)   openSite();
+  if (isSelectedClosed) closedSite();
+}
+
+cancelSites() {
+  cancelTab("Site/Open_Site",   false);
+  cancelTab("Site/Closed_Site", false);
+}
+openSite()  {showTab("Site/Open_Site"  ); showTab("Site/Site");}
+closedSite(){showTab("Site/Closed_Site"); showTab("Site/Site");}
+
+loadSiteFrom(String uuid) {
+  String tabgroup = "Site";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  FetchCallback cb = new FetchCallback() {
+    onFetch(result) {
+      updateOpenClosedTabs();
+    }
+  };
+  showTabGroup(tabgroup, uuid, cb);
+}
