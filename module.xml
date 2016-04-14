@@ -28,7 +28,7 @@
            prevented from further recording if the field is left blank-->
     </Logger_ID>
     <Device_ID t="radio">
-      <!--Populated manually in logic from Transect/Transect/Device_ID-->
+      <!--Populated manually in logic from Transect/Vars/Device_ID-->
     </Device_ID>
     <Login t="button" l="Control"/>
   </Login>
@@ -69,15 +69,6 @@
         <app>-</app>
       </str>
     </timestamp>
-    <Device_ID t="radio" f="notnull">
-      <!--Set from value in Login/Login/Device_ID-->
-      <opts>
-        <opt>A</opt>
-        <opt>B</opt>
-        <opt>C</opt>
-        <opt>D</opt>
-      </opts>
-    </Device_ID>
     <Total_Transect_Width_m b="decimal">
       Total Transect Width (m)
     </Total_Transect_Width_m>
@@ -204,6 +195,15 @@
     </Survey_extent>
   </Map>
   <Vars f="hidden">
+    <Device_ID t="radio" f="notnull">
+      <!--Set from value in Login/Login/Device_ID-->
+      <opts>
+        <opt>A</opt>
+        <opt>B</opt>
+        <opt>C</opt>
+        <opt>D</opt>
+      </opts>
+    </Device_ID>
     <State/>
     <author f="id">
       <str>

@@ -4,7 +4,7 @@
 
 copyDeviceId() {
   src = "Login/Login/Device_ID";
-  dst = "Transect/Transect/Device_ID";
+  dst = "Transect/Vars/Device_ID";
   val = getFieldValue(src);
 
   setFieldValue(dst, val);
