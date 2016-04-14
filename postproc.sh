@@ -18,4 +18,15 @@ onClickLoginLogin () {
 replacement=""
 perl -0777 -i.original -pe "s/\\Q$string/$replacement/igs" ui_logic.bsh
 
+string="
+loadSiteFrom(String uuid) {
+  String tabgroup = \"Site\";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  showTabGroup(tabgroup, uuid);
+}"
+replacement=""
+perl -0777 -i.original -pe "s/\\Q$string/$replacement/igs" ui_logic.bsh
+
 rm ui_logic.bsh.original
