@@ -28,9 +28,9 @@ userSelected() {
 // Log in as 'Other' then call `userSelected()`.
 proceedAsOther() {
   // Warning for case where 'Other' user isn't present on FAIMS server.
-  msgHead  = "User 'Other' not found on FAIMS server";
-  msgBody  = "Please add 'Other' as a user on the FAIMS server in order to ";
-  msgBody += "log in.";
+  msgHead  = "Cannot Log In";
+  msgBody  = "The user 'Other' was not found. Please add 'Other' to this ";
+  msgBody += "module's list of users via the FAIMS server in order to log in.";
 
   // Select 'Other' user.
   q  = "SELECT userid, fname, lname, email ";
@@ -40,7 +40,7 @@ proceedAsOther() {
   FetchCallback callback = new FetchCallback() {
     onFetch(result) {
       // Can't select user named 'Other'.  Tell user to add it to FAIMS server.
-      if (result == null) {
+      if (result.size() == 0) {
         showWarning(msgHead, msgBody);
         return;
       }
