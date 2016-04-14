@@ -1,0 +1,72 @@
+/**************************** LOGIN TAB VALIDATION ****************************/
+/* The autogen defines its own `onClickLoginLogin` function. This is          */
+/* overridden using @POSTPROC.                                                */
+/******************************************************************************/
+
+onClickLoginLogin () {
+  refDeviceId = "Login/Login/Device_ID";
+  refLoggerId = userMenuPath; // Defined by autogen
+
+  String loggerIdVocabId = getFieldValue(refLoggerId);
+  String deviceIdVocabId = getFieldValue(refDeviceId);
+
+  isSelectedDeviceId = !isNull(deviceIdVocabId);
+  isSelectedLoggerId = !isNull(loggerIdVocabId);
+
+  if (!isSelectedLoggerId) { noLoggerIdSelected(); return; }
+  if (!isSelectedDeviceId) { noDeviceIdSelected(); return; }
+
+  newTab("Control", true);
+}
+
+noDeviceIdSelected() {
+  msgHead = "No Device ID Selected";
+  msgBody = "A Device ID must be selected in order to log in.";
+  showWarning(msgHead, msgBody);
+}
+
+noLoggerIdSelected() {
+  msgHead  = "No Logger ID Selected";
+
+  msgBody  = "Press 'OK' to select the user 'Other', or 'Cancel' to go back ";
+  msgBody += "and select a Logger ID.";
+
+  showAlert(msgHead, msgBody, "selectUserOther()", "");
+}
+
+// Log in as 'Other'. (i.e. Do a `setUser` call.)
+selectUserOther() {
+  // Warning for case where 'Other' user isn't present on FAIMS server.
+  msgHead  = "Cannot Select User";
+  msgBody  = "The user 'Other' was not found. Please add 'Other' to this ";
+  msgBody += "module's list of users via the FAIMS server in order to log in.";
+
+  // Select 'Other' user.
+  q  = "SELECT userid, fname, lname, email ";
+  q += "FROM   user ";
+  q += "WHERE  fname = 'Other'";
+
+  FetchCallback callback = new FetchCallback() {
+    onFetch(result) {
+      // Can't select user named 'Other'.  Tell user to add it to FAIMS server.
+      if (result.size() == 0) {
+        showWarning(msgHead, msgBody);
+        return;
+      }
+
+      // Can select user named 'Other'.  Call `setUser` and set global variable
+      // `user`.
+      user = new User(
+          result.get(0),
+          result.get(1),
+          result.get(2),
+          result.get(3)
+      );
+      setUser(user);
+      username = result.get(1) + " " + result.get(2);
+
+      setFieldValue(userMenuPath, result.get(0));
+    }
+  };
+  fetchOne(q, callback);
+}
