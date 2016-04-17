@@ -356,7 +356,7 @@
     <Feature_Type t="checkbox">
       <desc>Select all relevant site features.</desc>
       <opts>
-        <opt>Intangible values</opt>
+        <opt>Intangible Values</opt>
         <opt>Aboriginal Ceremony</opt>
         <opt>Aboriginal Resource</opt>
         <opt>Dreaming</opt>
@@ -381,7 +381,6 @@
       </opts>
     </Feature_Type>
     <New_Feature t="button" lc="Feature"/>
-    <!--<List_of_Features ec="Feature"/>-->
   </Feature>
   <Vars f="hidden">
     <author f="id">
@@ -1013,6 +1012,7 @@
   <!--UTILS-->
   <!--DEVICE_ID_COPYING-->
   <!--DEVICE_ID_POPULATION-->
+  <!--DYNAMIC_UI_FEATURE_TABS-->
   <!--DYNAMIC_UI_OPEN_CLOSED-->
   <!--LOGIN_TAB_VALIDATION-->
   <!--TRANSECT_GEOMETRY-->

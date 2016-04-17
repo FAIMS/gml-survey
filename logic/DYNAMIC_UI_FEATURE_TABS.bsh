@@ -1,0 +1,74 @@
+/************************* DYNAMIC UI - FEATURE TABS **************************/
+/* There are two cases to handle: TODO: Update this comment                   */
+/*   (a) When a Feature is newly created.                                     */
+/*   (b) When a Feature has been loaded.                                      */
+/*                                                                            */
+/* Case (a) is handled by an on-click events which triggers                   */
+/* `updateOpenClosedTabs()`.                                                  */
+/*                                                                            */
+/* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
+/* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
+/******************************************************************************/
+Map FEATURE_TO_TAB = new HashMap();
+
+FEATURE_TO_TAB.put("Intangible Values",                 "Intangible Value");
+FEATURE_TO_TAB.put("Aboriginal Ceremony",               "Intangible Value");
+FEATURE_TO_TAB.put("Aboriginal Resource",               "Intangible Value");
+FEATURE_TO_TAB.put("Dreaming",                          "Intangible Value");
+FEATURE_TO_TAB.put("Gathering",                         "Intangible Value");
+FEATURE_TO_TAB.put("Art",                               "Art");
+FEATURE_TO_TAB.put("Artefact",                          "Artefact");
+FEATURE_TO_TAB.put("Burial",                            "Other Feature");
+FEATURE_TO_TAB.put("Conflict",                          "Other Feature");
+FEATURE_TO_TAB.put("Mound",                             "Other Feature");
+FEATURE_TO_TAB.put("Fish Trap",                         "Other Feature");
+FEATURE_TO_TAB.put("Grinding Groove",                   "Grinding Groove");
+FEATURE_TO_TAB.put("Habitation Structure",              "Other Feature");
+FEATURE_TO_TAB.put("Hearth/Ground Oven",                "Hearth/Ground Oven");
+FEATURE_TO_TAB.put("Non Human Bone & Organic Material", "Other Feature");
+FEATURE_TO_TAB.put("Ochre quarry",                      "Other Feature");
+FEATURE_TO_TAB.put("Potential Archaeological Deposit",  "Potential Archaeological Deposit");
+FEATURE_TO_TAB.put("Stone Quarry",                      "Other Feature");
+FEATURE_TO_TAB.put("Shell",                             "Shell");
+FEATURE_TO_TAB.put("Stone Arrangement",                 "Other Feature");
+FEATURE_TO_TAB.put("Culturally Modified Tree",          "Culturally Modified Tree");
+FEATURE_TO_TAB.put("Water Hole",                        "Other Feature");
+
+FEATURE_TO_TAB = normaliseFeatureToTabMap(FEATURE_TO_TAB);
+
+normaliseMapString(String s) {
+  return s.replaceAll("[^a-zA-Z0-9]", "_");
+}
+
+normaliseFeatureToTabMap(Map map) {
+  String tabParent  = "Feature";
+
+  Map normalisedMap = new HashMap();
+  for (Map.Entry<String, String> entry : map.entrySet()) {
+    String feature = entry.getKey();   feature = normaliseMapString(feature);
+    String tab     = entry.getValue(); tab     = normaliseMapString(tab);
+
+    String normalisedFeature = "{%s}";
+    String normalisedTab     = "%s/%s";
+
+    normalisedFeature = replaceFirst(normalisedFeature, "%s", feature);
+    normalisedTab     = replaceFirst(normalisedTab,     "%s", tabParent);
+    normalisedTab     = replaceFirst(normalisedTab,     "%s", tab);
+
+    normalisedMap.put(normalisedFeature, normalisedTab);
+  }
+
+  return normalisedMap;
+}
+
+cancelAllFeatureTabs() {
+  for (String tab: FEATURE_TO_TAB.values()) {
+    cancelTab(tab, false);
+  }
+}
+
+updateFeatureTabs() {
+  cancelAllFeatureTabs();
+
+  // TODO
+}
