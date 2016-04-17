@@ -9,8 +9,44 @@
 /* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
 /* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
 /******************************************************************************/
-Map FEATURE_TO_TAB = new HashMap();
+normaliseFeatureToTabMap(Map map) {
+  String tabParent  = "Feature";
 
+  Map normalisedMap = new HashMap();
+  for (entry : map.entrySet()) {
+    String feature = entry.getKey();   feature = normaliseMapString(feature);
+    String tab     = entry.getValue(); tab     = normaliseMapString(tab);
+
+    String normalisedFeature = "{%s}";
+    String normalisedTab     = "%s/%s";
+
+    normalisedFeature = replaceFirst(normalisedFeature, "%s", feature);
+    normalisedTab     = replaceFirst(normalisedTab,     "%s", tabParent);
+    normalisedTab     = replaceFirst(normalisedTab,     "%s", tab);
+
+    normalisedMap.put(normalisedFeature, normalisedTab);
+  }
+
+  return normalisedMap;
+}
+
+normaliseMapString(String s) {
+  return s.replaceAll("[^a-zA-Z0-9]", "_");
+}
+
+cancelAllFeatureTabs() {
+  for (String tab: FEATURE_TO_TAB.values()) {
+    cancelTab(tab, false);
+  }
+}
+
+updateFeatureTabs() {
+  cancelAllFeatureTabs();
+
+  // TODO
+}
+
+FEATURE_TO_TAB = new HashMap();
 FEATURE_TO_TAB.put("Intangible Values",                 "Intangible Value");
 FEATURE_TO_TAB.put("Aboriginal Ceremony",               "Intangible Value");
 FEATURE_TO_TAB.put("Aboriginal Resource",               "Intangible Value");
@@ -33,42 +69,4 @@ FEATURE_TO_TAB.put("Shell",                             "Shell");
 FEATURE_TO_TAB.put("Stone Arrangement",                 "Other Feature");
 FEATURE_TO_TAB.put("Culturally Modified Tree",          "Culturally Modified Tree");
 FEATURE_TO_TAB.put("Water Hole",                        "Other Feature");
-
 FEATURE_TO_TAB = normaliseFeatureToTabMap(FEATURE_TO_TAB);
-
-normaliseMapString(String s) {
-  return s.replaceAll("[^a-zA-Z0-9]", "_");
-}
-
-normaliseFeatureToTabMap(Map map) {
-  String tabParent  = "Feature";
-
-  Map normalisedMap = new HashMap();
-  for (Map.Entry<String, String> entry : map.entrySet()) {
-    String feature = entry.getKey();   feature = normaliseMapString(feature);
-    String tab     = entry.getValue(); tab     = normaliseMapString(tab);
-
-    String normalisedFeature = "{%s}";
-    String normalisedTab     = "%s/%s";
-
-    normalisedFeature = replaceFirst(normalisedFeature, "%s", feature);
-    normalisedTab     = replaceFirst(normalisedTab,     "%s", tabParent);
-    normalisedTab     = replaceFirst(normalisedTab,     "%s", tab);
-
-    normalisedMap.put(normalisedFeature, normalisedTab);
-  }
-
-  return normalisedMap;
-}
-
-cancelAllFeatureTabs() {
-  for (String tab: FEATURE_TO_TAB.values()) {
-    cancelTab(tab, false);
-  }
-}
-
-updateFeatureTabs() {
-  cancelAllFeatureTabs();
-
-  // TODO
-}
