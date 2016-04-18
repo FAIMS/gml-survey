@@ -723,7 +723,6 @@ saveTabGroup(String tabgroup, String callback) {
       // some role in helping FAIMS associate the correct user with a record.
       if (!userWasSet) {
         saveTabGroup(tabgroup);
-        populateAuthorAndTimestamp(tabgroup);
       }
 
       execute(callback);
@@ -733,7 +732,6 @@ saveTabGroup(String tabgroup, String callback) {
     }
   };
 
-  populateAuthorAndTimestamp(tabgroup);
   saveTabGroup(tabgroup, id, geometry, attributes, saveCallback, enableAutosave);
 }
 
@@ -1041,11 +1039,10 @@ newTransect(){
 
   setUuid(tabgroup, null);
   newTabGroup(tabgroup);
-
+  populateAuthorAndTimestamp(tabgroup);
   String autoNumDest = "";
   autoNumDest = "Transect/Transect/Transect_ID";
   incAutoNum(autoNumDest);
-  copyDeviceId();
 }
 
 duplicateTransect(){
@@ -1126,7 +1123,7 @@ newSite(){
 
   setUuid(tabgroup, null);
   newTabGroup(tabgroup);
-
+  populateAuthorAndTimestamp(tabgroup);
   String autoNumDest = "";
   autoNumDest = "Site/Site/Site_ID_Number";
   incAutoNum(autoNumDest);
@@ -1206,7 +1203,7 @@ newFeature(){
 
   setUuid(tabgroup, null);
   newTabGroup(tabgroup);
-
+  populateAuthorAndTimestamp(tabgroup);
   String autoNumDest = "";
   autoNumDest = "Feature/Feature/Feature_ID";
   incAutoNum(autoNumDest);
@@ -1784,45 +1781,52 @@ selectUserOther() {
   fetchOne(q, callback);
 }
 /***************************** TRANSECT GEOMETREY *****************************/
-// TODO: Add mutex so that a second point can't be taken while
-// tryIncrementingState() is running
+import java.util.concurrent.Semaphore;
 
 addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
 addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
 
-REF_STATE = "Transect/Vars/State";
+INC_MUTEX = new Semaphore(1);
+
+REF_STATE = "Transect/Vars/Transect_State";
 
 STATE_NONE     = "";
 STATE_STARTED  = "STARTED";
 STATE_FINISHED = "FINISHED";
 
 startSurveyUnit() {
-  state = getState();
+  if (!checkGps()) return;
 
+  state = getState();
   if      (state.equals(STATE_NONE    )) tryIncrementingState();
   else if (state.equals(STATE_STARTED )) showToast("Survey already started");
   else if (state.equals(STATE_FINISHED)) showToast("Survey already finished");
 }
 
 finishSurveyUnit() {
-  state = getState();
+  if (!checkGps()) return;
 
+  state = getState();
   if      (state.equals(STATE_NONE    )) showToast("Survey not yet started");
   else if (state.equals(STATE_STARTED )) tryIncrementingState();
   else if (state.equals(STATE_FINISHED)) showToast("Survey already finished");
 }
 
-tryIncrementingState() {
+checkGps() {
   Object positionProj = getGPSPositionProjected();
   if (positionProj == null) {
     showToast("Unable to get GPS position");
+    return false;
+  }
+  return true;
+}
+
+tryIncrementingState() {
+  if (!INC_MUTEX.tryAcquire()) {
+    showToast("Already taking a point...");
     return;
   }
 
-  saveParentTransect();
-}
-
-saveParentTransect() {
   tabGroup               = "Transect";
   saveChildTransectPoint = "saveChildTransectPoint";
 
@@ -1857,11 +1861,13 @@ saveChildTransectPoint(String parentId) {
   String parentUuid   = getUuid(parentTabGroup);
 
   if (isNull(parentUuid)) {
-    // Shouldn't happen because `saveParentTransect` should've set this.
+    // Shouldn't happen because `tryIncrementingState` should've set this.
     Log.e("saveChildTransectPoint()", "Parent UUID is null");
+    INC_MUTEX.release();
     return;
   }
   if (positionProj == null) {
+    INC_MUTEX.release();
     return;
   }
 
@@ -1876,6 +1882,7 @@ saveChildTransectPoint(String parentId) {
     // Shouldn't ever happen
     Log.e("saveChildTransectPoint()", "Unexpected state");
     showWarning("Error", "A critial error has occurred. Point not saved.");
+    INC_MUTEX.release();
     return;
   }
 
@@ -1897,6 +1904,8 @@ saveChildTransectPoint(String parentId) {
       rel = replaceFirst(rel, "%s", childTabGroup);
 
       saveEntitiesToHierRel(rel, parentUuid, uuid, "Parent Of", "Child Of", "");
+
+      INC_MUTEX.release();
     }
   };
   saveArchEnt(null, childTabGroup, geoList, attribs, saveCallback);

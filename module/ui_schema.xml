@@ -83,7 +83,7 @@
             </Map>
             <Vars>
               <Device_ID/>
-              <State/>
+              <Transect_State/>
               <Author/>
             </Vars>
           </Transect>
@@ -572,8 +572,8 @@
             <value>0</value>
           </item>
         </select1>
-        <input faims_attribute_type="measure" ref="State" faims_attribute_name="State">
-          <label>{State}</label>
+        <input faims_attribute_type="measure" ref="Transect_State" faims_attribute_name="Transect State">
+          <label>{Transect_State}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input ref="Author" faims_attribute_name="author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
