@@ -56,8 +56,6 @@
               <Start_Survey_Unit/>
               <Transect_ID/>
               <Timestamp/>
-              <Device_ID/>
-              <Author/>
               <Total_Transect_Width_m/>
               <Number_of_Participants_in_Transect/>
               <Participants/>
@@ -83,6 +81,11 @@
               <Map/>
               <Survey_extent/>
             </Map>
+            <Vars>
+              <Device_ID/>
+              <State/>
+              <Author/>
+            </Vars>
           </Transect>
           <Transect_Point>
             <Transect_Point>
@@ -126,14 +129,14 @@
               <Length_of_potential_site_area/>
               <Average_width_of_potential_site_area/>
             </Open_Site>
-            <Close_Site>
+            <Closed_Site>
               <Shelter_Cave_Formation/>
               <Rock_Surface_Condition/>
               <Internal_Length/>
               <Internal_Width/>
               <Shelter_Height/>
               <Shelter_Floor_Area/>
-            </Close_Site>
+            </Closed_Site>
             <Community_Consultation_Notes>
               <Aboriginal_community_interpretation/>
               <Aboriginal_community_management_recommendations/>
@@ -143,6 +146,9 @@
               <Feature_Type/>
               <New_Feature/>
             </Feature>
+            <Vars>
+              <Author/>
+            </Vars>
           </Site>
           <Feature>
             <Feature>
@@ -280,6 +286,10 @@
               <Carving_type/>
               <Axe_Marks/>
             </Culturally_Modified_Tree>
+            <Vars>
+              <Author/>
+              <Timestamp/>
+            </Vars>
           </Feature>
           <logic/>
         </faims>
@@ -299,10 +309,10 @@
       <bind type="decimal" nodeset="/faims/Site/Open_Site/Length_of_assessed_site_area"/>
       <bind type="decimal" nodeset="/faims/Site/Open_Site/Length_of_potential_site_area"/>
       <bind type="decimal" nodeset="/faims/Site/Open_Site/Average_width_of_potential_site_area"/>
-      <bind type="decimal" nodeset="/faims/Site/Close_Site/Internal_Length"/>
-      <bind type="decimal" nodeset="/faims/Site/Close_Site/Internal_Width"/>
-      <bind type="decimal" nodeset="/faims/Site/Close_Site/Shelter_Height"/>
-      <bind type="decimal" nodeset="/faims/Site/Close_Site/Shelter_Floor_Area"/>
+      <bind type="decimal" nodeset="/faims/Site/Closed_Site/Internal_Length"/>
+      <bind type="decimal" nodeset="/faims/Site/Closed_Site/Internal_Width"/>
+      <bind type="decimal" nodeset="/faims/Site/Closed_Site/Shelter_Height"/>
+      <bind type="decimal" nodeset="/faims/Site/Closed_Site/Shelter_Floor_Area"/>
       <bind type="decimal" nodeset="/faims/Feature/Feature/Feature_ID"/>
       <bind type="decimal" nodeset="/faims/Feature/Artefact/Total_Number_of_Artefacts"/>
       <bind type="decimal" nodeset="/faims/Feature/Artefact/Instance_No"/>
@@ -435,18 +445,9 @@
           <label>{Transect_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input ref="Timestamp" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+        <input ref="Timestamp" faims_attribute_name="timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{timestamp}</label>
-        </input>
-        <select1 appearance="full" faims_attribute_type="vocab" ref="Device_ID" faims_attribute_name="Device ID" faims_style_class="required">
-          <label>{Device_ID}</label>
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
-        <input ref="Author" faims_read_only="true" faims_annotation="false" faims_certainty="false">
-          <label>{Logger_ID}</label>
+          <!--WARNING: Flags ignored-->
         </input>
         <input faims_attribute_type="measure" ref="Total_Transect_Width_m" faims_attribute_name="Total Transect Width m">
           <label>{Total_Transect_Width__m_}</label>
@@ -562,6 +563,24 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
+      <group ref="Vars" faims_hidden="true">
+        <label>{Vars}</label>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Device_ID" faims_attribute_name="Device ID" faims_style_class="required">
+          <label>{Device_ID}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="State" faims_attribute_name="State">
+          <label>{State}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input ref="Author" faims_attribute_name="author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{author}</label>
+          <!--WARNING: Flags ignored-->
+        </input>
+      </group>
     </group>
     <group ref="Transect_Point" faims_archent_type="Transect Point">
       <label/>
@@ -589,8 +608,9 @@
           <label>{Site_ID_Number}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input ref="Timestamp" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+        <input ref="Timestamp" faims_attribute_name="timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{timestamp}</label>
+          <!--WARNING: Flags ignored-->
         </input>
         <group ref="Colgroup_GPS" faims_style="orientation">
           <label/>
@@ -695,8 +715,8 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
-      <group ref="Close_Site">
-        <label>{Close_Site}</label>
+      <group ref="Closed_Site">
+        <label>{Closed_Site}</label>
         <select1 faims_attribute_type="vocab" ref="Shelter_Cave_Formation" faims_attribute_name="Shelter Cave Formation">
           <label>{Shelter_Cave_Formation}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
@@ -745,7 +765,7 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
-      <group ref="Feature" faims_scrollable="false">
+      <group ref="Feature">
         <label>{Feature}</label>
         <select faims_attribute_type="vocab" ref="Feature_Type" faims_attribute_name="Feature Type">
           <label>{Feature_Type}</label>
@@ -757,6 +777,13 @@
         <trigger ref="New_Feature">
           <label>{New_Feature}</label>
         </trigger>
+      </group>
+      <group ref="Vars" faims_hidden="true">
+        <label>{Vars}</label>
+        <input ref="Author" faims_attribute_name="author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{author}</label>
+          <!--WARNING: Flags ignored-->
+        </input>
       </group>
     </group>
     <group ref="Feature" faims_archent_type="Feature">
@@ -1411,6 +1438,17 @@
             <value>0</value>
           </item>
         </select1>
+      </group>
+      <group ref="Vars" faims_hidden="true">
+        <label>{Vars}</label>
+        <input ref="Author" faims_attribute_name="author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{author}</label>
+          <!--WARNING: Flags ignored-->
+        </input>
+        <input ref="Timestamp" faims_attribute_name="timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{timestamp}</label>
+          <!--WARNING: Flags ignored-->
+        </input>
       </group>
     </group>
   </h:body>

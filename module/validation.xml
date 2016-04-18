@@ -6,11 +6,6 @@
         <param value="measure" type="field"/>
       </validator>
     </property>
-    <property name="Device ID">
-      <validator type="blankchecker">
-        <param value="vocab" type="field"/>
-      </validator>
-    </property>
     <property name="Number of Participants in Transect">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
@@ -44,6 +39,11 @@
     <property name="Geomorphological Activity">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Device ID">
+      <validator type="blankchecker">
+        <param value="vocab" type="field"/>
       </validator>
     </property>
   </ArchaeologicalElement>

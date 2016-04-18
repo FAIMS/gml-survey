@@ -149,8 +149,8 @@ addOnEvent("Transect/Transect/Landform", "click", "dropdownItemValue = getFieldV
 addOnEvent("Transect/Transect/Slope_Gradient", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Slope_Gradient\")");
 addOnEvent("Transect/Transect/Geomorphological_Activity", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Geomorphological_Activity\")");
 addOnEvent("Site/Site/Site_Aspect_Orientation", "click", "dropdownItemValue = getFieldValue(\"Site/Site/Site_Aspect_Orientation\")");
-addOnEvent("Site/Close_Site/Shelter_Cave_Formation", "click", "dropdownItemValue = getFieldValue(\"Site/Close_Site/Shelter_Cave_Formation\")");
-addOnEvent("Site/Close_Site/Rock_Surface_Condition", "click", "dropdownItemValue = getFieldValue(\"Site/Close_Site/Rock_Surface_Condition\")");
+addOnEvent("Site/Closed_Site/Shelter_Cave_Formation", "click", "dropdownItemValue = getFieldValue(\"Site/Closed_Site/Shelter_Cave_Formation\")");
+addOnEvent("Site/Closed_Site/Rock_Surface_Condition", "click", "dropdownItemValue = getFieldValue(\"Site/Closed_Site/Rock_Surface_Condition\")");
 addOnEvent("Feature/Feature/Feature_Condition", "click", "dropdownItemValue = getFieldValue(\"Feature/Feature/Feature_Condition\")");
 addOnEvent("Feature/Feature/Select_Feature_Type", "click", "dropdownItemValue = getFieldValue(\"Feature/Feature/Select_Feature_Type\")");
 addOnEvent("Feature/Artefact/Insitu_Artefact", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Insitu_Artefact\")");
@@ -496,18 +496,18 @@ makeVocab(String type, String path, String attrib, List vocabExclusions, String 
       }
     });
 }
-makeVocab("RadioGroup", "Transect/Transect/Device_ID", "Device ID");
 makeVocab("DropDown", "Transect/Transect/Landform", "Landform");
 makeVocab("DropDown", "Transect/Transect/Slope_Gradient", "Slope Gradient");
 makeVocab("PictureGallery", "Transect/Transect/Ground_surface_visibility", "Ground surface visibility");
 makeVocab("PictureGallery", "Transect/Transect/Ground_surface_exposure", "Ground surface exposure");
 makeVocab("DropDown", "Transect/Transect/Geomorphological_Activity", "Geomorphological Activity");
+makeVocab("RadioGroup", "Transect/Vars/Device_ID", "Device ID");
 makeVocab("RadioGroup", "Site/Site/Open_Closed_Site", "Open Closed Site");
 makeVocab("DropDown", "Site/Site/Site_Aspect_Orientation", "Site Aspect Orientation");
 makeVocab("CheckBoxGroup", "Site/Site/General_Condition_of_Site", "General Condition of Site");
 makeVocab("RadioGroup", "Site/Open_Site/Subsurfance_potential", "Subsurfance potential");
-makeVocab("DropDown", "Site/Close_Site/Shelter_Cave_Formation", "Shelter Cave Formation");
-makeVocab("DropDown", "Site/Close_Site/Rock_Surface_Condition", "Rock Surface Condition");
+makeVocab("DropDown", "Site/Closed_Site/Shelter_Cave_Formation", "Shelter Cave Formation");
+makeVocab("DropDown", "Site/Closed_Site/Rock_Surface_Condition", "Rock Surface Condition");
 makeVocab("CheckBoxGroup", "Site/Feature/Feature_Type", "Feature Type");
 makeVocab("DropDown", "Feature/Feature/Feature_Condition", "Feature Condition");
 makeVocab("DropDown", "Feature/Feature/Select_Feature_Type", "Select Feature Type");
@@ -625,7 +625,6 @@ validateTransect() {
   List f = new ArrayList(); // Fields to be validated
 
   f.add(fieldPair("Transect/Transect/Transect_ID", "{Transect_ID}"));
-  f.add(fieldPair("Transect/Transect/Device_ID", "{Device_ID}"));
   f.add(fieldPair("Transect/Transect/Number_of_Participants_in_Transect", "{Number_of_Participants_in_Transect}"));
   f.add(fieldPair("Transect/Transect/Landform", "{Landform}"));
   f.add(fieldPair("Transect/Transect/Slope_Gradient", "{Slope_Gradient}"));
@@ -633,6 +632,7 @@ validateTransect() {
   f.add(fieldPair("Transect/Transect/Ground_surface_visibility", "{Ground_surface_visibility}"));
   f.add(fieldPair("Transect/Transect/Ground_surface_exposure", "{Ground_surface_exposure}"));
   f.add(fieldPair("Transect/Transect/Geomorphological_Activity", "{Geomorphological_Activity}"));
+  f.add(fieldPair("Transect/Vars/Device_ID", "{Device_ID}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("Validation Results", validationMessage);
@@ -648,10 +648,10 @@ validateSite() {
   f.add(fieldPair("Site/Open_Site/Estimated_area_of_visible_site", "{Estimated_area_of_visible_site}"));
   f.add(fieldPair("Site/Open_Site/Length_of_assessed_site_area", "{Length_of_assessed_site_area}"));
   f.add(fieldPair("Site/Open_Site/Average_width_of_potential_site_area", "{Average_width_of_potential_site_area}"));
-  f.add(fieldPair("Site/Close_Site/Internal_Length", "{Internal_Length}"));
-  f.add(fieldPair("Site/Close_Site/Internal_Width", "{Internal_Width}"));
-  f.add(fieldPair("Site/Close_Site/Shelter_Height", "{Shelter_Height}"));
-  f.add(fieldPair("Site/Close_Site/Shelter_Floor_Area", "{Shelter_Floor_Area}"));
+  f.add(fieldPair("Site/Closed_Site/Internal_Length", "{Internal_Length}"));
+  f.add(fieldPair("Site/Closed_Site/Internal_Width", "{Internal_Width}"));
+  f.add(fieldPair("Site/Closed_Site/Shelter_Height", "{Shelter_Height}"));
+  f.add(fieldPair("Site/Closed_Site/Shelter_Floor_Area", "{Shelter_Floor_Area}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("Validation Results", validationMessage);
@@ -698,8 +698,6 @@ saveTabGroup(String tabgroup, String callback) {
   SaveCallback saveCallback  = new SaveCallback() {
     onSave(uuid, newRecord) {
       setUuid(tabgroup, uuid);
-      populateAuthorAndTimestamp(tabgroup);
-
       // Make a child-parent relationship if need be.
       if (newRecord && !isNull(parentTabgroup_)) {
         String rel = "";
@@ -725,6 +723,7 @@ saveTabGroup(String tabgroup, String callback) {
       // some role in helping FAIMS associate the correct user with a record.
       if (!userWasSet) {
         saveTabGroup(tabgroup);
+        populateAuthorAndTimestamp(tabgroup);
       }
 
       execute(callback);
@@ -741,34 +740,26 @@ saveTabGroup(String tabgroup, String callback) {
 populateAuthorAndTimestamp(String tabgroup) {
   Map tabgroupToAuthor    = new HashMap();
   Map tabgroupToTimestamp = new HashMap();
-  tabgroupToAuthor.put("Transect", "Transect/Transect/Author");
+  tabgroupToAuthor.put("Transect", "Transect/Vars/Author");
+  tabgroupToAuthor.put("Site", "Site/Vars/Author");
+  tabgroupToAuthor.put("Feature", "Feature/Vars/Author");
   tabgroupToTimestamp.put("Transect", "Transect/Transect/Timestamp");
   tabgroupToTimestamp.put("Site", "Site/Site/Timestamp");
+  tabgroupToTimestamp.put("Feature", "Feature/Vars/Timestamp");
 
-  String uuid          = getUuid(tabgroup);
   String authorPath    = tabgroupToAuthor.get(tabgroup);
   String timestampPath = tabgroupToTimestamp.get(tabgroup);
-  if (isNull(uuid)) {
-    if (!isNull(authorPath))
-      setFieldValue(authorPath,    "Entity not yet saved");
-    if (!isNull(timestampPath))
-      setFieldValue(timestampPath, "Entity not yet saved");
-    return;
-  }
 
-  String q = "SELECT createdat, createdby " +
-             "  FROM createdmodifiedatby " +
-             " WHERE uuid = '" + uuid + "'";
-  FetchCallback callback = new FetchCallback() {
-    onFetch(result) {
-      if (!isNull(timestampPath))
-        setFieldValue(timestampPath, result.get(0));
-      if (!isNull(authorPath))
-        setFieldValue(authorPath,    result.get(1));
-    }
-  };
+  fmt     = "yyyy-MM-dd HH:mm:ss z";
+  date    = new Date();
+  dateFmt = new java.text.SimpleDateFormat(fmt);
+  dateStr = dateFmt.format(date);
 
-  fetchOne(q, callback);
+  String authorVal    = username;
+  String timestampVal = dateStr;
+
+  setFieldValue(authorPath,    authorVal);
+  setFieldValue(timestampPath, timestampVal);
 }
 
 onShowTransect () {
@@ -788,10 +779,6 @@ addOnEvent("Transect", "show", "onShowTransect()");
 addOnEvent("Site", "show", "onShowSite()");
 addOnEvent("Feature", "show", "onShowFeature()");
 
-onClickLoginLogin () {
-  // TODO: Add some things which should happen when this element is clicked
-  newTab("Control", true);
-}
 onClickControlNewTransect () {
   // TODO: Add some things which should happen when this element is clicked
   newTransect();
@@ -1070,7 +1057,6 @@ duplicateTransect(){
   String autoNumDest = "";
   autoNumDest = "Transect/Transect/Transect_ID";
   incAutoNum(autoNumDest);
-  copyDeviceId();
 
   populateCameraPictureGallery("Transect/Transect/Transect_Photo", new ArrayList());
   populateFileList("Transect/Transect/Transect_Sketch", new ArrayList());
@@ -1383,13 +1369,6 @@ loadTransectPointFrom(String uuid) {
   showTabGroup(tabgroup, uuid);
 }
 
-loadSiteFrom(String uuid) {
-  String tabgroup = "Site";
-  setUuid(tabgroup, uuid);
-  if (isNull(uuid)) return;
-
-  showTabGroup(tabgroup, uuid);
-}
 
 loadFeatureFrom(String uuid) {
   String tabgroup = "Feature";
@@ -1555,6 +1534,28 @@ incAutoNum(String destPath) {
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/
 
+/***************************** UTILITY FUNCTIONS ******************************/
+
+// Regex-free string replacement function
+replaceFirst(haystack, needle, replacement) {
+  i = haystack.indexOf(needle);
+  if (i == -1)           return haystack;
+  if (needle.equals("")) return haystack;
+  pre  = haystack.substring(0, i                                   );
+  post = haystack.substring(   i+needle.length(), haystack.length());
+  return pre + replacement + post;
+}
+/***************************** DEVICE ID COPYING ******************************/
+/* Triggered upon Transect creation using @POSTPROC.                          */
+/******************************************************************************/
+
+copyDeviceId() {
+  src = "Login/Login/Device_ID";
+  dst = "Transect/Vars/Device_ID";
+  val = getFieldValue(src);
+
+  setFieldValue(dst, val);
+}
 /**************************** DEVICE ID POPULATION ****************************/
 makeVocab("RadioGroup", "Login/Login/Device_ID", "Device ID");
 
@@ -1571,34 +1572,241 @@ saveDeviceId() {
   val = getFieldValue(src);
   insertIntoLocalSettings(src, val);
 }
-/***************************** DEVICE ID COPYING ******************************/
-/* Triggered upon Transect creation using @POSTPROC.                          */
+/************************* DYNAMIC UI - FEATURE TABS **************************/
+/* There are two cases to handle: TODO: Update this comment                   */
+/*   (a) When a Feature is newly created.                                     */
+/*   (b) When a Feature has been loaded.                                      */
+/*                                                                            */
+/* Case (a) is handled by an on-click events which triggers                   */
+/* `updateOpenClosedTabs()`.                                                  */
+/*                                                                            */
+/* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
+/* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
+/******************************************************************************/
+normaliseFeatureToTabMap(Map map) {
+  String tabParent  = "Feature";
+
+  Map normalisedMap = new HashMap();
+  for (entry : map.entrySet()) {
+    String feature = entry.getKey();   feature = normaliseMapString(feature);
+    String tab     = entry.getValue(); tab     = normaliseMapString(tab);
+
+    String normalisedFeature = "{%s}";
+    String normalisedTab     = "%s/%s";
+
+    normalisedFeature = replaceFirst(normalisedFeature, "%s", feature);
+    normalisedTab     = replaceFirst(normalisedTab,     "%s", tabParent);
+    normalisedTab     = replaceFirst(normalisedTab,     "%s", tab);
+
+    normalisedMap.put(normalisedFeature, normalisedTab);
+  }
+
+  return normalisedMap;
+}
+
+normaliseMapString(String s) {
+  return s.replaceAll("[^a-zA-Z0-9]", "_");
+}
+
+cancelAllFeatureTabs() {
+  for (String tab: FEATURE_TO_TAB.values()) {
+    cancelTab(tab, false);
+  }
+}
+
+updateFeatureTabs() {
+  cancelAllFeatureTabs();
+
+  // TODO
+}
+
+FEATURE_TO_TAB = new HashMap();
+FEATURE_TO_TAB.put("Intangible Values",                 "Intangible Value");
+FEATURE_TO_TAB.put("Aboriginal Ceremony",               "Intangible Value");
+FEATURE_TO_TAB.put("Aboriginal Resource",               "Intangible Value");
+FEATURE_TO_TAB.put("Dreaming",                          "Intangible Value");
+FEATURE_TO_TAB.put("Gathering",                         "Intangible Value");
+FEATURE_TO_TAB.put("Art",                               "Art");
+FEATURE_TO_TAB.put("Artefact",                          "Artefact");
+FEATURE_TO_TAB.put("Burial",                            "Other Feature");
+FEATURE_TO_TAB.put("Conflict",                          "Other Feature");
+FEATURE_TO_TAB.put("Mound",                             "Other Feature");
+FEATURE_TO_TAB.put("Fish Trap",                         "Other Feature");
+FEATURE_TO_TAB.put("Grinding Groove",                   "Grinding Groove");
+FEATURE_TO_TAB.put("Habitation Structure",              "Other Feature");
+FEATURE_TO_TAB.put("Hearth/Ground Oven",                "Hearth/Ground Oven");
+FEATURE_TO_TAB.put("Non Human Bone & Organic Material", "Other Feature");
+FEATURE_TO_TAB.put("Ochre quarry",                      "Other Feature");
+FEATURE_TO_TAB.put("Potential Archaeological Deposit",  "Potential Archaeological Deposit");
+FEATURE_TO_TAB.put("Stone Quarry",                      "Other Feature");
+FEATURE_TO_TAB.put("Shell",                             "Shell");
+FEATURE_TO_TAB.put("Stone Arrangement",                 "Other Feature");
+FEATURE_TO_TAB.put("Culturally Modified Tree",          "Culturally Modified Tree");
+FEATURE_TO_TAB.put("Water Hole",                        "Other Feature");
+FEATURE_TO_TAB = normaliseFeatureToTabMap(FEATURE_TO_TAB);
+/*********************** DYNAMIC UI - OPEN/CLOSED SITE ************************/
+/* There are two cases to handle:                                             */
+/*   (a) When a Site is newly created.                                        */
+/*   (b) When a Site has been loaded.                                         */
+/*                                                                            */
+/* Case (a) is handled by an on-click events which triggers                   */
+/* `updateOpenClosedTabs()`.                                                  */
+/*                                                                            */
+/* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
+/* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
+/******************************************************************************/
+addOnEvent("Site",                       "show",  "updateOpenClosedTabs()");
+addOnEvent("Site/Site/Open_Closed_Site", "click", "updateOpenClosedTabs()");
+
+VOCAB_ID_OPEN   = null;
+VOCAB_ID_CLOSED = null;
+OPEN_CLOSED_SITE_VALS = new ArrayList();
+fetchVocab("Open Closed Site", OPEN_CLOSED_SITE_VALS, "setOpenClosedVocabIds()");
+
+getVocabId(vocabName, vocabVals) {
+  vocabName = "{" + vocabName + "}";
+  vocabId   = null;
+  for (List val : OPEN_CLOSED_SITE_VALS) {
+    String thisVocabId   = val.get(0);
+    String thisVocabName = val.get(1);
+
+    if (vocabName.equals(thisVocabName)) {
+      return thisVocabId;
+    }
+  }
+}
+
+setOpenClosedVocabIds() {
+  VOCAB_ID_OPEN   = getVocabId("Open",   OPEN_CLOSED_SITE_VALS);
+  VOCAB_ID_CLOSED = getVocabId("Closed", OPEN_CLOSED_SITE_VALS);
+}
+
+updateOpenClosedTabs() {
+  cancelSites();
+
+  selectedId       = getFieldValue("Site/Site/Open_Closed_Site");
+  isSelectedOpen   = VOCAB_ID_OPEN  .equals(selectedId);
+  isSelectedClosed = VOCAB_ID_CLOSED.equals(selectedId);
+
+  if (isSelectedOpen)   openSite();
+  if (isSelectedClosed) closedSite();
+}
+
+cancelSites() {
+  cancelTab("Site/Open_Site",   false);
+  cancelTab("Site/Closed_Site", false);
+}
+openSite()  {showTab("Site/Open_Site"  ); showTab("Site/Site");}
+closedSite(){showTab("Site/Closed_Site"); showTab("Site/Site");}
+
+loadSiteFrom(String uuid) {
+  String tabgroup = "Site";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  FetchCallback cb = new FetchCallback() {
+    onFetch(result) {
+      updateOpenClosedTabs();
+    }
+  };
+  showTabGroup(tabgroup, uuid, cb);
+}
+/**************************** LOGIN TAB VALIDATION ****************************/
+/* The autogen defines its own `onClickLoginLogin` function. This is          */
+/* overridden using @POSTPROC.                                                */
 /******************************************************************************/
 
-copyDeviceId() {
-  src = "Login/Login/Device_ID";
-  dst = "Transect/Transect/Device_ID";
-  val = getFieldValue(src);
+onClickLoginLogin () {
+  refDeviceId = "Login/Login/Device_ID";
+  refLoggerId = userMenuPath; // Defined by autogen
 
-  setFieldValue(dst, val);
+  String loggerIdVocabId = getFieldValue(refLoggerId);
+  String deviceIdVocabId = getFieldValue(refDeviceId);
+
+  isSelectedDeviceId = !isNull(deviceIdVocabId);
+  isSelectedLoggerId = !isNull(loggerIdVocabId);
+
+  if (!isSelectedLoggerId) { noLoggerIdSelected(); return; }
+  if (!isSelectedDeviceId) { noDeviceIdSelected(); return; }
+
+  newTab("Control", true);
+}
+
+noDeviceIdSelected() {
+  msgHead = "No Device ID Selected";
+  msgBody = "A Device ID must be selected in order to log in.";
+  showWarning(msgHead, msgBody);
+}
+
+noLoggerIdSelected() {
+  msgHead  = "No Logger ID Selected";
+
+  msgBody  = "Press 'OK' to select the user 'Other', or 'Cancel' to go back ";
+  msgBody += "and select a Logger ID.";
+
+  showAlert(msgHead, msgBody, "selectUserOther()", "");
+}
+
+// Log in as 'Other'. (i.e. Do a `setUser` call.)
+selectUserOther() {
+  // Warning for case where 'Other' user isn't present on FAIMS server.
+  msgHead  = "Cannot Select User";
+  msgBody  = "The user 'Other' was not found. Please add 'Other' to this ";
+  msgBody += "module's list of users via the FAIMS server in order to log in.";
+
+  // Select 'Other' user.
+  q  = "SELECT userid, fname, lname, email ";
+  q += "FROM   user ";
+  q += "WHERE  fname = 'Other'";
+
+  FetchCallback callback = new FetchCallback() {
+    onFetch(result) {
+      // Can't select user named 'Other'.  Tell user to add it to FAIMS server.
+      if (result.size() == 0) {
+        showWarning(msgHead, msgBody);
+        return;
+      }
+
+      // Can select user named 'Other'.  Call `setUser` and set global variable
+      // `user`.
+      user = new User(
+          result.get(0),
+          result.get(1),
+          result.get(2),
+          result.get(3)
+      );
+      setUser(user);
+      username = result.get(1) + " " + result.get(2);
+
+      setFieldValue(userMenuPath, result.get(0));
+    }
+  };
+  fetchOne(q, callback);
 }
 /***************************** TRANSECT GEOMETREY *****************************/
+// TODO: Add mutex so that a second point can't be taken while
+// tryIncrementingState() is running
+
 addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
 addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
 
-STATE_NONE     = "NONE";
+REF_STATE = "Transect/Vars/State";
+
+STATE_NONE     = "";
 STATE_STARTED  = "STARTED";
 STATE_FINISHED = "FINISHED";
 
-state = STATE_NONE;
-
 startSurveyUnit() {
+  state = getState();
+
   if      (state.equals(STATE_NONE    )) tryIncrementingState();
   else if (state.equals(STATE_STARTED )) showToast("Survey already started");
   else if (state.equals(STATE_FINISHED)) showToast("Survey already finished");
 }
 
 finishSurveyUnit() {
+  state = getState();
+
   if      (state.equals(STATE_NONE    )) showToast("Survey not yet started");
   else if (state.equals(STATE_STARTED )) tryIncrementingState();
   else if (state.equals(STATE_FINISHED)) showToast("Survey already finished");
@@ -1663,10 +1871,8 @@ saveChildTransectPoint(String parentId) {
   Point  point = new Point(pos, null, (PointStyle) null, null);
   List   geoList = new ArrayList(); geoList.add(point);
 
-  String stateNext;
-  if      (state.equals(STATE_NONE   )) stateNext = STATE_STARTED;
-  else if (state.equals(STATE_STARTED)) stateNext = STATE_FINISHED;
-  else {
+  String state = incState();
+  if (state == null) {
     // Shouldn't ever happen
     Log.e("saveChildTransectPoint()", "Unexpected state");
     showWarning("Error", "A critial error has occurred. Point not saved.");
@@ -1674,17 +1880,16 @@ saveChildTransectPoint(String parentId) {
   }
 
   String order;
-  if (stateNext.equals(STATE_STARTED )) order = "0";
-  if (stateNext.equals(STATE_FINISHED)) order = "1";
+  if (state.equals(STATE_STARTED )) order = "0";
+  if (state.equals(STATE_FINISHED)) order = "1";
 
   List attribs = createAttributeList();
-  attribs.add(createEntityAttribute("State",     null, null, stateNext, null));
-  attribs.add(createEntityAttribute("Parent ID", null, null, parentId,  null));
-  attribs.add(createEntityAttribute("Order",     null, null, order,     null));
+  attribs.add(createEntityAttribute("State",     null, null, state,    null));
+  attribs.add(createEntityAttribute("Parent ID", null, null, parentId, null));
+  attribs.add(createEntityAttribute("Order",     null, null, order,    null));
 
   saveCallback = new SaveCallback() {
     onSave(uuid, newRecord) {
-      state = stateNext;
       showToast("Survey " + state.toLowerCase());
 
       String rel = "%s - %s";
@@ -1695,16 +1900,6 @@ saveChildTransectPoint(String parentId) {
     }
   };
   saveArchEnt(null, childTabGroup, geoList, attribs, saveCallback);
-}
-
-// Regex-free string replacement functions
-replaceFirst(haystack, needle, replacement) {
-  i = haystack.indexOf(needle);
-  if (i == -1)           return haystack;
-  if (needle.equals("")) return haystack;
-  pre  = haystack.substring(0, i                                   );
-  post = haystack.substring(   i+needle.length(), haystack.length());
-  return pre + replacement + post;
 }
 
 fetchIdentifier(String uuid, String callback) {
@@ -1726,6 +1921,25 @@ fetchIdentifier(String uuid, String callback) {
   };
 
   fetchOne(q, cb);
+}
+
+getState() {
+  return getFieldValue(REF_STATE);
+}
+
+getNextState() {
+  if (getState().equals(STATE_NONE   )) return STATE_STARTED;
+  if (getState().equals(STATE_STARTED)) return STATE_FINISHED;
+  return null;
+}
+
+setState(val) {
+  setFieldValue(REF_STATE, val);
+  return val;
+}
+
+incState() {
+  return setState(getNextState());
 }
 
 /******************************************************************************/
