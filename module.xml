@@ -24,7 +24,6 @@
   <Login>
     <Logger_ID t="dropdown" f="user"/>
     <Device_ID t="radio">
-      <!--TODO: This requires validation-->
       <!--Populated manually in logic from Transect/Vars/Device_ID-->
     </Device_ID>
     <Login t="button" l="Control"/>
@@ -46,9 +45,6 @@
   <Transect>
     <Start_Survey_Unit t="button"/>
     <Transect_ID f="id notnull autonum">
-      <!--TODO: TRN-<TransectID>-<Author>-<Date>; Export output format:One
-           column for Identifier (for export), one column for TransectID (with
-           padded zeros):"Transect", <TransectID>-->
       <str>
         <pos>0</pos>
         <fmt>TRN-$2</fmt>
@@ -61,7 +57,7 @@
     </Transect_ID>
     <timestamp f="id">
       <str>
-        <fmt>$2</fmt>
+        <fmt>-$2</fmt>
         <pos>2</pos>
         <app>-</app>
       </str>
@@ -201,10 +197,10 @@
         <opt>D</opt>
       </opts>
     </Device_ID>
-    <State/>
+    <Transect_State/>
     <author f="id">
       <str>
-        <fmt>$2</fmt>
+        <fmt>-$2</fmt>
         <pos>1</pos>
         <app>-</app>
       </str>
@@ -214,17 +210,14 @@
 
 <Transect_Point f="noui">
   <Transect_Point>
-    <State     f="id"><str><fmt>$2 </fmt></str></State>
-    <Parent_ID f="id"><str><fmt>$2 </fmt></str></Parent_ID>
+    <State     f="id"><str><fmt>{{if $2 then "$2 "}}</fmt></str></State>
+    <Parent_ID f="id"><str><fmt>{{if $2 then "$2 "}}</fmt></str></Parent_ID>
     <Order     f="id"><str><fmt>$2</fmt> </str></Order>
   </Transect_Point>
 </Transect_Point>
 
 <Site>
   <Site>
-    <!--TODO: Site-<SiteID>-<Author>-<Date>; Export output format:One column for
-         Identifier (for export), one column for SiteID (with padded zeros):
-         "Site", <SiteID>-->
     <Site_ID_Number f="id notnull autonum">
       <desc>
         The current autonumbering assumes single device in field. If multiple
@@ -238,7 +231,7 @@
     </Site_ID_Number>
     <timestamp f="id">
       <str>
-        <fmt>$2</fmt>
+        <fmt>-$2</fmt>
         <pos>2</pos>
         <app>-</app>
       </str>
@@ -385,7 +378,7 @@
   <Vars f="hidden">
     <author f="id">
       <str>
-        <fmt>$2</fmt>
+        <fmt>-$2</fmt>
         <pos>1</pos>
         <app>-</app>
       </str>
@@ -396,8 +389,8 @@
 <Feature>
   <Feature>
     <Feature_ID f="id notnull autonum">
-      <!--TODO: <SelectFeatureType>-<FeatureID>-<Author>-<Date>-->
       <str>
+        <fmt>-$2</fmt>
         <pos>1</pos>
         <app>-</app>
       </str>
@@ -413,6 +406,7 @@
     </Feature_Condition>
     <Select_Feature_Type f="id">
       <str>
+        <fmt>Feature-$2</fmt>
         <pos>0</pos>
         <app>-</app>
       </str>
@@ -993,14 +987,14 @@
   <Vars f="hidden">
     <author f="id">
       <str>
-        <fmt>$2</fmt>
+        <fmt>-$2</fmt>
         <pos>2</pos>
         <app>-</app>
       </str>
     </author>
     <timestamp f="id">
       <str>
-        <fmt>$2</fmt>
+        <fmt>-$2</fmt>
         <pos>3</pos>
         <app>-</app>
       </str>
