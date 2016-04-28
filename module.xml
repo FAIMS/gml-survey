@@ -435,9 +435,6 @@
       </opts>
     </Stratified_Artefact>
     <Total_Number_of_Artefacts b="decimal"/>
-    <Instance_No b="decimal" f="id notnull">
-      Instance No.
-    </Instance_No>
     <Artefact_Raw_Material>
       <opts>
         <opt>Basalt</opt>
