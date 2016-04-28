@@ -406,7 +406,7 @@
     </Feature_Condition>
     <Select_Feature_Type f="id">
       <str>
-        <fmt>Feature-$2</fmt>
+        <fmt>Feature-$1</fmt>
         <pos>0</pos>
         <app>-</app>
       </str>
