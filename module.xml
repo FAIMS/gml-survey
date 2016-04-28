@@ -237,14 +237,14 @@
       </str>
     </timestamp>
     <gps/>
-    <Open_Closed_Site t="radio">
+    <Open_Closed_Site t="radio" f="notnull">
       Open/Closed Site
       <opts>
         <opt>Open</opt>
         <opt>Closed</opt>
       </opts>
     </Open_Closed_Site>
-    <Site_Aspect_Orientation>
+    <Site_Aspect_Orientation f="notnull">
       Site Aspect/Orientation
       <desc>As per the descriptions in the AHIMS site recording form.</desc>
       <opts>
