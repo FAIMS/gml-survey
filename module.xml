@@ -84,7 +84,7 @@
         <opt>Lower Slope</opt>
         <opt>Simple Slope</opt>
         <opt>Flat</opt>
-        <opt>Open Depression (vale)</opt>
+        <opt>Open Depression (Vale)</opt>
         <opt>Closed Depression</opt>
       </opts>
     </Landform>
@@ -92,11 +92,11 @@
       Slope/Gradient
       <opts>
         <opt>Level</opt>
-        <opt>Very gently inclined</opt>
-        <opt>Gently inclined</opt>
-        <opt>Moderately inclined</opt>
+        <opt>Very Gently Inclined</opt>
+        <opt>Gently Inclined</opt>
+        <opt>Moderately Inclined</opt>
         <opt>Steep</opt>
-        <opt>Very steep</opt>
+        <opt>Very Steep</opt>
         <opt>Precipitous</opt>
         <opt>Cliffed</opt>
       </opts>
@@ -107,13 +107,13 @@
         is relevant.
       </desc>
     </Aspect>
-    <Vegetation_notes f="notnull">
+    <Vegetation_Notes f="notnull">
       <desc>
         Note any recognisable species that are particularly dominant, known
         classifications for the ecosystem or other pertinent information.
       </desc>
-    </Vegetation_notes>
-    <Ground_surface_visibility f="notnull">
+    </Vegetation_Notes>
+    <Ground_Surface_Visibility f="notnull">
       <desc>
         Estimate the average percentage of ground surface that is visible for
         the survey unit as per the definition in the Code of Practice (perhaps
@@ -122,8 +122,8 @@
       <opts>
         <!--PERCENTAGE_NUMBERS-->
       </opts>
-    </Ground_surface_visibility>
-    <Ground_surface_exposure f="notnull">
+    </Ground_Surface_Visibility>
+    <Ground_Surface_Exposure f="notnull">
       <desc>
         Estimate the average percentage of ground surface that is exposed/
         quantity of exposures within the survey unit as per the definition in
@@ -133,20 +133,20 @@
       <opts>
         <!--PERCENTAGE_NUMBERS-->
       </opts>
-    </Ground_surface_exposure>
-    <Ground_surface_notes>
+    </Ground_Surface_Exposure>
+    <Ground_Surface_Notes>
       <desc>
         Describe any factors or issues affecting ground cover - e.g. grass
         height and thickness, leaf litter, flooding etc.
       </desc>
-    </Ground_surface_notes>
-    <Soil_observations>
+    </Ground_Surface_Notes>
+    <Soil_Observations>
       <desc>
         Describe the nature of the soil within the survey unit from any
         exposures that allow observations to be made. FAIMS to insert MOLS
         description criteria in the information field.
       </desc>
-    </Soil_observations>
+    </Soil_Observations>
     <Geomorphological_Activity f="notnull">
       <desc>
         Insert descriptions from Australian Soil and Land Survey Field Handbook.
@@ -183,9 +183,9 @@
   </Transect>
   <Map>
     <Map t="map"/>
-    <Survey_extent f="readonly">
+    <Survey_Extent f="readonly">
       <!--TODO: This needs to be populated-->
-    </Survey_extent>
+    </Survey_Extent>
   </Map>
   <Vars f="hidden">
     <Device_ID t="radio" f="notnull">
@@ -218,7 +218,7 @@
 
 <Site>
   <Site>
-    <Site_ID_Number f="id notnull autonum">
+    <Site_ID f="id notnull autonum">
       <desc>
         The current autonumbering assumes single device in field. If multiple
         devices are in use, uniqueness rules must be defined.
@@ -228,7 +228,7 @@
         <fmt>Site-$2</fmt>
         <app>-</app>
       </str>
-    </Site_ID_Number>
+    </Site_ID>
     <timestamp f="id">
       <str>
         <fmt>-$2</fmt>
@@ -237,13 +237,13 @@
       </str>
     </timestamp>
     <gps/>
-    <Open_Closed_Site t="radio" f="notnull">
-      Open/Closed Site
+    <Open_Close_Site t="radio" f="notnull">
+      Open/Close Site
       <opts>
         <opt>Open</opt>
-        <opt>Closed</opt>
+        <opt>Close</opt>
       </opts>
-    </Open_Closed_Site>
+    </Open_Close_Site>
     <Site_Aspect_Orientation f="notnull">
       Site Aspect/Orientation
       <desc>As per the descriptions in the AHIMS site recording form.</desc>
@@ -255,33 +255,33 @@
         <opt>N/A</opt>
       </opts>
     </Site_Aspect_Orientation>
-    <Distance_to_permanent_water_source b="decimal">
+    <Distance_to_Permanent_Water_Source b="decimal">
       <desc>Distance to permanent water source in metres.</desc>
-    </Distance_to_permanent_water_source>
-    <Distance_to_temporary_water_source b="decimal">
+    </Distance_to_Permanent_Water_Source>
+    <Distance_to_Temporary_Water_Source b="decimal">
       <desc>Distance to temporary water source in metres.</desc>
-    </Distance_to_temporary_water_source>
-    <Name_of_nearest_permanent_water_source>
+    </Distance_to_Temporary_Water_Source>
+    <Name_of_the_Nearest_Permanent_Water_Source>
       <desc>Name of nearest permanent water source.</desc>
-    </Name_of_nearest_permanent_water_source>
-    <Name_of_nearest_temporary_water>
+    </Name_of_the_Nearest_Permanent_Water_Source>
+    <Name_of_the_Nearest_Temporary_Water>
       <desc>Name of nearest temporary water.</desc>
-    </Name_of_nearest_temporary_water>
+    </Name_of_the_Nearest_Temporary_Water>
     <General_Condition_of_Site t="checkbox" f="notnull">
       <desc>Select all those that apply.</desc>
       <opts>
         <opt>Weathered</opt>
-        <opt>Vehicle damage</opt>
-        <opt>Surface water Wash</opt>
-        <opt>Fire damage</opt>
+        <opt>Vehicle Damage</opt>
+        <opt>Surface Water Wash</opt>
+        <opt>Fire Damage</opt>
         <opt>Erosion</opt>
-        <opt>Stock damage</opt>
-        <opt>Exposed archaeological/Other material</opt>
-        <opt>Fire damage</opt>
-        <opt>Animal damage</opt>
+        <opt>Stock Damage</opt>
+        <opt>Exposed Archaeological/Other Material</opt>
+        <opt>Fire Damage</opt>
+        <opt>Animal Damage</opt>
         <opt>Graffitti/Vandalism</opt>
         <opt>Mineralisation</opt>
-        <opt>Unstable structure/Landform</opt>
+        <opt>Unstable Structure/Landform</opt>
       </opts>
     </General_Condition_of_Site>
   </Site>
@@ -289,50 +289,66 @@
     <Map t="map"/>
   </Map>
   <Open_Site>
-    <Total_length_of_visible_site b="decimal" f="notnull"/>
-    <Average_width_of_visible_site b="decimal" f="notnull"/>
-    <Estimated_area_of_visible_site b="decimal" f="notnull"/>
-    <Length_of_assessed_site_area b="decimal" f="notnull"/>
-    <Subsurfance_potential t="radio">
+    <Total_Length_of_Visible_Site b="decimal" f="notnull">
+      Total Length of Visible Site (m)
+    </Total_Length_of_Visible_Site>
+    <Average_Width_of_Visible_Site b="decimal" f="notnull">
+      Average Width of Visible Site (m)
+    </Average_Width_of_Visible_Site>
+    <Estimated_Area_of_Visible_Site b="decimal" f="notnull"/>
+    <Length_of_Assessed_Site_Area b="decimal" f="notnull">
+      Length of Assessed Site Area (m)
+    </Length_of_Assessed_Site_Area>
+    <Subsurface_Potential t="radio">
       <opts>
         <!--BOOLEAN-->
       </opts>
-    </Subsurfance_potential>
-    <Length_of_potential_site_area b="decimal"/>
-    <Average_width_of_potential_site_area b="decimal" f="notnull"/>
+    </Subsurface_Potential>
+    <Length_of_Potential_Site_Area b="decimal">
+      Length of Potential Site Area (m)
+    </Length_of_Potential_Site_Area>
+    <Average_Width_of_Potential_Site_Area b="decimal" f="notnull">
+      Average Width of Potential Site Area (m)
+    </Average_Width_of_Potential_Site_Area>
   </Open_Site>
-  <Closed_Site>
+  <Close_Site>
     <Shelter_Cave_Formation>
       Shelter/Cave Formation
       <opts>
         <opt>Boulder</opt>
-        <opt>Wind erosion</opt>
-        <opt>Water erosion</opt>
-        <opt>Rock collapse</opt>
+        <opt>Wind Erosion</opt>
+        <opt>Water Erosion</opt>
+        <opt>Rock Collapse</opt>
         <opt>Other</opt>
       </opts>
     </Shelter_Cave_Formation>
     <Rock_Surface_Condition>
       <opts>
-        <opt>Silica gloss</opt>
+        <opt>Silica Gloss</opt>
         <opt>Tessellated</opt>
         <opt>Weathered</opt>
         <opt>Other</opt>
       </opts>
     </Rock_Surface_Condition>
-    <Internal_Length b="decimal" f="notnull"/>
-    <Internal_Width b="decimal" f="notnull"/>
-    <Shelter_Height b="decimal" f="notnull"/>
+    <Internal_Length b="decimal" f="notnull">
+      Internal Length (m)
+    </Internal_Length>
+    <Internal_Width b="decimal" f="notnull">
+      Internal Width (m)
+    </Internal_Width>
+    <Shelter_Height b="decimal" f="notnull">
+      Shelter Height  (m)
+    </Shelter_Height>
     <Shelter_Floor_Area b="decimal" f="notnull"/>
-  </Closed_Site>
+  </Close_Site>
   <Community_Consultation_Notes>
-    <Aboriginal_community_interpretation>
+    <Aboriginal_Community_Interpretation>
       <desc>Note informants name and what they have said.</desc>
-    </Aboriginal_community_interpretation>
-    <Aboriginal_community_management_recommendations>
+    </Aboriginal_Community_Interpretation>
+    <Aboriginal_Community_Management_Recommendations>
       <desc>Note informants name and what they have said.</desc>
-    </Aboriginal_community_management_recommendations>
-    <Other_management_recommendations>
+    </Aboriginal_Community_Management_Recommendations>
+    <Other_Management_Recommendations>
       <desc>
         Add any thoughts you have on appropriate/necessary management. The AHIMS
         site recording form lists the following as options, but there may be
@@ -343,7 +359,7 @@
         rubbish removal, insect/animal removal additional recording,
         interpretation.
       </desc>
-    </Other_management_recommendations>
+    </Other_Management_Recommendations>
   </Community_Consultation_Notes>
   <Feature>
     <Feature_Type t="checkbox">
@@ -364,7 +380,7 @@
         <opt>Habitation Structure</opt>
         <opt>Hearth/Ground Oven</opt>
         <opt>Non Human Bone &amp; Organic Material</opt>
-        <opt>Ochre quarry</opt>
+        <opt>Ochre Quarry</opt>
         <opt>Potential Archaeological Deposit</opt>
         <opt>Stone Quarry</opt>
         <opt>Shell</opt>
@@ -424,11 +440,11 @@
     <New_Feature_Type t="button"/>
   </Feature>
   <Artefact>
-    <Insitu_Artefact>
+    <In_Situ_Artefact>
       <opts>
         <!--BOOLEAN_MODAL-->
       </opts>
-    </Insitu_Artefact>
+    </In_Situ_Artefact>
     <Stratified_Artefact>
       <opts>
         <!--BOOLEAN_MODAL-->
@@ -439,7 +455,7 @@
       <opts>
         <opt>Basalt</opt>
         <opt>Chert</opt>
-        <opt>Fine grained siliceous</opt>
+        <opt>Fine Grained Siliceous</opt>
         <opt>Granite</opt>
         <opt>Quartz</opt>
         <opt>Quartzite</opt>
@@ -448,9 +464,9 @@
         <opt>Glass</opt>
         <opt>Mudstone</opt>
         <opt>Silcrete</opt>
-        <opt>Petrified wood</opt>
+        <opt>Petrified Wood</opt>
         <opt>Chalcedony</opt>
-        <opt>Chalcedonic chert</opt>
+        <opt>Chalcedonic Chert</opt>
         <opt>Ceramic</opt>
         <opt>Metal</opt>
         <opt>Shell</opt>
@@ -458,12 +474,12 @@
         <opt>Wood</opt>
         <opt>Resin</opt>
         <opt>Plastic</opt>
-        <opt>Building material</opt>
+        <opt>Building Material</opt>
         <opt>Synthetic</opt>
         <opt>Textile</opt>
-        <opt>Other animal Material</opt>
-        <opt>Other plant material</opt>
-        <opt>Other unknown material</opt>
+        <opt>Other Animal Material</opt>
+        <opt>Other Plant Material</opt>
+        <opt>Other Unknown Material</opt>
       </opts>
     </Artefact_Raw_Material>
     <Artefact_Type t="radio">
@@ -482,7 +498,7 @@
         <opt>Hammerstone</opt>
         <opt>Manuport</opt>
         <opt>Groundstone Implement
-          <opt>Milling slab</opt>
+          <opt>Milling Slab</opt>
           <opt>Mortar</opt>
           <opt>Muller</opt>
         </opt>
@@ -528,7 +544,7 @@
         <opt>Fabric Decay</opt>
         <opt>Ground</opt>
         <opt>Melted</opt>
-        <opt>Other heat modification</opt>
+        <opt>Other Heat Modification</opt>
         <opt>Opalescence</opt>
         <opt>Perforated</opt>
         <opt>Polished</opt>
@@ -537,45 +553,45 @@
         <opt>Weathered</opt>
       </opts>
     </Artefact_Status_Modification>
-    <Platform_Surface_for_Aboriginal_stone_artefacts>
-      Platform Surface (for Aboriginal stone artefacts)
+    <Platform_Surface_for_Aboriginal_Stone_Artefacts>
+      Platform Surface (for Aboriginal Stone Artefacts)
       <opts>
         <opt>Cortex</opt>
-        <opt>One flake scar</opt>
-        <opt>More than one flake scar</opt>
+        <opt>One Flake Scar</opt>
+        <opt>More than One Flake Scar</opt>
         <opt>Faceted</opt>
         <opt>Ground</opt>
         <opt>Indeterminate</opt>
         <opt>Bipolar</opt>
       </opts>
-    </Platform_Surface_for_Aboriginal_stone_artefacts>
-    <Platform_Type_for_Aboriginal_stone_artefacts>
-      Platform Type (for Aboriginal stone artefacts)
+    </Platform_Surface_for_Aboriginal_Stone_Artefacts>
+    <Platform_Type_for_Aboriginal_Stone_Artefacts>
+      Platform Type (for Aboriginal Stone Artefacts)
       <opts>
         <opt>Wide</opt>
         <opt>Focal</opt>
         <opt>Shattered</opt>
         <opt>Indeterminate</opt>
       </opts>
-    </Platform_Type_for_Aboriginal_stone_artefacts>
-    <Termination_for_Aboriginal_stone_artefacts>
-      Termination (for Aboriginal stone artefacts)
+    </Platform_Type_for_Aboriginal_Stone_Artefacts>
+    <Termination_for_Aboriginal_Stone_Artefacts>
+      Termination (for Aboriginal Stone Artefacts)
       <opts>
         <opt>Feather</opt>
         <opt>Hinge</opt>
         <opt>Step</opt>
         <opt>Plunge</opt>
       </opts>
-    </Termination_for_Aboriginal_stone_artefacts>
-    <Cross_Section_for_Aboriginal_artefacts>
-      Cross Section (for Aboriginal artefacts)
+    </Termination_for_Aboriginal_Stone_Artefacts>
+    <Cross_Section_for_Aboriginal_Artefacts>
+      Cross Section (for Aboriginal Artefacts)
       <opts>
         <opt>High/Strong</opt>
         <opt>High/Weak</opt>
         <opt>Low/Weak</opt>
         <opt>Irregular</opt>
       </opts>
-    </Cross_Section_for_Aboriginal_artefacts>
+    </Cross_Section_for_Aboriginal_Artefacts>
     <Artefact_Length_mm b="decimal">
       Artefact Length (mm)
       <desc>Maximum length of the object - longest side.</desc>
@@ -613,11 +629,11 @@
   <Intangible_Value>
     <Intangible_Value_Type>
       <opts>
-        <opt>Aboriginal Ceremony (no physical evidence)</opt>
+        <opt>Aboriginal Ceremony (No Physical Evidence)</opt>
         <opt>Song</opt>
         <opt>Story</opt>
         <opt>Dreaming</opt>
-        <opt>Gathering (non physical evidence).</opt>
+        <opt>Gathering (No Physical Evidence)</opt>
       </opts>
     </Intangible_Value_Type>
     <Intangible_Value_Description/>
@@ -644,15 +660,15 @@
       <opts>
         <opt>Anthropomorphic</opt>
         <opt>Bird</opt>
-        <opt>Bird track</opt>
+        <opt>Bird Track</opt>
         <opt>Canoe</opt>
         <opt>Circle</opt>
-        <opt>Contact material Culture</opt>
+        <opt>Contact Material Culture</opt>
         <opt>Duck</opt>
         <opt>Eel</opt>
         <opt>Emu</opt>
-        <opt>Emu track</opt>
-        <opt>European figure</opt>
+        <opt>Emu Track</opt>
+        <opt>European Figure</opt>
         <opt>Female</opt>
         <opt>Fish</opt>
         <opt>Foot</opt>
@@ -662,7 +678,7 @@
         <opt>Line</opt>
         <opt>Lizard</opt>
         <opt>Macropod</opt>
-        <opt>Macropod track</opt>
+        <opt>Macropod Track</opt>
         <opt>Male</opt>
         <opt>Marine-other</opt>
         <opt>Other</opt>
@@ -689,7 +705,7 @@
         <opt>Other</opt>
         <opt>Painted</opt>
         <opt>Pecked</opt>
-        <opt>Pigment &amp; engraved</opt>
+        <opt>Pigment &amp; Engraved</opt>
         <opt>Stencilled</opt>
       </opts>
     </Application_Technique>
@@ -697,7 +713,7 @@
       <opts>
         <opt>Fill</opt>
         <opt>Line</opt>
-        <opt>Line + fill</opt>
+        <opt>Line + Fill</opt>
         <opt>Other</opt>
         <opt>Pattern</opt>
       </opts>
@@ -720,11 +736,11 @@
         button.
       </desc>
       <opts>
-        <opt>All over shelter or rock platform surface</opt>
+        <opt>All Over Shelter or Rock Platform Surface</opt>
         <opt>Ceiling</opt>
         <opt>Floor</opt>
-        <opt>Mostly near largest sheltered space</opt>
-        <opt>Mostly on out of the way spaces</opt>
+        <opt>Mostly near Largest Sheltered Space</opt>
+        <opt>Mostly on Out of the Way Spaces</opt>
         <opt>Other</opt>
         <opt>Wall</opt>
       </opts>
@@ -736,8 +752,8 @@
       <opts>
         <opt>Faded</opt>
         <opt>Stained</opt>
-        <opt>Mineralisation evident</opt>
-        <opt>Very brant colours</opt>
+        <opt>Mineralisation Evident</opt>
+        <opt>Very Brant Colours</opt>
         <opt>Unweathered</opt>
         <opt>Weathered</opt>
       </opts>
@@ -748,79 +764,79 @@
   </Art>
   <Other_Feature>
     <Description_Other_Feature/>
-    <Chain_of_Custody_Notes_for_human_remains>
-      Chain of Custody Notes (for human remains)
-    </Chain_of_Custody_Notes_for_human_remains>
+    <Chain_of_Custody_Notes_for_Human_Remains>
+      Chain of Custody Notes (for Human Remains)
+    </Chain_of_Custody_Notes_for_Human_Remains>
     <Other_Feature_Sketch_Plan t="file"/>
     <Other_Feature_Photo t="camera"/>
   </Other_Feature>
   <Grinding_Groove>
-    <Type_Grinding_Groove>
+    <Type_of_Grinding_Groove>
       <opts>
         <opt>Broad</opt>
         <opt>Narrow/point</opt>
         <opt>Hollow</opt>
         <opt>Flat</opt>
       </opts>
-    </Type_Grinding_Groove>
+    </Type_of_Grinding_Groove>
     <Profile_Shape t="radio">
       <opts>
-        <opt>U' shaped</opt>
-        <opt>'V' shaped</opt>
+        <opt>U' Shaped</opt>
+        <opt>'V' Shaped</opt>
         <opt>Flat</opt>
       </opts>
     </Profile_Shape>
-    <Seed_species_present/>
-    <Groove_function/>
-    <Dimensions_-_length_of_smallest_part_mm b="decimal">
-      Dimensions - length of smallest part (mm)
-    </Dimensions_-_length_of_smallest_part_mm>
-    <Dimensions_-_width_of_smallest_part_mm b="decimal">
-      Dimensions - width of smallest part (mm)
-    </Dimensions_-_width_of_smallest_part_mm>
-    <Dimensions_-_depth_of_smallest_part_mm b="decimal">
-      Dimensions - depth of smallest part (mm)
-    </Dimensions_-_depth_of_smallest_part_mm>
-    <Dimensions_-_length_of_largest_part_mm b="decimal">
-      Dimensions - length of largest part (mm)
-    </Dimensions_-_length_of_largest_part_mm>
-    <Dimensions_-_width_of_largest_part_mm b="decimal">
-      Dimensions - width of largest part (mm)
-    </Dimensions_-_width_of_largest_part_mm>
-    <Dimensions_-_depth_of_largest_part_mm b="decimal">
-      Dimensions - depth of largest part (mm)
-    </Dimensions_-_depth_of_largest_part_mm>
-    <Groove_count b="decimal"/>
-    <Cluster_count b="decimal"/>
+    <Seed_Species_Present/>
+    <Groove_Function/>
+    <Dimensions_-_Length_of_the_Smallest_Part_mm b="decimal">
+      Dimensions - Length of the Smallest Part (mm)
+    </Dimensions_-_Length_of_the_Smallest_Part_mm>
+    <Dimensions_-_Width_of_the_Smallest_Part_mm b="decimal">
+      Dimensions - Width of the Smallest Part (mm)
+    </Dimensions_-_Width_of_the_Smallest_Part_mm>
+    <Dimensions_-_Depth_of_the_Smallest_Part_mm b="decimal">
+      Dimensions - Depth of the Smallest Part (mm)
+    </Dimensions_-_Depth_of_the_Smallest_Part_mm>
+    <Dimensions_-_Length_of_the_Largest_Part_mm b="decimal">
+      Dimensions - Length of the Largest Part (mm)
+    </Dimensions_-_Length_of_the_Largest_Part_mm>
+    <Dimensions_-_Width_of_the_Largest_Part_mm b="decimal">
+      Dimensions - Width of the Largest Part (mm)
+    </Dimensions_-_Width_of_the_Largest_Part_mm>
+    <Dimensions_-_Depth_of_the_Largest_Part_mm b="decimal">
+      Dimensions - Depth of the Largest Part (mm)
+    </Dimensions_-_Depth_of_the_Largest_Part_mm>
+    <Groove_Count b="decimal"/>
+    <Cluster_Count b="decimal"/>
     <Grinding_Groove_Sketch_Plan t="file"/>
     <Grinding_Groove_Photo t="camera"/>
   </Grinding_Groove>
   <Shell>
     <Shell_Distribution t="radio">
       <opts>
-        <opt>Surface scatter</opt>
-        <opt>Stratified deposit</opt>
+        <opt>Surface Scatter</opt>
+        <opt>Stratified Deposit</opt>
         <opt>Mounded</opt>
       </opts>
     </Shell_Distribution>
-    <Distance_to_high_water_mark_metres b="decimal">
-      Distance to high water mark (metres)
-    </Distance_to_high_water_mark_metres>
-    <Species_present t="checkbox">
+    <Distance_to_High_Water_Mark_Metres b="decimal">
+      Distance to High Water Mark (m)
+    </Distance_to_High_Water_Mark_Metres>
+    <Species_Present t="checkbox">
       <opts>
         <!--SPECIES-->
       </opts>
-    </Species_present>
+    </Species_Present>
     <Dominant_Species>
       <opts>
         <!--SPECIES-->
       </opts>
     </Dominant_Species>
-    <Approximate_percentage_of_dominant_species_as_part_of_assemblage>
+    <Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage>
       <opts>
         <!--PERCENTAGE_INTERVALS-->
       </opts>
-    </Approximate_percentage_of_dominant_species_as_part_of_assemblage>
+    </Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage>
     <Shell_Sketch_Plan t="file"/>
     <Shell_Photo t="camera"/>
   </Shell>
@@ -841,12 +857,12 @@
     <Hearth_Components>
       <desc>Tick all those that are relevant.</desc>
       <opts>
-        <opt>Baked clay balls</opt>
+        <opt>Baked Clay Balls</opt>
         <opt>Charcoal</opt>
         <opt>Wood</opt>
-        <opt>Heat affected basal clay</opt>
-        <opt>Bone/Other animal material</opt>
-        <opt>Seeds/other Plant material</opt>
+        <opt>Heat Affected Basal Clay</opt>
+        <opt>Bone/Other Animal Material</opt>
+        <opt>Seeds/Other Plant Material</opt>
         <opt>Stone</opt>
       </opts>
     </Hearth_Components>
@@ -855,11 +871,11 @@
     <Hearth_Photo t="camera"/>
   </Hearth_Ground_Oven>
   <Potential_Archaeological_Deposit>
-    <PAD_Insitu>
+    <PAD_in_Situ>
       <opts>
         <!--BOOLEAN_MODAL-->
       </opts>
-    </PAD_Insitu>
+    </PAD_in_Situ>
     <PAD_Stratified>
       <opts>
         <!--BOOLEAN_MODAL-->
@@ -871,7 +887,7 @@
         <opt>Aboriginal Stone Artefact</opt>
         <opt>Shell</opt>
         <opt>Burial</opt>
-        <opt>Oven/ Hearth</opt>
+        <opt>Oven/Hearth</opt>
       </opts>
     </PAD_Type>
     <PAD_Surface_Artefacts t="radio">
@@ -907,10 +923,10 @@
     <Tree_Status>
       <opts>
         <opt>Standing</opt>
-        <opt>Lying down</opt>
-        <opt>Partially felled</opt>
-        <opt>Subject to salinity</opt>
-        <opt>Not in situ</opt>
+        <opt>Lying Down</opt>
+        <opt>Partially Felled</opt>
+        <opt>Subject to Salinity</opt>
+        <opt>Not in Situ</opt>
       </opts>
     </Tree_Status>
     <CM_Tree_Damage t="checkbox">
@@ -918,7 +934,7 @@
       <opts>
         <opt>Ringbarked</opt>
         <opt>Rot</opt>
-        <opt>Limb fall</opt>
+        <opt>Limb Fall</opt>
         <opt>None</opt>
       </opts>
     </CM_Tree_Damage>
@@ -927,11 +943,12 @@
         <!--BOOLEAN-->
       </opts>
     </Regrowth>
-    <Is_a_tree_health_assessment_required t="radio">
+    <Is_a_Tree_Health_Assessment_Required t="radio">
+      Is a Tree Health Assessment Required?
       <opts>
         <!--BOOLEAN-->
       </opts>
-    </Is_a_tree_health_assessment_required>
+    </Is_a_Tree_Health_Assessment_Required>
     <Length_of_Scar_mm b="decimal">
       Length of Scar (mm)
     </Length_of_Scar_mm>
@@ -947,7 +964,7 @@
     <CM_Tree_Shape>
       <opts>
         <opt>Oval</opt>
-        <opt>Rectangular square</opt>
+        <opt>Rectangular Square</opt>
         <opt>Round</opt>
         <opt>Other</opt>
       </opts>
@@ -964,14 +981,14 @@
         <opt>North</opt>
       </opts>
     </CM_Tree_Orientation>
-    <Carving_type>
+    <Carving_Type>
       <opts>
         <opt>Linear</opt>
         <opt>Geometric</opt>
         <opt>Pictorial</opt>
         <opt>N/A</opt>
       </opts>
-    </Carving_type>
+    </Carving_Type>
     <Axe_Marks>
       <opts>
         <opt>Metal</opt>
