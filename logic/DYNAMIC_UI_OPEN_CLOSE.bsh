@@ -1,26 +1,26 @@
-/*********************** DYNAMIC UI - OPEN/CLOSED SITE ************************/
+/************************ DYNAMIC UI - OPEN/CLOSE SITE ************************/
 /* There are two cases to handle:                                             */
 /*   (a) When a Site is newly created.                                        */
 /*   (b) When a Site has been loaded.                                         */
 /*                                                                            */
 /* Case (a) is handled by an on-click events which triggers                   */
-/* `updateOpenClosedTabs()`.                                                  */
+/* `updateOpenCloseTabs()`.                                                   */
 /*                                                                            */
 /* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
 /* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
 /******************************************************************************/
-addOnEvent("Site",                       "show",  "updateOpenClosedTabs()");
-addOnEvent("Site/Site/Open_Closed_Site", "click", "updateOpenClosedTabs()");
+addOnEvent("Site",                      "show",  "updateOpenCloseTabs()");
+addOnEvent("Site/Site/Open_Close_Site", "click", "updateOpenCloseTabs()");
 
-VOCAB_ID_OPEN   = null;
-VOCAB_ID_CLOSED = null;
-OPEN_CLOSED_SITE_VALS = new ArrayList();
-fetchVocab("Open Closed Site", OPEN_CLOSED_SITE_VALS, "setOpenClosedVocabIds()");
+VOCAB_ID_OPEN  = null;
+VOCAB_ID_CLOSE = null;
+OPEN_CLOSE_SITE_VALS = new ArrayList();
+fetchVocab("Open Close Site", OPEN_CLOSE_SITE_VALS, "setOpenCloseVocabIds()");
 
 getVocabId(vocabName, vocabVals) {
   vocabName = "{" + vocabName + "}";
   vocabId   = null;
-  for (List val : OPEN_CLOSED_SITE_VALS) {
+  for (List val : OPEN_CLOSE_SITE_VALS) {
     String thisVocabId   = val.get(0);
     String thisVocabName = val.get(1);
 
@@ -30,28 +30,28 @@ getVocabId(vocabName, vocabVals) {
   }
 }
 
-setOpenClosedVocabIds() {
-  VOCAB_ID_OPEN   = getVocabId("Open",   OPEN_CLOSED_SITE_VALS);
-  VOCAB_ID_CLOSED = getVocabId("Closed", OPEN_CLOSED_SITE_VALS);
+setOpenCloseVocabIds() {
+  VOCAB_ID_OPEN  = getVocabId("Open",  OPEN_CLOSE_SITE_VALS);
+  VOCAB_ID_CLOSE = getVocabId("Close", OPEN_CLOSE_SITE_VALS);
 }
 
-updateOpenClosedTabs() {
+updateOpenCloseTabs() {
   cancelSites();
 
-  selectedId       = getFieldValue("Site/Site/Open_Closed_Site");
-  isSelectedOpen   = VOCAB_ID_OPEN  .equals(selectedId);
-  isSelectedClosed = VOCAB_ID_CLOSED.equals(selectedId);
+  selectedId      = getFieldValue("Site/Site/Open_Close_Site");
+  isSelectedOpen  = VOCAB_ID_OPEN .equals(selectedId);
+  isSelectedClose = VOCAB_ID_CLOSE.equals(selectedId);
 
-  if (isSelectedOpen)   openSite();
-  if (isSelectedClosed) closedSite();
+  if (isSelectedOpen)  openSite();
+  if (isSelectedClose) closeSite();
 }
 
 cancelSites() {
-  cancelTab("Site/Open_Site",   false);
-  cancelTab("Site/Closed_Site", false);
+  cancelTab("Site/Open_Site",  false);
+  cancelTab("Site/Close_Site", false);
 }
-openSite()  {showTab("Site/Open_Site"  ); showTab("Site/Site");}
-closedSite(){showTab("Site/Closed_Site"); showTab("Site/Site");}
+openSite() {showTab("Site/Open_Site" ); showTab("Site/Site");}
+closeSite(){showTab("Site/Close_Site"); showTab("Site/Site");}
 
 loadSiteFrom(String uuid) {
   String tabgroup = "Site";
@@ -60,7 +60,7 @@ loadSiteFrom(String uuid) {
 
   FetchCallback cb = new FetchCallback() {
     onFetch(result) {
-      updateOpenClosedTabs();
+      updateOpenCloseTabs();
     }
   };
   showTabGroup(tabgroup, uuid, cb);
