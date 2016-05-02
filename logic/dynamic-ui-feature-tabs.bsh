@@ -1,72 +1,96 @@
 /************************* DYNAMIC UI - FEATURE TABS **************************/
-/* There are two cases to handle: TODO: Update this comment                   */
+/* There are two cases to handle:                                             */
 /*   (a) When a Feature is newly created.                                     */
 /*   (b) When a Feature has been loaded.                                      */
 /*                                                                            */
-/* Case (a) is handled by an on-click events which triggers                   */
-/* `updateOpenClosedTabs()`.                                                  */
+/* Case (a) is handled by on-click events which trigger                       */
+/* `updateFeatureTabs()`.                                                     */
 /*                                                                            */
 /* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
-/* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
+/* by overwriting the auto-generated function `loadFeatureFrom` using         */
+/* @POSTPROC.                                                                 */
 /******************************************************************************/
-normaliseFeatureToTabMap(Map map) {
-  String tabParent  = "Feature";
+addOnEvent("Feature",                             "show",   "updateFeatureTabs()");
+addOnEvent("Feature/Feature/Select_Feature_Type", "select", "updateFeatureTabs()");
 
-  Map normalisedMap = new HashMap();
-  for (entry : map.entrySet()) {
-    String feature = entry.getKey();   feature = normaliseMapString(feature);
-    String tab     = entry.getValue(); tab     = normaliseMapString(tab);
+// Fetch the "Select Feature Type" vocab and populate the
+// `SELECT_FEATURE_TYPE_VOCAB` global.
+fetchSelectFeatureType() {
+  SELECT_FEATURE_TYPE_VOCAB = new HashMap();
 
-    String normalisedFeature = "{%s}";
-    String normalisedTab     = "%s/%s";
+  attributeName = "Select Feature Type";
 
-    normalisedFeature = replaceFirst(normalisedFeature, "%s", feature);
-    normalisedTab     = replaceFirst(normalisedTab,     "%s", tabParent);
-    normalisedTab     = replaceFirst(normalisedTab,     "%s", tab);
+  q  = " SELECT    vocabid, vocabname";
+  q += " FROM      vocabulary";
+  q += " LEFT JOIN attributekey";
+  q += " USING    (attributeid)";
+  q += " WHERE     attributename = '%s'";
+  q  = replaceFirst(q, "%s", attributeName);
 
-    normalisedMap.put(normalisedFeature, normalisedTab);
-  }
+  populateHashMap = new FetchCallback() {
+    onFetch(result) {
+      for (row : result) {
+        vocabId   = row.get(0);
+        vocabName = row.get(1);
+        SELECT_FEATURE_TYPE_VOCAB.put(vocabId, vocabName);
+      }
+    }
+  };
 
-  return normalisedMap;
+  fetchAll(q, populateHashMap);
 }
 
-normaliseMapString(String s) {
-  return s.replaceAll("[^a-zA-Z0-9]", "_");
+// The `fetchSelectFeatureType` call is required to set
+// `SELECT_FEATURE_TYPE_VOCAB` because async code in Beanshell/Java is DUMBBBB.
+// Also, SELECT_FEATURE_TYPE_VOCAB is a HashMap: vocabId -> vocabName.
+SELECT_FEATURE_TYPE_VOCAB = null;
+fetchSelectFeatureType();
+
+vocabNametoTabRef(vocabName) {
+  if (vocabName == null) return null;
+
+  // "{Vocab_Name}" -> "Vocab_Name"
+  tabName = vocabName.substring(1, vocabName.length() - 1);
+
+  tabRef = "Feature/%s";
+  tabRef = replaceFirst(tabRef, "%s", tabName);
+
+  return tabRef;
 }
 
 cancelAllFeatureTabs() {
-  for (String tab: FEATURE_TO_TAB.values()) {
-    cancelTab(tab, false);
+  for (String vocabName: SELECT_FEATURE_TYPE_VOCAB.values()) {
+    tabRef = vocabNametoTabRef(vocabName);
+    cancelTab(tabRef, false);
   }
 }
 
 updateFeatureTabs() {
-  cancelAllFeatureTabs();
+  mainTabRef  = "Feature/Feature";
+  dropdownRef = "Feature/Feature/Select_Feature_Type";
 
-  // TODO
+  // Based on the value of the dropdown at `dropdownRef`, figure out the
+  // reference to the tab which should be shown.
+  vocabId        = getFieldValue(dropdownRef);
+  vocabName      = SELECT_FEATURE_TYPE_VOCAB.get(vocabId);
+  selectedTabRef = vocabNametoTabRef(vocabName);
+
+  // The following lines do as shown here: http://i.imgur.com/f0GT1Dy.png
+  cancelAllFeatureTabs();
+  if (selectedTabRef == null) return;
+  showTab(selectedTabRef);
+  showTab(mainTabRef);
 }
 
-FEATURE_TO_TAB = new HashMap();
-FEATURE_TO_TAB.put("Intangible Values",                 "Intangible Value");
-FEATURE_TO_TAB.put("Aboriginal Ceremony",               "Intangible Value");
-FEATURE_TO_TAB.put("Aboriginal Resource",               "Intangible Value");
-FEATURE_TO_TAB.put("Dreaming",                          "Intangible Value");
-FEATURE_TO_TAB.put("Gathering",                         "Intangible Value");
-FEATURE_TO_TAB.put("Art",                               "Art");
-FEATURE_TO_TAB.put("Artefact",                          "Artefact");
-FEATURE_TO_TAB.put("Burial",                            "Other Feature");
-FEATURE_TO_TAB.put("Conflict",                          "Other Feature");
-FEATURE_TO_TAB.put("Mound",                             "Other Feature");
-FEATURE_TO_TAB.put("Fish Trap",                         "Other Feature");
-FEATURE_TO_TAB.put("Grinding Groove",                   "Grinding Groove");
-FEATURE_TO_TAB.put("Habitation Structure",              "Other Feature");
-FEATURE_TO_TAB.put("Hearth/Ground Oven",                "Hearth/Ground Oven");
-FEATURE_TO_TAB.put("Non Human Bone & Organic Material", "Other Feature");
-FEATURE_TO_TAB.put("Ochre quarry",                      "Other Feature");
-FEATURE_TO_TAB.put("Potential Archaeological Deposit",  "Potential Archaeological Deposit");
-FEATURE_TO_TAB.put("Stone Quarry",                      "Other Feature");
-FEATURE_TO_TAB.put("Shell",                             "Shell");
-FEATURE_TO_TAB.put("Stone Arrangement",                 "Other Feature");
-FEATURE_TO_TAB.put("Culturally Modified Tree",          "Culturally Modified Tree");
-FEATURE_TO_TAB.put("Water Hole",                        "Other Feature");
-FEATURE_TO_TAB = normaliseFeatureToTabMap(FEATURE_TO_TAB);
+loadFeatureFrom(String uuid) {
+  String tabgroup = "Feature";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  FetchCallback cb = new FetchCallback() {
+    onFetch(result) {
+      updateFeatureTabs();
+    }
+  };
+  showTabGroup(tabgroup, uuid, cb);
+}

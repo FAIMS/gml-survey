@@ -435,12 +435,11 @@
         <opt>Shell</opt>
         <opt>Hearth/Ground Oven</opt>
         <opt>Potential Archaeological Deposit</opt>
-        <opt>Culturally Mofified Tree</opt>
+        <opt>Culturally Modified Tree</opt>
       </opts>
     </Select_Feature_Type>
-    <New_Feature_Type t="button"/>
   </Feature>
-  <Artefact>
+  <Artefact f="hidden">
     <In_Situ_Artefact>
       <opts>
         <!--@SOURCE: vocabs/boolean-modal.xml-->
@@ -627,7 +626,7 @@
       </desc>
     </Artefact_Photo_Caption>
   </Artefact>
-  <Intangible_Value>
+  <Intangible_Value f="hidden">
     <Intangible_Value_Type>
       <opts>
         <opt>Aboriginal Ceremony (No Physical Evidence)</opt>
@@ -639,7 +638,7 @@
     </Intangible_Value_Type>
     <Intangible_Value_Description/>
   </Intangible_Value>
-  <Art>
+  <Art f="hidden">
     <Pigment_Engraved t="radio">
       Pigment/Engraved
       <opts>
@@ -763,7 +762,7 @@
     <Art_Photo t="camera"/>
     <Art_Other_Observations/>
   </Art>
-  <Other_Feature>
+  <Other_Feature f="hidden">
     <Description_Other_Feature/>
     <Chain_of_Custody_Notes_for_Human_Remains>
       Chain of Custody Notes (for Human Remains)
@@ -771,7 +770,7 @@
     <Other_Feature_Sketch_Plan t="file"/>
     <Other_Feature_Photo t="camera"/>
   </Other_Feature>
-  <Grinding_Groove>
+  <Grinding_Groove f="hidden">
     <Type_of_Grinding_Groove>
       <opts>
         <opt>Broad</opt>
@@ -812,7 +811,7 @@
     <Grinding_Groove_Sketch_Plan t="file"/>
     <Grinding_Groove_Photo t="camera"/>
   </Grinding_Groove>
-  <Shell>
+  <Shell f="hidden">
     <Shell_Distribution t="radio">
       <opts>
         <opt>Surface Scatter</opt>
@@ -841,7 +840,7 @@
     <Shell_Sketch_Plan t="file"/>
     <Shell_Photo t="camera"/>
   </Shell>
-  <Hearth_Ground_Oven>
+  <Hearth_Ground_Oven f="hidden">
     Hearth/Ground Oven
     <Hearth_Shape_mm>
       Hearth Shape (mm)
@@ -871,7 +870,7 @@
     <Hearth_Sketch_Plan t="file"/>
     <Hearth_Photo t="camera"/>
   </Hearth_Ground_Oven>
-  <Potential_Archaeological_Deposit>
+  <Potential_Archaeological_Deposit f="hidden">
     <PAD_in_Situ>
       <opts>
         <!--@SOURCE: vocabs/boolean-modal.xml-->
@@ -897,7 +896,7 @@
       </opts>
     </PAD_Surface_Artefacts>
   </Potential_Archaeological_Deposit>
-  <Culturally_Modified_Tree>
+  <Culturally_Modified_Tree f="hidden">
     <CM_Tree_Type t="radio">
       <opts>
         <opt>Carved</opt>
