@@ -120,7 +120,7 @@
         include the definition from Appendix A of the Code).
       </desc>
       <opts>
-        <!--PERCENTAGE_NUMBERS-->
+        <!--@SOURCE: vocabs/percentage_numbers.xml-->
       </opts>
     </Ground_Surface_Visibility>
     <Ground_Surface_Exposure f="notnull">
@@ -131,7 +131,7 @@
         the Code).
       </desc>
       <opts>
-        <!--PERCENTAGE_NUMBERS-->
+        <!--@SOURCE: vocabs/percentage_numbers.xml-->
       </opts>
     </Ground_Surface_Exposure>
     <Ground_Surface_Notes>
@@ -301,7 +301,7 @@
     </Length_of_Assessed_Site_Area>
     <Subsurface_Potential t="radio">
       <opts>
-        <!--BOOLEAN-->
+        <!--@SOURCE: vocabs/boolean.xml-->
       </opts>
     </Subsurface_Potential>
     <Length_of_Potential_Site_Area b="decimal">
@@ -442,12 +442,12 @@
   <Artefact>
     <In_Situ_Artefact>
       <opts>
-        <!--BOOLEAN_MODAL-->
+        <!--@SOURCE: vocabs/boolean-modal.xml-->
       </opts>
     </In_Situ_Artefact>
     <Stratified_Artefact>
       <opts>
-        <!--BOOLEAN_MODAL-->
+        <!--@SOURCE: vocabs/boolean-modal.xml-->
       </opts>
     </Stratified_Artefact>
     <Total_Number_of_Artefacts b="decimal"/>
@@ -518,7 +518,7 @@
         Dark Yellowish Brown.
       </desc>
       <opts>
-        <!--MUNSEL-->
+        <!--@SOURCE: vocabs/munsel.xml-->
       </opts>
     </Artefact_Colour>
     <Artefact_Status_Modification>
@@ -649,7 +649,7 @@
     </Pigment_Engraved>
     <Super-impositioning t="radio">
       <opts>
-        <!--BOOLEAN-->
+        <!--@SOURCE: vocabs/boolean.xml-->
       </opts>
     </Super-impositioning>
     <Art_Motif t="checkbox">
@@ -824,17 +824,17 @@
     </Distance_to_High_Water_Mark_Metres>
     <Species_Present t="checkbox">
       <opts>
-        <!--SPECIES-->
+        <!--@SOURCE: vocabs/species.xml-->
       </opts>
     </Species_Present>
     <Dominant_Species>
       <opts>
-        <!--SPECIES-->
+        <!--@SOURCE: vocabs/species.xml-->
       </opts>
     </Dominant_Species>
     <Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage>
       <opts>
-        <!--PERCENTAGE_INTERVALS-->
+        <!--@SOURCE: vocabs/percentage_intervals.xml-->
       </opts>
     </Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage>
     <Shell_Sketch_Plan t="file"/>
@@ -873,12 +873,12 @@
   <Potential_Archaeological_Deposit>
     <PAD_in_Situ>
       <opts>
-        <!--BOOLEAN_MODAL-->
+        <!--@SOURCE: vocabs/boolean-modal.xml-->
       </opts>
     </PAD_in_Situ>
     <PAD_Stratified>
       <opts>
-        <!--BOOLEAN_MODAL-->
+        <!--@SOURCE: vocabs/boolean-modal.xml-->
       </opts>
     </PAD_Stratified>
     <PAD_Type>
@@ -892,7 +892,7 @@
     </PAD_Type>
     <PAD_Surface_Artefacts t="radio">
       <opts>
-        <!--BOOLEAN-->
+        <!--@SOURCE: vocabs/boolean.xml-->
       </opts>
     </PAD_Surface_Artefacts>
   </Potential_Archaeological_Deposit>
@@ -940,13 +940,13 @@
     </CM_Tree_Damage>
     <Regrowth t="radio">
       <opts>
-        <!--BOOLEAN-->
+        <!--@SOURCE: vocabs/boolean.xml-->
       </opts>
     </Regrowth>
     <Is_a_Tree_Health_Assessment_Required t="radio">
       Is a Tree Health Assessment Required?
       <opts>
-        <!--BOOLEAN-->
+        <!--@SOURCE: vocabs/boolean.xml-->
       </opts>
     </Is_a_Tree_Health_Assessment_Required>
     <Length_of_Scar_mm b="decimal">
@@ -1016,13 +1016,13 @@
 </Feature>
 
 <logic><![CDATA[
-  <!--UTILS-->
-  <!--DEVICE_ID_COPYING-->
-  <!--DEVICE_ID_POPULATION-->
-  <!--DYNAMIC_UI_FEATURE_TABS-->
-  <!--DYNAMIC_UI_OPEN_CLOSE-->
-  <!--LOGIN_TAB_VALIDATION-->
-  <!--TRANSECT_GEOMETRY-->
+  <!--@SOURCE: logic/utils.bsh-->
+  <!--@SOURCE: logic/device-id-copying.bsh-->
+  <!--@SOURCE: logic/device-id-population.bsh-->
+  <!--@SOURCE: logic/dynamic-ui-feature-tabs.bsh-->
+  <!--@SOURCE: logic/dynamic-ui-open-close.bsh-->
+  <!--@SOURCE: logic/login-tab-validation.bsh-->
+  <!--@SOURCE: logic/transect-geometry.bsh-->
 ]]></logic>
 
 </module>

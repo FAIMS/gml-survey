@@ -1,27 +1,24 @@
 #!/usr/bin/env bash
 
-# For each file, `./directory/FILE.ext`, `doImport` copies the contents of
-# FILE.xml to wherever the comment <!--FILE--> is encountered in module.xml.
-doImport () {
-    local directory=$1
-
-    imports=$(find "$directory/" -mindepth 1 -maxdepth 1 | sort)
-    for import in $imports
-    do
-        if [ ! -s "$import" ]
-        then
-            continue
-        fi
-
-        filename=$(basename "$import")  # directory/1.xml -> 1.xml
-        noextension="${filename%.*}"    # 1.xml -> 1
-
-        sed -i -e "/<!--$noextension-->/{
-            r $import
-            d
-        }" module.xml
-    done
+# Escape sed's special characters
+escape_sed() {
+    echo "$1" |
+    sed \
+        -e 's/\//\\\//g' \
+        -e 's/\&/\\\&/g'
 }
 
-doImport "logic"
-doImport "vocabs"
+# In module.xml, replace any line <!--@SOURCE: path/to/file--> with the contents
+# of the file at path/to/file.
+filenames=$(find . -type f -printf '%P\n')
+for filename in $filenames
+do
+    whitespace='\s*'                           # Zero or more whitespace chars
+    dot_slash='\(\.\/\)\?'                     # Optional './'
+    escaped_filename=$(escape_sed "$filename") # Escape slashes in filenames
+
+    sed -i -e "/<!--@SOURCE:$whitespace$dot_slash$escaped_filename-->/{
+        r $filename
+        d
+    }" module.xml
+done
