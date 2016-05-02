@@ -3,7 +3,7 @@
 /*   (a) When a Site is newly created.                                        */
 /*   (b) When a Site has been loaded.                                         */
 /*                                                                            */
-/* Case (a) is handled by an on-click event which triggers                    */
+/* Case (a) is handled by on-click events which triggers                      */
 /* `updateOpenCloseTabs()`.                                                   */
 /*                                                                            */
 /* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
