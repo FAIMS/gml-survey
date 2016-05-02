@@ -851,9 +851,9 @@
     <Hearth_Width_mm>
       Hearth Width (mm)
     </Hearth_Width_mm>
-    <Hearth_Estimated_Depth>
+    <Hearth_Estimated_Depth_mm>
       Hearth Estimated Depth (mm)
-    </Hearth_Estimated_Depth>
+    </Hearth_Estimated_Depth_mm>
     <Hearth_Components>
       <desc>Tick all those that are relevant.</desc>
       <opts>
