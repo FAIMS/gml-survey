@@ -79,7 +79,7 @@ saveChildTransectPoint(String parentId) {
   String parentUuid   = getUuid(parentTabGroup);
 
   if (isNull(parentUuid)) {
-    // Shouldn't happen because `tryIncrementingState` should've set this.
+    // Shouldn't happen because `tryIncrementingState` should've set parentUuid.
     Log.e("saveChildTransectPoint()", "Parent UUID is null");
     INC_MUTEX.release();
     return;
