@@ -120,7 +120,7 @@
         include the definition from Appendix A of the Code).
       </desc>
       <opts>
-        <!--@SOURCE: vocabs/percentage_numbers.xml-->
+        <!--@SOURCE: vocabs/percentage-numbers.xml-->
       </opts>
     </Ground_Surface_Visibility>
     <Ground_Surface_Exposure f="notnull">
@@ -131,7 +131,7 @@
         the Code).
       </desc>
       <opts>
-        <!--@SOURCE: vocabs/percentage_numbers.xml-->
+        <!--@SOURCE: vocabs/percentage-numbers.xml-->
       </opts>
     </Ground_Surface_Exposure>
     <Ground_Surface_Notes>
@@ -834,7 +834,7 @@
     </Dominant_Species>
     <Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage>
       <opts>
-        <!--@SOURCE: vocabs/percentage_intervals.xml-->
+        <!--@SOURCE: vocabs/percentage-intervals.xml-->
       </opts>
     </Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage>
     <Shell_Sketch_Plan t="file"/>
