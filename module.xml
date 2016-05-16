@@ -183,9 +183,9 @@
   </Transect>
   <Map>
     <Map t="map"/>
-    <Survey_Extent f="readonly">
-      <!--TODO: This needs to be populated-->
-    </Survey_Extent>
+    <Survey_Extent_Square_Metres f="readonly">
+      Survey Extent (Square Metres)
+    </Survey_Extent_Square_Metres>
   </Map>
   <Vars f="hidden">
     <Device_ID t="radio" f="notnull">
@@ -198,6 +198,8 @@
       </opts>
     </Device_ID>
     <Transect_State/>
+    <UUID_Started/>
+    <UUID_Finished/>
     <author f="id">
       <str>
         <fmt>-$2</fmt>
@@ -1017,6 +1019,7 @@
 
 <logic><![CDATA[
   <!--@SOURCE: logic/utils.bsh-->
+
   <!--@SOURCE: logic/device-id-copying.bsh-->
   <!--@SOURCE: logic/device-id-population.bsh-->
   <!--@SOURCE: logic/dynamic-ui-feature-tabs.bsh-->

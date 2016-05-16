@@ -3,8 +3,13 @@ import java.util.concurrent.Semaphore;
 
 addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
 addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
+onFocus   ("Transect/Transect/Total_Transect_Width_m", "",  "populateSurveyExtent()");
 
 INC_MUTEX = new Semaphore(1);
+
+REF_EXTENT        = "Transect/Map/Survey_Extent_Square_Metres";
+REF_UUID_STARTED  = "Transect/Vars/UUID_Started";
+REF_UUID_FINISHED = "Transect/Vars/UUID_Finished";
 
 REF_STATE = "Transect/Vars/Transect_State";
 
@@ -123,10 +128,57 @@ saveChildTransectPoint(String parentId) {
 
       saveEntitiesToHierRel(rel, parentUuid, uuid, "Parent Of", "Child Of", "");
 
+      if (state.equals(STATE_STARTED )) setFieldValue(REF_UUID_STARTED,  uuid);
+      if (state.equals(STATE_FINISHED)) setFieldValue(REF_UUID_FINISHED, uuid);
+
+      populateSurveyExtent();
+
       INC_MUTEX.release();
     }
   };
   saveArchEnt(null, childTabGroup, geoList, attribs, saveCallback);
+}
+
+populateSurveyExtent() {
+  String refTransectWidth = "Transect/Transect/Total_Transect_Width_m";
+  String sTransectWidth;
+
+  sTransectWidth = getFieldValue(refTransectWidth);
+  uuidStarted    = getFieldValue(REF_UUID_STARTED );
+  uuidFinished   = getFieldValue(REF_UUID_FINISHED);
+
+  if (isNull(sTransectWidth)) return;
+  if (isNull(uuidStarted   )) return;
+  if (isNull(uuidFinished  )) return;
+
+  String q = "";
+  q += " SELECT distance(startpoint, endpoint), astext(startpoint), astext(endpoint)";
+  q += "   FROM (SELECT transform(geospatialcolumn, %s) AS startpoint";
+  q += "           FROM latestnondeletedarchent";
+  q += "          WHERE uuid = %s";
+  q += "        ),";
+  q += "        (SELECT transform(geospatialcolumn, %s) AS endpoint";
+  q += "           FROM latestnondeletedarchent";
+  q += "          WHERE uuid = %s";
+  q += "        )";
+  q  = replaceFirst(q, "%s", getModuleSrid());
+  q  = replaceFirst(q, "%s", uuidStarted    );
+  q  = replaceFirst(q, "%s", getModuleSrid());
+  q  = replaceFirst(q, "%s", uuidFinished   );
+
+  FetchCallback populate = new FetchCallback() {
+    onFetch(result) {
+      String sTransectLength = result.get(0);
+
+      Double dTransectLength = Double.valueOf(sTransectLength);
+      Double dTransectWidth  = Double.valueOf(sTransectWidth);
+      Double dExtent         = dTransectLength * dTransectWidth;
+
+      setFieldValue(REF_EXTENT, dExtent);
+    }
+  };
+
+  fetchOne(q, populate);
 }
 
 fetchIdentifier(String uuid, String callback) {
