@@ -181,6 +181,10 @@
     <Transect_Other_Notes/>
     <Finish_Survey_Unit t="button"/>
   </Transect>
+  <Site f="noscroll">
+    <Add_New_Site   t="button" lc="Site"/>
+    <Recorded_Sites t="list"   ec="Site"/>
+  </Site>
   <Map>
     <Map t="map"/>
     <Survey_Extent_Square_Metres f="readonly">
