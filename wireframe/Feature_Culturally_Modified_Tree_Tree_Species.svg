@@ -14,22 +14,35 @@
 </style> 
 <rect x="0" y="0" width="200" height="40" 
         fill="white" stroke-width="0"/>
+ 		
+ 		<ellipse cx="7" cy="30" rx="5" ry="5"  style="fill:white;stroke:black;stroke-width:1" />
+ 		<ellipse cx="57" cy="30" rx="5" ry="5"  style="fill:white;stroke:black;stroke-width:1" />
+ 		<ellipse cx="107" cy="30" rx="5" ry="5"  style="fill:white;stroke:black;stroke-width:1" />
+<ellipse cx="157" cy="30" rx="5" ry="5"  style="fill:white;stroke:black;stroke-width:1" />
 
-<path d="M 5 35 L 195 35" stroke="black" fill="black" stroke-width="1"/>
-<path d="M 185 35 L 195 35 L 195 25 Z" stroke="black" fill="black" stroke-width="1"/>
+<text x="15" y="32" font-family="Roboto" font-size="8" fill="gray"> Radio </text>
+<text x="65" y="32" font-family="Roboto" font-size="8" fill="gray"> Radio </text>
+<text x="115" y="32" font-family="Roboto" font-size="8" fill="gray"> Radio </text>
+<text x="165" y="32" font-family="Roboto" font-size="8" fill="gray"> Radio </text>
 
-<text x="5" y="30" font-family="Roboto" font-size="8" fill="gray"> dropdown </text>
+fill white
+stroke gray
 
-line 5,75 195,75 
-polyline 180,75 195,75 195,60
+circle 22,47 22,31
+circle 155,47 155,31
+circle 288,47 288,31
 
 fill gray
 stroke gray
 stroke-width 0
 stroke-opacity 0
 
-font-size 10
-text 10,70 "Dropdown"		
+
+font-size 14
+text 43,52 "Radio"
+text 175,52 "Radio"
+text 318,52 "Radio"
+
 <text x="5" y="12" font-family="Roboto" font-size="10pt" fill="black"> Tree Species </text>
 stroke black
 fill black

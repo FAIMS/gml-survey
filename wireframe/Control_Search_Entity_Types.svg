@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="200" height="40" 
+<svg width="100" height="40" 
      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
      <style>
 @font-face {
@@ -12,16 +12,16 @@
 }
 
 </style> 
-<rect x="0" y="0" width="200" height="40" 
+<rect x="0" y="0" width="100" height="40" 
         fill="white" stroke-width="0"/>
 
-<path d="M 5 35 L 195 35" stroke="black" fill="black" stroke-width="1"/>
-<path d="M 185 35 L 195 35 L 195 25 Z" stroke="black" fill="black" stroke-width="1"/>
+<path d="M 5 35 L 95 35" stroke="black" fill="black" stroke-width="1"/>
+<path d="M 85 35 L 95 35 L 95 25 Z" stroke="black" fill="black" stroke-width="1"/>
 
 <text x="5" y="30" font-family="Roboto" font-size="8" fill="gray"> dropdown </text>
 
-line 5,75 195,75 
-polyline 180,75 195,75 195,60
+line 5,75 95,75 
+polyline 80,75 95,75 95,60
 
 fill gray
 stroke gray
