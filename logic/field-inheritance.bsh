@@ -1,0 +1,31 @@
+/***************************** FIELD INHERITANCE ******************************/
+/* Linked using @POSTPROC.                                                    */
+/******************************************************************************/
+copyFieldValue(src, dst) {
+  String val = getFieldValue(src);
+  setFieldValue(dst, val);
+}
+
+// Don't delete me. This simplifies the code in @POSTPROC.
+inheritTransectFields() {
+  return;
+}
+
+inheritSiteFields() {
+  //BEWARE! Weird formatting!
+  if (parentTabgroup__.equals("Transect"))
+  copyFieldValue(
+    "Transect/Transect/Transect_ID",
+    "Site/Vars/Site_Transect_ID"
+  );
+}
+
+// Don't delete me. This simplifies the code in @POSTPROC.
+inheritFeatureFields() {
+  //BEWARE! Weird formatting!
+  if (parentTabgroup__.equals("Site"))
+  copyFieldValue(
+    "Site/Vars/Site_Transect_ID",
+    "Feature/Vars/Feature_Transect_ID"
+  );
+}

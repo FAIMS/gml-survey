@@ -1,0 +1,81 @@
+/****************************** SEARCH EXTENSION ******************************/
+SEARCH_GUIDE  = "If the <b>Parent Transect ID</b> field (below) is filled in, ";
+SEARCH_GUIDE += "the <b>Entity List</b> (at the bottom) will constrain the ";
+SEARCH_GUIDE += "records to those which are descendants of the <b>Parent ";
+SEARCH_GUIDE += "Transect</b>. If <b>Parent Transect ID</b> is left blank, it ";
+SEARCH_GUIDE += "will not be used to constrain the search results.";
+
+populateWebViewHtml("Control/Search/Parent_Transect_ID_Guide", SEARCH_GUIDE);
+
+search(){
+  String tabgroup = "Control";
+  String refEntityList       = tabgroup + "/Search/Entity_List";
+  String refSearchTerm       = tabgroup + "/Search/Search_Term";
+  String refEntityTypes      = tabgroup + "/Search/Entity_Types";
+  String refParentTransectID = tabgroup + "/Search/Parent_Transect_ID";
+
+  String type = getFieldValue(refEntityTypes);
+  String term = getFieldValue(refSearchTerm);
+  String parentTransectID = getFieldValue(refParentTransectID);
+
+  if (!validateSearch(type, parentTransectID)) {
+    return;
+  }
+
+  String searchQuery = "";
+  searchQuery += " SELECT uuid, response";
+  searchQuery += "  FROM latestNonDeletedArchEntFormattedIdentifiers";
+  searchQuery += " WHERE uuid IN (SELECT uuid";
+  searchQuery += "                  FROM latestNonDeletedArchEntIdentifiers";
+  searchQuery += "                 WHERE measure LIKE '"+term+"'||'%'";
+  searchQuery += "                   AND ( aenttypename LIKE '"+type+"' OR '' = '"+type+"' )";
+  searchQuery += "                   AND ('' = '"+parentTransectID+"' OR";
+  searchQuery += "                        uuid IN (SELECT uuid ";
+  searchQuery += "                                   FROM latestnondeletedaentvalue ";
+  searchQuery += "                                   JOIN attributekey using (attributeid)";
+  searchQuery += "                                  WHERE attributename in ('Site Transect ID', 'Feature Transect ID')";
+  searchQuery += "                                    AND measure = '"+parentTransectID+"'";
+  searchQuery += "                                )";
+  searchQuery += "                        )";
+  searchQuery += "                )";
+  searchQuery += " ORDER BY response";
+  searchQuery += " LIMIT  ?";
+  searchQuery += " OFFSET ?";
+
+  populateCursorList(refEntityList, searchQuery, 25);
+  refreshTabgroupCSS(tabgroup);
+
+  Log.d("Module", "Search query: " + searchQuery);
+}
+
+validateSearch(type, parentTransectID) {
+  if (isNull(parentTransectID)) {
+    return true;
+  }
+
+  List possibleChildTypes = new ArrayList();
+  possibleChildTypes.add("");        // No constraint or "All"
+  possibleChildTypes.add("Feature");
+  possibleChildTypes.add("Site");
+
+  // There can only be entites in the search results if the arch ent type
+  // selected by the user is a child of a Transect.
+  Boolean canShowResults = possibleChildTypes.contains(type);
+
+  if (canShowResults) {
+    return true;
+  }
+
+  msgHead  = "No Results Found";
+  msgBody  = "No results have been found. This may be because Transects can ";
+  msgBody += "only have Feature or Site records as their children. However, ";
+  msgBody += "the list of results has been constrained to display only ";
+  msgBody += "records whose entity type is " + type + ".";
+  msgBody += "\n\n";
+  msgBody += "Leaving the Parent Entity ID field blank, or setting the Entity ";
+  msgBody += "Types dropdown menu to 'All', 'Feature' or 'Site' may yeild ";
+  msgBody += "better results.";
+  showWarning(msgHead, msgBody);
+
+  return false;
+}

@@ -36,9 +36,7 @@
     <New_Site     t="button" l="Site"/>
     <autonum/>
   </Control>
-  <search>
-    <!--TODO: Add "Limit by" field-->
-  </search>
+  <search/>
 </Control>
 
 <Transect>
@@ -238,7 +236,7 @@
     <timestamp f="id">
       <str>
         <fmt>-$2</fmt>
-        <pos>2</pos>
+        <pos>3</pos>
         <app>-</app>
       </str>
     </timestamp>
@@ -401,10 +399,16 @@
     <author f="id">
       <str>
         <fmt>-$2</fmt>
-        <pos>1</pos>
+        <pos>2</pos>
         <app>-</app>
       </str>
     </author>
+    <Site_Transect_ID f="id">
+      <str>
+        <fmt>{{if $2 then "-TRN-$2"}}</fmt>
+        <pos>1</pos>
+      </str>
+    </Site_Transect_ID>
   </Vars>
 </Site>
 
@@ -412,9 +416,8 @@
   <Feature>
     <Feature_ID f="id notnull autonum">
       <str>
-        <fmt>-$2</fmt>
-        <pos>1</pos>
-        <app>-</app>
+        <fmt>$2</fmt>
+        <pos>0</pos>
       </str>
     </Feature_ID>
     <gps/>
@@ -428,8 +431,8 @@
     </Feature_Condition>
     <Select_Feature_Type f="id">
       <str>
-        <fmt>Feature-$1</fmt>
-        <pos>0</pos>
+        <fmt>-Feature Type-$1</fmt>
+        <pos>1</pos>
         <app>-</app>
       </str>
       <opts>
@@ -1007,17 +1010,23 @@
     <author f="id">
       <str>
         <fmt>-$2</fmt>
-        <pos>2</pos>
+        <pos>3</pos>
         <app>-</app>
       </str>
     </author>
     <timestamp f="id">
       <str>
         <fmt>-$2</fmt>
-        <pos>3</pos>
+        <pos>4</pos>
         <app>-</app>
       </str>
     </timestamp>
+    <Feature_Transect_ID f="id">
+      <str>
+        <fmt>{{if $2 then "-TRN-$2"}}</fmt>
+        <pos>2</pos>
+      </str>
+    </Feature_Transect_ID>
   </Vars>
 </Feature>
 
@@ -1030,6 +1039,8 @@
   <!--@SOURCE: logic/dynamic-ui-open-close.bsh-->
   <!--@SOURCE: logic/login-tab-validation.bsh-->
   <!--@SOURCE: logic/transect-geometry.bsh-->
+  <!--@SOURCE: logic/field-inheritance.bsh-->
+  <!--@SOURCE: logic/search-extension.bsh-->
 ]]></logic>
 
 </module>
