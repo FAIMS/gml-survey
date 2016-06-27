@@ -87,7 +87,7 @@ replacement="
           <label><\/label>
         <\/input>
         <input ref=\"Parent_Transect_ID\">
-          <label>Parent Entity ID (Transect)<\/label>
+          <label>Parent Transect ID<\/label>
         <\/input>$string"
 perl -0777 -i.original -pe "s/$string/$replacement/is" ui_schema.xml
 
