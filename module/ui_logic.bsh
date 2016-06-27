@@ -2,8 +2,10 @@ import android.util.Log;
 
 Object dialog;          // Used to help coordinate the display of a "busy..." dialog
 String parentTabgroup;  // Used to allow entities to be saved as children
+String parentTabgroup__;// Used to allow entities to be saved as children
 String redirectTab;     // makes newTab work as expected
 String username = "";
+String userid   = "";
 
 setFileSyncEnabled(true);
 setSyncDelay(5.0f);
@@ -67,8 +69,6 @@ newTab(String tab, Boolean resolveTabGroups) {
     case 2:
       String tabgroupString = path[0];
       String tabString      = path[0] + "/" + path[1];
-
-      showWarning(tabString, tabString);
 
       redirectTab = tabString;
       String onShowTabgroup = "if (!isNull(redirectTab)) { newTab(redirectTab); redirectTab = \"\"; }";
@@ -149,35 +149,36 @@ addOnEvent("Transect/Transect/Landform", "click", "dropdownItemValue = getFieldV
 addOnEvent("Transect/Transect/Slope_Gradient", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Slope_Gradient\")");
 addOnEvent("Transect/Transect/Geomorphological_Activity", "click", "dropdownItemValue = getFieldValue(\"Transect/Transect/Geomorphological_Activity\")");
 addOnEvent("Site/Site/Site_Aspect_Orientation", "click", "dropdownItemValue = getFieldValue(\"Site/Site/Site_Aspect_Orientation\")");
-addOnEvent("Site/Closed_Site/Shelter_Cave_Formation", "click", "dropdownItemValue = getFieldValue(\"Site/Closed_Site/Shelter_Cave_Formation\")");
-addOnEvent("Site/Closed_Site/Rock_Surface_Condition", "click", "dropdownItemValue = getFieldValue(\"Site/Closed_Site/Rock_Surface_Condition\")");
+addOnEvent("Site/Close_Site/Shelter_Cave_Formation", "click", "dropdownItemValue = getFieldValue(\"Site/Close_Site/Shelter_Cave_Formation\")");
+addOnEvent("Site/Close_Site/Rock_Surface_Condition", "click", "dropdownItemValue = getFieldValue(\"Site/Close_Site/Rock_Surface_Condition\")");
+addOnEvent("Site/Feature/Recorded_Features", "click", "dropdownItemValue = getFieldValue(\"Site/Feature/Recorded_Features\")");
 addOnEvent("Feature/Feature/Feature_Condition", "click", "dropdownItemValue = getFieldValue(\"Feature/Feature/Feature_Condition\")");
 addOnEvent("Feature/Feature/Select_Feature_Type", "click", "dropdownItemValue = getFieldValue(\"Feature/Feature/Select_Feature_Type\")");
-addOnEvent("Feature/Artefact/Insitu_Artefact", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Insitu_Artefact\")");
+addOnEvent("Feature/Artefact/In_Situ_Artefact", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/In_Situ_Artefact\")");
 addOnEvent("Feature/Artefact/Stratified_Artefact", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Stratified_Artefact\")");
 addOnEvent("Feature/Artefact/Artefact_Raw_Material", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Raw_Material\")");
 addOnEvent("Feature/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts\")");
 addOnEvent("Feature/Artefact/Artefact_Colour", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Colour\")");
 addOnEvent("Feature/Artefact/Artefact_Status_Modification", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Artefact_Status_Modification\")");
-addOnEvent("Feature/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts\")");
-addOnEvent("Feature/Artefact/Platform_Type_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Platform_Type_for_Aboriginal_stone_artefacts\")");
-addOnEvent("Feature/Artefact/Termination_for_Aboriginal_stone_artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Termination_for_Aboriginal_stone_artefacts\")");
-addOnEvent("Feature/Artefact/Cross_Section_for_Aboriginal_artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Cross_Section_for_Aboriginal_artefacts\")");
+addOnEvent("Feature/Artefact/Platform_Surface_for_Aboriginal_Stone_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Platform_Surface_for_Aboriginal_Stone_Artefacts\")");
+addOnEvent("Feature/Artefact/Platform_Type_for_Aboriginal_Stone_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Platform_Type_for_Aboriginal_Stone_Artefacts\")");
+addOnEvent("Feature/Artefact/Termination_for_Aboriginal_Stone_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Termination_for_Aboriginal_Stone_Artefacts\")");
+addOnEvent("Feature/Artefact/Cross_Section_for_Aboriginal_Artefacts", "click", "dropdownItemValue = getFieldValue(\"Feature/Artefact/Cross_Section_for_Aboriginal_Artefacts\")");
 addOnEvent("Feature/Intangible_Value/Intangible_Value_Type", "click", "dropdownItemValue = getFieldValue(\"Feature/Intangible_Value/Intangible_Value_Type\")");
 addOnEvent("Feature/Art/Art_Form", "click", "dropdownItemValue = getFieldValue(\"Feature/Art/Art_Form\")");
 addOnEvent("Feature/Art/Art_Main_Colour", "click", "dropdownItemValue = getFieldValue(\"Feature/Art/Art_Main_Colour\")");
 addOnEvent("Feature/Art/Art_Condition", "click", "dropdownItemValue = getFieldValue(\"Feature/Art/Art_Condition\")");
-addOnEvent("Feature/Grinding_Groove/Type_Grinding_Groove", "click", "dropdownItemValue = getFieldValue(\"Feature/Grinding_Groove/Type_Grinding_Groove\")");
+addOnEvent("Feature/Grinding_Groove/Type_of_Grinding_Groove", "click", "dropdownItemValue = getFieldValue(\"Feature/Grinding_Groove/Type_of_Grinding_Groove\")");
 addOnEvent("Feature/Shell/Dominant_Species", "click", "dropdownItemValue = getFieldValue(\"Feature/Shell/Dominant_Species\")");
-addOnEvent("Feature/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "click", "dropdownItemValue = getFieldValue(\"Feature/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage\")");
+addOnEvent("Feature/Shell/Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage", "click", "dropdownItemValue = getFieldValue(\"Feature/Shell/Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage\")");
 addOnEvent("Feature/Hearth_Ground_Oven/Hearth_Components", "click", "dropdownItemValue = getFieldValue(\"Feature/Hearth_Ground_Oven/Hearth_Components\")");
-addOnEvent("Feature/Potential_Archaeological_Deposit/PAD_Insitu", "click", "dropdownItemValue = getFieldValue(\"Feature/Potential_Archaeological_Deposit/PAD_Insitu\")");
+addOnEvent("Feature/Potential_Archaeological_Deposit/PAD_in_Situ", "click", "dropdownItemValue = getFieldValue(\"Feature/Potential_Archaeological_Deposit/PAD_in_Situ\")");
 addOnEvent("Feature/Potential_Archaeological_Deposit/PAD_Stratified", "click", "dropdownItemValue = getFieldValue(\"Feature/Potential_Archaeological_Deposit/PAD_Stratified\")");
 addOnEvent("Feature/Potential_Archaeological_Deposit/PAD_Type", "click", "dropdownItemValue = getFieldValue(\"Feature/Potential_Archaeological_Deposit/PAD_Type\")");
 addOnEvent("Feature/Culturally_Modified_Tree/Tree_Status", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/Tree_Status\")");
 addOnEvent("Feature/Culturally_Modified_Tree/CM_Tree_Shape", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/CM_Tree_Shape\")");
 addOnEvent("Feature/Culturally_Modified_Tree/CM_Tree_Orientation", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/CM_Tree_Orientation\")");
-addOnEvent("Feature/Culturally_Modified_Tree/Carving_type", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/Carving_type\")");
+addOnEvent("Feature/Culturally_Modified_Tree/Carving_Type", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/Carving_Type\")");
 addOnEvent("Feature/Culturally_Modified_Tree/Axe_Marks", "click", "dropdownItemValue = getFieldValue(\"Feature/Culturally_Modified_Tree/Axe_Marks\")");
 
 /******************************************************************************/
@@ -361,9 +362,11 @@ populateListForUsers(){
 
 selectUser () {
   String userVocabId  = getFieldValue(userMenuPath);
-  if (isNull(userVocabId))
+  if (isNull(userVocabId)) {
+    username = "";
+    userid = "";
     return;
-
+  }
   String userQ        = "SELECT userid,fname,lname,email FROM user " +
                         "WHERE  userid='" + userVocabId + "';";
   FetchCallback callback = new FetchCallback() {
@@ -376,6 +379,7 @@ selectUser () {
       );
       setUser(user);
       username = result.get(1) + " " + result.get(2);
+      userid   = result.get(0);
     }
   };
 
@@ -479,12 +483,16 @@ makeVocab(String type, String path, String attrib, List vocabExclusions, String 
           }
           result=filteredVocab;
         }
+        Boolean hasNull =
+                vocabExclusions == null
+            || !vocabExclusions.contains("")
+            && !vocabExclusions.contains(null);
         // print("makeVocab() filtered result: " + result);
         if(type.equals("CheckBoxGroup")) {
           populateCheckBoxGroup(path, result);
         } else if(type.equals("DropDown")) {
           // populateDropDown(path, result);
-          populateDropDown(path, result, true);
+          populateDropDown(path, result, hasNull);
         } else if(type.equals("RadioGroup")) {
           populateRadioGroup(path, result);
         } else if(type.equals("List")) {
@@ -498,30 +506,30 @@ makeVocab(String type, String path, String attrib, List vocabExclusions, String 
 }
 makeVocab("DropDown", "Transect/Transect/Landform", "Landform");
 makeVocab("DropDown", "Transect/Transect/Slope_Gradient", "Slope Gradient");
-makeVocab("PictureGallery", "Transect/Transect/Ground_surface_visibility", "Ground surface visibility");
-makeVocab("PictureGallery", "Transect/Transect/Ground_surface_exposure", "Ground surface exposure");
+makeVocab("PictureGallery", "Transect/Transect/Ground_Surface_Visibility", "Ground Surface Visibility");
+makeVocab("PictureGallery", "Transect/Transect/Ground_Surface_Exposure", "Ground Surface Exposure");
 makeVocab("DropDown", "Transect/Transect/Geomorphological_Activity", "Geomorphological Activity");
 makeVocab("RadioGroup", "Transect/Vars/Device_ID", "Device ID");
-makeVocab("RadioGroup", "Site/Site/Open_Closed_Site", "Open Closed Site");
+makeVocab("RadioGroup", "Site/Site/Open_Close_Site", "Open Close Site");
 makeVocab("DropDown", "Site/Site/Site_Aspect_Orientation", "Site Aspect Orientation");
 makeVocab("CheckBoxGroup", "Site/Site/General_Condition_of_Site", "General Condition of Site");
-makeVocab("RadioGroup", "Site/Open_Site/Subsurfance_potential", "Subsurfance potential");
-makeVocab("DropDown", "Site/Closed_Site/Shelter_Cave_Formation", "Shelter Cave Formation");
-makeVocab("DropDown", "Site/Closed_Site/Rock_Surface_Condition", "Rock Surface Condition");
+makeVocab("RadioGroup", "Site/Open_Site/Subsurface_Potential", "Subsurface Potential");
+makeVocab("DropDown", "Site/Close_Site/Shelter_Cave_Formation", "Shelter Cave Formation");
+makeVocab("DropDown", "Site/Close_Site/Rock_Surface_Condition", "Rock Surface Condition");
 makeVocab("CheckBoxGroup", "Site/Feature/Feature_Type", "Feature Type");
 makeVocab("DropDown", "Feature/Feature/Feature_Condition", "Feature Condition");
 makeVocab("DropDown", "Feature/Feature/Select_Feature_Type", "Select Feature Type");
-makeVocab("DropDown", "Feature/Artefact/Insitu_Artefact", "Insitu Artefact");
+makeVocab("DropDown", "Feature/Artefact/In_Situ_Artefact", "In Situ Artefact");
 makeVocab("DropDown", "Feature/Artefact/Stratified_Artefact", "Stratified Artefact");
 makeVocab("DropDown", "Feature/Artefact/Artefact_Raw_Material", "Artefact Raw Material");
 makeVocab("RadioGroup", "Feature/Artefact/Artefact_Type", "Artefact Type");
 makeVocab("HierarchicalDropDown", "Feature/Artefact/Artefact_Description_for_Aboriginal_Stone_Artefacts", "Artefact Description for Aboriginal Stone Artefacts");
 makeVocab("HierarchicalDropDown", "Feature/Artefact/Artefact_Colour", "Artefact Colour");
 makeVocab("DropDown", "Feature/Artefact/Artefact_Status_Modification", "Artefact Status Modification");
-makeVocab("DropDown", "Feature/Artefact/Platform_Surface_for_Aboriginal_stone_artefacts", "Platform Surface for Aboriginal stone artefacts");
-makeVocab("DropDown", "Feature/Artefact/Platform_Type_for_Aboriginal_stone_artefacts", "Platform Type for Aboriginal stone artefacts");
-makeVocab("DropDown", "Feature/Artefact/Termination_for_Aboriginal_stone_artefacts", "Termination for Aboriginal stone artefacts");
-makeVocab("DropDown", "Feature/Artefact/Cross_Section_for_Aboriginal_artefacts", "Cross Section for Aboriginal artefacts");
+makeVocab("DropDown", "Feature/Artefact/Platform_Surface_for_Aboriginal_Stone_Artefacts", "Platform Surface for Aboriginal Stone Artefacts");
+makeVocab("DropDown", "Feature/Artefact/Platform_Type_for_Aboriginal_Stone_Artefacts", "Platform Type for Aboriginal Stone Artefacts");
+makeVocab("DropDown", "Feature/Artefact/Termination_for_Aboriginal_Stone_Artefacts", "Termination for Aboriginal Stone Artefacts");
+makeVocab("DropDown", "Feature/Artefact/Cross_Section_for_Aboriginal_Artefacts", "Cross Section for Aboriginal Artefacts");
 makeVocab("DropDown", "Feature/Intangible_Value/Intangible_Value_Type", "Intangible Value Type");
 makeVocab("RadioGroup", "Feature/Art/Pigment_Engraved", "Pigment Engraved");
 makeVocab("RadioGroup", "Feature/Art/Super-impositioning", "Super-impositioning");
@@ -531,14 +539,14 @@ makeVocab("DropDown", "Feature/Art/Art_Form", "Art Form");
 makeVocab("DropDown", "Feature/Art/Art_Main_Colour", "Art Main Colour");
 makeVocab("CheckBoxGroup", "Feature/Art/Art_Location", "Art Location");
 makeVocab("DropDown", "Feature/Art/Art_Condition", "Art Condition");
-makeVocab("DropDown", "Feature/Grinding_Groove/Type_Grinding_Groove", "Type Grinding Groove");
+makeVocab("DropDown", "Feature/Grinding_Groove/Type_of_Grinding_Groove", "Type of Grinding Groove");
 makeVocab("RadioGroup", "Feature/Grinding_Groove/Profile_Shape", "Profile Shape");
 makeVocab("RadioGroup", "Feature/Shell/Shell_Distribution", "Shell Distribution");
-makeVocab("CheckBoxGroup", "Feature/Shell/Species_present", "Species present");
+makeVocab("CheckBoxGroup", "Feature/Shell/Species_Present", "Species Present");
 makeVocab("DropDown", "Feature/Shell/Dominant_Species", "Dominant Species");
-makeVocab("DropDown", "Feature/Shell/Approximate_percentage_of_dominant_species_as_part_of_assemblage", "Approximate percentage of dominant species as part of assemblage");
+makeVocab("DropDown", "Feature/Shell/Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage", "Approximate Percentage of Dominant Species as Part of Assemblage");
 makeVocab("DropDown", "Feature/Hearth_Ground_Oven/Hearth_Components", "Hearth Components");
-makeVocab("DropDown", "Feature/Potential_Archaeological_Deposit/PAD_Insitu", "PAD Insitu");
+makeVocab("DropDown", "Feature/Potential_Archaeological_Deposit/PAD_in_Situ", "PAD in Situ");
 makeVocab("DropDown", "Feature/Potential_Archaeological_Deposit/PAD_Stratified", "PAD Stratified");
 makeVocab("DropDown", "Feature/Potential_Archaeological_Deposit/PAD_Type", "PAD Type");
 makeVocab("RadioGroup", "Feature/Potential_Archaeological_Deposit/PAD_Surface_Artefacts", "PAD Surface Artefacts");
@@ -548,10 +556,10 @@ makeVocab("RadioGroup", "Feature/Culturally_Modified_Tree/Living_Status", "Livin
 makeVocab("DropDown", "Feature/Culturally_Modified_Tree/Tree_Status", "Tree Status");
 makeVocab("CheckBoxGroup", "Feature/Culturally_Modified_Tree/CM_Tree_Damage", "CM Tree Damage");
 makeVocab("RadioGroup", "Feature/Culturally_Modified_Tree/Regrowth", "Regrowth");
-makeVocab("RadioGroup", "Feature/Culturally_Modified_Tree/Is_a_tree_health_assessment_required", "Is a tree health assessment required");
+makeVocab("RadioGroup", "Feature/Culturally_Modified_Tree/Is_a_Tree_Health_Assessment_Required", "Is a Tree Health Assessment Required");
 makeVocab("DropDown", "Feature/Culturally_Modified_Tree/CM_Tree_Shape", "CM Tree Shape");
 makeVocab("DropDown", "Feature/Culturally_Modified_Tree/CM_Tree_Orientation", "CM Tree Orientation");
-makeVocab("DropDown", "Feature/Culturally_Modified_Tree/Carving_type", "Carving type");
+makeVocab("DropDown", "Feature/Culturally_Modified_Tree/Carving_Type", "Carving Type");
 makeVocab("DropDown", "Feature/Culturally_Modified_Tree/Axe_Marks", "Axe Marks");
 
 
@@ -628,9 +636,9 @@ validateTransect() {
   f.add(fieldPair("Transect/Transect/Number_of_Participants_in_Transect", "{Number_of_Participants_in_Transect}"));
   f.add(fieldPair("Transect/Transect/Landform", "{Landform}"));
   f.add(fieldPair("Transect/Transect/Slope_Gradient", "{Slope_Gradient}"));
-  f.add(fieldPair("Transect/Transect/Vegetation_notes", "{Vegetation_notes}"));
-  f.add(fieldPair("Transect/Transect/Ground_surface_visibility", "{Ground_surface_visibility}"));
-  f.add(fieldPair("Transect/Transect/Ground_surface_exposure", "{Ground_surface_exposure}"));
+  f.add(fieldPair("Transect/Transect/Vegetation_Notes", "{Vegetation_Notes}"));
+  f.add(fieldPair("Transect/Transect/Ground_Surface_Visibility", "{Ground_Surface_Visibility}"));
+  f.add(fieldPair("Transect/Transect/Ground_Surface_Exposure", "{Ground_Surface_Exposure}"));
   f.add(fieldPair("Transect/Transect/Geomorphological_Activity", "{Geomorphological_Activity}"));
   f.add(fieldPair("Transect/Vars/Device_ID", "{Device_ID}"));
 
@@ -641,17 +649,19 @@ validateTransect() {
 validateSite() {
   List f = new ArrayList(); // Fields to be validated
 
-  f.add(fieldPair("Site/Site/Site_ID_Number", "{Site_ID_Number}"));
+  f.add(fieldPair("Site/Site/Site_ID", "{Site_ID}"));
+  f.add(fieldPair("Site/Site/Open_Close_Site", "{Open_Close_Site}"));
+  f.add(fieldPair("Site/Site/Site_Aspect_Orientation", "{Site_Aspect_Orientation}"));
   f.add(fieldPair("Site/Site/General_Condition_of_Site", "{General_Condition_of_Site}"));
-  f.add(fieldPair("Site/Open_Site/Total_length_of_visible_site", "{Total_length_of_visible_site}"));
-  f.add(fieldPair("Site/Open_Site/Average_width_of_visible_site", "{Average_width_of_visible_site}"));
-  f.add(fieldPair("Site/Open_Site/Estimated_area_of_visible_site", "{Estimated_area_of_visible_site}"));
-  f.add(fieldPair("Site/Open_Site/Length_of_assessed_site_area", "{Length_of_assessed_site_area}"));
-  f.add(fieldPair("Site/Open_Site/Average_width_of_potential_site_area", "{Average_width_of_potential_site_area}"));
-  f.add(fieldPair("Site/Closed_Site/Internal_Length", "{Internal_Length}"));
-  f.add(fieldPair("Site/Closed_Site/Internal_Width", "{Internal_Width}"));
-  f.add(fieldPair("Site/Closed_Site/Shelter_Height", "{Shelter_Height}"));
-  f.add(fieldPair("Site/Closed_Site/Shelter_Floor_Area", "{Shelter_Floor_Area}"));
+  f.add(fieldPair("Site/Open_Site/Total_Length_of_Visible_Site", "{Total_Length_of_Visible_Site__m_}"));
+  f.add(fieldPair("Site/Open_Site/Average_Width_of_Visible_Site", "{Average_Width_of_Visible_Site__m_}"));
+  f.add(fieldPair("Site/Open_Site/Estimated_Area_of_Visible_Site", "{Estimated_Area_of_Visible_Site}"));
+  f.add(fieldPair("Site/Open_Site/Length_of_Assessed_Site_Area", "{Length_of_Assessed_Site_Area__m_}"));
+  f.add(fieldPair("Site/Open_Site/Average_Width_of_Potential_Site_Area", "{Average_Width_of_Potential_Site_Area__m_}"));
+  f.add(fieldPair("Site/Close_Site/Internal_Length", "{Internal_Length__m_}"));
+  f.add(fieldPair("Site/Close_Site/Internal_Width", "{Internal_Width__m_}"));
+  f.add(fieldPair("Site/Close_Site/Shelter_Height", "{Shelter_Height__m_}"));
+  f.add(fieldPair("Site/Close_Site/Shelter_Floor_Area", "{Shelter_Floor_Area}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("Validation Results", validationMessage);
@@ -661,7 +671,6 @@ validateFeature() {
   List f = new ArrayList(); // Fields to be validated
 
   f.add(fieldPair("Feature/Feature/Feature_ID", "{Feature_ID}"));
-  f.add(fieldPair("Feature/Artefact/Instance_No", "{Instance_No_}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("Validation Results", validationMessage);
@@ -672,7 +681,7 @@ validateFeature() {
 /******************************************************************************/
 /*                                 AUTOSAVING                                 */
 /******************************************************************************/
-Map tabgroupToUuid = new HashMap();
+Map tabgroupToUuid = Collections.synchronizedMap(new HashMap());
 
 getUuid(String tabgroup) {
   tabgroupToUuid.get(tabgroup);
@@ -738,12 +747,12 @@ saveTabGroup(String tabgroup, String callback) {
 populateAuthorAndTimestamp(String tabgroup) {
   Map tabgroupToAuthor    = new HashMap();
   Map tabgroupToTimestamp = new HashMap();
-  tabgroupToAuthor.put("Transect", "Transect/Vars/Author");
-  tabgroupToAuthor.put("Site", "Site/Vars/Author");
-  tabgroupToAuthor.put("Feature", "Feature/Vars/Author");
-  tabgroupToTimestamp.put("Transect", "Transect/Transect/Timestamp");
-  tabgroupToTimestamp.put("Site", "Site/Site/Timestamp");
-  tabgroupToTimestamp.put("Feature", "Feature/Vars/Timestamp");
+  tabgroupToAuthor.put("Transect", "Transect/Vars/author");
+  tabgroupToAuthor.put("Site", "Site/Vars/author");
+  tabgroupToAuthor.put("Feature", "Feature/Vars/author");
+  tabgroupToTimestamp.put("Transect", "Transect/Transect/timestamp");
+  tabgroupToTimestamp.put("Site", "Site/Site/timestamp");
+  tabgroupToTimestamp.put("Feature", "Feature/Vars/timestamp");
 
   String authorPath    = tabgroupToAuthor.get(tabgroup);
   String timestampPath = tabgroupToTimestamp.get(tabgroup);
@@ -756,8 +765,8 @@ populateAuthorAndTimestamp(String tabgroup) {
   String authorVal    = username;
   String timestampVal = dateStr;
 
-  setFieldValue(authorPath,    authorVal);
-  setFieldValue(timestampPath, timestampVal);
+  if (!isNull(authorPath))    setFieldValue(authorPath,    authorVal);
+  if (!isNull(timestampPath)) setFieldValue(timestampPath, timestampVal);
 }
 
 onShowTransect () {
@@ -779,10 +788,23 @@ addOnEvent("Feature", "show", "onShowFeature()");
 
 onClickControlNewTransect () {
   // TODO: Add some things which should happen when this element is clicked
+  parentTabgroup__ = "Control";
   newTransect();
 }
 onClickControlNewSite () {
   // TODO: Add some things which should happen when this element is clicked
+  parentTabgroup__ = "Control";
+  newSite();
+}
+onClickTransectAddNewSite () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Transect";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup   = tabgroup;
+  parentTabgroup__ = tabgroup;
   newSite();
 }
 onClickSiteNewFeature () {
@@ -792,13 +814,15 @@ onClickSiteNewFeature () {
     showToast("{You_must_save_this_tabgroup_first}");
     return;
   }
-  parentTabgroup = tabgroup;
+  parentTabgroup   = tabgroup;
+  parentTabgroup__ = tabgroup;
   newFeature();
 }
 
 addOnEvent("Login/Login/Login", "click", "onClickLoginLogin()");
 addOnEvent("Control/Control/New_Transect", "click", "onClickControlNewTransect()");
 addOnEvent("Control/Control/New_Site", "click", "onClickControlNewSite()");
+addOnEvent("Transect/Site/Add_New_Site", "click", "onClickTransectAddNewSite()");
 addOnEvent("Site/Feature/New_Feature", "click", "onClickSiteNewFeature()");
 
 
@@ -1043,6 +1067,7 @@ newTransect(){
   String autoNumDest = "";
   autoNumDest = "Transect/Transect/Transect_ID";
   incAutoNum(autoNumDest);
+  inheritTransectFields();
 }
 
 duplicateTransect(){
@@ -1115,7 +1140,7 @@ newSite(){
   String tabgroup = "Site";
 
   String autoNumSource = "";
-  autoNumSource = getFieldValue("Control/Control/Next_Site_ID_Number");
+  autoNumSource = getFieldValue("Control/Control/Next_Site_ID");
   if (isNull(autoNumSource)) {
     showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
     return;
@@ -1125,8 +1150,9 @@ newSite(){
   newTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
   String autoNumDest = "";
-  autoNumDest = "Site/Site/Site_ID_Number";
+  autoNumDest = "Site/Site/Site_ID";
   incAutoNum(autoNumDest);
+  inheritSiteFields();
 }
 
 duplicateSite(){
@@ -1136,7 +1162,7 @@ duplicateSite(){
   disableAutoSave(tabgroup);
 
   String autoNumDest = "";
-  autoNumDest = "Site/Site/Site_ID_Number";
+  autoNumDest = "Site/Site/Site_ID";
   incAutoNum(autoNumDest);
 
 
@@ -1207,6 +1233,7 @@ newFeature(){
   String autoNumDest = "";
   autoNumDest = "Feature/Feature/Feature_ID";
   incAutoNum(autoNumDest);
+  inheritFeatureFields();
 }
 
 duplicateFeature(){
@@ -1367,13 +1394,6 @@ loadTransectPointFrom(String uuid) {
 }
 
 
-loadFeatureFrom(String uuid) {
-  String tabgroup = "Feature";
-  setUuid(tabgroup, uuid);
-  if (isNull(uuid)) return;
-
-  showTabGroup(tabgroup, uuid);
-}
 
 
 /******************************************************************************/
@@ -1482,7 +1502,7 @@ incField(String ref) {
   return incField(ref, 1);
 }
 
-addOnEvent("Control/Control", "show", "onShowAutonum()");
+addOnEvent("Control", "show", "onShowAutonum()");
 
 /* This function should only be called once since it creates event handlers,
  * otherwise multiple copies of the same handler will trigger with the event.
@@ -1490,7 +1510,7 @@ addOnEvent("Control/Control", "show", "onShowAutonum()");
 onShowAutonum() {
   List l = new ArrayList();
   l.add("Control/Control/Next_Transect_ID");
-  l.add("Control/Control/Next_Site_ID_Number");
+  l.add("Control/Control/Next_Site_ID");
   l.add("Control/Control/Next_Feature_ID");
 
 
@@ -1518,7 +1538,7 @@ loadStartingId(String ref) {
 incAutoNum(String destPath) {
   Map destToSource = new HashMap();
   destToSource.put("Transect/Transect/Transect_ID", "Control/Control/Next_Transect_ID");
-  destToSource.put("Site/Site/Site_ID_Number", "Control/Control/Next_Site_ID_Number");
+  destToSource.put("Site/Site/Site_ID", "Control/Control/Next_Site_ID");
   destToSource.put("Feature/Feature/Feature_ID", "Control/Control/Next_Feature_ID");
 
   String sourcePath = destToSource.get(destPath);
@@ -1526,6 +1546,111 @@ incAutoNum(String destPath) {
   setFieldValue(destPath, destVal);
   incField(sourcePath);
 }
+
+/******************************************************************************/
+/*                POPULATION OF ENTITY AND CHILD ENTITY LISTS                 */
+/******************************************************************************/
+/*
+ * `viewType`   the type of GUI element to be populated. It can either equal
+ *              "DropDown" or "List".
+ * `path`       the reference of the GUI element to be populated.
+ * `parentUuid` the parent in the relationship denoted by `relType`.
+ * `entType`    the type of the entities the menu will be populated with.
+ * `relType`    the name of the relationship the children are to be in with the
+ *              entity denoted by `parentUuid`.
+ */
+populateMenuWithEntities (
+  String viewType,
+  String path,
+  String parentUuid,
+  String entType,
+  String relType
+) {
+  String getChildEntitiesQ = "" +
+    "SELECT childuuid, response "+
+    "  FROM parentchild JOIN latestNonDeletedArchEntFormattedIdentifiers ON (childuuid = uuid) " +
+    "  JOIN createdmodifiedatby USING (uuid) " +
+    " WHERE relationshipid IN (SELECT relationshipid  " +
+    "                            FROM latestnondeletedrelationship JOIN relntype USING (relntypeid) " +
+    "                           WHERE relntypename = '"+relType+"') " +
+    "   AND parentuuid = " + parentUuid + " " +
+    "   AND (childaenttypename = '"+entType+"' OR '"+entType+"' = '') " +
+    " ORDER BY createdat DESC ";
+
+  String getEntitiesQ = "" +
+    "SELECT uuid, response "+
+    "  FROM latestNonDeletedArchEntFormattedIdentifiers  "+
+    " WHERE uuid in (SELECT uuid "+
+    "                  FROM latestNonDeletedArchEntIdentifiers "+
+    "                 WHERE aenttypename = '"+entType+"' OR '"+entType+"' = '' " +
+    "               )  "+
+    " ORDER BY response ";
+
+  String q = null;
+  if (relType.equals("")) {
+    q = getEntitiesQ;
+  } else {
+    q = getChildEntitiesQ;
+  }
+
+  FetchCallback cbPopulateDropDown = new FetchCallback() {
+    onFetch(result) {
+      populateDropDown(path, result, true);
+    }
+  };
+
+  switch (viewType) {
+    case "DropDown":
+      fetchAll(q, cbPopulateDropDown);
+      break;
+    case "List":
+      q += " LIMIT ? OFFSET ? ";
+      populateCursorList(path, q, 25);
+      break;
+    default:
+      Log.e("populateMenuWithEntities ", "Unexpected type '" + viewType + "'");
+  }
+}
+
+menus = new ArrayList();
+menus.add(new String[] {
+  "List",
+  "Transect/Site/Recorded_Sites",
+  "getUuid(\"Transect\")",
+  "Site",
+  "Transect - Site",
+});
+menus.add(new String[] {
+  "DropDown",
+  "Site/Feature/Recorded_Features",
+  "getUuid(\"Site\")",
+  "Feature",
+  "Site - Feature",
+});
+for (m : menus) {
+  String viewType       = m[0];
+  String path           = m[1];
+  String parentUuidCall = m[2];
+  String entType        = m[3];
+  String relType        = m[4];
+
+  String functionCall = "";
+  functionCall += "populateMenuWithEntities(";
+  functionCall += "\"" + viewType       + "\"";
+  functionCall += ", ";
+  functionCall += "\"" + path           + "\"";
+  functionCall += ", ";
+  functionCall +=        parentUuidCall       ;
+  functionCall += ", ";
+  functionCall += "\"" + entType        + "\"";
+  functionCall += ", ";
+  functionCall += "\"" + relType        + "\"";
+  functionCall += ")";
+
+  addOnEvent(path, "show", functionCall);
+}
+addOnEvent("Transect/Site/Recorded_Sites", "click", "loadEntity()");
+addOnEvent("Site/Feature/Recorded_Features", "click", "loadEntity(true)");
 
 /******************************************************************************/
 /*                             HANDWRITTEN LOGIC                              */
@@ -1542,6 +1667,7 @@ replaceFirst(haystack, needle, replacement) {
   post = haystack.substring(   i+needle.length(), haystack.length());
   return pre + replacement + post;
 }
+
 /***************************** DEVICE ID COPYING ******************************/
 /* Triggered upon Transect creation using @POSTPROC.                          */
 /******************************************************************************/
@@ -1570,100 +1696,124 @@ saveDeviceId() {
   insertIntoLocalSettings(src, val);
 }
 /************************* DYNAMIC UI - FEATURE TABS **************************/
-/* There are two cases to handle: TODO: Update this comment                   */
+/* There are two cases to handle:                                             */
 /*   (a) When a Feature is newly created.                                     */
 /*   (b) When a Feature has been loaded.                                      */
 /*                                                                            */
-/* Case (a) is handled by an on-click events which triggers                   */
-/* `updateOpenClosedTabs()`.                                                  */
+/* Case (a) is handled by on-click events which trigger                       */
+/* `updateFeatureTabs()`.                                                     */
 /*                                                                            */
 /* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
-/* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
+/* by overwriting the auto-generated function `loadFeatureFrom` using         */
+/* @POSTPROC.                                                                 */
 /******************************************************************************/
-normaliseFeatureToTabMap(Map map) {
-  String tabParent  = "Feature";
+addOnEvent("Feature",                             "show",   "updateFeatureTabs()");
+addOnEvent("Feature/Feature/Select_Feature_Type", "select", "updateFeatureTabs()");
 
-  Map normalisedMap = new HashMap();
-  for (entry : map.entrySet()) {
-    String feature = entry.getKey();   feature = normaliseMapString(feature);
-    String tab     = entry.getValue(); tab     = normaliseMapString(tab);
+// Fetch the "Select Feature Type" vocab and populate the
+// `SELECT_FEATURE_TYPE_VOCAB` global.
+fetchSelectFeatureType() {
+  SELECT_FEATURE_TYPE_VOCAB = new HashMap();
 
-    String normalisedFeature = "{%s}";
-    String normalisedTab     = "%s/%s";
+  attributeName = "Select Feature Type";
 
-    normalisedFeature = replaceFirst(normalisedFeature, "%s", feature);
-    normalisedTab     = replaceFirst(normalisedTab,     "%s", tabParent);
-    normalisedTab     = replaceFirst(normalisedTab,     "%s", tab);
+  q  = " SELECT    vocabid, vocabname";
+  q += " FROM      vocabulary";
+  q += " LEFT JOIN attributekey";
+  q += " USING    (attributeid)";
+  q += " WHERE     attributename = '%s'";
+  q  = replaceFirst(q, "%s", attributeName);
 
-    normalisedMap.put(normalisedFeature, normalisedTab);
-  }
+  populateHashMap = new FetchCallback() {
+    onFetch(result) {
+      for (row : result) {
+        vocabId   = row.get(0);
+        vocabName = row.get(1);
+        SELECT_FEATURE_TYPE_VOCAB.put(vocabId, vocabName);
+      }
+    }
+  };
 
-  return normalisedMap;
+  fetchAll(q, populateHashMap);
 }
 
-normaliseMapString(String s) {
-  return s.replaceAll("[^a-zA-Z0-9]", "_");
+// The `fetchSelectFeatureType` call is required to set
+// `SELECT_FEATURE_TYPE_VOCAB` because async code in Beanshell/Java is DUMBBBB.
+// Also, SELECT_FEATURE_TYPE_VOCAB is a HashMap: vocabId -> vocabName.
+SELECT_FEATURE_TYPE_VOCAB = null;
+fetchSelectFeatureType();
+
+vocabNametoTabRef(vocabName) {
+  if (vocabName == null) return null;
+
+  // "{Vocab_Name}" -> "Vocab_Name"
+  tabName = vocabName.substring(1, vocabName.length() - 1);
+
+  tabRef = "Feature/%s";
+  tabRef = replaceFirst(tabRef, "%s", tabName);
+
+  return tabRef;
 }
 
 cancelAllFeatureTabs() {
-  for (String tab: FEATURE_TO_TAB.values()) {
-    cancelTab(tab, false);
+  for (String vocabName: SELECT_FEATURE_TYPE_VOCAB.values()) {
+    tabRef = vocabNametoTabRef(vocabName);
+    cancelTab(tabRef, false);
   }
 }
 
 updateFeatureTabs() {
-  cancelAllFeatureTabs();
+  mainTabRef  = "Feature/Feature";
+  dropdownRef = "Feature/Feature/Select_Feature_Type";
 
-  // TODO
+  // Based on the value of the dropdown at `dropdownRef`, figure out the
+  // reference to the tab which should be shown.
+  vocabId        = getFieldValue(dropdownRef);
+  vocabName      = SELECT_FEATURE_TYPE_VOCAB.get(vocabId);
+  selectedTabRef = vocabNametoTabRef(vocabName);
+
+  // The following lines do as shown here: http://i.imgur.com/f0GT1Dy.png
+  cancelAllFeatureTabs();
+  if (selectedTabRef == null) return;
+  showTab(selectedTabRef);
+  showTab(mainTabRef);
 }
 
-FEATURE_TO_TAB = new HashMap();
-FEATURE_TO_TAB.put("Intangible Values",                 "Intangible Value");
-FEATURE_TO_TAB.put("Aboriginal Ceremony",               "Intangible Value");
-FEATURE_TO_TAB.put("Aboriginal Resource",               "Intangible Value");
-FEATURE_TO_TAB.put("Dreaming",                          "Intangible Value");
-FEATURE_TO_TAB.put("Gathering",                         "Intangible Value");
-FEATURE_TO_TAB.put("Art",                               "Art");
-FEATURE_TO_TAB.put("Artefact",                          "Artefact");
-FEATURE_TO_TAB.put("Burial",                            "Other Feature");
-FEATURE_TO_TAB.put("Conflict",                          "Other Feature");
-FEATURE_TO_TAB.put("Mound",                             "Other Feature");
-FEATURE_TO_TAB.put("Fish Trap",                         "Other Feature");
-FEATURE_TO_TAB.put("Grinding Groove",                   "Grinding Groove");
-FEATURE_TO_TAB.put("Habitation Structure",              "Other Feature");
-FEATURE_TO_TAB.put("Hearth/Ground Oven",                "Hearth/Ground Oven");
-FEATURE_TO_TAB.put("Non Human Bone & Organic Material", "Other Feature");
-FEATURE_TO_TAB.put("Ochre quarry",                      "Other Feature");
-FEATURE_TO_TAB.put("Potential Archaeological Deposit",  "Potential Archaeological Deposit");
-FEATURE_TO_TAB.put("Stone Quarry",                      "Other Feature");
-FEATURE_TO_TAB.put("Shell",                             "Shell");
-FEATURE_TO_TAB.put("Stone Arrangement",                 "Other Feature");
-FEATURE_TO_TAB.put("Culturally Modified Tree",          "Culturally Modified Tree");
-FEATURE_TO_TAB.put("Water Hole",                        "Other Feature");
-FEATURE_TO_TAB = normaliseFeatureToTabMap(FEATURE_TO_TAB);
-/*********************** DYNAMIC UI - OPEN/CLOSED SITE ************************/
+loadFeatureFrom(String uuid) {
+  String tabgroup = "Feature";
+  setUuid(tabgroup, uuid);
+  if (isNull(uuid)) return;
+
+  FetchCallback cb = new FetchCallback() {
+    onFetch(result) {
+      updateFeatureTabs();
+    }
+  };
+  showTabGroup(tabgroup, uuid, cb);
+}
+/************************ DYNAMIC UI - OPEN/CLOSE SITE ************************/
 /* There are two cases to handle:                                             */
 /*   (a) When a Site is newly created.                                        */
 /*   (b) When a Site has been loaded.                                         */
 /*                                                                            */
-/* Case (a) is handled by an on-click events which triggers                   */
-/* `updateOpenClosedTabs()`.                                                  */
+/* Case (a) is handled by on-click events which trigger                       */
+/* `updateOpenCloseTabs()`.                                                   */
 /*                                                                            */
 /* Case (b) is handled by a callback to `showTabGroup`. This is implemented   */
 /* by overwriting the auto-generated function `loadSiteFrom` using @POSTPROC. */
 /******************************************************************************/
-addOnEvent("Site",                       "show",  "updateOpenClosedTabs()");
-addOnEvent("Site/Site/Open_Closed_Site", "click", "updateOpenClosedTabs()");
+addOnEvent("Site",                      "show",  "updateOpenCloseTabs()");
+addOnEvent("Site/Site/Open_Close_Site", "click", "updateOpenCloseTabs()");
 
-VOCAB_ID_OPEN   = null;
-VOCAB_ID_CLOSED = null;
-OPEN_CLOSED_SITE_VALS = new ArrayList();
-fetchVocab("Open Closed Site", OPEN_CLOSED_SITE_VALS, "setOpenClosedVocabIds()");
+VOCAB_ID_OPEN  = null;
+VOCAB_ID_CLOSE = null;
+OPEN_CLOSE_SITE_VALS = new ArrayList();
+fetchVocab("Open Close Site", OPEN_CLOSE_SITE_VALS, "setOpenCloseVocabIds()");
 
 getVocabId(vocabName, vocabVals) {
   vocabName = "{" + vocabName + "}";
   vocabId   = null;
-  for (List val : OPEN_CLOSED_SITE_VALS) {
+  for (List val : OPEN_CLOSE_SITE_VALS) {
     String thisVocabId   = val.get(0);
     String thisVocabName = val.get(1);
 
@@ -1673,28 +1823,28 @@ getVocabId(vocabName, vocabVals) {
   }
 }
 
-setOpenClosedVocabIds() {
-  VOCAB_ID_OPEN   = getVocabId("Open",   OPEN_CLOSED_SITE_VALS);
-  VOCAB_ID_CLOSED = getVocabId("Closed", OPEN_CLOSED_SITE_VALS);
+setOpenCloseVocabIds() {
+  VOCAB_ID_OPEN  = getVocabId("Open",  OPEN_CLOSE_SITE_VALS);
+  VOCAB_ID_CLOSE = getVocabId("Close", OPEN_CLOSE_SITE_VALS);
 }
 
-updateOpenClosedTabs() {
+updateOpenCloseTabs() {
   cancelSites();
 
-  selectedId       = getFieldValue("Site/Site/Open_Closed_Site");
-  isSelectedOpen   = VOCAB_ID_OPEN  .equals(selectedId);
-  isSelectedClosed = VOCAB_ID_CLOSED.equals(selectedId);
+  selectedId      = getFieldValue("Site/Site/Open_Close_Site");
+  isSelectedOpen  = VOCAB_ID_OPEN .equals(selectedId);
+  isSelectedClose = VOCAB_ID_CLOSE.equals(selectedId);
 
-  if (isSelectedOpen)   openSite();
-  if (isSelectedClosed) closedSite();
+  if (isSelectedOpen)  openSite();
+  if (isSelectedClose) closeSite();
 }
 
 cancelSites() {
-  cancelTab("Site/Open_Site",   false);
-  cancelTab("Site/Closed_Site", false);
+  cancelTab("Site/Open_Site",  false);
+  cancelTab("Site/Close_Site", false);
 }
-openSite()  {showTab("Site/Open_Site"  ); showTab("Site/Site");}
-closedSite(){showTab("Site/Closed_Site"); showTab("Site/Site");}
+openSite() {showTab("Site/Open_Site" ); showTab("Site/Site");}
+closeSite(){showTab("Site/Close_Site"); showTab("Site/Site");}
 
 loadSiteFrom(String uuid) {
   String tabgroup = "Site";
@@ -1703,7 +1853,7 @@ loadSiteFrom(String uuid) {
 
   FetchCallback cb = new FetchCallback() {
     onFetch(result) {
-      updateOpenClosedTabs();
+      updateOpenCloseTabs();
     }
   };
   showTabGroup(tabgroup, uuid, cb);
@@ -1785,8 +1935,13 @@ import java.util.concurrent.Semaphore;
 
 addOnEvent("Transect/Transect/Start_Survey_Unit",  "click", "startSurveyUnit()");
 addOnEvent("Transect/Transect/Finish_Survey_Unit", "click", "finishSurveyUnit()");
+onFocus   ("Transect/Transect/Total_Transect_Width_m", "",  "populateSurveyExtent()");
 
 INC_MUTEX = new Semaphore(1);
+
+REF_EXTENT        = "Transect/Map/Survey_Extent_Square_Metres";
+REF_UUID_STARTED  = "Transect/Vars/UUID_Started";
+REF_UUID_FINISHED = "Transect/Vars/UUID_Finished";
 
 REF_STATE = "Transect/Vars/Transect_State";
 
@@ -1861,7 +2016,7 @@ saveChildTransectPoint(String parentId) {
   String parentUuid   = getUuid(parentTabGroup);
 
   if (isNull(parentUuid)) {
-    // Shouldn't happen because `tryIncrementingState` should've set this.
+    // Shouldn't happen because `tryIncrementingState` should've set parentUuid.
     Log.e("saveChildTransectPoint()", "Parent UUID is null");
     INC_MUTEX.release();
     return;
@@ -1905,10 +2060,57 @@ saveChildTransectPoint(String parentId) {
 
       saveEntitiesToHierRel(rel, parentUuid, uuid, "Parent Of", "Child Of", "");
 
+      if (state.equals(STATE_STARTED )) setFieldValue(REF_UUID_STARTED,  uuid);
+      if (state.equals(STATE_FINISHED)) setFieldValue(REF_UUID_FINISHED, uuid);
+
+      populateSurveyExtent();
+
       INC_MUTEX.release();
     }
   };
   saveArchEnt(null, childTabGroup, geoList, attribs, saveCallback);
+}
+
+populateSurveyExtent() {
+  String refTransectWidth = "Transect/Transect/Total_Transect_Width_m";
+  String sTransectWidth;
+
+  sTransectWidth = getFieldValue(refTransectWidth);
+  uuidStarted    = getFieldValue(REF_UUID_STARTED );
+  uuidFinished   = getFieldValue(REF_UUID_FINISHED);
+
+  if (isNull(sTransectWidth)) return;
+  if (isNull(uuidStarted   )) return;
+  if (isNull(uuidFinished  )) return;
+
+  String q = "";
+  q += " SELECT distance(startpoint, endpoint), astext(startpoint), astext(endpoint)";
+  q += "   FROM (SELECT transform(geospatialcolumn, %s) AS startpoint";
+  q += "           FROM latestnondeletedarchent";
+  q += "          WHERE uuid = %s";
+  q += "        ),";
+  q += "        (SELECT transform(geospatialcolumn, %s) AS endpoint";
+  q += "           FROM latestnondeletedarchent";
+  q += "          WHERE uuid = %s";
+  q += "        )";
+  q  = replaceFirst(q, "%s", getModuleSrid());
+  q  = replaceFirst(q, "%s", uuidStarted    );
+  q  = replaceFirst(q, "%s", getModuleSrid());
+  q  = replaceFirst(q, "%s", uuidFinished   );
+
+  FetchCallback populate = new FetchCallback() {
+    onFetch(result) {
+      String sTransectLength = result.get(0);
+
+      Double dTransectLength = Double.valueOf(sTransectLength);
+      Double dTransectWidth  = Double.valueOf(sTransectWidth);
+      Double dExtent         = dTransectLength * dTransectWidth;
+
+      setFieldValue(REF_EXTENT, dExtent);
+    }
+  };
+
+  fetchOne(q, populate);
 }
 
 fetchIdentifier(String uuid, String callback) {
@@ -1949,6 +2151,118 @@ setState(val) {
 
 incState() {
   return setState(getNextState());
+}
+/***************************** FIELD INHERITANCE ******************************/
+/* Linked using @POSTPROC.                                                    */
+/******************************************************************************/
+copyFieldValue(src, dst) {
+  String val = getFieldValue(src);
+  setFieldValue(dst, val);
+}
+
+// Don't delete me. This simplifies the code in @POSTPROC.
+inheritTransectFields() {
+  return;
+}
+
+inheritSiteFields() {
+  //BEWARE! Weird formatting!
+  if (parentTabgroup__.equals("Transect"))
+  copyFieldValue(
+    "Transect/Transect/Transect_ID",
+    "Site/Vars/Site_Transect_ID"
+  );
+}
+
+// Don't delete me. This simplifies the code in @POSTPROC.
+inheritFeatureFields() {
+  //BEWARE! Weird formatting!
+  if (parentTabgroup__.equals("Site"))
+  copyFieldValue(
+    "Site/Vars/Site_Transect_ID",
+    "Feature/Vars/Feature_Transect_ID"
+  );
+}
+/****************************** SEARCH EXTENSION ******************************/
+SEARCH_GUIDE  = "If the <b>Parent Transect ID</b> field (below) is filled in, ";
+SEARCH_GUIDE += "the <b>Entity List</b> (at the bottom) will constrain the ";
+SEARCH_GUIDE += "records to those which are descendants of the <b>Parent ";
+SEARCH_GUIDE += "Transect</b>. If <b>Parent Transect ID</b> is left blank, it ";
+SEARCH_GUIDE += "will not be used to constrain the search results.";
+
+populateWebViewHtml("Control/Search/Parent_Transect_ID_Guide", SEARCH_GUIDE);
+
+search(){
+  String tabgroup = "Control";
+  String refEntityList       = tabgroup + "/Search/Entity_List";
+  String refSearchTerm       = tabgroup + "/Search/Search_Term";
+  String refEntityTypes      = tabgroup + "/Search/Entity_Types";
+  String refParentTransectID = tabgroup + "/Search/Parent_Transect_ID";
+
+  String type = getFieldValue(refEntityTypes);
+  String term = getFieldValue(refSearchTerm);
+  String parentTransectID = getFieldValue(refParentTransectID);
+
+  if (!validateSearch(type, parentTransectID)) {
+    return;
+  }
+
+  String searchQuery = "";
+  searchQuery += " SELECT uuid, response";
+  searchQuery += "  FROM latestNonDeletedArchEntFormattedIdentifiers";
+  searchQuery += " WHERE uuid IN (SELECT uuid";
+  searchQuery += "                  FROM latestNonDeletedArchEntIdentifiers";
+  searchQuery += "                 WHERE measure LIKE '"+term+"'||'%'";
+  searchQuery += "                   AND ( aenttypename LIKE '"+type+"' OR '' = '"+type+"' )";
+  searchQuery += "                   AND ('' = '"+parentTransectID+"' OR";
+  searchQuery += "                        uuid IN (SELECT uuid ";
+  searchQuery += "                                   FROM latestnondeletedaentvalue ";
+  searchQuery += "                                   JOIN attributekey using (attributeid)";
+  searchQuery += "                                  WHERE attributename in ('Site Transect ID', 'Feature Transect ID')";
+  searchQuery += "                                    AND measure = '"+parentTransectID+"'";
+  searchQuery += "                                )";
+  searchQuery += "                        )";
+  searchQuery += "                )";
+  searchQuery += " ORDER BY response";
+  searchQuery += " LIMIT  ?";
+  searchQuery += " OFFSET ?";
+
+  populateCursorList(refEntityList, searchQuery, 25);
+  refreshTabgroupCSS(tabgroup);
+
+  Log.d("Module", "Search query: " + searchQuery);
+}
+
+validateSearch(type, parentTransectID) {
+  if (isNull(parentTransectID)) {
+    return true;
+  }
+
+  List possibleChildTypes = new ArrayList();
+  possibleChildTypes.add("");        // No constraint or "All"
+  possibleChildTypes.add("Feature");
+  possibleChildTypes.add("Site");
+
+  // There can only be entites in the search results if the arch ent type
+  // selected by the user is a child of a Transect.
+  Boolean canShowResults = possibleChildTypes.contains(type);
+
+  if (canShowResults) {
+    return true;
+  }
+
+  msgHead  = "No Results Found";
+  msgBody  = "No results have been found. This may be because Transects can ";
+  msgBody += "only have Feature or Site records as their children. However, ";
+  msgBody += "the list of results has been constrained to display only ";
+  msgBody += "records whose entity type is " + type + ".";
+  msgBody += "\n\n";
+  msgBody += "Leaving the Parent Entity ID field blank, or setting the Entity ";
+  msgBody += "Types dropdown menu to 'All', 'Feature' or 'Site' may yeild ";
+  msgBody += "better results.";
+  showWarning(msgHead, msgBody);
+
+  return false;
 }
 
 /******************************************************************************/

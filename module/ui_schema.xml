@@ -35,7 +35,7 @@
               <New_Transect/>
               <New_Site/>
               <Next_Transect_ID/>
-              <Next_Site_ID_Number/>
+              <Next_Site_ID/>
               <Next_Feature_ID/>
             </Control>
             <Search>
@@ -48,25 +48,29 @@
                 </Col_1>
               </Colgroup_0>
               <Entity_Types/>
+              <Parent_Transect_ID_Guide/>
+              <Parent_Transect_ID/>
+
               <Entity_List/>
             </Search>
+
           </Control>
           <Transect>
             <Transect>
               <Start_Survey_Unit/>
               <Transect_ID/>
-              <Timestamp/>
+              <timestamp/>
               <Total_Transect_Width_m/>
               <Number_of_Participants_in_Transect/>
               <Participants/>
               <Landform/>
               <Slope_Gradient/>
               <Aspect/>
-              <Vegetation_notes/>
-              <Ground_surface_visibility/>
-              <Ground_surface_exposure/>
-              <Ground_surface_notes/>
-              <Soil_observations/>
+              <Vegetation_Notes/>
+              <Ground_Surface_Visibility/>
+              <Ground_Surface_Exposure/>
+              <Ground_Surface_Notes/>
+              <Soil_Observations/>
               <Geomorphological_Activity/>
               <Disturbance/>
               <Transect_Photo/>
@@ -77,14 +81,20 @@
               <Transect_Other_Notes/>
               <Finish_Survey_Unit/>
             </Transect>
+            <Site>
+              <Add_New_Site/>
+              <Recorded_Sites/>
+            </Site>
             <Map>
               <Map/>
-              <Survey_extent/>
+              <Survey_Extent_Square_Metres/>
             </Map>
             <Vars>
               <Device_ID/>
               <Transect_State/>
-              <Author/>
+              <UUID_Started/>
+              <UUID_Finished/>
+              <author/>
             </Vars>
           </Transect>
           <Transect_Point>
@@ -96,8 +106,8 @@
           </Transect_Point>
           <Site>
             <Site>
-              <Site_ID_Number/>
-              <Timestamp/>
+              <Site_ID/>
+              <timestamp/>
               <Colgroup_GPS>
                 <Col_0>
                   <Latitude/>
@@ -109,45 +119,47 @@
                 </Col_1>
               </Colgroup_GPS>
               <Take_From_GPS/>
-              <Open_Closed_Site/>
+              <Open_Close_Site/>
               <Site_Aspect_Orientation/>
-              <Distance_to_permanent_water_source/>
-              <Distance_to_temporary_water_source/>
-              <Name_of_nearest_permanent_water_source/>
-              <Name_of_nearest_temporary_water/>
+              <Distance_to_Permanent_Water_Source/>
+              <Distance_to_Temporary_Water_Source/>
+              <Name_of_the_Nearest_Permanent_Water_Source/>
+              <Name_of_the_Nearest_Temporary_Water/>
               <General_Condition_of_Site/>
             </Site>
             <Map>
               <Map/>
             </Map>
             <Open_Site>
-              <Total_length_of_visible_site/>
-              <Average_width_of_visible_site/>
-              <Estimated_area_of_visible_site/>
-              <Length_of_assessed_site_area/>
-              <Subsurfance_potential/>
-              <Length_of_potential_site_area/>
-              <Average_width_of_potential_site_area/>
+              <Total_Length_of_Visible_Site/>
+              <Average_Width_of_Visible_Site/>
+              <Estimated_Area_of_Visible_Site/>
+              <Length_of_Assessed_Site_Area/>
+              <Subsurface_Potential/>
+              <Length_of_Potential_Site_Area/>
+              <Average_Width_of_Potential_Site_Area/>
             </Open_Site>
-            <Closed_Site>
+            <Close_Site>
               <Shelter_Cave_Formation/>
               <Rock_Surface_Condition/>
               <Internal_Length/>
               <Internal_Width/>
               <Shelter_Height/>
               <Shelter_Floor_Area/>
-            </Closed_Site>
+            </Close_Site>
             <Community_Consultation_Notes>
-              <Aboriginal_community_interpretation/>
-              <Aboriginal_community_management_recommendations/>
-              <Other_management_recommendations/>
+              <Aboriginal_Community_Interpretation/>
+              <Aboriginal_Community_Management_Recommendations/>
+              <Other_Management_Recommendations/>
             </Community_Consultation_Notes>
             <Feature>
               <Feature_Type/>
               <New_Feature/>
+              <Recorded_Features/>
             </Feature>
             <Vars>
-              <Author/>
+              <author/>
+              <Site_Transect_ID/>
             </Vars>
           </Site>
           <Feature>
@@ -166,23 +178,21 @@
               <Take_From_GPS/>
               <Feature_Condition/>
               <Select_Feature_Type/>
-              <New_Feature_Type/>
             </Feature>
             <Artefact>
-              <Insitu_Artefact/>
+              <In_Situ_Artefact/>
               <Stratified_Artefact/>
               <Total_Number_of_Artefacts/>
-              <Instance_No/>
               <Artefact_Raw_Material/>
               <Artefact_Type/>
               <Artefact_Description_for_Aboriginal_Stone_Artefacts/>
               <Artefact_Description_for_Historical_Artefacts/>
               <Artefact_Colour/>
               <Artefact_Status_Modification/>
-              <Platform_Surface_for_Aboriginal_stone_artefacts/>
-              <Platform_Type_for_Aboriginal_stone_artefacts/>
-              <Termination_for_Aboriginal_stone_artefacts/>
-              <Cross_Section_for_Aboriginal_artefacts/>
+              <Platform_Surface_for_Aboriginal_Stone_Artefacts/>
+              <Platform_Type_for_Aboriginal_Stone_Artefacts/>
+              <Termination_for_Aboriginal_Stone_Artefacts/>
+              <Cross_Section_for_Aboriginal_Artefacts/>
               <Artefact_Length_mm/>
               <Artefact_Width_mm/>
               <Artefact_Thickness_mm/>
@@ -210,29 +220,28 @@
               <Art_Photo/>
               <Button_Art_Photo/>
               <Art_Other_Observations/>
-              <Other_Feature_Description/>
             </Art>
             <Other_Feature>
               <Description_Other_Feature/>
-              <Chain_of_Custody_Notes_for_human_remains/>
+              <Chain_of_Custody_Notes_for_Human_Remains/>
               <Other_Feature_Sketch_Plan/>
               <Button_Other_Feature_Sketch_Plan/>
               <Other_Feature_Photo/>
               <Button_Other_Feature_Photo/>
             </Other_Feature>
             <Grinding_Groove>
-              <Type_Grinding_Groove/>
+              <Type_of_Grinding_Groove/>
               <Profile_Shape/>
-              <Seed_species_present/>
-              <Groove_function/>
-              <Dimensions_-_length_of_smallest_part_mm/>
-              <Dimensions_-_width_of_smallest_part_mm/>
-              <Dimensions_-_depth_of_smallest_part_mm/>
-              <Dimensions_-_length_of_largest_part_mm/>
-              <Dimensions_-_width_of_largest_part_mm/>
-              <Dimensions_-_depth_of_largest_part_mm/>
-              <Groove_count/>
-              <Cluster_count/>
+              <Seed_Species_Present/>
+              <Groove_Function/>
+              <Dimensions_-_Length_of_the_Smallest_Part_mm/>
+              <Dimensions_-_Width_of_the_Smallest_Part_mm/>
+              <Dimensions_-_Depth_of_the_Smallest_Part_mm/>
+              <Dimensions_-_Length_of_the_Largest_Part_mm/>
+              <Dimensions_-_Width_of_the_Largest_Part_mm/>
+              <Dimensions_-_Depth_of_the_Largest_Part_mm/>
+              <Groove_Count/>
+              <Cluster_Count/>
               <Grinding_Groove_Sketch_Plan/>
               <Button_Grinding_Groove_Sketch_Plan/>
               <Grinding_Groove_Photo/>
@@ -240,10 +249,10 @@
             </Grinding_Groove>
             <Shell>
               <Shell_Distribution/>
-              <Distance_to_high_water_mark_metres/>
-              <Species_present/>
+              <Distance_to_High_Water_Mark_Metres/>
+              <Species_Present/>
               <Dominant_Species/>
-              <Approximate_percentage_of_dominant_species_as_part_of_assemblage/>
+              <Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage/>
               <Shell_Sketch_Plan/>
               <Button_Shell_Sketch_Plan/>
               <Shell_Photo/>
@@ -253,7 +262,7 @@
               <Hearth_Shape_mm/>
               <Hearth_Length_mm/>
               <Hearth_Width_mm/>
-              <Hearth_Estimated_Depth/>
+              <Hearth_Estimated_Depth_mm/>
               <Hearth_Components/>
               <Hearth_Descriptive_Notes/>
               <Hearth_Sketch_Plan/>
@@ -262,7 +271,7 @@
               <Button_Hearth_Photo/>
             </Hearth_Ground_Oven>
             <Potential_Archaeological_Deposit>
-              <PAD_Insitu/>
+              <PAD_in_Situ/>
               <PAD_Stratified/>
               <PAD_Type/>
               <PAD_Surface_Artefacts/>
@@ -276,64 +285,65 @@
               <Tree_Status/>
               <CM_Tree_Damage/>
               <Regrowth/>
-              <Is_a_tree_health_assessment_required/>
+              <Is_a_Tree_Health_Assessment_Required/>
               <Length_of_Scar_mm/>
               <Width_of_Scar_mm/>
               <Depth_of_Scar_mm/>
               <Height_Above_Ground_mm/>
               <CM_Tree_Shape/>
               <CM_Tree_Orientation/>
-              <Carving_type/>
+              <Carving_Type/>
               <Axe_Marks/>
             </Culturally_Modified_Tree>
             <Vars>
-              <Author/>
-              <Timestamp/>
+              <author/>
+              <timestamp/>
+              <Feature_Transect_ID/>
             </Vars>
           </Feature>
           <logic/>
         </faims>
       </instance>
       <bind type="decimal" nodeset="/faims/Control/Control/Next_Transect_ID"/>
-      <bind type="decimal" nodeset="/faims/Control/Control/Next_Site_ID_Number"/>
+      <bind type="decimal" nodeset="/faims/Control/Control/Next_Site_ID"/>
       <bind type="decimal" nodeset="/faims/Control/Control/Next_Feature_ID"/>
       <bind type="decimal" nodeset="/faims/Transect/Transect/Transect_ID"/>
       <bind type="decimal" nodeset="/faims/Transect/Transect/Total_Transect_Width_m"/>
       <bind type="decimal" nodeset="/faims/Transect/Transect/Number_of_Participants_in_Transect"/>
-      <bind type="decimal" nodeset="/faims/Site/Site/Site_ID_Number"/>
-      <bind type="decimal" nodeset="/faims/Site/Site/Distance_to_permanent_water_source"/>
-      <bind type="decimal" nodeset="/faims/Site/Site/Distance_to_temporary_water_source"/>
-      <bind type="decimal" nodeset="/faims/Site/Open_Site/Total_length_of_visible_site"/>
-      <bind type="decimal" nodeset="/faims/Site/Open_Site/Average_width_of_visible_site"/>
-      <bind type="decimal" nodeset="/faims/Site/Open_Site/Estimated_area_of_visible_site"/>
-      <bind type="decimal" nodeset="/faims/Site/Open_Site/Length_of_assessed_site_area"/>
-      <bind type="decimal" nodeset="/faims/Site/Open_Site/Length_of_potential_site_area"/>
-      <bind type="decimal" nodeset="/faims/Site/Open_Site/Average_width_of_potential_site_area"/>
-      <bind type="decimal" nodeset="/faims/Site/Closed_Site/Internal_Length"/>
-      <bind type="decimal" nodeset="/faims/Site/Closed_Site/Internal_Width"/>
-      <bind type="decimal" nodeset="/faims/Site/Closed_Site/Shelter_Height"/>
-      <bind type="decimal" nodeset="/faims/Site/Closed_Site/Shelter_Floor_Area"/>
+      <bind type="decimal" nodeset="/faims/Site/Site/Site_ID"/>
+      <bind type="decimal" nodeset="/faims/Site/Site/Distance_to_Permanent_Water_Source"/>
+      <bind type="decimal" nodeset="/faims/Site/Site/Distance_to_Temporary_Water_Source"/>
+      <bind type="decimal" nodeset="/faims/Site/Open_Site/Total_Length_of_Visible_Site"/>
+      <bind type="decimal" nodeset="/faims/Site/Open_Site/Average_Width_of_Visible_Site"/>
+      <bind type="decimal" nodeset="/faims/Site/Open_Site/Estimated_Area_of_Visible_Site"/>
+      <bind type="decimal" nodeset="/faims/Site/Open_Site/Length_of_Assessed_Site_Area"/>
+      <bind type="decimal" nodeset="/faims/Site/Open_Site/Length_of_Potential_Site_Area"/>
+      <bind type="decimal" nodeset="/faims/Site/Open_Site/Average_Width_of_Potential_Site_Area"/>
+      <bind type="decimal" nodeset="/faims/Site/Close_Site/Internal_Length"/>
+      <bind type="decimal" nodeset="/faims/Site/Close_Site/Internal_Width"/>
+      <bind type="decimal" nodeset="/faims/Site/Close_Site/Shelter_Height"/>
+      <bind type="decimal" nodeset="/faims/Site/Close_Site/Shelter_Floor_Area"/>
       <bind type="decimal" nodeset="/faims/Feature/Feature/Feature_ID"/>
       <bind type="decimal" nodeset="/faims/Feature/Artefact/Total_Number_of_Artefacts"/>
-      <bind type="decimal" nodeset="/faims/Feature/Artefact/Instance_No"/>
       <bind type="decimal" nodeset="/faims/Feature/Artefact/Artefact_Length_mm"/>
       <bind type="decimal" nodeset="/faims/Feature/Artefact/Artefact_Width_mm"/>
       <bind type="decimal" nodeset="/faims/Feature/Artefact/Artefact_Thickness_mm"/>
-      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_length_of_smallest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_width_of_smallest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_depth_of_smallest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_length_of_largest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_width_of_largest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_depth_of_largest_part_mm"/>
-      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Groove_count"/>
-      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Cluster_count"/>
-      <bind type="decimal" nodeset="/faims/Feature/Shell/Distance_to_high_water_mark_metres"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_Length_of_the_Smallest_Part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_Width_of_the_Smallest_Part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_Depth_of_the_Smallest_Part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_Length_of_the_Largest_Part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_Width_of_the_Largest_Part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Dimensions_-_Depth_of_the_Largest_Part_mm"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Groove_Count"/>
+      <bind type="decimal" nodeset="/faims/Feature/Grinding_Groove/Cluster_Count"/>
+      <bind type="decimal" nodeset="/faims/Feature/Shell/Distance_to_High_Water_Mark_Metres"/>
       <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Number_of_Scars"/>
       <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Number_of_Carved_Panels"/>
       <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Length_of_Scar_mm"/>
       <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Width_of_Scar_mm"/>
       <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Depth_of_Scar_mm"/>
       <bind type="decimal" nodeset="/faims/Feature/Culturally_Modified_Tree/Height_Above_Ground_mm"/>
+      <bind type="decimal" nodeset="/faims/Control/Search/Parent_Transect_ID"/>
     </model>
   </h:head>
   <h:body>
@@ -394,8 +404,8 @@
         <input ref="Next_Transect_ID" faims_style_class="required">
           <label>{Next_Transect_ID}</label>
         </input>
-        <input ref="Next_Site_ID_Number" faims_style_class="required">
-          <label>{Next_Site_ID_Number}</label>
+        <input ref="Next_Site_ID" faims_style_class="required">
+          <label>{Next_Site_ID}</label>
         </input>
         <input ref="Next_Feature_ID" faims_style_class="required">
           <label>{Next_Feature_ID}</label>
@@ -425,6 +435,12 @@
             <value>Options not loaded</value>
           </item>
         </select1>
+        <input ref="Parent_Transect_ID_Guide" faims_web="true">
+          <label></label>
+        </input>
+        <input ref="Parent_Transect_ID">
+          <label>Parent Entity ID (Transect)</label>
+        </input>
         <select1 appearance="compact" ref="Entity_List">
           <label>{Entity_List}</label>
           <item>
@@ -445,7 +461,7 @@
           <label>{Transect_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input ref="Timestamp" faims_attribute_name="timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+        <input ref="timestamp" faims_attribute_name="Transect timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{timestamp}</label>
           <!--WARNING: Flags ignored-->
         </input>
@@ -481,32 +497,32 @@
           <label>{Aspect}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Vegetation_notes" faims_attribute_name="Vegetation notes" faims_style_class="required">
-          <label>{Vegetation_notes}</label>
+        <input faims_attribute_type="measure" ref="Vegetation_Notes" faims_attribute_name="Vegetation Notes" faims_style_class="required">
+          <label>{Vegetation_Notes}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <select1 type="image" faims_attribute_type="vocab" ref="Ground_surface_visibility" faims_attribute_name="Ground surface visibility" faims_style_class="required">
-          <label>{Ground_surface_visibility}</label>
+        <select1 type="image" faims_attribute_type="vocab" ref="Ground_Surface_Visibility" faims_attribute_name="Ground Surface Visibility" faims_style_class="required">
+          <label>{Ground_Surface_Visibility}</label>
           <!--WARNING: No type t was given for this view; assuming it is a picture gallery-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 type="image" faims_attribute_type="vocab" ref="Ground_surface_exposure" faims_attribute_name="Ground surface exposure" faims_style_class="required">
-          <label>{Ground_surface_exposure}</label>
+        <select1 type="image" faims_attribute_type="vocab" ref="Ground_Surface_Exposure" faims_attribute_name="Ground Surface Exposure" faims_style_class="required">
+          <label>{Ground_Surface_Exposure}</label>
           <!--WARNING: No type t was given for this view; assuming it is a picture gallery-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <input faims_attribute_type="measure" ref="Ground_surface_notes" faims_attribute_name="Ground surface notes">
-          <label>{Ground_surface_notes}</label>
+        <input faims_attribute_type="measure" ref="Ground_Surface_Notes" faims_attribute_name="Ground Surface Notes">
+          <label>{Ground_Surface_Notes}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Soil_observations" faims_attribute_name="Soil observations">
-          <label>{Soil_observations}</label>
+        <input faims_attribute_type="measure" ref="Soil_Observations" faims_attribute_name="Soil Observations">
+          <label>{Soil_Observations}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select1 faims_attribute_type="vocab" ref="Geomorphological_Activity" faims_attribute_name="Geomorphological Activity" faims_style_class="required">
@@ -553,13 +569,26 @@
           <label>{Finish_Survey_Unit}</label>
         </trigger>
       </group>
+      <group ref="Site" faims_scrollable="false">
+        <label>{Site}</label>
+        <trigger ref="Add_New_Site">
+          <label>{Add_New_Site}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Recorded_Sites" faims_annotation="false" faims_certainty="false">
+          <label>{Recorded_Sites}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+      </group>
       <group ref="Map" faims_scrollable="false">
         <label>{Map}</label>
         <input faims_map="true" ref="Map">
           <label/>
         </input>
-        <input faims_attribute_type="measure" ref="Survey_extent" faims_attribute_name="Survey extent" faims_read_only="true">
-          <label>{Survey_extent}</label>
+        <input faims_attribute_type="measure" ref="Survey_Extent_Square_Metres" faims_attribute_name="Survey Extent Square Metres" faims_read_only="true">
+          <label>{Survey_Extent__Square_Metres_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
@@ -576,7 +605,15 @@
           <label>{Transect_State}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input ref="Author" faims_attribute_name="author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+        <input faims_attribute_type="measure" ref="UUID_Started" faims_attribute_name="UUID Started">
+          <label>{UUID_Started}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="UUID_Finished" faims_attribute_name="UUID Finished">
+          <label>{UUID_Finished}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input ref="author" faims_attribute_name="Transect author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{author}</label>
           <!--WARNING: Flags ignored-->
         </input>
@@ -604,11 +641,11 @@
       <label>{Site}</label>
       <group ref="Site">
         <label>{Site}</label>
-        <input faims_attribute_type="measure" ref="Site_ID_Number" faims_attribute_name="Site ID Number" faims_style_class="required">
-          <label>{Site_ID_Number}</label>
+        <input faims_attribute_type="measure" ref="Site_ID" faims_attribute_name="Site ID" faims_style_class="required">
+          <label>{Site_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input ref="Timestamp" faims_attribute_name="timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+        <input ref="timestamp" faims_attribute_name="Site timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{timestamp}</label>
           <!--WARNING: Flags ignored-->
         </input>
@@ -636,14 +673,14 @@
         <trigger ref="Take_From_GPS">
           <label>{Take_From_GPS}</label>
         </trigger>
-        <select1 appearance="full" faims_attribute_type="vocab" ref="Open_Closed_Site" faims_attribute_name="Open Closed Site">
-          <label>{Open_Closed_Site}</label>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Open_Close_Site" faims_attribute_name="Open Close Site" faims_style_class="required">
+          <label>{Open_Close_Site}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Site_Aspect_Orientation" faims_attribute_name="Site Aspect Orientation">
+        <select1 faims_attribute_type="vocab" ref="Site_Aspect_Orientation" faims_attribute_name="Site Aspect Orientation" faims_style_class="required">
           <label>{Site_Aspect_Orientation}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
@@ -651,20 +688,20 @@
             <value>0</value>
           </item>
         </select1>
-        <input faims_attribute_type="measure" ref="Distance_to_permanent_water_source" faims_attribute_name="Distance to permanent water source">
-          <label>{Distance_to_permanent_water_source}</label>
+        <input faims_attribute_type="measure" ref="Distance_to_Permanent_Water_Source" faims_attribute_name="Distance to Permanent Water Source">
+          <label>{Distance_to_Permanent_Water_Source}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Distance_to_temporary_water_source" faims_attribute_name="Distance to temporary water source">
-          <label>{Distance_to_temporary_water_source}</label>
+        <input faims_attribute_type="measure" ref="Distance_to_Temporary_Water_Source" faims_attribute_name="Distance to Temporary Water Source">
+          <label>{Distance_to_Temporary_Water_Source}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Name_of_nearest_permanent_water_source" faims_attribute_name="Name of nearest permanent water source">
-          <label>{Name_of_nearest_permanent_water_source}</label>
+        <input faims_attribute_type="measure" ref="Name_of_the_Nearest_Permanent_Water_Source" faims_attribute_name="Name of the Nearest Permanent Water Source">
+          <label>{Name_of_the_Nearest_Permanent_Water_Source}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Name_of_nearest_temporary_water" faims_attribute_name="Name of nearest temporary water">
-          <label>{Name_of_nearest_temporary_water}</label>
+        <input faims_attribute_type="measure" ref="Name_of_the_Nearest_Temporary_Water" faims_attribute_name="Name of the Nearest Temporary Water">
+          <label>{Name_of_the_Nearest_Temporary_Water}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select faims_attribute_type="vocab" ref="General_Condition_of_Site" faims_attribute_name="General Condition of Site" faims_style_class="required">
@@ -683,40 +720,40 @@
       </group>
       <group ref="Open_Site">
         <label>{Open_Site}</label>
-        <input faims_attribute_type="measure" ref="Total_length_of_visible_site" faims_attribute_name="Total length of visible site" faims_style_class="required">
-          <label>{Total_length_of_visible_site}</label>
+        <input faims_attribute_type="measure" ref="Total_Length_of_Visible_Site" faims_attribute_name="Total Length of Visible Site" faims_style_class="required">
+          <label>{Total_Length_of_Visible_Site__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Average_width_of_visible_site" faims_attribute_name="Average width of visible site" faims_style_class="required">
-          <label>{Average_width_of_visible_site}</label>
+        <input faims_attribute_type="measure" ref="Average_Width_of_Visible_Site" faims_attribute_name="Average Width of Visible Site" faims_style_class="required">
+          <label>{Average_Width_of_Visible_Site__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Estimated_area_of_visible_site" faims_attribute_name="Estimated area of visible site" faims_style_class="required">
-          <label>{Estimated_area_of_visible_site}</label>
+        <input faims_attribute_type="measure" ref="Estimated_Area_of_Visible_Site" faims_attribute_name="Estimated Area of Visible Site" faims_style_class="required">
+          <label>{Estimated_Area_of_Visible_Site}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Length_of_assessed_site_area" faims_attribute_name="Length of assessed site area" faims_style_class="required">
-          <label>{Length_of_assessed_site_area}</label>
+        <input faims_attribute_type="measure" ref="Length_of_Assessed_Site_Area" faims_attribute_name="Length of Assessed Site Area" faims_style_class="required">
+          <label>{Length_of_Assessed_Site_Area__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <select1 appearance="full" faims_attribute_type="vocab" ref="Subsurfance_potential" faims_attribute_name="Subsurfance potential">
-          <label>{Subsurfance_potential}</label>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Subsurface_Potential" faims_attribute_name="Subsurface Potential">
+          <label>{Subsurface_Potential}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <input faims_attribute_type="measure" ref="Length_of_potential_site_area" faims_attribute_name="Length of potential site area">
-          <label>{Length_of_potential_site_area}</label>
+        <input faims_attribute_type="measure" ref="Length_of_Potential_Site_Area" faims_attribute_name="Length of Potential Site Area">
+          <label>{Length_of_Potential_Site_Area__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Average_width_of_potential_site_area" faims_attribute_name="Average width of potential site area" faims_style_class="required">
-          <label>{Average_width_of_potential_site_area}</label>
+        <input faims_attribute_type="measure" ref="Average_Width_of_Potential_Site_Area" faims_attribute_name="Average Width of Potential Site Area" faims_style_class="required">
+          <label>{Average_Width_of_Potential_Site_Area__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
-      <group ref="Closed_Site">
-        <label>{Closed_Site}</label>
+      <group ref="Close_Site">
+        <label>{Close_Site}</label>
         <select1 faims_attribute_type="vocab" ref="Shelter_Cave_Formation" faims_attribute_name="Shelter Cave Formation">
           <label>{Shelter_Cave_Formation}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
@@ -734,15 +771,15 @@
           </item>
         </select1>
         <input faims_attribute_type="measure" ref="Internal_Length" faims_attribute_name="Internal Length" faims_style_class="required">
-          <label>{Internal_Length}</label>
+          <label>{Internal_Length__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Internal_Width" faims_attribute_name="Internal Width" faims_style_class="required">
-          <label>{Internal_Width}</label>
+          <label>{Internal_Width__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Shelter_Height" faims_attribute_name="Shelter Height" faims_style_class="required">
-          <label>{Shelter_Height}</label>
+          <label>{Shelter_Height__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Shelter_Floor_Area" faims_attribute_name="Shelter Floor Area" faims_style_class="required">
@@ -752,16 +789,16 @@
       </group>
       <group ref="Community_Consultation_Notes">
         <label>{Community_Consultation_Notes}</label>
-        <input faims_attribute_type="measure" ref="Aboriginal_community_interpretation" faims_attribute_name="Aboriginal community interpretation">
-          <label>{Aboriginal_community_interpretation}</label>
+        <input faims_attribute_type="measure" ref="Aboriginal_Community_Interpretation" faims_attribute_name="Aboriginal Community Interpretation">
+          <label>{Aboriginal_Community_Interpretation}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Aboriginal_community_management_recommendations" faims_attribute_name="Aboriginal community management recommendations">
-          <label>{Aboriginal_community_management_recommendations}</label>
+        <input faims_attribute_type="measure" ref="Aboriginal_Community_Management_Recommendations" faims_attribute_name="Aboriginal Community Management Recommendations">
+          <label>{Aboriginal_Community_Management_Recommendations}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Other_management_recommendations" faims_attribute_name="Other management recommendations">
-          <label>{Other_management_recommendations}</label>
+        <input faims_attribute_type="measure" ref="Other_Management_Recommendations" faims_attribute_name="Other Management Recommendations">
+          <label>{Other_Management_Recommendations}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
@@ -777,12 +814,23 @@
         <trigger ref="New_Feature">
           <label>{New_Feature}</label>
         </trigger>
+        <select1 ref="Recorded_Features" faims_annotation="false" faims_certainty="false">
+          <label>{Recorded_Features}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
       </group>
       <group ref="Vars" faims_hidden="true">
         <label>{Vars}</label>
-        <input ref="Author" faims_attribute_name="author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+        <input ref="author" faims_attribute_name="Site author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{author}</label>
           <!--WARNING: Flags ignored-->
+        </input>
+        <input faims_attribute_type="measure" ref="Site_Transect_ID" faims_attribute_name="Site Transect ID">
+          <label>{Site_Transect_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
     </group>
@@ -834,14 +882,11 @@
             <value>0</value>
           </item>
         </select1>
-        <trigger ref="New_Feature_Type">
-          <label>{New_Feature_Type}</label>
-        </trigger>
       </group>
-      <group ref="Artefact">
+      <group ref="Artefact" faims_hidden="true">
         <label>{Artefact}</label>
-        <select1 faims_attribute_type="vocab" ref="Insitu_Artefact" faims_attribute_name="Insitu Artefact">
-          <label>{Insitu_Artefact}</label>
+        <select1 faims_attribute_type="vocab" ref="In_Situ_Artefact" faims_attribute_name="In Situ Artefact">
+          <label>{In_Situ_Artefact}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
@@ -858,10 +903,6 @@
         </select1>
         <input faims_attribute_type="measure" ref="Total_Number_of_Artefacts" faims_attribute_name="Total Number of Artefacts">
           <label>{Total_Number_of_Artefacts}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
-        <input faims_attribute_type="measure" ref="Instance_No" faims_attribute_name="Instance No" faims_style_class="required">
-          <label>{Instance_No_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select1 faims_attribute_type="vocab" ref="Artefact_Raw_Material" faims_attribute_name="Artefact Raw Material">
@@ -907,32 +948,32 @@
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Platform_Surface_for_Aboriginal_stone_artefacts" faims_attribute_name="Platform Surface for Aboriginal stone artefacts">
-          <label>{Platform_Surface__for_Aboriginal_stone_artefacts_}</label>
+        <select1 faims_attribute_type="vocab" ref="Platform_Surface_for_Aboriginal_Stone_Artefacts" faims_attribute_name="Platform Surface for Aboriginal Stone Artefacts">
+          <label>{Platform_Surface__for_Aboriginal_Stone_Artefacts_}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Platform_Type_for_Aboriginal_stone_artefacts" faims_attribute_name="Platform Type for Aboriginal stone artefacts">
-          <label>{Platform_Type__for_Aboriginal_stone_artefacts_}</label>
+        <select1 faims_attribute_type="vocab" ref="Platform_Type_for_Aboriginal_Stone_Artefacts" faims_attribute_name="Platform Type for Aboriginal Stone Artefacts">
+          <label>{Platform_Type__for_Aboriginal_Stone_Artefacts_}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Termination_for_Aboriginal_stone_artefacts" faims_attribute_name="Termination for Aboriginal stone artefacts">
-          <label>{Termination__for_Aboriginal_stone_artefacts_}</label>
+        <select1 faims_attribute_type="vocab" ref="Termination_for_Aboriginal_Stone_Artefacts" faims_attribute_name="Termination for Aboriginal Stone Artefacts">
+          <label>{Termination__for_Aboriginal_Stone_Artefacts_}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Cross_Section_for_Aboriginal_artefacts" faims_attribute_name="Cross Section for Aboriginal artefacts">
-          <label>{Cross_Section__for_Aboriginal_artefacts_}</label>
+        <select1 faims_attribute_type="vocab" ref="Cross_Section_for_Aboriginal_Artefacts" faims_attribute_name="Cross Section for Aboriginal Artefacts">
+          <label>{Cross_Section__for_Aboriginal_Artefacts_}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
@@ -970,7 +1011,7 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
-      <group ref="Intangible_Value">
+      <group ref="Intangible_Value" faims_hidden="true">
         <label>{Intangible_Value}</label>
         <select1 faims_attribute_type="vocab" ref="Intangible_Value_Type" faims_attribute_name="Intangible Value Type">
           <label>{Intangible_Value_Type}</label>
@@ -985,7 +1026,7 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
-      <group ref="Art">
+      <group ref="Art" faims_hidden="true">
         <label>{Art}</label>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Pigment_Engraved" faims_attribute_name="Pigment Engraved">
           <label>{Pigment_Engraved}</label>
@@ -1074,19 +1115,15 @@
           <label>{Art_Other_Observations}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Other_Feature_Description" faims_attribute_name="Other Feature Description">
-          <label>{Other_Feature_Description}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
-        </input>
       </group>
-      <group ref="Other_Feature">
+      <group ref="Other_Feature" faims_hidden="true">
         <label>{Other_Feature}</label>
         <input faims_attribute_type="measure" ref="Description_Other_Feature" faims_attribute_name="Description Other Feature">
           <label>{Description_Other_Feature}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Chain_of_Custody_Notes_for_human_remains" faims_attribute_name="Chain of Custody Notes for human remains">
-          <label>{Chain_of_Custody_Notes__for_human_remains_}</label>
+        <input faims_attribute_type="measure" ref="Chain_of_Custody_Notes_for_Human_Remains" faims_attribute_name="Chain of Custody Notes for Human Remains">
+          <label>{Chain_of_Custody_Notes__for_Human_Remains_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select type="file" faims_attribute_type="measure" faims_sync="true" ref="Other_Feature_Sketch_Plan" faims_attribute_name="Other Feature Sketch Plan">
@@ -1110,10 +1147,10 @@
           <label>{Button_Other_Feature_Photo}</label>
         </trigger>
       </group>
-      <group ref="Grinding_Groove">
+      <group ref="Grinding_Groove" faims_hidden="true">
         <label>{Grinding_Groove}</label>
-        <select1 faims_attribute_type="vocab" ref="Type_Grinding_Groove" faims_attribute_name="Type Grinding Groove">
-          <label>{Type_Grinding_Groove}</label>
+        <select1 faims_attribute_type="vocab" ref="Type_of_Grinding_Groove" faims_attribute_name="Type of Grinding Groove">
+          <label>{Type_of_Grinding_Groove}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
@@ -1127,44 +1164,44 @@
             <value>0</value>
           </item>
         </select1>
-        <input faims_attribute_type="measure" ref="Seed_species_present" faims_attribute_name="Seed species present">
-          <label>{Seed_species_present}</label>
+        <input faims_attribute_type="measure" ref="Seed_Species_Present" faims_attribute_name="Seed Species Present">
+          <label>{Seed_Species_Present}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Groove_function" faims_attribute_name="Groove function">
-          <label>{Groove_function}</label>
+        <input faims_attribute_type="measure" ref="Groove_Function" faims_attribute_name="Groove Function">
+          <label>{Groove_Function}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Dimensions_-_length_of_smallest_part_mm" faims_attribute_name="Dimensions - length of smallest part mm">
-          <label>{Dimensions___length_of_smallest_part__mm_}</label>
+        <input faims_attribute_type="measure" ref="Dimensions_-_Length_of_the_Smallest_Part_mm" faims_attribute_name="Dimensions - Length of the Smallest Part mm">
+          <label>{Dimensions___Length_of_the_Smallest_Part__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Dimensions_-_width_of_smallest_part_mm" faims_attribute_name="Dimensions - width of smallest part mm">
-          <label>{Dimensions___width_of_smallest_part__mm_}</label>
+        <input faims_attribute_type="measure" ref="Dimensions_-_Width_of_the_Smallest_Part_mm" faims_attribute_name="Dimensions - Width of the Smallest Part mm">
+          <label>{Dimensions___Width_of_the_Smallest_Part__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Dimensions_-_depth_of_smallest_part_mm" faims_attribute_name="Dimensions - depth of smallest part mm">
-          <label>{Dimensions___depth_of_smallest_part__mm_}</label>
+        <input faims_attribute_type="measure" ref="Dimensions_-_Depth_of_the_Smallest_Part_mm" faims_attribute_name="Dimensions - Depth of the Smallest Part mm">
+          <label>{Dimensions___Depth_of_the_Smallest_Part__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Dimensions_-_length_of_largest_part_mm" faims_attribute_name="Dimensions - length of largest part mm">
-          <label>{Dimensions___length_of_largest_part__mm_}</label>
+        <input faims_attribute_type="measure" ref="Dimensions_-_Length_of_the_Largest_Part_mm" faims_attribute_name="Dimensions - Length of the Largest Part mm">
+          <label>{Dimensions___Length_of_the_Largest_Part__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Dimensions_-_width_of_largest_part_mm" faims_attribute_name="Dimensions - width of largest part mm">
-          <label>{Dimensions___width_of_largest_part__mm_}</label>
+        <input faims_attribute_type="measure" ref="Dimensions_-_Width_of_the_Largest_Part_mm" faims_attribute_name="Dimensions - Width of the Largest Part mm">
+          <label>{Dimensions___Width_of_the_Largest_Part__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Dimensions_-_depth_of_largest_part_mm" faims_attribute_name="Dimensions - depth of largest part mm">
-          <label>{Dimensions___depth_of_largest_part__mm_}</label>
+        <input faims_attribute_type="measure" ref="Dimensions_-_Depth_of_the_Largest_Part_mm" faims_attribute_name="Dimensions - Depth of the Largest Part mm">
+          <label>{Dimensions___Depth_of_the_Largest_Part__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Groove_count" faims_attribute_name="Groove count">
-          <label>{Groove_count}</label>
+        <input faims_attribute_type="measure" ref="Groove_Count" faims_attribute_name="Groove Count">
+          <label>{Groove_Count}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Cluster_count" faims_attribute_name="Cluster count">
-          <label>{Cluster_count}</label>
+        <input faims_attribute_type="measure" ref="Cluster_Count" faims_attribute_name="Cluster Count">
+          <label>{Cluster_Count}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select type="file" faims_attribute_type="measure" faims_sync="true" ref="Grinding_Groove_Sketch_Plan" faims_attribute_name="Grinding Groove Sketch Plan">
@@ -1188,7 +1225,7 @@
           <label>{Button_Grinding_Groove_Photo}</label>
         </trigger>
       </group>
-      <group ref="Shell">
+      <group ref="Shell" faims_hidden="true">
         <label>{Shell}</label>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Shell_Distribution" faims_attribute_name="Shell Distribution">
           <label>{Shell_Distribution}</label>
@@ -1197,12 +1234,12 @@
             <value>0</value>
           </item>
         </select1>
-        <input faims_attribute_type="measure" ref="Distance_to_high_water_mark_metres" faims_attribute_name="Distance to high water mark metres">
-          <label>{Distance_to_high_water_mark__metres_}</label>
+        <input faims_attribute_type="measure" ref="Distance_to_High_Water_Mark_Metres" faims_attribute_name="Distance to High Water Mark Metres">
+          <label>{Distance_to_High_Water_Mark__m_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <select faims_attribute_type="vocab" ref="Species_present" faims_attribute_name="Species present">
-          <label>{Species_present}</label>
+        <select faims_attribute_type="vocab" ref="Species_Present" faims_attribute_name="Species Present">
+          <label>{Species_Present}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -1216,8 +1253,8 @@
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Approximate_percentage_of_dominant_species_as_part_of_assemblage" faims_attribute_name="Approximate percentage of dominant species as part of assemblage">
-          <label>{Approximate_percentage_of_dominant_species_as_part_of_assemblage}</label>
+        <select1 faims_attribute_type="vocab" ref="Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage" faims_attribute_name="Approximate Percentage of Dominant Species as Part of Assemblage">
+          <label>{Approximate_Percentage_of_Dominant_Species_as_Part_of_Assemblage}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
@@ -1245,21 +1282,21 @@
           <label>{Button_Shell_Photo}</label>
         </trigger>
       </group>
-      <group ref="Hearth_Ground_Oven">
+      <group ref="Hearth_Ground_Oven" faims_hidden="true">
         <label>{Hearth_Ground_Oven}</label>
         <input faims_attribute_type="measure" ref="Hearth_Shape_mm" faims_attribute_name="Hearth Shape mm">
-          <label>{Hearth_Length__mm_}</label>
+          <label>{Hearth_Shape__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Hearth_Length_mm" faims_attribute_name="Hearth Length mm">
-          <label>{Hearth_Width__mm_}</label>
+          <label>{Hearth_Length__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Hearth_Width_mm" faims_attribute_name="Hearth Width mm">
           <label>{Hearth_Width__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
-        <input faims_attribute_type="measure" ref="Hearth_Estimated_Depth" faims_attribute_name="Hearth Estimated Depth">
+        <input faims_attribute_type="measure" ref="Hearth_Estimated_Depth_mm" faims_attribute_name="Hearth Estimated Depth mm">
           <label>{Hearth_Estimated_Depth__mm_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
@@ -1296,10 +1333,10 @@
           <label>{Button_Hearth_Photo}</label>
         </trigger>
       </group>
-      <group ref="Potential_Archaeological_Deposit">
+      <group ref="Potential_Archaeological_Deposit" faims_hidden="true">
         <label>{Potential_Archaeological_Deposit}</label>
-        <select1 faims_attribute_type="vocab" ref="PAD_Insitu" faims_attribute_name="PAD Insitu">
-          <label>{PAD_Insitu}</label>
+        <select1 faims_attribute_type="vocab" ref="PAD_in_Situ" faims_attribute_name="PAD in Situ">
+          <label>{PAD_in_Situ}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
@@ -1330,7 +1367,7 @@
           </item>
         </select1>
       </group>
-      <group ref="Culturally_Modified_Tree">
+      <group ref="Culturally_Modified_Tree" faims_hidden="true">
         <label>{Culturally_Modified_Tree}</label>
         <select1 appearance="full" faims_attribute_type="vocab" ref="CM_Tree_Type" faims_attribute_name="CM Tree Type">
           <label>{CM_Tree_Type}</label>
@@ -1383,8 +1420,8 @@
             <value>0</value>
           </item>
         </select1>
-        <select1 appearance="full" faims_attribute_type="vocab" ref="Is_a_tree_health_assessment_required" faims_attribute_name="Is a tree health assessment required">
-          <label>{Is_a_tree_health_assessment_required}</label>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Is_a_Tree_Health_Assessment_Required" faims_attribute_name="Is a Tree Health Assessment Required">
+          <label>{Is_a_Tree_Health_Assessment_Required_}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -1422,8 +1459,8 @@
             <value>0</value>
           </item>
         </select1>
-        <select1 faims_attribute_type="vocab" ref="Carving_type" faims_attribute_name="Carving type">
-          <label>{Carving_type}</label>
+        <select1 faims_attribute_type="vocab" ref="Carving_Type" faims_attribute_name="Carving Type">
+          <label>{Carving_Type}</label>
           <!--WARNING: No type t was given for this view; assuming it is a dropdown-->
           <item>
             <label>Options not loaded</label>
@@ -1441,13 +1478,17 @@
       </group>
       <group ref="Vars" faims_hidden="true">
         <label>{Vars}</label>
-        <input ref="Author" faims_attribute_name="author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+        <input ref="author" faims_attribute_name="Feature author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{author}</label>
           <!--WARNING: Flags ignored-->
         </input>
-        <input ref="Timestamp" faims_attribute_name="timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+        <input ref="timestamp" faims_attribute_name="Feature timestamp" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{timestamp}</label>
           <!--WARNING: Flags ignored-->
+        </input>
+        <input faims_attribute_type="measure" ref="Feature_Transect_ID" faims_attribute_name="Feature Transect ID">
+          <label>{Feature_Transect_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
     </group>

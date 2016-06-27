@@ -29,7 +29,7 @@ filenames = [
 username = 'faimsadmin@intersect.org.au'
 password = 'Pass.123'
 
-server = 'dev'
+server = 'olddev'
 url    = 'http://%s.fedarch.org' % server
 
 ################################################################################
@@ -46,7 +46,7 @@ else:
     moduleLocation = os.path.dirname(moduleLocation)
 # Determine module name
 moduleName = moduleLocation.split(os.sep)
-moduleName = moduleName[-1]
+moduleName = 'GML Survey - 20 Jun'
 
 # Check that all the given paths really exist
 if not os.path.exists(moduleLocation):

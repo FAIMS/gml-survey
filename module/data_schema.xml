@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <dataSchema>
+  <RelationshipElement name="Transect - Site" type="hierarchical">
+    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
+    <parent>Parent Of</parent>
+    <child>Child Of</child>
+  </RelationshipElement>
   <RelationshipElement name="Site - Feature" type="hierarchical">
     <description>A 1-to-n relationship between the parent and its children, respectively.</description>
     <parent>Parent Of</parent>
@@ -22,12 +27,12 @@
       <formatString><![CDATA[TRN-$2]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
     </property>
-    <property name="author" isIdentifier="true" type="measure">
+    <property name="Transect author" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[-$2]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
     </property>
-    <property name="timestamp" isIdentifier="true" type="measure">
+    <property name="Transect timestamp" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[-$2]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
@@ -70,7 +75,7 @@
 <description/></term>
         <term>{Flat}
 <description/></term>
-        <term>{Open_Depression__vale_}
+        <term>{Open_Depression__Vale_}
 <description/></term>
         <term>{Closed_Depression}
 <description/></term>
@@ -83,15 +88,15 @@
       <lookup>
         <term>{Level}
 <description/></term>
-        <term>{Very_gently_inclined}
+        <term>{Very_Gently_Inclined}
 <description/></term>
-        <term>{Gently_inclined}
+        <term>{Gently_Inclined}
 <description/></term>
-        <term>{Moderately_inclined}
+        <term>{Moderately_Inclined}
 <description/></term>
         <term>{Steep}
 <description/></term>
-        <term>{Very_steep}
+        <term>{Very_Steep}
 <description/></term>
         <term>{Precipitous}
 <description/></term>
@@ -107,7 +112,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Vegetation notes" type="measure">
+    <property name="Vegetation Notes" type="measure">
       <description>
         Note any recognisable species that are particularly dominant, known
         classifications for the ecosystem or other pertinent information.
@@ -115,7 +120,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Ground surface visibility" type="vocab">
+    <property name="Ground Surface Visibility" type="vocab">
       <description>
         Estimate the average percentage of ground surface that is visible for
         the survey unit as per the definition in the Code of Practice (perhaps
@@ -148,7 +153,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Ground surface exposure" type="vocab">
+    <property name="Ground Surface Exposure" type="vocab">
       <description>
         Estimate the average percentage of ground surface that is exposed/
         quantity of exposures within the survey unit as per the definition in
@@ -182,7 +187,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Ground surface notes" type="measure">
+    <property name="Ground Surface Notes" type="measure">
       <description>
         Describe any factors or issues affecting ground cover - e.g. grass
         height and thickness, leaf litter, flooding etc.
@@ -190,7 +195,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Soil observations" type="measure">
+    <property name="Soil Observations" type="measure">
       <description>
         Describe the nature of the soil within the survey unit from any
         exposures that allow observations to be made. FAIMS to insert MOLS
@@ -257,7 +262,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Survey extent" type="measure">
+    <property name="Survey Extent Square Metres" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -278,6 +283,16 @@
       </lookup>
     </property>
     <property name="Transect State" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="UUID Started" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="UUID Finished" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -303,7 +318,7 @@
   </ArchaeologicalElement>
   <ArchaeologicalElement name="Site">
     <description/>
-    <property name="Site ID Number" isIdentifier="true" type="measure">
+    <property name="Site ID" isIdentifier="true" type="measure">
       <description>
         The current autonumbering assumes single device in field. If multiple
         devices are in use, uniqueness rules must be defined.
@@ -311,24 +326,29 @@
       <formatString><![CDATA[Site-$2]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
     </property>
-    <property name="author" isIdentifier="true" type="measure">
+    <property name="Site Transect ID" isIdentifier="true" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $2 then "-TRN-$2"}}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Site author" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[-$2]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
     </property>
-    <property name="timestamp" isIdentifier="true" type="measure">
+    <property name="Site timestamp" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[-$2]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
     </property>
-    <property name="Open Closed Site" type="vocab">
+    <property name="Open Close Site" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
         <term>{Open}
 <description/></term>
-        <term>{Closed}
+        <term>{Close}
 <description/></term>
       </lookup>
     </property>
@@ -349,22 +369,22 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Distance to permanent water source" type="measure">
+    <property name="Distance to Permanent Water Source" type="measure">
       <description>Distance to permanent water source in metres.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Distance to temporary water source" type="measure">
+    <property name="Distance to Temporary Water Source" type="measure">
       <description>Distance to temporary water source in metres.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Name of nearest permanent water source" type="measure">
+    <property name="Name of the Nearest Permanent Water Source" type="measure">
       <description>Name of nearest permanent water source.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Name of nearest temporary water" type="measure">
+    <property name="Name of the Nearest Temporary Water" type="measure">
       <description>Name of nearest temporary water.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -376,51 +396,51 @@
       <lookup>
         <term>{Weathered}
 <description/></term>
-        <term>{Vehicle_damage}
+        <term>{Vehicle_Damage}
 <description/></term>
-        <term>{Surface_water_Wash}
+        <term>{Surface_Water_Wash}
 <description/></term>
-        <term>{Fire_damage}
+        <term>{Fire_Damage}
 <description/></term>
         <term>{Erosion}
 <description/></term>
-        <term>{Stock_damage}
+        <term>{Stock_Damage}
 <description/></term>
-        <term>{Exposed_archaeological_Other_material}
+        <term>{Exposed_Archaeological_Other_Material}
 <description/></term>
-        <term>{Fire_damage}
+        <term>{Fire_Damage}
 <description/></term>
-        <term>{Animal_damage}
+        <term>{Animal_Damage}
 <description/></term>
         <term>{Graffitti_Vandalism}
 <description/></term>
         <term>{Mineralisation}
 <description/></term>
-        <term>{Unstable_structure_Landform}
+        <term>{Unstable_Structure_Landform}
 <description/></term>
       </lookup>
     </property>
-    <property name="Total length of visible site" type="measure">
+    <property name="Total Length of Visible Site" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Average width of visible site" type="measure">
+    <property name="Average Width of Visible Site" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Estimated area of visible site" type="measure">
+    <property name="Estimated Area of Visible Site" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Length of assessed site area" type="measure">
+    <property name="Length of Assessed Site Area" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Subsurfance potential" type="vocab">
+    <property name="Subsurface Potential" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -431,12 +451,12 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Length of potential site area" type="measure">
+    <property name="Length of Potential Site Area" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Average width of potential site area" type="measure">
+    <property name="Average Width of Potential Site Area" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -448,11 +468,11 @@
       <lookup>
         <term>{Boulder}
 <description/></term>
-        <term>{Wind_erosion}
+        <term>{Wind_Erosion}
 <description/></term>
-        <term>{Water_erosion}
+        <term>{Water_Erosion}
 <description/></term>
-        <term>{Rock_collapse}
+        <term>{Rock_Collapse}
 <description/></term>
         <term>{Other}
 <description/></term>
@@ -463,7 +483,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{Silica_gloss}
+        <term>{Silica_Gloss}
 <description/></term>
         <term>{Tessellated}
 <description/></term>
@@ -493,17 +513,17 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Aboriginal community interpretation" type="measure">
+    <property name="Aboriginal Community Interpretation" type="measure">
       <description>Note informants name and what they have said.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Aboriginal community management recommendations" type="measure">
+    <property name="Aboriginal Community Management Recommendations" type="measure">
       <description>Note informants name and what they have said.</description>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Other management recommendations" type="measure">
+    <property name="Other Management Recommendations" type="measure">
       <description>
         Add any thoughts you have on appropriate/necessary management. The AHIMS
         site recording form lists the following as options, but there may be
@@ -552,7 +572,7 @@
 <description/></term>
         <term>{Non_Human_Bone___Organic_Material}
 <description/></term>
-        <term>{Ochre_quarry}
+        <term>{Ochre_Quarry}
 <description/></term>
         <term>{Potential_Archaeological_Deposit}
 <description/></term>
@@ -583,9 +603,14 @@
   </ArchaeologicalElement>
   <ArchaeologicalElement name="Feature">
     <description/>
+    <property name="Feature ID" isIdentifier="true" type="measure">
+      <description/>
+      <formatString><![CDATA[$2]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
     <property name="Select Feature Type" isIdentifier="true" type="vocab">
       <description/>
-      <formatString><![CDATA[Feature-$2]]></formatString>
+      <formatString><![CDATA[-Feature Type-$1]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
       <lookup>
         <term>{Artefact}
@@ -596,27 +621,29 @@
 <description/></term>
         <term>{Other_Feature}
 <description/></term>
-        <term>{Grinding_Groove_Shell}
+        <term>{Grinding_Groove}
+<description/></term>
+        <term>{Shell}
 <description/></term>
         <term>{Hearth_Ground_Oven}
 <description/></term>
         <term>{Potential_Archaeological_Deposit}
 <description/></term>
-        <term>{Culturally_Mofified_Tree}
+        <term>{Culturally_Modified_Tree}
 <description/></term>
       </lookup>
     </property>
-    <property name="Feature ID" isIdentifier="true" type="measure">
+    <property name="Feature Transect ID" isIdentifier="true" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $2 then "-TRN-$2"}}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Feature author" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[-$2]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
     </property>
-    <property name="author" isIdentifier="true" type="measure">
-      <description/>
-      <formatString><![CDATA[-$2]]></formatString>
-      <appendCharacterString><![CDATA[-]]></appendCharacterString>
-    </property>
-    <property name="timestamp" isIdentifier="true" type="measure">
+    <property name="Feature timestamp" isIdentifier="true" type="measure">
       <description/>
       <formatString><![CDATA[-$2]]></formatString>
       <appendCharacterString><![CDATA[-]]></appendCharacterString>
@@ -636,7 +663,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Insitu Artefact" type="vocab">
+    <property name="In Situ Artefact" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -671,11 +698,6 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Instance No" isIdentifier="true" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
     <property name="Artefact Raw Material" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
@@ -685,7 +707,7 @@
 <description/></term>
         <term>{Chert}
 <description/></term>
-        <term>{Fine_grained_siliceous}
+        <term>{Fine_Grained_Siliceous}
 <description/></term>
         <term>{Granite}
 <description/></term>
@@ -703,11 +725,11 @@
 <description/></term>
         <term>{Silcrete}
 <description/></term>
-        <term>{Petrified_wood}
+        <term>{Petrified_Wood}
 <description/></term>
         <term>{Chalcedony}
 <description/></term>
-        <term>{Chalcedonic_chert}
+        <term>{Chalcedonic_Chert}
 <description/></term>
         <term>{Ceramic}
 <description/></term>
@@ -723,17 +745,17 @@
 <description/></term>
         <term>{Plastic}
 <description/></term>
-        <term>{Building_material}
+        <term>{Building_Material}
 <description/></term>
         <term>{Synthetic}
 <description/></term>
         <term>{Textile}
 <description/></term>
-        <term>{Other_animal_Material}
+        <term>{Other_Animal_Material}
 <description/></term>
-        <term>{Other_plant_material}
+        <term>{Other_Plant_Material}
 <description/></term>
-        <term>{Other_unknown_material}
+        <term>{Other_Unknown_Material}
 <description/></term>
       </lookup>
     </property>
@@ -766,7 +788,7 @@
         <term>{Manuport}
 <description/></term>
         <term>{Groundstone_Implement}
-<description/><term>{Milling_slab}
+<description/><term>{Milling_Slab}
 <description/></term><term>{Mortar}
 <description/></term><term>{Muller}
 <description/></term></term>
@@ -3991,7 +4013,7 @@
 <description/></term>
         <term>{Melted}
 <description/></term>
-        <term>{Other_heat_modification}
+        <term>{Other_Heat_Modification}
 <description/></term>
         <term>{Opalescence}
 <description/></term>
@@ -4007,16 +4029,16 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Platform Surface for Aboriginal stone artefacts" type="vocab">
+    <property name="Platform Surface for Aboriginal Stone Artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
         <term>{Cortex}
 <description/></term>
-        <term>{One_flake_scar}
+        <term>{One_Flake_Scar}
 <description/></term>
-        <term>{More_than_one_flake_scar}
+        <term>{More_than_One_Flake_Scar}
 <description/></term>
         <term>{Faceted}
 <description/></term>
@@ -4028,7 +4050,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Platform Type for Aboriginal stone artefacts" type="vocab">
+    <property name="Platform Type for Aboriginal Stone Artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4043,7 +4065,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Termination for Aboriginal stone artefacts" type="vocab">
+    <property name="Termination for Aboriginal Stone Artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4058,7 +4080,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Cross Section for Aboriginal artefacts" type="vocab">
+    <property name="Cross Section for Aboriginal Artefacts" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4120,7 +4142,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{Aboriginal_Ceremony__no_physical_evidence_}
+        <term>{Aboriginal_Ceremony__No_Physical_Evidence_}
 <description/></term>
         <term>{Song}
 <description/></term>
@@ -4128,7 +4150,7 @@
 <description/></term>
         <term>{Dreaming}
 <description/></term>
-        <term>{Gathering__non_physical_evidence__}
+        <term>{Gathering__No_Physical_Evidence_}
 <description/></term>
       </lookup>
     </property>
@@ -4173,13 +4195,13 @@
 <description/></term>
         <term>{Bird}
 <description/></term>
-        <term>{Bird_track}
+        <term>{Bird_Track}
 <description/></term>
         <term>{Canoe}
 <description/></term>
         <term>{Circle}
 <description/></term>
-        <term>{Contact_material_Culture}
+        <term>{Contact_Material_Culture}
 <description/></term>
         <term>{Duck}
 <description/></term>
@@ -4187,9 +4209,9 @@
 <description/></term>
         <term>{Emu}
 <description/></term>
-        <term>{Emu_track}
+        <term>{Emu_Track}
 <description/></term>
-        <term>{European_figure}
+        <term>{European_Figure}
 <description/></term>
         <term>{Female}
 <description/></term>
@@ -4209,7 +4231,7 @@
 <description/></term>
         <term>{Macropod}
 <description/></term>
-        <term>{Macropod_track}
+        <term>{Macropod_Track}
 <description/></term>
         <term>{Male}
 <description/></term>
@@ -4257,7 +4279,7 @@
 <description/></term>
         <term>{Pecked}
 <description/></term>
-        <term>{Pigment___engraved}
+        <term>{Pigment___Engraved}
 <description/></term>
         <term>{Stencilled}
 <description/></term>
@@ -4272,7 +4294,7 @@
 <description/></term>
         <term>{Line}
 <description/></term>
-        <term>{Line___fill}
+        <term>{Line___Fill}
 <description/></term>
         <term>{Other}
 <description/></term>
@@ -4311,15 +4333,15 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{All_over_shelter_or_rock_platform_surface}
+        <term>{All_Over_Shelter_or_Rock_Platform_Surface}
 <description/></term>
         <term>{Ceiling}
 <description/></term>
         <term>{Floor}
 <description/></term>
-        <term>{Mostly_near_largest_sheltered_space}
+        <term>{Mostly_near_Largest_Sheltered_Space}
 <description/></term>
-        <term>{Mostly_on_out_of_the_way_spaces}
+        <term>{Mostly_on_Out_of_the_Way_Spaces}
 <description/></term>
         <term>{Other}
 <description/></term>
@@ -4341,9 +4363,9 @@
 <description/></term>
         <term>{Stained}
 <description/></term>
-        <term>{Mineralisation_evident}
+        <term>{Mineralisation_Evident}
 <description/></term>
-        <term>{Very_brant_colours}
+        <term>{Very_Brant_Colours}
 <description/></term>
         <term>{Unweathered}
 <description/></term>
@@ -4366,17 +4388,12 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Other Feature Description" type="measure">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
-    </property>
     <property name="Description Other Feature" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Chain of Custody Notes for human remains" type="measure">
+    <property name="Chain of Custody Notes for Human Remains" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4391,7 +4408,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Type Grinding Groove" type="vocab">
+    <property name="Type of Grinding Groove" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4411,60 +4428,60 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{U__shaped}
+        <term>{U__Shaped}
 <description/></term>
-        <term>{_V__shaped}
+        <term>{_V__Shaped}
 <description/></term>
         <term>{Flat}
 <description/></term>
       </lookup>
     </property>
-    <property name="Seed species present" type="measure">
+    <property name="Seed Species Present" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Groove function" type="measure">
+    <property name="Groove Function" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Dimensions - length of smallest part mm" type="measure">
+    <property name="Dimensions - Length of the Smallest Part mm" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Dimensions - width of smallest part mm" type="measure">
+    <property name="Dimensions - Width of the Smallest Part mm" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Dimensions - depth of smallest part mm" type="measure">
+    <property name="Dimensions - Depth of the Smallest Part mm" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Dimensions - length of largest part mm" type="measure">
+    <property name="Dimensions - Length of the Largest Part mm" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Dimensions - width of largest part mm" type="measure">
+    <property name="Dimensions - Width of the Largest Part mm" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Dimensions - depth of largest part mm" type="measure">
+    <property name="Dimensions - Depth of the Largest Part mm" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Groove count" type="measure">
+    <property name="Groove Count" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Cluster count" type="measure">
+    <property name="Cluster Count" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4484,20 +4501,20 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{Surface_scatter}
+        <term>{Surface_Scatter}
 <description/></term>
-        <term>{Stratified_deposit}
+        <term>{Stratified_Deposit}
 <description/></term>
         <term>{Mounded}
 <description/></term>
       </lookup>
     </property>
-    <property name="Distance to high water mark metres" type="measure">
+    <property name="Distance to High Water Mark Metres" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Species present" type="vocab">
+    <property name="Species Present" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4516,7 +4533,7 @@
 <description/></term>
         <term>{Limpit}
 <description/></term>
-        <term>{Mud_oyster}
+        <term>{Mud_Oyster}
 <description/></term>
         <term>{Mutton_Fish}
 <description/></term>
@@ -4532,9 +4549,9 @@
 <description/></term>
         <term>{Triton}
 <description/></term>
-        <term>{Turban__large_}
+        <term>{Turban__Large_}
 <description/></term>
-        <term>{Other_Unknown}
+        <term>{Other___Unknown}
 <description/></term>
       </lookup>
     </property>
@@ -4557,7 +4574,7 @@
 <description/></term>
         <term>{Limpit}
 <description/></term>
-        <term>{Mud_oyster}
+        <term>{Mud_Oyster}
 <description/></term>
         <term>{Mutton_Fish}
 <description/></term>
@@ -4573,13 +4590,13 @@
 <description/></term>
         <term>{Triton}
 <description/></term>
-        <term>{Turban__large_}
+        <term>{Turban__Large_}
 <description/></term>
-        <term>{Other_Unknown}
+        <term>{Other___Unknown}
 <description/></term>
       </lookup>
     </property>
-    <property name="Approximate percentage of dominant species as part of assemblage" type="vocab">
+    <property name="Approximate Percentage of Dominant Species as Part of Assemblage" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4631,7 +4648,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="Hearth Estimated Depth" type="measure">
+    <property name="Hearth Estimated Depth mm" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4641,17 +4658,17 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
       <lookup>
-        <term>{Baked_clay_balls}
+        <term>{Baked_Clay_Balls}
 <description/></term>
         <term>{Charcoal}
 <description/></term>
         <term>{Wood}
 <description/></term>
-        <term>{Heat_affected_basal_clay}
+        <term>{Heat_Affected_Basal_Clay}
 <description/></term>
-        <term>{Bone_Other_animal_material}
+        <term>{Bone_Other_Animal_Material}
 <description/></term>
-        <term>{Seeds_other_Plant_material}
+        <term>{Seeds_Other_Plant_Material}
 <description/></term>
         <term>{Stone}
 <description/></term>
@@ -4672,7 +4689,7 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
-    <property name="PAD Insitu" type="vocab">
+    <property name="PAD in Situ" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4715,7 +4732,7 @@
 <description/></term>
         <term>{Burial}
 <description/></term>
-        <term>{Oven__Hearth}
+        <term>{Oven_Hearth}
 <description/></term>
       </lookup>
     </property>
@@ -4786,13 +4803,13 @@
       <lookup>
         <term>{Standing}
 <description/></term>
-        <term>{Lying_down}
+        <term>{Lying_Down}
 <description/></term>
-        <term>{Partially_felled}
+        <term>{Partially_Felled}
 <description/></term>
-        <term>{Subject_to_salinity}
+        <term>{Subject_to_Salinity}
 <description/></term>
-        <term>{Not_in_situ}
+        <term>{Not_in_Situ}
 <description/></term>
       </lookup>
     </property>
@@ -4805,7 +4822,7 @@
 <description/></term>
         <term>{Rot}
 <description/></term>
-        <term>{Limb_fall}
+        <term>{Limb_Fall}
 <description/></term>
         <term>{None}
 <description/></term>
@@ -4822,7 +4839,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Is a tree health assessment required" type="vocab">
+    <property name="Is a Tree Health Assessment Required" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
@@ -4860,7 +4877,7 @@
       <lookup>
         <term>{Oval}
 <description/></term>
-        <term>{Rectangular_square}
+        <term>{Rectangular_Square}
 <description/></term>
         <term>{Round}
 <description/></term>
@@ -4891,7 +4908,7 @@
 <description/></term>
       </lookup>
     </property>
-    <property name="Carving type" type="vocab">
+    <property name="Carving Type" type="vocab">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>

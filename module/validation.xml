@@ -13,32 +13,32 @@
     </property>
     <property name="Landform">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param value="vocab" type="field"/>
       </validator>
     </property>
     <property name="Slope Gradient">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param value="vocab" type="field"/>
       </validator>
     </property>
-    <property name="Vegetation notes">
+    <property name="Vegetation Notes">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
     </property>
-    <property name="Ground surface visibility">
+    <property name="Ground Surface Visibility">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param value="vocab" type="field"/>
       </validator>
     </property>
-    <property name="Ground surface exposure">
+    <property name="Ground Surface Exposure">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param value="vocab" type="field"/>
       </validator>
     </property>
     <property name="Geomorphological Activity">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param value="vocab" type="field"/>
       </validator>
     </property>
     <property name="Device ID">
@@ -48,9 +48,19 @@
     </property>
   </ArchaeologicalElement>
   <ArchaeologicalElement name="Site">
-    <property name="Site ID Number">
+    <property name="Site ID">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
+      </validator>
+    </property>
+    <property name="Open Close Site">
+      <validator type="blankchecker">
+        <param value="vocab" type="field"/>
+      </validator>
+    </property>
+    <property name="Site Aspect Orientation">
+      <validator type="blankchecker">
+        <param value="vocab" type="field"/>
       </validator>
     </property>
     <property name="General Condition of Site">
@@ -58,27 +68,27 @@
         <param value="vocab" type="field"/>
       </validator>
     </property>
-    <property name="Total length of visible site">
+    <property name="Total Length of Visible Site">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
     </property>
-    <property name="Average width of visible site">
+    <property name="Average Width of Visible Site">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
     </property>
-    <property name="Estimated area of visible site">
+    <property name="Estimated Area of Visible Site">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
     </property>
-    <property name="Length of assessed site area">
+    <property name="Length of Assessed Site Area">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
     </property>
-    <property name="Average width of potential site area">
+    <property name="Average Width of Potential Site Area">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
@@ -106,11 +116,6 @@
   </ArchaeologicalElement>
   <ArchaeologicalElement name="Feature">
     <property name="Feature ID">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-    <property name="Instance No">
       <validator type="blankchecker">
         <param value="measure" type="field"/>
       </validator>
