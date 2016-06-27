@@ -10,8 +10,8 @@
 /* by overwriting the auto-generated function `loadFeatureFrom` using         */
 /* @POSTPROC.                                                                 */
 /******************************************************************************/
-addOnEvent("Feature",                             "show",   "updateFeatureTabs()");
-addOnEvent("Feature/Feature/Select_Feature_Type", "select", "updateFeatureTabs()");
+addOnEvent("Feature",                             "show",  "updateFeatureTabs()");
+addOnEvent("Feature/Feature/Select_Feature_Type", "click", "updateFeatureTabs()");
 
 // Fetch the "Select Feature Type" vocab and populate the
 // `SELECT_FEATURE_TYPE_VOCAB` global.

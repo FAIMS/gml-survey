@@ -439,7 +439,7 @@
           <label></label>
         </input>
         <input ref="Parent_Transect_ID">
-          <label>Parent Entity ID (Transect)</label>
+          <label>Parent Transect ID</label>
         </input>
         <select1 appearance="compact" ref="Entity_List">
           <label>{Entity_List}</label>
