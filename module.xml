@@ -393,7 +393,8 @@
         <opt>Water Hole</opt>
       </opts>
     </Feature_Type>
-    <New_Feature t="button" lc="Feature"/>
+    <New_Feature       t="button"   lc="Feature"/>
+    <Recorded_Features t="dropdown" ec="Feature"/>
   </Feature>
   <Vars f="hidden">
     <author f="id">
