@@ -1042,6 +1042,7 @@
   <!--@SOURCE: logic/transect-geometry.bsh-->
   <!--@SOURCE: logic/field-inheritance.bsh-->
   <!--@SOURCE: logic/search-extension.bsh-->
+  <!--@SOURCE: logic/custom-duplication.bsh-->
 ]]></logic>
 
 </module>
