@@ -63,9 +63,9 @@ replacement="\\1
   inherit\\2Fields();"
 perl -0777 -i.original -pe "s/$string/$replacement/igs" ui_logic.bsh
 
-string="disableAutoSave(tabgroup);"
+string="disableAutoSave\(tabgroup\);"
 replacement="$string
-  clearGpsInTabGroup(String tabGroup);"
+  clearGpsInTabGroup(tabgroup);"
 perl -0777 -i.original -pe "s/$string/$replacement/igs" ui_logic.bsh
 
 # Extensions to Search tab
