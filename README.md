@@ -39,4 +39,22 @@ For more details about the **GML Aboriginal Survey** please visit the GML Herita
 If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
 
 ## Screenshots:
-
+<p align="left">
+  <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-135854.png" width="250"/>
+  <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-135858.png" width="250"/>
+  <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-135902.png" width="250"/>
+</p>
+<p align="left">
+ <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-135927.png" width="250"/>
+  <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-135933.png" width="250"/>
+  <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-135954.png" width="250"/>
+</p>
+<p align="left">
+ <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-135958.png" width="250"/>
+  <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-140007.png" width="250"/>
+  <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-140107.png" width="250"/>
+</p>
+<p align="left">
+ <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-140118.png" width="250"/>
+  <img src="https://github.com/FAIMS/gml-survey/blob/master/screenshots/Screenshot_20170913-140130.png" width="250"/>
+</p>
